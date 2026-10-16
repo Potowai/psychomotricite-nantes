@@ -217,7 +217,7 @@ export function PhotoPlaceholder({
 }) {
   return (
     <figure
-      className={`flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-azure/45 bg-blue-soft/40 p-8 text-center ${className}`}
+      className={`flex w-full min-w-0 max-w-full flex-col items-center justify-center gap-4 self-start rounded-2xl border border-dashed border-azure/45 bg-blue-soft/40 p-8 text-center ${className}`}
       style={{ aspectRatio: ratio }}
     >
       <span

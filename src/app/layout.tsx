@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { StickyContactBar } from "@/components/contact-cta";
 import { JsonLd, localBusinessSchema, personSchema, websiteSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 
@@ -88,7 +89,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-scroll-behavior="smooth"
       className={`${sharedLayoutProps} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col pb-14 lg:pb-0">
         <a
           href="#contenu"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:text-paper"
@@ -100,6 +101,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <SiteFooter />
+        <StickyContactBar />
         <JsonLd
           data={[localBusinessSchema(), personSchema(), websiteSchema()]}
         />

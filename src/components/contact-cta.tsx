@@ -87,29 +87,60 @@ export function StickyContactBar() {
       <div className="grid grid-cols-3 divide-x divide-line">
         <a
           href={telHref}
-          className="flex flex-col items-center gap-0.5 py-3 text-xs text-ink-2"
+          className="flex flex-col items-center gap-1 py-3 text-xs text-ink-2"
         >
-          <span aria-hidden="true" className="text-base">
-            ☎
-          </span>
+          <svg
+            aria-hidden="true"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M6.6 3h2.7l1.4 3.9-1.9 1.4a12.5 12.5 0 0 0 6.9 6.9l1.4-1.9 3.9 1.4v2.7A2 2 0 0 1 18.8 19 16 16 0 0 1 5 5.2 2 2 0 0 1 6.6 3z" />
+          </svg>
           Appeler
         </a>
         <a
           href={smsHref}
-          className="flex flex-col items-center gap-0.5 py-3 text-xs text-ink-2"
+          className="flex flex-col items-center gap-1 py-3 text-xs text-ink-2"
         >
-          <span aria-hidden="true" className="text-base">
-            ✉
-          </span>
+          <svg
+            aria-hidden="true"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M21 11.5a8.4 8.4 0 0 1-12.2 7.5L4 20.5l1.5-4.7A8.4 8.4 0 1 1 21 11.5z" />
+          </svg>
           SMS
         </a>
         <Link
           href="/contact"
-          className="flex flex-col items-center gap-0.5 bg-ink py-3 text-xs text-paper"
+          className="flex flex-col items-center gap-1 bg-ink py-3 text-xs text-paper"
         >
-          <span aria-hidden="true" className="text-base">
-            ◆
-          </span>
+          <svg
+            aria-hidden="true"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+            <path d="M8 3v4M16 3v4M3.5 10h17" />
+          </svg>
           Rendez-vous
         </Link>
       </div>

@@ -27,7 +27,7 @@ const motifs = [
 const channels = ["Téléphone", "SMS", "E-mail"];
 
 const fieldClass =
-  "w-full rounded-xl border border-line bg-paper px-4 py-3 text-ink outline-none transition-colors placeholder:text-ink-3/70 focus:border-blue focus:ring-2 focus:ring-blue/15";
+  "w-full rounded-xl border border-line bg-paper px-4 py-3 text-base text-ink outline-none transition-colors placeholder:text-ink-3/70 focus:border-blue focus:ring-2 focus:ring-blue/15";
 const labelClass = "block text-sm font-medium text-ink";
 
 export function ContactForm() {
