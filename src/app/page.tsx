@@ -23,47 +23,24 @@ const motifs = [
   {
     title: "Le corps et la motricité",
     text: "Retard de développement, maladresse, troubles de l’équilibre ou de la coordination, tics, bégaiement, douleurs chroniques, syndrome post-chute, maladies, troubles neurologiques, handicap.",
-    tone: "sage",
   },
   {
     title: "Les émotions et la psyché",
     text: "Confiance en soi, anxiété, dépression, addictions, psychotraumatismes, difficultés relationnelles, troubles du comportement, troubles psychosomatiques, épuisement professionnel / burn out.",
-    tone: "blue",
   },
   {
     title: "Le rapport au corps",
     text: "Troubles du comportement alimentaire, vécu de violences, dysphorie de genre — ou, plus simplement, le désir « d’apprendre à aimer son corps ».",
-    tone: "terracotta",
   },
   {
     title: "Les étapes de la vie",
     text: "Notre corps grandit et traverse des seuils : puberté, grossesse, vieillissement. Autant de périodes de sensibilité où une séance peut être un espace sécurisant.",
-    tone: "sage",
   },
   {
     title: "Les neuroatypies",
     text: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HQI/THQI. J’accompagne aussi les personnes concernées par les TSA, le TDA-H et/ou les troubles dys.",
-    tone: "blue",
   },
 ] as const;
-
-const motifTones = {
-  blue: {
-    card: "border-azure/25 bg-linear-to-br from-blue-soft via-blue-soft/50 to-paper",
-    halo: "bg-azure/30",
-    bar: "bg-azure",
-  },
-  terracotta: {
-    card: "border-corail/25 bg-linear-to-br from-corail-soft via-corail-soft/50 to-paper",
-    halo: "bg-corail/30",
-    bar: "bg-corail",
-  },
-  sage: {
-    card: "border-sage/25 bg-linear-to-br from-sage-soft via-sage-soft/50 to-paper",
-    halo: "bg-sage/30",
-    bar: "bg-sage",
-  },
-} as const;
 
 const etapes = [
   {
@@ -247,36 +224,29 @@ export default function HomePage() {
           </div>
 
           <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {motifs.map((m, i) => {
-              const tone = motifTones[m.tone];
-              return (
-                <li
-                  key={m.title}
-                  className={`group relative flex flex-col overflow-hidden rounded-[1.75rem] border ${tone.card} p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]`}
+            {motifs.map((m, i) => (
+              <li
+                key={m.title}
+                className="group relative flex flex-col overflow-hidden rounded-[1.75rem] border border-line bg-paper p-7 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
+              >
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute right-6 top-4 font-display text-[3.25rem] leading-none text-ink/[0.07]"
                 >
-                  <span
-                    aria-hidden="true"
-                    className={`pointer-events-none absolute -right-14 -top-16 h-40 w-40 rounded-full ${tone.halo} opacity-60 blur-2xl transition-opacity duration-300 group-hover:opacity-100`}
-                  />
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute right-6 top-4 font-display text-[3.25rem] leading-none text-ink/10"
-                  >
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className={`relative mb-5 block h-1.5 w-10 rounded-full ${tone.bar}`}
-                  />
-                  <h3 className="relative font-display text-xl text-ink">
-                    {m.title}
-                  </h3>
-                  <p className="relative mt-3 leading-relaxed text-ink-2">
-                    {m.text}
-                  </p>
-                </li>
-              );
-            })}
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="relative mb-5 block h-1.5 w-10 rounded-full bg-ink/15"
+                />
+                <h3 className="relative font-display text-xl text-ink">
+                  {m.title}
+                </h3>
+                <p className="relative mt-3 leading-relaxed text-ink-2">
+                  {m.text}
+                </p>
+              </li>
+            ))}
           </ul>
         </Container>
       </section>
