@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CtaBand } from "@/components/contact-cta";
+import { DocumentLang } from "@/components/document-lang";
 import { Callout, Container, Faq, PageHero, SectionTitle } from "@/components/ui";
 import {
   JsonLd,
@@ -41,6 +42,7 @@ const faqs = [
 export default function EnglishPage() {
   return (
     <div lang="en">
+      <DocumentLang lang="en" />
       <PageHero
         breadcrumbs={[
           { label: "Accueil", href: "/" },

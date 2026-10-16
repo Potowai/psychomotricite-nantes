@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { StickyContactBar } from "@/components/contact-cta";
 import { AnalyticsEvents } from "@/components/analytics-events";
+import { LanguageBanner } from "@/components/language-banner";
 import { Umami } from "@/components/umami";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -120,6 +121,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <SiteFooter />
         <StickyContactBar />
+        <LanguageBanner />
         <AnalyticsEvents />
         <Analytics />
         <SpeedInsights />

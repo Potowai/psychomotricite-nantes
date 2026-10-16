@@ -117,6 +117,12 @@ Le SEO local vit à 80 % hors du site.
 - **Version anglaise** — différenciateur fort : elle reçoit en anglais. Une page
   « English » cible *psychomotor therapist Nantes* / *English-speaking therapist Nantes*
   (hreflang). Peu de concurrents le font.
+  - La langue n'est **jamais** déduite de l'IP ni de la région : Googlebot crawle
+    depuis les États-Unis, une redirection par région l'enverrait vers `/en` et
+    sortirait tout le site français de l'index. Le signal utilisé est la langue du
+    navigateur (`Accept-Language` / `navigator.languages`), et il ne sert qu'à
+    **proposer** l'autre version dans une bannière refermable
+    (`src/components/language-banner.tsx`). Jamais de redirection.
 - **Core Web Vitals** : audit LCP / CLS / INP (Lighthouse), polices, images.
 - **Accessibilité** : contrastes, navigation clavier, `alt` — bon pour l'humain et Google.
 - **Hygiène** : liens morts, orphelines, chaînes de redirections, 404.
