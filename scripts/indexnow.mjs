@@ -42,6 +42,28 @@ if (urlList.length === 0) {
   process.exit(1);
 }
 
+// IndexNow n'accepte que des URLs appartenant au domaine dont la clé est
+// vérifiable. Tant que le sitemap annonce le domaine définitif alors que la clé
+// n'est servie que par l'URL de préproduction, on s'abstient : envoyer ces URLs
+// produirait une erreur 422 et ferait échouer le workflow pour rien.
+const sitemapHost = (() => {
+  try {
+    return new URL(urlList[0]).host;
+  } catch {
+    return null;
+  }
+})();
+
+if (sitemapHost && sitemapHost !== HOST) {
+  console.log(
+    `IndexNow : le sitemap annonce ${sitemapHost}, alors que la clé n'est vérifiable que sur ${HOST}.`,
+  );
+  console.log(
+    "Envoi ignoré — attendu tant que le domaine définitif n'est pas basculé. Rien à corriger : la clé est déjà dans public/ et sera servie depuis le domaine définitif.",
+  );
+  process.exit(0);
+}
+
 const res = await fetch("https://api.indexnow.org/indexnow", {
   method: "POST",
   headers: { "Content-Type": "application/json; charset=utf-8" },
