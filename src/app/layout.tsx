@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { StickyContactBar } from "@/components/contact-cta";
 import { AnalyticsEvents } from "@/components/analytics-events";
+import { Umami } from "@/components/umami";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { JsonLd, localBusinessSchema, personSchema, websiteSchema } from "@/lib/jsonld";
@@ -35,6 +36,20 @@ export const metadata: Metadata = {
   creator: site.name,
   publisher: site.name,
   category: "Santé",
+  // Renseignées par variables d'environnement après vérification du domaine
+  // dans Search Console / Bing Webmaster Tools — rien n'est émis si absentes.
+  verification: {
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : {}),
+    ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? {
+          other: {
+            "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION,
+          },
+        }
+      : {}),
+  },
   alternates: {
     types: {
       "application/rss+xml": "/rss.xml",
@@ -108,6 +123,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <AnalyticsEvents />
         <Analytics />
         <SpeedInsights />
+        <Umami />
         <JsonLd
           data={[localBusinessSchema(), personSchema(), websiteSchema()]}
         />

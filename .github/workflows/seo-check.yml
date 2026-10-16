@@ -1,0 +1,26 @@
+name: Contrôle SEO & performance
+
+# Garde-fou gratuit : interroge l'API PageSpeed Insights (Lighthouse : performance,
+# SEO, accessibilité, bonnes pratiques) sur les pages clés, une fois par semaine.
+# Aucune clé requise, quota public d'environ 25 000 requêtes par jour.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  pagespeed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PageSpeed Insights (mobile)
+        env:
+          ORIGIN: https://psychomotricite-nantes.vercel.app
+        run: |
+          for path in "/" "/contact" "/psychomotricite" "/seances-et-tarifs"; do
+            echo "::group::${ORIGIN}${path}"
+            curl -sS \
+              "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${ORIGIN}${path}&strategy=mobile&category=performance&category=seo&category=accessibility&category=best-practices" \
+              | jq -r '.lighthouseResult.categories | to_entries[] | "\(.key): \((.value.score * 100) | round)/100"'
+            echo "::endgroup::"
+          done

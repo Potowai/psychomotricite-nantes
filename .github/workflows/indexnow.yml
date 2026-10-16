@@ -1,0 +1,28 @@
+name: IndexNow
+
+# IndexNow est un protocole ouvert et gratuit : il prévient Bing, Yandex, Naver et
+# Seznam qu'une page a changé, au lieu d'attendre que leurs robots repassent.
+# Google ne fait pas partie du protocole (il s'appuie sur le sitemap).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Laisse le temps au déploiement Vercel de publier les nouvelles pages,
+      # sinon les URL envoyées renvoient encore l'ancienne version.
+      - name: Attendre le déploiement Vercel
+        run: sleep 90
+
+      - name: Signaler les URL du sitemap
+        run: node scripts/indexnow.mjs
