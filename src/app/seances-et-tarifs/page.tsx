@@ -99,6 +99,20 @@ const faqItems = [
       </p>
     ),
   },
+  {
+    question: "Quelle est la différence entre un bilan et un suivi ?",
+    answer: (
+      <p>
+        Le bilan psychomoteur est un temps d’évaluation : quelques rendez-vous
+        pour préciser la demande, observer la motricité fine et globale, le
+        rapport au temps et à l’espace, le vécu corporel et la sensorialité — et
+        dégager une première grille de compréhension, avec les difficultés comme
+        les ressources. Le suivi vient ensuite : des séances régulières, le plus
+        souvent une fois par semaine ou tous les quinze jours, autour de
+        médiations corporelles et d’échanges.
+      </p>
+    ),
+  },
 ];
 
 export default function SeancesEtTarifsPage() {

@@ -97,9 +97,9 @@ export const motifs: Motif[] = [
     label: "TDA-H",
     metaTitle: "TDA-H",
     metaDescription:
-      "Psychomotricité et TDA-H à Nantes : régulation, mouvement et appuis concrets pour les adolescent.es et adultes concerné.es. Manuela Edom, psychomotricienne.",
+      "Psychomotricité et TDA-H (TDAH) à Nantes : régulation, mouvement et appuis concrets pour les adolescent.es et adultes concerné.es. Manuela Edom, psychomotricienne.",
     title: "TDA-H : remettre du corps dans l’équation.",
-    lead: "J’accompagne des personnes concernées par d’autres neuroatypies, comme le TDA-H. Quand l’attention se disperse, quand le corps s’agite ou se met en pause, la psychomotricité propose des appuis concrets.",
+    lead: "J’accompagne des personnes concernées par d’autres neuroatypies, comme le TDA-H (aussi écrit TDAH). Quand l’attention se disperse, quand le corps s’agite ou se met en pause, la psychomotricité propose des appuis concrets.",
     sections: [
       {
         heading: "De quoi parle-t-on ?",
@@ -128,7 +128,7 @@ export const motifs: Motif[] = [
         heading: "Ce que la psychomotricité propose",
         paragraphs: [
           "La séance propose d’expérimenter plutôt que de contraindre : bouger, s’appuyer, se poser, sentir — et peu à peu repérer ce qui aide.",
-          "Le travail porte sur la régulation tonico-émotionnelle, le repérage des sensations, le rapport au temps et à l’espace, la motricité. Autant d’appuis qui peuvent se transférer au quotidien.",
+          "Le travail porte sur la régulation tonico-émotionnelle, le repérage des sensations, le rapport au temps et à l’espace, la motricité, ainsi que sur les fonctions exécutives — s’organiser, planifier, commencer et terminer. Autant d’appuis qui peuvent se transférer au quotidien.",
           "Les médiations corporelles — mouvement, respiration, toucher, matière — sont choisies avec vous, selon ce qui vous parle.",
         ],
       },
@@ -150,7 +150,7 @@ export const motifs: Motif[] = [
           "Non. Elle vient en complément d’un suivi médical ou psychologique, jamais à leur place.",
       },
       {
-        question: "À partir de quel âge ?",
+        question: "Recevez-vous les adultes concerné.es par un TDA-H ?",
         answer:
           "Je reçois surtout des adolescent.es et des adultes. Pour les enfants, cela dépend des situations : n’hésitez pas à m’écrire.",
       },
@@ -163,7 +163,7 @@ export const motifs: Motif[] = [
     label: "Anxiété & burn-out",
     metaTitle: "Anxiété & burn-out",
     metaDescription:
-      "Anxiété, stress chronique, épuisement professionnel : la psychomotricité offre un autre chemin, par le corps. Séances à Nantes avec Manuela Edom, psychomotricienne.",
+      "Anxiété, attaques de panique, stress chronique, burn-out et épuisement professionnel : la psychomotricité offre un autre chemin, par le corps. Séances à Nantes avec Manuela Edom, psychomotricienne.",
     title: "Anxiété, burn-out : passer par le corps pour faire un pas de côté.",
     lead: "Quand la tête tourne en boucle, le corps est un autre chemin. Passer par le corps permet de faire un pas de côté tout en allant explorer en profondeur — c’est aussi un moyen de cultiver ses ressources internes.",
     sections: [
@@ -181,7 +181,8 @@ export const motifs: Motif[] = [
           "Il n’est pas nécessaire d’être « au fond » pour consulter. Souvent, on vient parce qu’on sent qu’un équilibre s’est déplacé.",
         ],
         items: [
-          "une anxiété qui occupe beaucoup de place, des pensées en boucle",
+          "une anxiété — généralisée ou ponctuelle — qui occupe beaucoup de place, des pensées en boucle",
+          "des attaques de panique, un corps qui s’emballe sans prévenir",
           "un épuisement qui résiste au repos (burn-out)",
           "des tensions, douleurs ou somatisations liées au stress",
           "un sommeil difficile, un corps toujours en alerte",
@@ -229,14 +230,14 @@ export const motifs: Motif[] = [
     label: "Troubles dys",
     metaTitle: "Troubles dys",
     metaDescription:
-      "Dyspraxie, dysgraphie, dyslexie… : la psychomotricité s’intéresse au corps qui apprend. Bilan et séances à Nantes avec Manuela Edom, psychomotricienne D.E.",
+      "Dyspraxie, dysgraphie, dyslexie, trouble de la coordination… : la psychomotricité s’intéresse au corps qui apprend. Bilan et séances à Nantes avec Manuela Edom, psychomotricienne D.E.",
     title: "Troubles dys : le corps, la coordination, la confiance.",
     lead: "J’accompagne des personnes concernées par les troubles dys. Au-delà des apprentissages, la psychomotricité s’intéresse au corps qui apprend : coordination, motricité fine, repères dans le temps et l’espace — et l’estime de soi qui va avec.",
     sections: [
       {
         heading: "De quoi parle-t-on ?",
         paragraphs: [
-          "On regroupe sous « troubles dys » plusieurs troubles durables des apprentissages : dyspraxie (coordination), dyslexie, dysgraphie, dyscalculie, dysphasie… Ils ne disent rien de l’intelligence, mais rendent certains gestes ou certains apprentissages coûteux.",
+          "On regroupe sous « troubles dys » plusieurs troubles durables des apprentissages : dyspraxie — aussi appelée trouble de la coordination (TDC ou TAC) —, dyslexie, dysgraphie, dyscalculie, dysorthographie, dysphasie… Ils ne disent rien de l’intelligence, mais rendent certains gestes ou certains apprentissages coûteux.",
           "Le corps y est très présent : un geste maladroit, une écriture difficile, un repérage dans l’espace ou le temps qui demande beaucoup d’efforts, une fatigabilité importante.",
           "À force de fournir des efforts invisibles, la confiance en soi peut s’effriter. La psychomotricité prend en compte cette dimension autant que la motricité.",
         ],
@@ -247,8 +248,9 @@ export const motifs: Motif[] = [
           "Un bilan psychomoteur peut aider à comprendre ce qui se joue, et à ouvrir des pistes concrètes.",
         ],
         items: [
-          "une maladresse, une difficulté de coordination ou d’équilibre",
-          "une écriture laborieuse, un geste graphique coûteux",
+          "une maladresse, un enfant « maladroit » qui se cogne ou renverse souvent",
+          "une difficulté de coordination ou d’équilibre",
+          "une écriture laborieuse ou illisible, un geste graphique coûteux",
           "des repères dans le temps et l’espace difficiles à construire",
           "une fatigabilité importante dans les apprentissages",
           "un évitement, une perte de confiance, un sentiment d’échec",
@@ -294,14 +296,14 @@ export const motifs: Motif[] = [
     label: "Personnes âgées",
     metaTitle: "Personnes âgées",
     metaDescription:
-      "Les séances de psychomotricité s’adressent à toute personne, du bébé à la personne âgée. Équilibre, prévention des chutes, confiance : accompagnement à Nantes.",
+      "Les séances de psychomotricité s’adressent à toute personne, du bébé à la personne âgée. Équilibre, prévention des chutes, autonomie et confiance : accompagnement à Nantes.",
     title: "Grand âge : continuer d’habiter son corps.",
     lead: "Les séances de psychomotricité s’adressent à toute personne, du bébé à la personne âgée. Avec l’avancée en âge, le corps change — et avec lui, parfois, l’équilibre, la mémoire du geste, la confiance. La séance est un espace pour continuer à bouger, se sentir et se réassurer.",
     sections: [
       {
         heading: "De quoi parle-t-on ?",
         paragraphs: [
-          "Le vieillissement est une étape de la vie, un mouvement du corps parmi d’autres. Il peut s’accompagner de changements : équilibre plus fragile, motricité moins assurée, fatigabilité, peur de tomber.",
+          "Le vieillissement est une étape de la vie, un mouvement du corps parmi d’autres. Il peut s’accompagner de changements : équilibre plus fragile, motricité moins assurée, fatigabilité, peur de tomber, perte d’autonomie.",
           "Après une chute, la crainte peut s’installer et limiter les déplacements — ce qui entretient la perte de confiance. Certaines maladies neurologiques ou douleurs chroniques modifient aussi le rapport au corps.",
           "La séance de psychomotricité propose un temps doux et sécurisant, où le corps reste un lieu d’exploration et de plaisir, quel que soit l’âge.",
         ],
@@ -324,8 +326,8 @@ export const motifs: Motif[] = [
         heading: "Ce que la psychomotricité propose",
         paragraphs: [
           "La séance s’adapte à vos possibilités du moment. Elle peut se dérouler assis.e ou debout, à partir de mouvements simples, de la respiration, du toucher, de la détente.",
-          "Il s’agit d’entretenir la mobilité, l’équilibre et le repérage dans l’espace — mais aussi de retrouver la sécurité intérieure et le plaisir du mouvement.",
-          "Je peux, dans certaines situations, me déplacer à domicile ou sur le lieu de vie.",
+          "Il s’agit d’entretenir la mobilité, l’équilibre, la proprioception et le repérage dans l’espace — mais aussi de retrouver la sécurité intérieure et le plaisir du mouvement.",
+          "Je peux, dans certaines situations, me déplacer à domicile — dans le cadre d’un maintien à domicile — ou en établissement (EHPAD, résidence).",
         ],
       },
     ],

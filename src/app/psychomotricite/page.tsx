@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/contact-cta";
-import { Callout, Container, PageHero, PhotoPlaceholder, SectionTitle } from "@/components/ui";
+import { Callout, Container, Faq, PageHero, PhotoPlaceholder, SectionTitle } from "@/components/ui";
 import { motifs as motifPages } from "@/content/motifs";
-import { JsonLd, breadcrumbSchema, serviceSchema } from "@/lib/jsonld";
+import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/jsonld";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -12,6 +12,29 @@ export const metadata: Metadata = pageMetadata({
     "La psychomotricité s’intéresse aux liens entre les vécus corporels et psychiques. Une profession paramédicale reconnue par un diplôme d’État, pour toute personne du bébé à la personne âgée.",
   path: "/psychomotricite",
 });
+
+const faqItems = [
+  {
+    question: "Qu’est-ce que la psychomotricité ?",
+    answer:
+      "Une profession paramédicale qui s’intéresse aux liens entre le corps et la vie psychique : la motricité, les sensations, le tonus, le rapport au temps et à l’espace, la relation à l’autre. Elle s’exerce avec un diplôme d’État, comme l’orthophonie.",
+  },
+  {
+    question: "À quoi ça sert concrètement ?",
+    answer:
+      "À retrouver des appuis : mieux sentir son corps, réguler ce qui déborde, se repérer dans l’espace et dans le temps, oser bouger et prendre sa place. On passe par le mouvement, la relaxation, la respiration, la matière et la parole.",
+  },
+  {
+    question: "Est-ce que ça marche aussi pour un adulte ?",
+    answer:
+      "Oui. La psychomotricité ne s’adresse pas qu’aux enfants : je reçois des adolescent.es et des adultes, parfois longtemps après que les difficultés se sont installées. Aucun diagnostic n’est nécessaire pour venir.",
+  },
+  {
+    question: "Quelle différence avec l’orthophonie ou la psychologie ?",
+    answer:
+      "Ces approches se complètent plus qu’elles ne s’opposent. L’orthophoniste travaille le langage et les apprentissages du langage écrit ; le psychologue travaille la vie psychique et, selon sa formation, le bilan cognitif. La psychomotricité prend appui sur le corps, le mouvement et les sensations.",
+  },
+];
 
 const motifs = [
   {
@@ -212,6 +235,18 @@ export default function PsychomotricitePage() {
         </Container>
       </section>
 
+      <section className="border-b border-line/70 bg-paper-2">
+        <Container className="py-16 sm:py-20">
+          <SectionTitle
+            eyebrow="Questions fréquentes"
+            title="Ce qu’on me demande souvent."
+          />
+          <div className="mt-10 max-w-3xl">
+            <Faq items={faqItems} />
+          </div>
+        </Container>
+      </section>
+
       <CtaBand
         title="Une question sur votre situation ?"
         text="N’hésitez pas à me contacter pour m’expliquer votre demande : je vous proposerai un rendez-vous, ou je vous réorienterai vers un.e autre professionnel.le si besoin."
@@ -229,6 +264,9 @@ export default function PsychomotricitePage() {
             { name: "Accueil", path: "/" },
             { name: "La psychomotricité", path: "/psychomotricite" },
           ]),
+          faqSchema(
+            faqItems.map((f) => ({ question: f.question, answer: f.answer })),
+          ),
         ]}
       />
     </>

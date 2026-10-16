@@ -22,7 +22,8 @@ export function SiteFooter() {
             </p>
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-ink-2">
               Consultations de psychomotricité pour adolescent.es et adultes, au
-              cœur de Nantes.
+              cœur de Nantes et dans la métropole : Rezé, Saint-Herblain,
+              Orvault, Saint-Sébastien-sur-Loire.
             </p>
             <a
               href={site.otherSite.url}
