@@ -42,6 +42,9 @@ const motifs = [
   },
 ] as const;
 
+/* Texture d'abord, une seule couleur : son bleu */
+const motifAccent = "var(--color-azure)";
+
 const etapes = [
   {
     n: "01",
@@ -231,13 +234,27 @@ export default function HomePage() {
               >
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute right-6 top-4 font-display text-[3.25rem] leading-none text-ink/[0.07]"
+                  className="card-texture pointer-events-none absolute inset-0"
+                />
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    backgroundImage: `radial-gradient(135% 115% at 100% 0%, color-mix(in srgb, ${motifAccent} 14%, transparent), transparent 62%)`,
+                  }}
+                />
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute right-6 top-4 font-display text-[3.25rem] leading-none text-ink/[0.08]"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span
                   aria-hidden="true"
-                  className="relative mb-5 block h-1.5 w-10 rounded-full bg-ink/15"
+                  className="relative mb-5 block h-1.5 w-10 rounded-full"
+                  style={{
+                    backgroundColor: `color-mix(in srgb, ${motifAccent} 60%, transparent)`,
+                  }}
                 />
                 <h3 className="relative font-display text-xl text-ink">
                   {m.title}
