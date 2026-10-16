@@ -32,7 +32,7 @@ Deux leviers distincts :
 | 1.2 | Déclarer `psychomotriciennenantes.fr` comme domaine principal + rediriger `www` | Moi | Évite le contenu dupliqué |
 | 1.3 | Fournir **SIRET** et **ADELI / RPPS** | Manuela | Obligatoire pour les mentions légales et indispensable pour les annuaires |
 | 1.4 | Fournir les **photos** (5 emplacements « à fournir ») | Manuela | Les photos réelles améliorent le taux de contact et la confiance |
-| 1.5 | Créer la **Google Business Profile** (ou me donner l'accès) | Manuela + Alexis | **Le levier n°1** pour « psychomotricienne Nantes » |
+| 1.5 | **Optimiser** la fiche **Google Business Profile** existante (accès gestionnaire à confirmer) | Manuela + Alexis | **Le levier n°1** pour « psychomotricienne Nantes » : la fiche existe déjà, mais une fiche jamais retravaillée laisse la plupart des gains sur la table |
 | 1.6 | Clé **Resend** (ou autre) pour que le formulaire envoie vraiment les e-mails | Alexis | Sans elle, les messages ne partent pas |
 
 ---

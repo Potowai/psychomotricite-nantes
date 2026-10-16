@@ -76,18 +76,36 @@ Google, et elle alimente les réponses de Copilot.
 
 ## 4. Fiche Google Business Profile (le levier n°1)
 
-Voir `plan-seo-geo.md` §2 pour le détail. En résumé : c'est elle qui déclenche le
-pack local sur « psychomotricienne Nantes », bien plus que le contenu du site.
+**La fiche existe déjà** — il ne s'agit donc pas de la créer, mais de l'auditer et
+de la remettre à niveau : c'est là que se trouvent les gains. Voir
+`plan-seo-geo.md` §2 pour le détail. C'est elle qui déclenche le pack local sur
+« psychomotricienne Nantes », bien plus que le contenu du site.
 
-Points de vigilance :
+À vérifier, dans cet ordre :
 
+- **Accès gestionnaire** : la fiche est-elle bien réclamée, et le compte qui la
+  gère est-il accessible ? Une fiche non réclamée peut être modifiée par
+  n'importe qui — cas fréquent quand une ancienne agence l'a créée.
 - **Catégorie** : il n'existe pas de catégorie « psychomotricien » exacte. Partir
   de *Psychothérapeute* ou *Thérapeute*, puis compléter avec *Service de santé
-  mentale*.
+  mentale*. C'est la catégorie principale qui détermine les recherches sur
+  lesquelles la fiche peut apparaître.
 - **NAP rigoureusement identique** au site : 2 rue d'Allonville, 44000 Nantes,
   06 84 74 96 70.
 - **Horaires** : lundi et samedi uniquement.
-- **Avis** : le facteur n°2. Demander systématiquement, jamais d'avis acheté.
+- **Description** (750 caractères) : rédigée avec ses mots, pas de copier-coller
+  du site.
+- **Prestations** : bilan psychomoteur, suivi, douance (HPI, HQI/THQI), TDA-H,
+  troubles dys, anxiété / burn-out, personne âgée.
+- **Photos** : 10 ou plus — les mêmes visuels que les 5 emplacements « à fournir »
+  du site, dès qu'elle les envoie.
+- **Lien du site** : à basculer sur le nouveau site le jour du changement de DNS.
+- **Lien de rendez-vous** : « Prendre rendez-vous » vers `/contact`.
+- **Questions & réponses** : reprendre les questions déjà rédigées sur `/faq`.
+- **Publications** : une par mois suffit.
+- **Attributs** : sur rendez-vous, accessibilité PMR (déjà documentés sur le site).
+- **Avis** : le facteur n°2. Demander systématiquement, jamais d'avis acheté, et
+  répondre à chaque avis.
 
 ---
 

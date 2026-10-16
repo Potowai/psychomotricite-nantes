@@ -83,7 +83,7 @@ Ces éléments sont marqués dans le site et doivent être complétés par Manue
 - [ ] **Mentions légales** : numéro **SIRET** et numéro **ADELI / RPPS**.
 - [ ] **Photos professionnelles** récentes d'elle (le site utilise pour l'instant
       ses images existantes ; elle enverra de vraies photos).
-- [ ] **Fiche Google Business Profile** : à créer/optimiser (levier local majeur).
+- [ ] **Fiche Google Business Profile** : à optimiser — elle existe déjà (levier local majeur).
 - [ ] **Domaine** : confirmer l'accès au registrar et au DNS.
 - [ ] **Envoi des e-mails** du formulaire : créer la clé Resend (ou un service
       équivalent).
