@@ -13,7 +13,7 @@ import { fullAddress, site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Psychomotricienne à Nantes — adolescents & adultes",
   description:
-    "Manuela Edom, psychomotricienne diplômée d’État à Nantes. Séances pour adolescent.es et adultes, au cabinet du 2 rue d’Allonville. Douance (HQI/THQI), TSA, TDA-H, troubles dys. Appel ou SMS au 06 84 74 96 70.",
+    "Manuela Edom, psychomotricienne diplômée d’État à Nantes. Séances pour adolescent.es et adultes, au cabinet du 2 rue d’Allonville. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Appel ou SMS au 06 84 74 96 70.",
   path: "/",
   locale: "fr_FR",
   languages: { "fr-FR": "/", en: "/en", "x-default": "/" },
@@ -38,7 +38,7 @@ const motifs = [
   },
   {
     title: "Les neuroatypies",
-    text: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HQI/THQI. J’accompagne aussi les personnes concernées par les TSA, le TDA-H et/ou les troubles dys.",
+    text: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HPI ou HQI/THQI. J’accompagne aussi les personnes concernées par les TSA, le TDA-H et/ou les troubles dys.",
   },
 ] as const;
 
@@ -431,7 +431,7 @@ export default function HomePage() {
             <ul className="mt-8 space-y-4">
               <ResourceLink
                 href="/blog/douance-hqi-thqi-et-psychomotricite"
-                title="Douance (HQI/THQI) et psychomotricité"
+                title="Douance (HPI, HQI/THQI) et psychomotricité"
               />
               <ResourceLink
                 href="/blog/anxiete-burn-out-pourquoi-passer-par-le-corps"

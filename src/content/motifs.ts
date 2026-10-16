@@ -28,19 +28,19 @@ export type Motif = {
 export const motifs: Motif[] = [
   {
     slug: "douance-hqi-thqi",
-    label: "Douance (HQI / THQI)",
-    metaTitle: "Douance (HQI / THQI)",
+    label: "Douance (HPI, HQI / THQI)",
+    metaTitle: "Douance (HPI, HQI / THQI)",
     metaDescription:
-      "Psychomotricité et douance à Nantes : un espace pour le corps des personnes HQI/THQI, où l’intensité et la sensibilité peuvent se déposer. Manuela Edom, psychomotricienne.",
-    title: "Douance, HQI, THQI : quand le corps aussi a besoin de place.",
-    lead: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HQI/THQI. La psychomotricité offre un espace où l’intelligence n’a plus à tout porter — où le corps, lui, peut se déposer.",
+      "Psychomotricité et douance à Nantes : un espace pour le corps des personnes HPI, HQI ou THQI, où l’intensité et la sensibilité peuvent se déposer. Manuela Edom, psychomotricienne.",
+    title: "Douance, HPI, HQI : quand le corps aussi a besoin de place.",
+    lead: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HPI, HQI ou THQI. La psychomotricité offre un espace où l’intelligence n’a plus à tout porter — où le corps, lui, peut se déposer.",
     sections: [
       {
         heading: "De quoi parle-t-on ?",
         paragraphs: [
-          "La douance — ou haut potentiel intellectuel, HQI et THQI — désigne un fonctionnement cognitif particulier, souvent marqué par une grande rapidité de pensée, une intensité émotionnelle et une sensibilité forte.",
+          "La douance — aussi appelée haut potentiel intellectuel (HPI), ou HQI et THQI lorsque le quotient est très élevé — désigne un fonctionnement cognitif particulier, souvent marqué par une grande rapidité de pensée, une intensité émotionnelle et une sensibilité forte.",
           "Ce n’est ni une maladie, ni une supériorité : c’est une manière d’être au monde qui, à certains moments, peut devenir fatigante. Le sentiment de décalage, le besoin de sens, la difficulté à trouver sa place pèsent parfois plus que la pensée elle-même.",
-          "Chez beaucoup de personnes HQI/THQI, le corps est le premier à le dire : tensions, agitation, somatisations, difficulté à ralentir, à se poser, à se laisser traverser par une émotion sans être débordé.e.",
+          "Chez beaucoup de personnes HPI, HQI ou THQI, le corps est le premier à le dire : tensions, agitation, somatisations, difficulté à ralentir, à se poser, à se laisser traverser par une émotion sans être débordé.e.",
         ],
       },
       {
@@ -69,12 +69,12 @@ export const motifs: Motif[] = [
     ],
     note: {
       title: "Je suis aussi formatrice",
-      text: "Je suis formatrice sur la thématique de la douance (HQI/THQI), ainsi que sur la parentalité, le développement de l’enfant, le portage et la transculturalité.",
+      text: "Je suis formatrice sur la thématique de la douance (HPI, HQI/THQI), ainsi que sur la parentalité, le développement de l’enfant, le portage et la transculturalité.",
       tone: "sage",
     },
     faq: [
       {
-        question: "Faut-il un diagnostic de HQI pour consulter ?",
+        question: "Faut-il un diagnostic de HPI ou de HQI pour consulter ?",
         answer:
           "Non. Un diagnostic n’est pas nécessaire pour venir. Vous pouvez consulter parce que quelque chose vous pèse, sans avoir de mot pour le nommer.",
       },
@@ -84,7 +84,7 @@ export const motifs: Motif[] = [
           "Non — la douance n’est pas quelque chose à guérir. Le travail porte sur le vécu : les tensions, la fatigue, la place que vous vous autorisez à prendre.",
       },
       {
-        question: "Recevez-vous les adolescents HQI/THQI ?",
+        question: "Recevez-vous les adolescent.es HPI ou HQI/THQI ?",
         answer:
           "Oui. Je reçois des adolescent.es et des adultes, et des enfants selon les situations.",
       },

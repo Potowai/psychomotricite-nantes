@@ -8,7 +8,7 @@ export function GET() {
   lines.push(`# ${site.name} — ${site.role} à Nantes`);
   lines.push("");
   lines.push(
-    `> Cabinet de psychomotricité à Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psychomotricienne diplômée d’État (D.E.) depuis ${site.practitioner.since}, reçoit adolescent.es et adultes au ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Spécialités : douance (HQI/THQI), TSA, TDA-H, troubles dys. Consultations les lundis et samedis.`,
+    `> Cabinet de psychomotricité à Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psychomotricienne diplômée d’État (D.E.) depuis ${site.practitioner.since}, reçoit adolescent.es et adultes au ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Spécialités : douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Consultations les lundis et samedis.`,
   );
   lines.push("");
 
@@ -47,7 +47,7 @@ export function GET() {
     `- [La psychomotricité](${site.url}/psychomotricite) : définition, profession paramédicale (décret n°88-6559 du 6 mai 1988), motifs de consultation`,
   );
   lines.push(
-    `- [Qui suis-je ?](${site.url}/qui-suis-je) : parcours, douance (HQI/THQI), TSA, TDA-H, troubles dys, transculturalité, formations`,
+    `- [Qui suis-je ?](${site.url}/qui-suis-je) : parcours, douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys, transculturalité, formations`,
   );
   lines.push(
     `- [Séances et tarifs](${site.url}/seances-et-tarifs) : déroulé, bilan psychomoteur, médiations, tarifs, aides au financement`,

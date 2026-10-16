@@ -96,9 +96,9 @@ const faq: Item[] = [
   },
   {
     category: "Douance & neuroatypies",
-    question: "Accompagnez-vous les personnes HQI/THQI ?",
+    question: "Accompagnez-vous les personnes HPI ou HQI/THQI ?",
     answer:
-      "Oui. Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HQI/THQI. J’accompagne également des personnes concernées par les TSA, le TDA-H et/ou les troubles dys.",
+      "Oui. Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HPI ou HQI/THQI. J’accompagne également des personnes concernées par les TSA, le TDA-H et/ou les troubles dys.",
   },
   {
     category: "Douance & neuroatypies",

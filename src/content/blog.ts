@@ -20,17 +20,17 @@ export type Article = {
 export const articles: Article[] = [
   {
     slug: "douance-hqi-thqi-et-psychomotricite",
-    title: "Douance (HQI/THQI) et psychomotricité : quand le corps pense aussi",
+    title: "Douance (HPI, HQI/THQI) et psychomotricité : quand le corps pense aussi",
     description:
       "Chez les personnes à haut potentiel, le corps porte souvent une part du trop-plein. Ce que la psychomotricité vient écouter, et comment se déroule un accompagnement.",
     date: "2026-03-04",
     updated: "2026-10-02",
     readingMinutes: 6,
-    tags: ["Douance", "HQI/THQI", "Adolescents", "Adultes"],
+    tags: ["Douance", "HPI, HQI/THQI", "Adolescents", "Adultes"],
     blocks: [
       {
         type: "lead",
-        text: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HQI/THQI. Ce n’est pas un hasard : chez elles, le corps est souvent le premier lieu où l’intensité se manifeste — et le dernier que l’on pense à écouter.",
+        text: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HPI, HQI/THQI. Ce n’est pas un hasard : chez elles, le corps est souvent le premier lieu où l’intensité se manifeste — et le dernier que l’on pense à écouter.",
       },
       {
         type: "p",
@@ -241,7 +241,7 @@ export const articles: Article[] = [
       {
         type: "note",
         title: "Douance et neuroatypies",
-        text: "J’accompagne régulièrement des personnes HQI/THQI, ainsi que des personnes concernées par les TSA, le TDA-H et/ou les troubles dys.",
+        text: "J’accompagne régulièrement des personnes HPI, HQI/THQI, ainsi que des personnes concernées par les TSA, le TDA-H et/ou les troubles dys.",
       },
     ],
   },

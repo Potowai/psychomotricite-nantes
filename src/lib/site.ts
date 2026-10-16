@@ -10,7 +10,7 @@ export const site = {
   shortName: "Manuela Edom",
   tagline: "Psychomotricienne à Nantes",
   description:
-    "Psychomotricienne diplômée d'État à Nantes, Manuela Edom reçoit adolescent.es et adultes dans un cabinet paramédical au 2 rue d'Allonville. Douance, HQI/THQI, TSA, TDA-H, troubles dys.",
+    "Psychomotricienne diplômée d'État à Nantes, Manuela Edom reçoit adolescent.es et adultes dans un cabinet paramédical au 2 rue d'Allonville. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys.",
 
   practitioner: {
     firstName: "Manuela",

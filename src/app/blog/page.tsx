@@ -10,7 +10,7 @@ import { formatDate } from "@/lib/format";
 export const metadata: Metadata = pageMetadata({
   title: "Ressources — comprendre le lien corps-esprit",
   description:
-    "Articles sur la psychomotricité, la douance (HQI/THQI), les neuroatypies, l’anxiété et le rapport au corps, par Manuela Edom, psychomotricienne à Nantes.",
+    "Articles sur la psychomotricité, la douance (HPI, HQI/THQI), les neuroatypies, l’anxiété et le rapport au corps, par Manuela Edom, psychomotricienne à Nantes.",
   path: "/blog",
 });
 

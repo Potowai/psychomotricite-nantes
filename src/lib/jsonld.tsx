@@ -97,7 +97,7 @@ export function personSchema() {
     knowsLanguage: ["fr", "en", "es"],
     knowsAbout: [
       "Psychomotricité",
-      "Douance (HQI/THQI)",
+      "Douance (HPI, HQI/THQI)",
       "Trouble du spectre de l'autisme (TSA)",
       "TDA-H",
       "Troubles dys",
