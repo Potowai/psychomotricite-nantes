@@ -86,9 +86,11 @@ export default function ConfidentialitePage() {
             <h2 className="font-display text-2xl text-ink">Cookies</h2>
             <p>
               Ce site ne dépose pas de cookie publicitaire ni de traceur de suivi
-              à des fins commerciales. Si un outil de mesure d’audience est
-              utilisé, il est configuré de manière respectueuse de votre vie
-              privée.
+              à des fins commerciales. La mesure d’audience repose sur Vercel Web
+              Analytics et Vercel Speed Insights, deux outils sans cookie qui
+              n’enregistrent aucune donnée personnelle : les statistiques sont
+              agrégées et anonymes (pages consultées, provenance, type
+              d’appareil, durée de chargement).
             </p>
 
             <h2 className="font-display text-2xl text-ink">Vos droits</h2>
