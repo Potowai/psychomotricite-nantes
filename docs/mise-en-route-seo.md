@@ -86,9 +86,8 @@ de la remettre à niveau : c'est là que se trouvent les gains. Voir
 - **Accès gestionnaire** : la fiche est-elle bien réclamée, et le compte qui la
   gère est-il accessible ? Une fiche non réclamée peut être modifiée par
   n'importe qui — cas fréquent quand une ancienne agence l'a créée.
-- **Catégorie** : il n'existe pas de catégorie « psychomotricien » exacte. Partir
-  de *Psychothérapeute* ou *Thérapeute*, puis compléter avec *Service de santé
-  mentale*. C'est la catégorie principale qui détermine les recherches sur
+- **Catégorie** : la catégorie **Psychomotricien** existe et est déjà en place
+  sur la fiche — rien à changer de ce côté. C'est la catégorie principale qui détermine les recherches sur
   lesquelles la fiche peut apparaître.
 - **NAP rigoureusement identique** au site : 2 rue d'Allonville, 44000 Nantes,
   06 84 74 96 70.

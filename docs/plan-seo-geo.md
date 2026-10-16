@@ -42,8 +42,8 @@ Deux leviers distincts :
 Le SEO local vit à 80 % hors du site.
 
 1. **Google Business Profile**
-   - Catégorie principale : *Psychothérapeute* ou *Thérapeute* (pas de catégorie
-     « psychomotricien » exacte → compléter avec *Service de santé mentale*).
+   - Catégorie principale : **Psychomotricien** — elle existe et est déjà en
+     place sur la fiche. Rien à changer de ce côté.
    - Adresse 2 rue d'Allonville, 44000 Nantes ; téléphone ; site ; horaires **lundi
      et samedi** ; zone desservie ; lien « Prendre rendez-vous » vers `/contact`.
    - Description rédigée à partir de ses propres mots (pas de copier-coller).
