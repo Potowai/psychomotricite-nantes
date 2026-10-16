@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Palette — papier chaud, encre bleu-nuit, accents d'aquarelle       */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-paper: #f6f1e8;
+  --color-paper-2: #efe7da;
+  --color-paper-3: #e4d8c6;
+  --color-ink: #1d2a33;
+  --color-ink-2: #47565f;
+  --color-ink-3: #7a868d;
+  --color-line: #d9cdb9;
+
+  /* Bleus — on reprend le bleu vif de Manuela (#0693e3) */
+  --color-blue: #1d6aa8;
+  --color-blue-deep: #14486f;
+  --color-blue-soft: #d9ecfb;
+  --color-azure: #0693e3;
+  --color-azure-deep: #0577ba;
+
+  /* Corail / rouge (#e8554e) */
+  --color-corail: #e8554e;
+  --color-corail-deep: #c33a33;
+  --color-corail-soft: #fbe2df;
+
+  /* Vert sauge (#67a671) */
+  --color-sage: #679a6d;
+  --color-sage-soft: #e2ecdd;
+
+  /* Ocre */
+  --color-ochre: #c2913f;
+  --color-ochre-soft: #f5e7cd;
+
+  --color-terracotta: #be5a45;
+
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.25rem;
+  --shadow-soft: 0 1px 2px rgba(29, 42, 51, 0.04), 0 12px 32px -12px rgba(29, 42, 51, 0.16);
+  --shadow-lift: 0 2px 4px rgba(29, 42, 51, 0.05), 0 24px 56px -20px rgba(29, 42, 51, 0.22);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-azure);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-azure);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Utilitaires maison                                                 */
+/* ------------------------------------------------------------------ */
+@utility container-page {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+}
+
+@utility rule {
+  border: 0;
+  border-top: 1px solid var(--color-line);
+}
+
+/* Lien éditorial souligné, réutilisé dans le corps de texte */
+@utility link-quiet {
+  color: var(--color-blue-deep);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-blue) 40%, transparent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 150ms ease, color 150ms ease;
+}
+
+@utility link-quiet-hover {
+  &:hover {
+    color: var(--color-blue);
+    text-decoration-color: var(--color-blue);
+  }
+}
+
+/* Motif de fond très discret : grain de papier */
+@utility paper-grain {
+  background-image: radial-gradient(
+    rgba(29, 42, 51, 0.035) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-up {
+    animation: none;
+  }
+}
