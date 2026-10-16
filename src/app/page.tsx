@@ -15,6 +15,8 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Manuela Edom, psychomotricienne diplômée d’État à Nantes. Séances pour adolescent.es et adultes, au cabinet du 2 rue d’Allonville. Douance (HQI/THQI), TSA, TDA-H, troubles dys. Appel ou SMS au 06 84 74 96 70.",
   path: "/",
+  locale: "fr_FR",
+  languages: { "fr-FR": "/", en: "/en", "x-default": "/" },
 });
 
 const motifs = [

@@ -10,6 +10,8 @@ type PageMeta = {
   publishedTime?: string;
   modifiedTime?: string;
   noindex?: boolean;
+  locale?: string;
+  languages?: Record<string, string>;
 };
 
 /**
@@ -25,19 +27,21 @@ export function pageMetadata({
   publishedTime,
   modifiedTime,
   noindex = false,
+  locale = "fr_FR",
+  languages,
 }: PageMeta): Metadata {
   const canonical = path === "/" ? "/" : path;
 
   return {
     title,
     description,
-    alternates: { canonical },
+    alternates: { canonical, ...(languages ? { languages } : {}) },
     robots: noindex
       ? { index: false, follow: false }
       : { index: true, follow: true },
     openGraph: {
       type,
-      locale: "fr_FR",
+      locale,
       url: canonical,
       siteName: `${site.name} — ${site.role}`,
       title,

@@ -1,3 +1,4 @@
+import { motifs } from "@/content/motifs";
 import { site } from "./site";
 
 const url = site.url;
@@ -57,7 +58,23 @@ export function localBusinessSchema() {
       { "@type": "MedicalTherapy", name: "Bilan psychomoteur" },
       { "@type": "MedicalTherapy", name: "Séance de psychomotricité de suivi" },
     ],
-    sameAs: [site.otherSite.url],
+    sameAs: [
+      site.otherSite.url,
+      ...(site.social.googleBusiness ? [site.social.googleBusiness] : []),
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Motifs de consultation",
+      itemListElement: motifs.map((motif) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: motif.label,
+          description: motif.metaDescription,
+          url: `${url}/psychomotricite/${motif.slug}`,
+        },
+      })),
+    },
     isAccessibleForFree: false,
     publicAccess: true,
     smokingAllowed: false,
@@ -167,8 +184,34 @@ export function serviceSchema(service: {
     description: service.description,
     url: `${url}${service.path}`,
     provider: { "@id": businessId },
-    areaServed: { "@type": "City", name: "Nantes" },
+    areaServed: [
+      { "@type": "City", name: "Nantes" },
+      { "@type": "AdministrativeArea", name: "Loire-Atlantique" },
+    ],
     serviceType: service.name,
+    category: "Psychomotricité",
+  };
+}
+
+/** Page médicale — renforce la compréhension par les moteurs et les IA. */
+export function medicalWebPageSchema(page: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: page.name,
+    description: page.description,
+    url: `${url}${page.path}`,
+    inLanguage: "fr-FR",
+    about: { "@id": businessId },
+    publisher: { "@id": businessId },
+    audience: {
+      "@type": "Patient",
+      name: "Adolescent.es et adultes à Nantes",
+    },
   };
 }
 

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { articlesFor } from "@/content/blog";
+import { motifs } from "@/content/motifs";
 import { site } from "@/lib/site";
 
 const SITE_UPDATED = new Date("2026-10-16");
@@ -48,7 +49,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      url: `${site.url}/en`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
   ];
+
+  const motifRoutes: MetadataRoute.Sitemap = motifs.map((motif) => ({
+    url: `${site.url}/psychomotricite/${motif.slug}`,
+    lastModified: SITE_UPDATED,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
 
   const articleRoutes: MetadataRoute.Sitemap = articlesFor().map((article) => ({
     url: `${site.url}/blog/${article.slug}`,
@@ -57,5 +71,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...articleRoutes];
+  return [...staticRoutes, ...motifRoutes, ...articleRoutes];
 }

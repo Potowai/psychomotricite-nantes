@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/contact-cta";
 import { Callout, Container, PageHero, PhotoPlaceholder, SectionTitle } from "@/components/ui";
+import { motifs as motifPages } from "@/content/motifs";
 import { JsonLd, breadcrumbSchema, serviceSchema } from "@/lib/jsonld";
 import { pageMetadata } from "@/lib/seo";
 
@@ -179,6 +180,34 @@ export default function PsychomotricitePage() {
                 <p className="mt-5 leading-relaxed text-ink-2">{m.outro}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-16 border-t border-line pt-10">
+            <p className="eyebrow">Pour aller plus loin</p>
+            <h2 className="mt-3 font-display text-[1.7rem] leading-tight text-ink sm:text-[2rem]">
+              Certains motifs méritent une page à part entière.
+            </h2>
+            <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {motifPages.map((m) => (
+                <li key={m.slug}>
+                  <Link
+                    href={`/psychomotricite/${m.slug}`}
+                    className="group flex h-full flex-col rounded-[1.25rem] border border-line bg-paper p-6 transition-colors hover:border-azure/40"
+                  >
+                    <span className="font-display text-xl leading-snug text-ink group-hover:text-azure-deep">
+                      {m.label}
+                    </span>
+                    <span className="mt-2 text-sm leading-relaxed text-ink-2">
+                      {m.metaDescription}
+                    </span>
+                    <span className="mt-4 text-sm font-medium text-azure-deep">
+                      En savoir plus{" "}
+                      <span aria-hidden="true">→</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </section>
