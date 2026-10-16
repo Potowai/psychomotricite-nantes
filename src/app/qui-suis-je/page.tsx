@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Qui suis-je ? — Manuela Edom, psychomotricienne à Nantes",
+  title: "Qui suis-je ?",
   description:
     "Psychomotricienne diplômée d’État depuis 2016, j’exerce à Nantes auprès d’adolescent.es et d’adultes. Douance (HQI/THQI), TSA, TDA-H, troubles dys, transculturalité.",
   path: "/qui-suis-je",
