@@ -20,7 +20,10 @@ export function SiteFooter() {
             <p className="mt-1 text-sm uppercase tracking-[0.2em] text-ink-3">
               {site.role}
             </p>
-            <p className="mt-6 max-w-xs text-sm leading-relaxed text-ink-2">
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-2">
+              Bilan et séances de psychomotricité sur rendez-vous.
+            </p>
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-2">
               Consultations de psychomotricité pour adolescent.es et adultes, à
               Nantes et dans la métropole : Rezé, Saint-Herblain, Orvault,
               Saint-Sébastien-sur-Loire.

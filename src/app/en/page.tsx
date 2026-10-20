@@ -15,7 +15,7 @@ import { mailHref, site, smsHref, telHref } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "English-speaking psychomotor therapist in Nantes",
   description:
-    "Manuela Edom is a state-certified psychomotor therapist (psychomotricienne D.E.) in Nantes who practices in English. Sessions for teenagers and adults — giftedness (HQI/THQI), ADHD, anxiety, burnout.",
+    "Manuela Edom is a state-certified psychomotor therapist (psychomotricienne D.E.) in Nantes who practices in English. Sessions for teenagers and adults, and children in specific situations — giftedness (HQI/THQI), ADHD, anxiety, burnout.",
   path: "/en",
   locale: "en_GB",
   languages: { "fr-FR": "/", en: "/en", "x-default": "/" },
@@ -50,7 +50,7 @@ export default function EnglishPage() {
         ]}
         eyebrow="English"
         title="Psychomotor therapy in Nantes, in English."
-        lead={`I am ${site.name.split(" ")[0]} ${site.name.split(" ")[1]}, a state-certified psychomotor therapist (psychomotricienne D.E.) practising in Nantes since ${site.practitioner.since}. I see teenagers and adults — and I practise in English as well as French.`}
+        lead={`I am ${site.name.split(" ")[0]} ${site.name.split(" ")[1]}, a state-certified psychomotor therapist (psychomotricienne D.E.) practising in Nantes since ${site.practitioner.since}. I see teenagers and adults — and children in specific situations — and I practise in English as well as French.`}
       />
 
       <Container className="py-16 lg:py-24">
@@ -102,10 +102,12 @@ export default function EnglishPage() {
             <div className="mt-6 space-y-5 text-lg leading-[1.75] text-ink-2">
               <p>
                 The first appointments are about meeting and clarifying what
-                brings you here. This is also when we do the psychomotor
-                assessment — a first picture of where you are in your body:
-                fine and gross motor skills, your relationship with time and
-                space, your sensory world.
+                brings you here, at your pace and without judgement. If needed,
+                a psychomotor assessment can be carried out; it is not a
+                mandatory step before starting sessions. It offers a first
+                picture of where you are in your body: fine and gross motor
+                skills, your relationship with time and space, your sensory
+                world.
               </p>
               <p>
                 After that, sessions move between bodily mediation and talking:
@@ -163,7 +165,7 @@ export default function EnglishPage() {
           serviceSchema({
             name: "Psychomotor therapy in English — Nantes",
             description:
-              "English-speaking psychomotor therapy sessions in Nantes for teenagers and adults.",
+              "English-speaking psychomotor therapy sessions in Nantes for teenagers and adults, and children in specific situations.",
             path: "/en",
           }),
           medicalWebPageSchema({

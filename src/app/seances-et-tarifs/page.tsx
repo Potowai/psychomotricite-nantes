@@ -107,8 +107,8 @@ const faqItems = [
         pour préciser la demande, observer la motricité fine et globale, le
         rapport au temps et à l’espace, le vécu corporel et la sensorialité — et
         dégager une première grille de compréhension, avec les difficultés comme
-        les ressources. Le suivi vient ensuite : des séances régulières, le plus
-        souvent une fois par semaine ou tous les quinze jours, autour de
+        les ressources. Le suivi peut venir ensuite : des séances régulières, le
+        plus souvent une fois par semaine ou tous les quinze jours, autour de
         médiations corporelles et d’échanges.
       </p>
     ),
@@ -139,14 +139,16 @@ export default function SeancesEtTarifsPage() {
               <div className="mt-6 space-y-5 text-lg leading-[1.78] text-ink-2">
                 <p>
                   Les premiers rendez-vous permettent de préciser la demande et
-                  de se rencontrer. C’est aussi le temps du{" "}
+                  de se rencontrer. Si besoin, un{" "}
                   <strong className="font-semibold text-ink">
                     bilan psychomoteur
-                  </strong>
-                  , afin de dégager une première grille de compréhension — une
-                  première photographie de là où en est la personne dans son
-                  corps : motricité fine, motricité globale, rapport au temps et
-                  à l’espace, vécu corporel, rapport au corps, sensorialité.
+                  </strong>{" "}
+                  peut être réalisé ; ce n’est pas une étape obligatoire pour
+                  donner suite à des séances. Il permet de dégager une première
+                  grille de compréhension — une première photographie de là où en
+                  est la personne dans son corps : motricité fine, motricité
+                  globale, rapport au temps et à l’espace, vécu corporel, rapport
+                  au corps, sensorialité.
                 </p>
                 <p>
                   Cela permet de voir quelles sont les difficultés, mais aussi
@@ -161,8 +163,9 @@ export default function SeancesEtTarifsPage() {
                 title="Des médiations corporelles, et des échanges."
               />
               <p className="mt-6 text-lg leading-[1.78] text-ink-2">
-                Après le bilan, les séances de psychomotricité s’articulent autour
-                de médiations corporelles et d’échanges. Les médiations utilisées
+                Lorsqu’un suivi est décidé, les séances de psychomotricité
+                s’articulent autour de médiations corporelles et d’échanges. Les
+                médiations utilisées
                 peuvent être :
               </p>
               <ul className="mt-7 flex flex-wrap gap-2.5">

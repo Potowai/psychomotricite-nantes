@@ -182,10 +182,12 @@ Ces éléments sont marqués dans le site et doivent être complétés par Manue
 - [ ] **Mentions légales** : numéro **SIRET** et numéro **ADELI / RPPS**.
 - [x] **Portrait professionnel** de Manuela (photo : Fabrice Rault), intégré en
       couleur, détouré et recadré pour ne garder que le haut des mains.
-- [ ] **Photos complémentaires** : deux photos sont attendues — la façade du
-      nouveau cabinet et l’intérieur de la salle de séance. Un emplacement
-      « visuel à venir » reste disponible pour une photo ou une illustration de
-      terrain.
+- [ ] **Visuels complémentaires** : la photo de la façade du nouveau cabinet
+      est attendue. Deux illustrations réalisées par une amie de Manuela sont
+      également prévues : un moment de séance (médiation corporelle, matière,
+      mouvement ou toucher) et une image d’écoute et de sensorialité (gros plan :
+      mains, souffle, mouvement, texture). Un emplacement « visuel à venir »
+      reste disponible pour une image de terrain.
 - [ ] **Fiche Google Business Profile** : à compléter — l'audit détaillé et les
       textes prêts à copier sont dans `docs/fiche-google-business.md`.
 - [ ] **Domaine** : confirmer l'accès au registrar et au DNS.
@@ -202,7 +204,7 @@ traitements aquarelle/encres originaux et sur les photos de Manuela. Si elle
 souhaite un univers visuel proche, il faudra des visuels libres de droits ou
 créés sur mesure.
 
-Les emplacements de photos en attente affichent un **visuel indicatif qui décrit
-la photo à fournir** (façade, salle de séance), jamais une image d'elle inventée.
+Les emplacements de visuels en attente affichent un **repère indicatif qui décrit
+l’image à fournir** (façade, illustrations), jamais une image d'elle inventée.
 Le portrait intégré est crédité à Fabrice Rault ; son cadrage conserve seulement
 le haut des mains, comme demandé.

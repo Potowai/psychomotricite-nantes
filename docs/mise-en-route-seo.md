@@ -97,7 +97,7 @@ de la remettre à niveau : c'est là que se trouvent les gains. Voir
 - **Prestations** : bilan psychomoteur, suivi, douance (HPI, HQI/THQI), TDA-H,
   troubles dys, anxiété / burn-out, personne âgée.
 - **Photos** : 10 ou plus — à commencer par les 2 photos attendues sur le site
-  (façade et salle de séance), dès qu'elle les envoie (le portrait est reçu).
+  (façade et illustrations), dès qu'elle les envoie (le portrait est reçu).
 - **Lien du site** : à basculer sur le nouveau site le jour du changement de DNS.
 - **Lien de rendez-vous** : « Prendre rendez-vous » vers `/contact`.
 - **Questions & réponses** : reprendre les questions déjà rédigées sur `/faq`.

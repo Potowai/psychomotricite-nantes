@@ -103,11 +103,12 @@ recherches précises :
 
 ### 2.5 Les photos
 
-2 photos seulement, pour une cible de 10 minimum. Ce sont **les mêmes visuels que
-les emplacements « photo à fournir » du site** : la façade du nouveau cabinet et
-l’intérieur de la salle de séance. Le portrait est déjà fourni, en couleur,
-détouré et recadré pour ne garder que le haut des mains (photo : Fabrice Rault).
-Ajouter ensuite une photo de temps en temps plutôt que tout d'un coup.
+La photo de la façade du nouveau cabinet est attendue. Pour Google Business,
+ajouter aussi des photos réelles de l’intérieur et de l’ambiance du cabinet, en
+complément des deux illustrations prévues pour le site. Le portrait est déjà
+fourni, en couleur, détouré et recadré pour ne garder que le haut des mains
+(photo : Fabrice Rault). Ajouter ensuite une photo de temps en temps plutôt que
+tout d'un coup.
 
 ### 2.6 Les publications et les questions
 

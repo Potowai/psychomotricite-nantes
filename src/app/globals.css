@@ -4,13 +4,13 @@
 /*  Palette — papier chaud, encre bleu-nuit, accents d'aquarelle       */
 /* ------------------------------------------------------------------ */
 @theme {
-  --color-paper: #fcfaf6;
-  --color-paper-2: #f5efe6;
-  --color-paper-3: #eadfd0;
+  --color-paper: #fffaf4;
+  --color-paper-2: #fbeee5;
+  --color-paper-3: #f2ddcf;
   --color-ink: #17252e;
   --color-ink-2: #3f505a;
   --color-ink-3: #5d6b73;
-  --color-line: #ded2c0;
+  --color-line: #e8d5c5;
 
   /* Bleus — le bleu vif de Manuela, légèrement densifié pour la lisibilité */
   --color-blue: #1268a8;

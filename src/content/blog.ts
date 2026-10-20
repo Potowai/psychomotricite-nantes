@@ -62,11 +62,11 @@ export const articles: Article[] = [
       { type: "h2", text: "Comment se passe l’accompagnement" },
       {
         type: "p",
-        text: "Les premiers rendez-vous permettent de préciser la demande et de se rencontrer. C’est aussi le temps du bilan psychomoteur, afin de dégager une première grille de compréhension — une première photographie de là où en est la personne dans son corps : motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité.",
+        text: "Les premiers rendez-vous permettent de préciser la demande et de se rencontrer. Si besoin, un bilan psychomoteur peut être réalisé, afin de dégager une première grille de compréhension — une première photographie de là où en est la personne dans son corps : motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité. Ce n’est pas une étape obligatoire pour commencer des séances.",
       },
       {
         type: "p",
-        text: "Après le bilan, les séances s’articulent autour de médiations corporelles et d’échanges : relaxation, chant, danse, musique, dessin, argile, toucher thérapeutique, auto-massages, exercices de respiration. Une séance dure environ 40 minutes, le plus souvent une fois par semaine ou tous les 15 jours.",
+        text: "Lorsqu’un suivi est mis en place, les séances s’articulent autour de médiations corporelles et d’échanges : relaxation, chant, danse, musique, dessin, argile, toucher thérapeutique, auto-massages, exercices de respiration. Une séance dure environ 40 minutes, le plus souvent une fois par semaine ou tous les 15 jours.",
       },
       { type: "h2", text: "Quand consulter ?" },
       {
@@ -148,7 +148,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "Les premiers rendez-vous permettent de préciser la demande et de se rencontrer. C’est aussi le temps du bilan psychomoteur, afin de dégager une première grille de compréhension, une première photographie de là où en est la personne dans son corps.",
+        text: "Les premiers rendez-vous permettent de préciser la demande et de se rencontrer. Si besoin, un bilan psychomoteur peut être réalisé, afin de dégager une première grille de compréhension, une première photographie de là où en est la personne dans son corps. Il n’est pas obligatoire pour commencer un suivi.",
       },
       { type: "h2", text: "Ce que l’on observe" },
       {

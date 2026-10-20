@@ -15,7 +15,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Psychomotricienne à Nantes — adolescents & adultes",
   description:
-    "Manuela Edom, psychomotricienne diplômée d’État à Nantes. Séances pour adolescent.es et adultes, au cabinet du 4 rue de la Mitrie. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Appel ou SMS au 06 84 74 96 70.",
+    "Manuela Edom, psychomotricienne diplômée d’État à Nantes. Séances pour adolescent.es et adultes, et enfants sur demandes spécifiques, au cabinet du 4 rue de la Mitrie. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Appel ou SMS au 06 84 74 96 70.",
   path: "/",
   locale: "fr_FR",
   languages: { "fr-FR": "/", en: "/en", "x-default": "/" },
@@ -24,11 +24,11 @@ export const metadata: Metadata = pageMetadata({
 const motifs = [
   {
     title: "Le corps et la motricité",
-    text: "Retard de développement, maladresse, troubles de l’équilibre ou de la coordination, tics, bégaiement, douleurs chroniques, syndrome post-chute, maladies, troubles neurologiques, handicap.",
+    text: "Retard de développement, maladresse, troubles de l’équilibre ou de la coordination, tics, bégaiement, douleurs chroniques, syndrome post-chute, maladies, troubles neurologiques.",
   },
   {
     title: "Les émotions et la psyché",
-    text: "Confiance en soi, anxiété, dépression, addictions, psychotraumatismes, difficultés relationnelles, troubles du comportement, troubles psychosomatiques, épuisement professionnel / burn out.",
+    text: "Confiance en soi, anxiété, dépression, addictions, psychotraumatismes, difficultés relationnelles, troubles du comportement, gestion de la colère, troubles du sommeil, troubles de l’alimentation, troubles psychosomatiques, épuisement professionnel / burn out.",
   },
   {
     title: "Le rapport au corps",
@@ -36,11 +36,11 @@ const motifs = [
   },
   {
     title: "Les étapes de la vie",
-    text: "Notre corps grandit et traverse des seuils : puberté, grossesse, vieillissement. Autant de périodes de sensibilité où une séance peut être un espace sécurisant.",
+    text: "Notre corps grandit et traverse des seuils : puberté, grossesse, vieillissement. Autant de périodes de sensibilité où une séance de psychomotricité peut être un espace sécurisant.",
   },
   {
     title: "Les neuroatypies",
-    text: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HPI ou HQI/THQI. J’accompagne aussi les personnes concernées par les TSA, le TDA-H et/ou les troubles dys.",
+    text: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HQI/THQI. J’accompagne aussi les personnes concernées par les TSA, le TDA-H et/ou les troubles dys.",
   },
 ] as const;
 
@@ -51,12 +51,12 @@ const etapes = [
   {
     n: "01",
     title: "Se rencontrer",
-    text: "Les premiers rendez-vous permettent de préciser la demande et de se rencontrer. Vous expliquez votre situation ; je vous écoute, sans jugement et à votre rythme.",
+    text: "Le premier rendez-vous permet de préciser votre demande, ce que je peux vous proposer, et de se rencontrer, sans jugement et à votre rythme.",
   },
   {
     n: "02",
     title: "Le bilan psychomoteur",
-    text: "C’est le temps d’une première photographie : où en est la personne dans son corps — motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité. On y lit les difficultés, et aussi les ressources.",
+    text: "Si besoin, un bilan psychomoteur peut être réalisé. Ce n’est pas une étape obligatoire pour donner suite à des séances. C’est le temps d’une première photographie : où en est la personne dans son corps — motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité. On y lit les difficultés, et aussi les ressources.",
   },
   {
     n: "03",
@@ -158,6 +158,9 @@ export default function HomePage() {
                 <dt className="text-ink-3">Public</dt>
                 <dd className="mt-1 font-display text-2xl text-ink">
                   ados et adultes
+                  <span className="mt-1 block font-sans text-xs leading-snug text-ink-3">
+                    (et enfants sur demandes spécifiques)
+                  </span>
                 </dd>
               </div>
               <div>
@@ -429,8 +432,9 @@ export default function HomePage() {
           <PhotoPlaceholder
             className="rounded-[2rem] lg:order-2"
             ratio="4 / 3"
-            title="La salle de séance, au cabinet"
-            note="Photo couleur de l’intérieur de la salle, sans visage identifiable de patient.es. Format conseillé : 1600 × 1200 px."
+            label="Illustration à venir"
+            title="Un moment de séance : médiation corporelle, matière, mouvement ou toucher"
+            note="Illustration de l’amie de Manuela, sans visage identifiable. Format conseillé : 1600 × 1200 px."
           />
           <div className="lg:order-1">
             <SectionTitle

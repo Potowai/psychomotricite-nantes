@@ -38,7 +38,7 @@ const faq: Item[] = [
     category: "Consulter",
     question: "Que se passe-t-il lors d’un premier rendez-vous ?",
     answer:
-      "Les premiers rendez-vous permettent de préciser la demande et de se rencontrer. C’est aussi le temps du bilan psychomoteur : dégager une première grille de compréhension et une première photographie de là où en est la personne dans son corps — motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité.",
+      "Le premier rendez-vous permet de préciser votre demande, ce que je peux vous proposer, et de se rencontrer, sans jugement et à votre rythme. Si besoin, un bilan psychomoteur peut être réalisé ; il n’est pas obligatoire pour commencer des séances. C’est le temps d’une première photographie : où en est la personne dans son corps — motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité.",
   },
   {
     category: "Tarifs & remboursement",

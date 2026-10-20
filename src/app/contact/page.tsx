@@ -90,6 +90,7 @@ export default function ContactPage() {
             <PhotoPlaceholder
               className="mt-6 rounded-[1.5rem]"
               ratio="4 / 3"
+              label="Photo à venir"
               title="Façade du nouveau cabinet, au 4 rue de la Mitrie"
               note="Photo couleur de la nouvelle façade à venir."
             />

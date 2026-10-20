@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import portraitManuela from "@/assets/images/portrait-manuela.webp";
 import { CtaBand } from "@/components/contact-cta";
 import { Callout, Container, PageHero, PhotoPlaceholder, SectionTitle } from "@/components/ui";
@@ -11,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Qui suis-je ?",
   description:
-    "Psychomotricienne diplômée d’État depuis 2016, j’exerce à Nantes auprès d’adolescent.es et d’adultes. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys, transculturalité.",
+    "Psychomotricienne diplômée d’État depuis 2016, j’exerce à Nantes auprès d’adolescent.es et d’adultes, et d’enfants sur demandes spécifiques. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys, transculturalité.",
   path: "/qui-suis-je",
 });
 
@@ -30,6 +29,7 @@ const formations = [
   "le développement de l’enfant",
   "le portage",
   "la transculturalité",
+  "le psychotraumatisme",
   "la douance (HQI/THQI)",
 ];
 
@@ -52,6 +52,7 @@ export default function QuiSuisJePage() {
             <Image
               src={portraitManuela}
               alt="Portrait de Manuela Edom, psychomotricienne à Nantes, souriante, le haut des mains au premier plan."
+              loading="eager"
               sizes="(max-width: 1024px) 100vw, 38vw"
               className="portrait-fade h-auto w-full"
             />
@@ -153,14 +154,16 @@ export default function QuiSuisJePage() {
             title="Une démarche d’aller vers, ancrée dans le réel."
           />
           <p className="mt-6 text-lg leading-relaxed text-ink-2">
-            Dans une démarche d’aller vers, j’ai travaillé auprès des
-            demandeurs.ses d’asile et sur des hébergements d’urgence pour mères
-            isolées, la plupart étrangères, pendant 3 ans.
+            Dans une démarche d’aller vers, j’ai travaillé pendant 5 ans auprès
+            des demandeurs.ses d’asile, sur des hébergements d’urgence pour mères
+            isolées (la plupart étrangères), ainsi qu’en bidonvilles.
           </p>
 
-          <h3 className="mt-10 font-display text-xl text-ink">
-            Je suis formatrice sur les thématiques de :
-          </h3>
+          <p className="mt-10 text-lg leading-relaxed text-ink-2">
+            Je suis formatrice en école du travail social et en école de
+            psychomotricité, ainsi qu’auprès de soignant·es en formation
+            continue, sur des thématiques telles que :
+          </p>
           <ul className="mt-4 flex flex-wrap gap-2">
             {formations.map((f) => (
               <li
@@ -175,24 +178,17 @@ export default function QuiSuisJePage() {
           <Callout title="Langues" tone="sage">
             <p>
               Je parle français (langue maternelle), anglais (B2), espagnol (B1)
-              et j’ai quelques notions d’arabe et de roumain (très débutante).
-              Les langues pour les séances sont donc le français et l’anglais.
+              et j’ai quelques notions d’arabe et de roumain (très débutante dans
+              les deux). Les langues pour les séances sont donc le français et
+              l’anglais.
             </p>
             <p className="mt-3">{site.languages.interpretation}</p>
           </Callout>
-
-          <p className="mt-8 text-lg leading-relaxed text-ink-2">
-            Pour en savoir plus sur le déroulé des séances et les tarifs,{" "}
-            <Link href="/seances-et-tarifs" className="text-blue-deep link-quiet">
-              consultez la page Séances &amp; tarifs
-            </Link>
-            .
-          </p>
         </div>
       </Container>
 
       <CtaBand
-        title="Faisons connaissance"
+        title="Prendre contact"
         text="Expliquez-moi votre demande en quelques mots : je vous dirai si je peux vous accompagner, et comment."
       />
 

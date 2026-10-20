@@ -32,7 +32,7 @@ Deux leviers distincts :
 | 1.1 | Basculer le DNS de `psychomotriciennenantes.fr` vers Vercel | Alexis (accès du registraire) | Le site est en ligne sur `psychomotricite-nantes.vercel.app` mais pas encore sur son vrai domaine |
 | 1.2 | Déclarer `psychomotriciennenantes.fr` comme domaine principal + rediriger `www` | Moi | Évite le contenu dupliqué |
 | 1.3 | Fournir **SIRET** et **ADELI / RPPS** | Manuela | Obligatoire pour les mentions légales et indispensable pour les annuaires |
-| 1.4 | Fournir les **photos** (façade et salle de séance ; portrait reçu) | Manuela | Les photos réelles améliorent le taux de contact et la confiance |
+| 1.4 | Fournir la **photo de façade** et les **deux illustrations** (portrait reçu) | Manuela | Les visuels réels et les illustrations augmentent la confiance et l’attachement |
 | 1.5 | **Optimiser** la fiche **Google Business Profile** existante (accès gestionnaire à confirmer) | Manuela + Alexis | **Le levier n°1** pour « psychomotricienne Nantes » : la fiche existe déjà, mais une fiche jamais retravaillée laisse la plupart des gains sur la table |
 | 1.6 | Clé **Resend** (ou autre) pour que le formulaire envoie vraiment les e-mails | Alexis | Sans elle, les messages ne partent pas |
 
