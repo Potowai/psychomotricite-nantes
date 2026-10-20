@@ -5,6 +5,7 @@ Fiche auditée : **Manuela Edom - Psychomotricienne**
 
 - Identifiant de lieu (place ID) : `ChIJV6EZVXTvBUgRwwYgEIICP5w`
 - Coordonnées de la fiche actuelle : 47.22498, -1.5310864 — plus code `6FF9+XH Nantes` (ancienne adresse, à remplacer par le 4 rue de la Mitrie)
+- Coordonnées vérifiées du nouveau cabinet : 47.2271603, -1.5330165 (OpenStreetMap, 4 rue de la Mitrie)
 
 C'est le levier n°1 du SEO local : c'est la fiche qui déclenche le pack local sur
 « psychomotricienne Nantes », bien plus que le contenu du site. Elle existe déjà —

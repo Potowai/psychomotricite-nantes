@@ -255,6 +255,14 @@ export default function SeancesEtTarifsPage() {
                 sociale. Des aides existent — voir ci-dessous.
               </p>
             </Callout>
+
+            <Callout title="Ordonnance" tone="sage">
+              <p>
+                La psychomotricité est une profession paramédicale : une
+                prescription médicale est obligatoire pour engager un bilan ou un
+                suivi.
+              </p>
+            </Callout>
           </div>
         </div>
       </Container>

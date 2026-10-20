@@ -8,7 +8,7 @@ export function GET() {
   lines.push(`# ${site.name} — ${site.role} à Nantes`);
   lines.push("");
   lines.push(
-    `> Cabinet de psychomotricité à Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psychomotricienne diplômée d’État (D.E.) depuis ${site.practitioner.since}, reçoit adolescent.es et adultes au ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Spécialités : douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Consultations du lundi au vendredi.`,
+    `> Cabinet de psychomotricité à Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psychomotricienne diplômée d’État (D.E.) depuis ${site.practitioner.since}, reçoit adolescent.es et adultes au ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Spécialités : douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Consultations du lundi au vendredi, sur rendez-vous.`,
   );
   lines.push("");
 

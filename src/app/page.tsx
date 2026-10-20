@@ -162,7 +162,7 @@ export default function HomePage() {
               <div>
                 <dt className="text-ink-3">Au cabinet</dt>
                 <dd className="mt-1 font-display text-2xl text-ink">
-                  du lundi au vendredi
+                  du lundi au vendredi, sur rendez-vous
                 </dd>
               </div>
             </dl>
@@ -387,7 +387,7 @@ export default function HomePage() {
           <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
             <InfoCell
               label="Consultations"
-              value="Du lundi au vendredi"
+              value="Du lundi au vendredi, sur rendez-vous"
               accent="bg-azure"
             />
             <InfoCell

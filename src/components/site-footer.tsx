@@ -63,7 +63,7 @@ export function SiteFooter() {
               </div>
               <div className="flex gap-2">
                 <dt className="text-ink-3">Accès</dt>
-                <dd>Sur rendez-vous</dd>
+                <dd>{site.access.summary}</dd>
               </div>
             </dl>
           </div>

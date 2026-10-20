@@ -16,7 +16,8 @@ Deux leviers distincts :
 - Next.js 16, rendu statique, hébergé sur Vercel (déploiement auto depuis GitHub).
 - Titres + descriptions uniques, canoniques, Open Graph / Twitter, `metadataBase`.
 - `sitemap.xml`, `robots.txt`, `rss.xml`, `manifest.webmanifest`, `llms.txt`.
-- Données structurées : `MedicalBusiness` (avec géo-coordonnées, horaires, adresse),
+- Données structurées : `MedicalBusiness` (avec géo-coordonnées, adresse et tarifs ;
+  pas d’horaires tant que les créneaux exacts ne sont pas confirmés),
   `Person`, `WebSite`, `Service`, `Article`, `BreadcrumbList`, `FAQPage`.
 - 308 depuis toutes les anciennes URLs WordPress (préserve les liens et le jus SEO).
 - En-têtes de sécurité, images optimisées via `next/image`.

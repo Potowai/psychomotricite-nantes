@@ -102,9 +102,9 @@ export default function OpengraphImage() {
           }}
         >
           <div style={{ display: "flex" }}>
-            4 rue de la Mitrie, 44000 Nantes
+            {site.address.street}, {site.address.postalCode} {site.address.city}
           </div>
-          <div style={{ display: "flex" }}>06 84 74 96 70</div>
+          <div style={{ display: "flex" }}>{site.contact.phoneDisplay}</div>
         </div>
       </div>
     ),

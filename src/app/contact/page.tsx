@@ -14,7 +14,7 @@ import { mailHref, site, smsHref, telHref } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Contact & plan d’accès à Nantes",
   description:
-    "Prendre rendez-vous avec Manuela Edom, psychomotricienne à Nantes : 06 84 74 96 70 (appel ou SMS), medom@psychomotricite.com. Cabinet pluridisciplinaire, 4 rue de la Mitrie, 44000 Nantes, du lundi au vendredi.",
+    "Prendre rendez-vous avec Manuela Edom, psychomotricienne à Nantes : 06 84 74 96 70 (appel ou SMS), medom@psychomotricite.com. Cabinet pluridisciplinaire, 4 rue de la Mitrie, 44000 Nantes, du lundi au vendredi, sur rendez-vous.",
   path: "/contact",
 });
 
@@ -28,7 +28,7 @@ export default function ContactPage() {
         ]}
         eyebrow="Contact & rendez-vous"
         title="Prendre rendez-vous."
-        lead="Vous pouvez me contacter par mail, SMS ou appel. Vous pouvez aussi m’écrire via le formulaire : je vous réponds en général sous 24 à 48 h ouvrées."
+        lead="Vous pouvez me contacter par mail, SMS ou appel. Vous pouvez aussi m’écrire via le formulaire : je vous réponds en général sous 24 à 48 h ouvrées. Une prescription médicale est obligatoire pour engager un bilan ou un suivi."
       />
 
       {/* Coordonnées en évidence */}

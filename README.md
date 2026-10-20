@@ -73,7 +73,8 @@ Merci de ne pas le réécrire en langage marketing générique.
 
 - Un titre et une **méta description uniques par page**, une URL canonique, des
   balises Open Graph et Twitter cohérentes.
-- **Données structurées JSON-LD** : `MedicalBusiness` (NAP, horaires, géo),
+- **Données structurées JSON-LD** : `MedicalBusiness` (NAP, géo, tarifs ; pas
+  d’horaires tant que les créneaux exacts ne sont pas confirmés),
   `Person`, `WebSite`, `Service`, `FAQPage`, `BreadcrumbList`, `Article`,
   `MedicalWebPage`.
 - `sitemap.xml`, `robots.txt`, `manifest.webmanifest` générés par Next.
