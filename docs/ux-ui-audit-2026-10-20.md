@@ -13,8 +13,9 @@
 
 L’ossature est solide : routes, focus, étiquettes de formulaire et responsive
 sont propres. Les écarts les plus visibles étaient concentrés dans les grilles
-de cartes et dans deux passages sans respiration. Sept corrections ont été
-apportées.
+de cartes et dans deux passages sans respiration. Dix corrections ont été
+apportées, puis quatre de plus lors d’une seconde passe sur les points
+signalés.
 
 | Priorité | Constat | État |
 |---|---|---|
@@ -25,6 +26,9 @@ apportées.
 | Accessibilité | Étiquette « Transports » à 4,22:1 (seuil 4,5:1) | Corrigé |
 | Confort | Liens de navigation à 17 px de haut, footer à 15–20 px | Corrigé |
 | Rythme | 96 px de marge vide entre le CTA et le footer | Corrigé |
+| Majeur | Formulaire : une seule alerte globale, aucune erreur par champ | Corrigé |
+| Majeur | Bannière de langue en pleine largeur, par-dessus le texte | Corrigé |
+| Moyen | Cadre de la carte blanc tant que les tuiles ne chargent pas | Corrigé |
 
 ## Constats détaillés
 
@@ -137,17 +141,83 @@ après le padding du CTA, sans vide artificiel.
 
 ## Points à surveiller
 
-1. **Carte OpenStreetMap** : l’iframe apparaît vide dans les captures headless
-   (chargement paresseux / réseau). À vérifier dans un navigateur réel avant de
-   conclure à un problème visuel.
-2. **Bannière de langue** : elle est fixe en bas de l’écran et peut recouvrir une
-   ligne de contenu tant qu’elle n’est pas fermée. Elle est volontairement
-   discrète et mémorisée, mais on peut la déplacer ou la réduire si elle gêne.
-3. **Formulaire** : les erreurs sont annoncées par un seul `role="alert"`, sans
-   `aria-invalid` ni message champ par champ. C’est utilisable, mais une
-   validation par champ serait la prochaine amélioration d’accessibilité.
+1. **Bannière de langue** : corrigée — voir ci-dessous, section « Deuxième
+   passe ».
+2. **Formulaire** : corrigé — validation champ par champ, résumé d'erreurs et
+   gestion du focus.
+3. **Carte OpenStreetMap** : vérifiée dans un vrai navigateur, elle s'affiche
+   correctement (les tuiles `tile.openstreetmap.org` répondent 200). Les
+   captures headless la montraient vide à cause du `loading="lazy"` : l'image
+   était prise avant le chargement des tuiles. Le cadre a désormais un fond
+   teinté, pour qu'un chargement lent ne ressemble pas à un trou blanc.
 4. **Contenu en attente** : photo de façade et deux illustrations. Les
-   emplacements sont prêts et documentés.
+   emplacements sont prêts, documentés, et leur traitement graphique a été
+   repris (papier texturé, dégradé d'aquarelle, filet plus lisible).
+
+## Deuxième passe — reprise des points signalés
+
+### 08 · Majeur · Formulaire — validation champ par champ
+
+Le formulaire n'affichait qu'une alerte globale : un champ vide ne disait rien,
+et le message unique ne disait pas lequel corriger.
+
+**Correction**
+
+- validation à la volée, message sous chaque champ fautif, icône d'alerte ;
+- `aria-invalid="true"` et `aria-describedby` sur chaque champ en erreur ;
+- résumé d'erreurs en haut du formulaire (`role="alert"`), listant chaque
+  problème avec un lien vers le champ concerné ;
+- le focus part sur le résumé à l'échec de l'envoi, puis sur le message de
+  succès (`role="status"`) ;
+- l'API renvoie désormais les erreurs par champ
+  (`{ ok: false, error, fields: { nom, email, … } }`) ;
+- le téléphone n'est exigé que si l'on choisit « Téléphone » ou « SMS » ;
+- le message doit dépasser 10 caractères pour être exploitable.
+
+```text
+Soumission vide :
+  role=alert  "Le formulaire n'a pas pu être envoyé" + 4 liens
+  aria-invalid  nom, email, message, consent
+  focus  → résumé d'erreurs
+Message trop court :
+  "Quelques mots de plus aideront à orienter votre demande."
+Canal téléphone sans numéro :
+  "Un numéro de téléphone est nécessaire pour être recontacté."
+Envoi valide :
+  role=status  "Merci, c'est bien envoyé." + focus sur le message
+```
+
+### 09 · Majeur · Bannière de langue — elle recouvrait le contenu
+
+La bannière occupait toute la largeur en bas de l'écran et se superposait aux
+lignes de texte en cours de lecture.
+
+**Correction**
+
+- au repos, elle tient dans un onglet rond de 44 px dans le coin de l'écran ;
+- au survol, au focus clavier ou au clic, elle se déploie au-dessus de
+  l'onglet, hors flux (position absolue) : elle ne pousse jamais la page ;
+- `aria-expanded` sur le bouton, `inert` sur le panneau replié, `Échap` pour
+  refermer, mémorisation du choix dans `localStorage` ;
+- placée juste après l'en-tête dans le DOM, elle est atteinte tôt au clavier.
+
+```text
+repos      onglet 44 × 44 px, panneau opacity 0
+survol     panneau 320 × 54 px, opacity 1
+recouvre   0 élément de contenu au repos
+clavier    onglet atteignable, Entrée déploie le panneau
+Échap     referme le panneau, focus rendu à l'onglet
+fermer     la bannière ne réapparaît pas, même après rechargement
+```
+
+### 10 · Moyen · Cadre de la carte — plus de trou blanc possible
+
+Le bloc de la carte avait un fond blanc par défaut, ce qui donnait l'impression
+d'une zone cassée pendant le chargement des tuiles.
+
+**Correction :** fond `bg-paper-2` sur le cadre et hauteur minimale garantie,
+l'adresse du cabinet restant affichée juste au-dessus sur les deux pages
+concernées.
 
 ## Vérifications
 
@@ -156,3 +226,27 @@ npm run lint      OK
 npx tsc --noEmit  OK
 npm run build     OK (34 pages)
 ```
+
+## Deuxième passe — reprise des points signalés (suite)
+
+### 11 · Accessibilité · Formulaire — chaque champ porte son erreur
+
+```text
+Avant :  role=alert unique, aucun aria-invalid, aucun aria-describedby
+Après :  aria-invalid  nom, email, message, consent
+         aria-describedby → id du message d'erreur
+         rôle alert sur le résumé, role status sur la confirmation
+```
+
+Le contrôle des cases à cocher et des boutons radio est porté par leur
+libellé complet (38 px de haut), la cible cliquable n'est donc pas le carré
+de 13 px du contrôle lui-même.
+
+### 12 · Cohérence · Champs du formulaire
+
+Le champ « Âge » et le champ « Motif » n'ont pas d'indication d'obligation :
+ils restent facultatifs, et le texte « Champs obligatoires marqués d'un * »
+sous le bouton couvre l'ensemble. Le champ « Téléphone » est également
+facultatif par défaut, l'exigence conditionnée est expliquée sous le choix du
+canal de contact.
+

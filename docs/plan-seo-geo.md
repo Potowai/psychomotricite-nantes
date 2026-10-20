@@ -122,7 +122,7 @@ Le SEO local vit à 80 % hors du site.
     depuis les États-Unis, une redirection par région l'enverrait vers `/en` et
     sortirait tout le site français de l'index. Le signal utilisé est la langue du
     navigateur (`Accept-Language` / `navigator.languages`), et il ne sert qu'à
-    **proposer** l'autre version dans une bannière refermable
+    **proposer** l'autre version dans un onglet discret
     (`src/components/language-banner.tsx`). Jamais de redirection.
 - **Core Web Vitals** : audit LCP / CLS / INP (Lighthouse), polices, images.
 - **Accessibilité** : contrastes, navigation clavier, `alt` — bon pour l'humain et Google.

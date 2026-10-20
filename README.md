@@ -61,7 +61,7 @@ npm run lint     # ESLint
 | Contenu des 5 pages « motifs » | `src/content/motifs.ts` |
 | Formulaire de contact (champs) | `src/components/contact-form.tsx` |
 | Traitement du formulaire | `src/app/api/contact/route.ts` |
-| Bandeau « autre langue » | `src/components/language-banner.tsx` |
+| Suggestion « autre langue » | `src/components/language-banner.tsx` |
 | Images | `src/assets/images/` |
 | Redirections et en-têtes de sécurité | `next.config.ts` |
 
@@ -101,8 +101,10 @@ l'enverrait vers l'anglais, sortant tout le site français de l'index.
 À la place :
 
 - `hreflang` (`fr-FR`, `en`, `x-default`) déclaré dans les métadonnées ;
-- une **bannière refermable** (`src/components/language-banner.tsx`) qui propose
-  l'autre version selon la langue du navigateur, une seule fois ;
+- une **suggestion de l'autre langue** (`src/components/language-banner.tsx`)
+  proposée selon la langue du navigateur, une seule fois : au repos, c'est un
+  onglet rond de 44 px dans le coin de l'écran, qui se déploie au survol, au
+  focus ou au clic sans jamais recouvrir le texte ;
 - `src/components/document-lang.tsx` pour que `/en` déclare bien `lang="en"` (la
   racine du site est en `lang="fr"` et Next.js n'autorise qu'une seule balise
   `<html>`).

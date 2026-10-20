@@ -61,21 +61,44 @@ export async function POST(request: NextRequest) {
     const message = asString(data.message, 4000);
     const consent = data.consent === "on" || data.consent === true || data.consent === "true";
 
-    if (!nom || !email || !message) {
-      return Response.json(
-        { ok: false, error: "Merci de renseigner votre nom, votre e-mail et votre message." },
-        { status: 422 },
-      );
+    // Erreurs renvoyées champ par champ : le formulaire peut ainsi signaler
+    // le champ fautif plutôt qu'un message global.
+    const champs: Record<string, string> = {};
+
+    if (!nom) {
+      champs.nom = "Merci d’indiquer votre nom et prénom.";
     }
-    if (!isEmail(email)) {
-      return Response.json(
-        { ok: false, error: "L’adresse e-mail semble invalide." },
-        { status: 422 },
-      );
+    if (!email) {
+      champs.email = "Merci d’indiquer votre adresse e-mail.";
+    } else if (!isEmail(email)) {
+      champs.email = "Cette adresse e-mail semble incomplète.";
+    }
+    if (!message) {
+      champs.message = "Merci de décrire votre demande en quelques mots.";
+    } else if (message.length < 10) {
+      champs.message =
+        "Quelques mots de plus aideront à orienter votre demande.";
+    }
+    if (
+      (preference === "Téléphone" || preference === "SMS") &&
+      !telephone
+    ) {
+      champs.telephone = `Un numéro de téléphone est nécessaire pour être recontacté${
+        preference === "SMS" ? " par SMS" : ""
+      }.`;
     }
     if (!consent) {
+      champs.consent =
+        "Merci d’accepter que vos informations soient utilisées pour vous recontacter.";
+    }
+
+    if (Object.keys(champs).length > 0) {
       return Response.json(
-        { ok: false, error: "Merci d’accepter d’être recontacté.e." },
+        {
+          ok: false,
+          error: "Merci de corriger les points signalés ci-dessous.",
+          fields: champs,
+        },
         { status: 422 },
       );
     }

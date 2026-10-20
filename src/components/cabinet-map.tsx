@@ -9,6 +9,11 @@ type CabinetMapProps = {
 /**
  * Carte navigable du cabinet, partagée entre l'accueil et la page contact.
  * L'iframe est chargée à la demande pour ne pas ralentir le premier rendu.
+ *
+ * Le cadre reste teinté (papier) tant que les tuiles OpenStreetMap ne sont
+ * pas arrivées : la page ne doit jamais ressembler à un trou blanc. L'adresse
+ * et l'itinéraire restent accessibles en toutes circonstances, juste au-dessus
+ * de la carte sur les deux pages qui l'emploient.
  */
 export function CabinetMap({
   className = "",
@@ -26,13 +31,16 @@ export function CabinetMap({
 
   return (
     <div className={className}>
-      <div className="overflow-hidden rounded-[1.5rem] border border-line">
+      <div
+        className="overflow-hidden rounded-[1.5rem] border border-line bg-paper-2"
+        style={{ minHeight: height }}
+      >
         <iframe
           title={`Plan d’accès au cabinet — ${fullAddress}`}
           src={mapSrc}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="w-full"
+          className="block w-full"
           style={{ height }}
         />
       </div>

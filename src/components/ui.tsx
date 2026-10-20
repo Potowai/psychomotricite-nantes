@@ -203,6 +203,10 @@ export function Faq({
  * Emplacement photo : bloc de remplacement clairement identifiable, à utiliser
  * tant que les photographies définitives ne sont pas fournies. Le libellé
  * indique précisément quel cliché produire.
+ *
+ * Le cadre est traité comme une illustration éditoriale à part entière
+ * (papier texturé, filet, motif d'aquarelle) pour que la page reste composée
+ * et lisible en attendant le visuel définitif.
  */
 export function PhotoPlaceholder({
   title,
@@ -219,9 +223,17 @@ export function PhotoPlaceholder({
 }) {
   return (
     <figure
-      className={`flex w-full min-w-0 max-w-full flex-col items-center justify-center gap-4 self-start rounded-2xl border border-dashed border-azure/45 bg-blue-soft/40 p-8 text-center ${className}`}
+      className={`relative flex w-full min-w-0 max-w-full flex-col items-center justify-center gap-4 self-start overflow-hidden rounded-2xl border border-dashed border-azure/45 bg-paper-2/70 p-8 text-center ${className}`}
       style={{ aspectRatio: ratio }}
     >
+      <span
+        aria-hidden="true"
+        className="card-texture pointer-events-none absolute inset-0 opacity-70"
+      />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-azure/10 to-transparent"
+      />
       <span
         aria-hidden="true"
         className="grid h-12 w-12 place-items-center rounded-full border border-azure/40 bg-paper text-azure-deep"
@@ -240,7 +252,7 @@ export function PhotoPlaceholder({
           <circle cx="12" cy="12.3" r="3.3" />
         </svg>
       </span>
-      <figcaption className="max-w-xs">
+      <figcaption className="relative max-w-xs">
         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-azure-deep">
           {label}
         </span>

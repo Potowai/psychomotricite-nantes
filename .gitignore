@@ -37,6 +37,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# captures du panneau navigateur (outil de revue UI)
+.openchamber
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

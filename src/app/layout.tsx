@@ -116,12 +116,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Aller au contenu principal
         </a>
         <SiteHeader />
+        {/* Placée juste après l'en-tête : l'onglet de langue reste ainsi
+            accessible tôt au clavier, sans parcourir toute la page. */}
+        <LanguageBanner />
         <main id="contenu" className="flex-1">
           {children}
         </main>
         <SiteFooter />
         <StickyContactBar />
-        <LanguageBanner />
         <AnalyticsEvents />
         <Analytics />
         <SpeedInsights />
