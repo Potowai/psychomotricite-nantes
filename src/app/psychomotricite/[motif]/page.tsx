@@ -103,7 +103,7 @@ export default async function MotifPage(
           </div>
 
           {related.length > 0 && (
-            <div className="rounded-[1.75rem] border border-line bg-paper-2/60 p-7 sm:p-9">
+            <div className="rounded-[1.75rem] border border-line bg-paper-2 p-7 sm:p-9">
               <p className="eyebrow">À lire</p>
               <ul className="mt-5 space-y-5">
                 {related.map((article) => (

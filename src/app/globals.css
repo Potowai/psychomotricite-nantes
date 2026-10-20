@@ -1,45 +1,50 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
-/*  Palette — papier chaud, encre bleu-nuit, accents d'aquarelle       */
+/*  Palette — craie claire, encre bleu-nuit, accents d'aquarelle        */
+/*                                                                     */
+/*  Le fond est quasi neutre (3 points d'écart entre rouge et bleu) :   */
+/*  plus de voile jaune sur toute la page, la lecture est plus nette et  */
+/*  les bleus de l'aquarelle ressortent. L'encre devient un bleu nuit   */
+/*  plutôt qu'un noir gris, et les accents gagnent en chroma.           */
 /* ------------------------------------------------------------------ */
 @theme {
-  --color-paper: #fffaf4;
-  --color-paper-2: #fbeee5;
-  --color-paper-3: #f2ddcf;
-  --color-ink: #17252e;
-  --color-ink-2: #3f505a;
-  --color-ink-3: #5d6b73;
-  --color-line: #e8d5c5;
+  --color-paper: #fdfcfa;
+  --color-paper-2: #f8ece2;
+  --color-paper-3: #f1e4d6;
+  --color-ink: #152a3c;
+  --color-ink-2: #3a4b56;
+  --color-ink-3: #55646d;
+  --color-line: #e5d9cb;
 
   /* Bleus — le bleu vif de Manuela, légèrement densifié pour la lisibilité */
-  --color-blue: #1268a8;
-  --color-blue-deep: #0f466b;
-  --color-blue-soft: #ddeefb;
-  --color-azure: #078bd6;
-  --color-azure-deep: #0673b0;
+  --color-blue: #0f6cae;
+  --color-blue-deep: #0d3f63;
+  --color-blue-soft: #dcecfa;
+  --color-azure: #0a8ade;
+  --color-azure-deep: #0a6aae;
 
   /* Corail / rouge */
-  --color-corail: #e8524b;
-  --color-corail-deep: #c73a34;
-  --color-corail-soft: #fbe2df;
+  --color-corail: #e64a3e;
+  --color-corail-deep: #c33a2f;
+  --color-corail-soft: #fbe0dc;
 
   /* Vert sauge */
-  --color-sage: #5f9468;
-  --color-sage-soft: #e2ecdd;
+  --color-sage: #4f9270;
+  --color-sage-soft: #e0ebda;
 
   /* Ocre */
-  --color-ochre: #c08a35;
-  --color-ochre-soft: #f5e7cd;
+  --color-ochre: #b57d26;
+  --color-ochre-soft: #f6e6c6;
 
-  --color-terracotta: #b95540;
+  --color-terracotta: #b4503a;
 
   --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --radius-card: 1.25rem;
-  --shadow-soft: 0 1px 2px rgba(23, 37, 46, 0.04), 0 12px 32px -12px rgba(23, 37, 46, 0.16);
-  --shadow-lift: 0 2px 4px rgba(23, 37, 46, 0.05), 0 24px 56px -20px rgba(23, 37, 46, 0.22);
+  --shadow-soft: 0 1px 2px rgba(21, 42, 60, 0.04), 0 12px 32px -12px rgba(21, 42, 60, 0.16);
+  --shadow-lift: 0 2px 4px rgba(21, 42, 60, 0.05), 0 24px 56px -20px rgba(21, 42, 60, 0.22);
 
   /* Échelle de titres fluide : la taille suit la largeur de l'écran, ce qui
      garantit qu'un mot long en français ne déborde jamais de sa boîte.
@@ -165,7 +170,7 @@
 /* Motif de fond très discret : grain de papier */
 @utility paper-grain {
   background-image: radial-gradient(
-    rgba(23, 37, 46, 0.032) 1px,
+    rgba(21, 42, 60, 0.032) 1px,
     transparent 1px
   );
   background-size: 22px 22px;
@@ -190,7 +195,7 @@
 /* Texture de carte : papier texturé, relief doux */
 @utility card-texture {
   background-image:
-    radial-gradient(rgba(23, 37, 46, 0.05) 1px, transparent 1.4px),
+    radial-gradient(rgba(21, 42, 60, 0.05) 1px, transparent 1.4px),
     radial-gradient(
       130% 100% at 0% 0%,
       rgba(255, 255, 255, 0.8),
@@ -198,8 +203,8 @@
     ),
     linear-gradient(
       180deg,
-      rgba(234, 223, 208, 0.6) 0%,
-      rgba(252, 250, 246, 0) 62%
+      rgba(241, 228, 214, 0.6) 0%,
+      rgba(253, 252, 250, 0) 62%
     );
   background-size:
     15px 15px,

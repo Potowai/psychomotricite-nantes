@@ -30,7 +30,7 @@ export default function BlogIndexPage() {
         <ul className="grid gap-x-8 gap-y-8 sm:grid-cols-2">
           {articles.map((article, i) => (
             <li key={article.slug}>
-              <article className="group flex h-full flex-col rounded-[1.5rem] border border-line/70 bg-paper-2/50 p-7 transition-shadow duration-300 hover:shadow-[var(--shadow-soft)]">
+              <article className="group flex h-full flex-col rounded-[1.5rem] border border-line/70 bg-paper-2 p-7 transition-shadow duration-300 hover:shadow-[var(--shadow-soft)]">
                 <span
                   aria-hidden="true"
                   className={`mb-5 block h-1.5 w-10 rounded-full ${

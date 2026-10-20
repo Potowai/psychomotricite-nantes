@@ -13,9 +13,10 @@
 
 L’ossature est solide : routes, focus, étiquettes de formulaire et responsive
 sont propres. Les écarts les plus visibles étaient concentrés dans les grilles
-de cartes, dans deux passages sans respiration, et sur l'affichage mobile, où
-les titres étaient rognés. Quatorze corrections ont été apportées, en trois
-passes.
+de cartes, dans deux passages sans respiration, sur l'affichage mobile, où
+les titres étaient rognés, et dans la couleur de fond, qui voilait la page et
+effaçait le rythme de lecture. Dix-sept corrections ont été apportées, en
+quatre passes.
 
 | Priorité | Constat | État |
 |---|---|---|
@@ -31,6 +32,7 @@ passes.
 | Moyen | Cadre de la carte blanc tant que les tuiles ne chargent pas | Corrigé |
 | Majeur | Titres rognés sous 414 px, documents plus larges que l'écran | Corrigé |
 | Majeur | Encadrés d'illustration coupant leur légende sur mobile | Corrigé |
+| Majeur | Voile jaune du fond et bandes de section invisibles (9/255) | Corrigé |
 
 ## Constats détaillés
 
@@ -310,6 +312,63 @@ cibles tactiles < 24 px       uniquement les cas exonérés
 
 Les 5 signalements restants dans l'outillage correspondent à un halo
 décoratif en `display: none` : faux positif.
+
+## Quatrième passe — la couleur de fond
+
+### 17 · Majeur · Le fond crème voilait toute la page
+
+Le fond `#fffaf4` portait un écart de 11 points entre le rouge et le bleu : un
+voile jaune perceptible sur 100 % de la page. Ilterne les images, amortit le
+bleu de l'aquarelle et donne cette sensation de « papier vieilli ».
+
+Les bandes de section, elles, étaient rendues à `bg-paper-2/60` — translucides
+à 60 %. Composées sur le fond, elles ne s'en écartaient que de **9 points sur
+255** : la page défilait en un seul continuum crème, sans respiration. C'est
+cette absence de rythme, plus que le contraste, qui manquait de « peps ».
+
+**Correction**
+
+- fond quasi neutre : voile ramené de 11 à 3 points ;
+- encre bleu nuit `#152a3c` au lieu du noir gris `#17252e` : les grands blocs
+  sombres portent la couleur du site au lieu de l'éteindre ;
+- accents plus francs : azure, corail, sauge et ocre gagnent en chroma ;
+- **bandes de section en pleine opacité** : c'est le vrai levier. Elles
+  passent de 9 à 14 points d'écart et installent enfin un rythme de lecture ;
+- les cartes et encadrés posés sur fond clair passent eux aussi en pleine
+  opacité, pour se détacher du fond au lieu de s'y fondre ;
+- l'emplacement « à venir » passe sur un bleu très léger, lisible aussi bien
+  sur le fond clair que sur une bande peach.
+
+```text
+                        avant      après
+voile du fond (R−B)      11          3
+bande de section /255     9         14
+corps 18 px            8,07:1    8,83:1
+meta 12 px sur bande   4,84:1    5,27:1
+lien bleu sur fond     4,95:1    5,56:1
+pastille ocre          2,92:1 ✗  3,46:1 ✓
+chroma du corail         157       168
+```
+
+Le pastille ocre, qui était sous le seuil de 3:1, passe au-dessus.
+
+### 18 · Cohérence · L'image de partage suit la palette
+
+`opengraph-image.tsx` et la couleur de barre du navigateur utilisaient les
+anciennes valeurs en dur. Elles sont alignées sur la nouvelle palette.
+
+## Vérifications
+
+```text
+npm run lint      OK
+npx tsc --noEmit  OK
+npm run build     OK (34 pages)
+```
+
+Contrôle de non-régression après changement de palette : 8 pages passées au
+probe d'accessibilité (contraste, cibles tactiles, débordement) et 140
+combinaisons page × largeur au contrôle mobile. Aucun écart, aucun seuil
+franchi.
 
 ## Deuxième passe — reprise des points signalés (suite)
 

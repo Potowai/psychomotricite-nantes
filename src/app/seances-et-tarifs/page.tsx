@@ -182,7 +182,7 @@ export default function SeancesEtTarifsPage() {
                 ].map((m) => (
                   <li
                     key={m}
-                    className="rounded-full border border-line bg-paper-2/60 px-4 py-2 text-ink-2"
+                    className="rounded-full border border-line bg-paper-2 px-4 py-2 text-ink-2"
                   >
                     {m}
                   </li>
@@ -217,7 +217,7 @@ export default function SeancesEtTarifsPage() {
 
           {/* Tarifs */}
           <div className="space-y-6 lg:sticky lg:top-28 lg:self-start">
-            <div className="rounded-[2rem] border border-line bg-paper-2/60 p-8">
+            <div className="rounded-[2rem] border border-line bg-paper-2 p-8">
               <p className="eyebrow">Tarifs</p>
               <dl className="mt-6 space-y-5">
                 <div className="flex items-baseline justify-between gap-4 border-b border-line pb-5">
@@ -270,7 +270,7 @@ export default function SeancesEtTarifsPage() {
         </div>
       </Container>
 
-      <section className="border-y border-line bg-paper-2/60">
+      <section className="border-y border-line bg-paper-2">
         <Container className="py-16 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
             <div>

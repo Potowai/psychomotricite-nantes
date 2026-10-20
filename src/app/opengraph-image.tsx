@@ -15,7 +15,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#fcfaf6",
+          background: "#fdfcfa",
           padding: "72px 80px",
           fontFamily: "sans-serif",
           position: "relative",
@@ -29,7 +29,7 @@ export default function OpengraphImage() {
             width: 460,
             height: 460,
             borderRadius: 460,
-            background: "#b95540",
+            background: "#b4503a",
             opacity: 0.14,
           }}
         />
@@ -41,7 +41,7 @@ export default function OpengraphImage() {
             width: 520,
             height: 520,
             borderRadius: 520,
-            background: "#0f466b",
+            background: "#0d3f63",
             opacity: 0.1,
           }}
         />
@@ -52,7 +52,7 @@ export default function OpengraphImage() {
               width: 16,
               height: 16,
               borderRadius: 16,
-              background: "#b95540",
+              background: "#b4503a",
             }}
           />
           <div
@@ -60,7 +60,7 @@ export default function OpengraphImage() {
               fontSize: 22,
               letterSpacing: 6,
               textTransform: "uppercase",
-              color: "#0f466b",
+              color: "#0d3f63",
               fontWeight: 700,
             }}
           >
@@ -74,7 +74,7 @@ export default function OpengraphImage() {
               fontSize: 104,
               lineHeight: 1.02,
               letterSpacing: -3,
-              color: "#17252e",
+              color: "#152a3c",
             }}
           >
             Manuela Edom
@@ -83,7 +83,7 @@ export default function OpengraphImage() {
             style={{
               marginTop: 18,
               fontSize: 40,
-              color: "#3f505a",
+              color: "#3a4b56",
             }}
           >
             Psychomotricienne diplômée d&apos;État
@@ -95,10 +95,10 @@ export default function OpengraphImage() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-end",
-            borderTop: "1px solid #ded2c0",
+            borderTop: "1px solid #e5d9cb",
             paddingTop: 26,
             fontSize: 24,
-            color: "#3f505a",
+            color: "#3a4b56",
           }}
         >
           <div style={{ display: "flex" }}>

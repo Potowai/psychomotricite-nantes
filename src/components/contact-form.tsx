@@ -307,7 +307,7 @@ export function ContactForm() {
       ref={formRef}
       onSubmit={onSubmit}
       noValidate
-      className="space-y-5 rounded-[2rem] border border-line bg-paper-2/50 p-6 sm:p-8"
+      className="space-y-5 rounded-[2rem] border border-line bg-paper-2 p-6 sm:p-8"
     >
       {errorList.length > 0 && (
         <div

@@ -140,7 +140,7 @@ export default function FaqPage() {
           </section>
         ))}
 
-        <div className="rounded-[2rem] border border-line bg-paper-2/60 p-8 text-center">
+        <div className="rounded-[2rem] border border-line bg-paper-2 p-8 text-center">
           <p className="font-display text-2xl text-ink">
             Une autre question ?
           </p>

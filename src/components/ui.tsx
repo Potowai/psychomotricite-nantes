@@ -230,7 +230,7 @@ export function PhotoPlaceholder({
 }) {
   return (
     <figure
-      className={`photo-placeholder relative w-full min-w-0 max-w-full self-start overflow-hidden rounded-2xl border border-dashed border-azure/45 bg-paper-2/70 text-center ${className}`}
+      className={`photo-placeholder relative w-full min-w-0 max-w-full self-start overflow-hidden rounded-2xl border border-dashed border-azure/45 bg-blue-soft/50 text-center ${className}`}
       style={{ "--ph-ratio": ratio } as React.CSSProperties}
     >
       <span
