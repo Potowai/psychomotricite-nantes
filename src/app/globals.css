@@ -144,6 +144,22 @@
   background-size: 22px 22px;
 }
 
+/* Le portrait détouré se fond doucement dans le fond de la section. */
+.portrait-fade {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 90%,
+    transparent 100%
+  );
+}
+
 /* Texture de carte : papier texturé, relief doux */
 @utility card-texture {
   background-image:

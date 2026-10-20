@@ -53,7 +53,7 @@ export default function QuiSuisJePage() {
               src={portraitManuela}
               alt="Portrait de Manuela Edom, psychomotricienne à Nantes, souriante, le haut des mains au premier plan."
               sizes="(max-width: 1024px) 100vw, 38vw"
-              className="h-auto w-full"
+              className="portrait-fade h-auto w-full"
             />
           </figure>
           <dl className="mt-8 space-y-4 border-t border-line pt-6 text-sm">

@@ -330,7 +330,7 @@ export default function HomePage() {
               src={portraitManuela}
               alt="Portrait de Manuela Edom, psychomotricienne à Nantes, souriante, le haut des mains au premier plan."
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="h-auto w-full"
+              className="portrait-fade h-auto w-full"
             />
           </figure>
           <div>
