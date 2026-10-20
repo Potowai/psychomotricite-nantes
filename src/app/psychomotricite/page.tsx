@@ -203,9 +203,14 @@ export default function PsychomotricitePage() {
             <h2 className="mt-3 font-display text-[1.7rem] leading-tight text-ink sm:text-[2rem]">
               Certains motifs particuliers sont développés dans une page dédiée.
             </h2>
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {motifPages.map((m) => (
-                <li key={m.slug}>
+            <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+              {motifPages.map((m, i) => (
+                <li
+                  key={m.slug}
+                  className={`${i < 3 ? "lg:col-span-2" : "lg:col-span-3"} ${
+                    i === 4 ? "sm:col-span-2" : ""
+                  }`}
+                >
                   <Link
                     href={`/psychomotricite/${m.slug}`}
                     className="group flex h-full flex-col rounded-[1.25rem] border border-line bg-paper p-6 transition-colors hover:border-azure/40"

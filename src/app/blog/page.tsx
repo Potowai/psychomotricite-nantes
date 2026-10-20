@@ -57,7 +57,7 @@ export default function BlogIndexPage() {
                   {article.tags.map((tag) => (
                     <li
                       key={tag}
-                      className="rounded-full border border-azure/25 bg-blue-soft/60 px-3 py-1 text-xs text-azure-deep"
+                      className="rounded-full border border-azure/25 bg-blue-soft/60 px-3 py-1 text-xs text-blue-deep"
                     >
                       {tag}
                     </li>

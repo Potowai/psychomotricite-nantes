@@ -70,7 +70,7 @@ export function CtaBand({
           </a>
           <Link
             href="/contact"
-            className="mt-1 text-center text-sm text-paper/60 underline underline-offset-4 transition-colors hover:text-paper"
+            className="mt-1 inline-flex justify-center py-1 text-sm text-paper/60 underline underline-offset-4 transition-colors hover:text-paper"
           >
             Ou écrivez-moi via le formulaire
           </Link>

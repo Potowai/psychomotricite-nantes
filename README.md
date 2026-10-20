@@ -163,6 +163,7 @@ chaque fonctionnalité s'active quand sa variable existe.
 | `docs/fiche-google-business.md` | Audit de la fiche Google et corrections à faire |
 | `docs/outils-seo-gratuits.md` | Outils gratuits retenus (et ceux écartés, avec raisons) |
 | `docs/mise-en-route-seo.md` | Ce qu'il reste à activer côté comptes |
+| `docs/ux-ui-audit-2026-10-20.md` | Audit UX/UI et accessibilité, avec mesures et corrections |
 
 ## Déploiement (Vercel)
 

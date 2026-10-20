@@ -231,11 +231,13 @@ export default function HomePage() {
             </p>
           </div>
 
-          <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
             {motifs.map((m, i) => (
               <li
                 key={m.title}
-                className="group relative flex flex-col overflow-hidden rounded-[1.75rem] border border-line bg-paper p-7 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
+                className={`group relative flex flex-col overflow-hidden rounded-[1.75rem] border border-line bg-paper p-7 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)] ${
+                  i < 3 ? "lg:col-span-2" : "lg:col-span-3"
+                } ${i === 4 ? "sm:col-span-2" : ""}`}
               >
                 <span
                   aria-hidden="true"
@@ -413,7 +415,7 @@ export default function HomePage() {
               accent="bg-corail"
             />
             <div className="bg-blue-soft/50 p-6 sm:col-span-2">
-              <p className="text-xs uppercase tracking-[0.16em] text-ink-3">
+              <p className="text-xs uppercase tracking-[0.16em] text-ink-2">
                 Transports
               </p>
               <ul className="mt-3 space-y-1 text-ink-2">

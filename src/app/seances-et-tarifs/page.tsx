@@ -216,7 +216,7 @@ export default function SeancesEtTarifsPage() {
           </div>
 
           {/* Tarifs */}
-          <div className="lg:sticky lg:top-28 lg:self-start">
+          <div className="space-y-6 lg:sticky lg:top-28 lg:self-start">
             <div className="rounded-[2rem] border border-line bg-paper-2/60 p-8">
               <p className="eyebrow">Tarifs</p>
               <dl className="mt-6 space-y-5">

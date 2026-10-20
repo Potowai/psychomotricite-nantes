@@ -32,7 +32,7 @@ export default function ContactPage() {
       />
 
       {/* Coordonnées en évidence */}
-      <section className="border-b border-line bg-paper-2/60">
+      <section className="border-b border-line bg-paper-2/60 py-8 lg:py-10">
         <Container className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
           <a
             href={telHref}

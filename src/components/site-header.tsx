@@ -67,7 +67,7 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       aria-current={active ? "page" : undefined}
-                      className={`relative text-sm transition-colors ${
+                      className={`relative inline-flex py-2 text-sm transition-colors ${
                         active
                           ? "text-blue-deep"
                           : "text-ink-2 hover:text-ink"
@@ -75,7 +75,7 @@ export function SiteHeader() {
                     >
                       {item.label}
                       <span
-                        className={`absolute -bottom-1.5 left-0 h-px bg-blue transition-all duration-300 ${
+                        className={`absolute bottom-1.5 left-0 h-px bg-blue transition-all duration-300 ${
                           active ? "w-full" : "w-0"
                         }`}
                       />
@@ -89,7 +89,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={telHref}
-            className="text-sm text-ink-2 tabular-nums transition-colors hover:text-blue-deep"
+            className="inline-flex py-2 text-sm text-ink-2 tabular-nums transition-colors hover:text-blue-deep"
           >
             {site.contact.phoneDisplay}
           </a>

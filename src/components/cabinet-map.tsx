@@ -41,7 +41,7 @@ export function CabinetMap({
           href={mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="link-quiet mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-blue-deep"
+          className="link-quiet mt-3 inline-flex items-center gap-1.5 py-1 text-sm font-medium text-blue-deep"
         >
           Ouvrir l’itinéraire dans Google Maps
           <span aria-hidden="true">→</span>

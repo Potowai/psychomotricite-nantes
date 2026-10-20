@@ -12,7 +12,7 @@ export function SiteFooter() {
   const year = 2026;
 
   return (
-    <footer className="mt-24 border-t border-line bg-paper-2">
+    <footer className="border-t border-line bg-paper-2">
       <div className="container-page py-16">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr] lg:gap-16">
           <div>
@@ -32,7 +32,7 @@ export function SiteFooter() {
               href={site.otherSite.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm text-blue-deep link-quiet"
+              className="mt-6 inline-flex items-center gap-1.5 py-1 text-sm text-blue-deep link-quiet"
             >
               {site.otherSite.label}
               <span aria-hidden="true">↗</span>
@@ -55,7 +55,7 @@ export function SiteFooter() {
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-block text-sm text-blue-deep link-quiet"
+              className="mt-3 inline-flex py-1 text-sm text-blue-deep link-quiet"
             >
               Voir le plan d&apos;accès
             </a>
@@ -77,7 +77,10 @@ export function SiteFooter() {
             </h2>
             <ul className="mt-5 space-y-3 text-sm">
               <li>
-                <a href={telHref} className="text-ink-2 link-quiet tabular-nums">
+                <a
+                  href={telHref}
+                  className="inline-flex py-1 text-ink-2 link-quiet tabular-nums"
+                >
                   {site.contact.phoneDisplay}
                 </a>
                 <span className="ml-2 text-xs text-ink-3">
@@ -85,7 +88,10 @@ export function SiteFooter() {
                 </span>
               </li>
               <li>
-                <a href={mailHref} className="break-all text-ink-2 link-quiet">
+                <a
+                  href={mailHref}
+                  className="inline-flex break-all py-1 text-ink-2 link-quiet"
+                >
                   {site.contact.email}
                 </a>
               </li>
@@ -97,7 +103,7 @@ export function SiteFooter() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-sm text-ink-2 transition-colors hover:text-blue-deep"
+                      className="inline-flex py-1 text-sm text-ink-2 transition-colors hover:text-blue-deep"
                     >
                       {item.label}
                     </Link>
@@ -116,14 +122,17 @@ export function SiteFooter() {
           </p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             <li>
-              <Link href="/mentions-legales" className="hover:text-ink-2">
+              <Link
+                href="/mentions-legales"
+                className="inline-flex py-1.5 hover:text-ink-2"
+              >
                 Mentions légales
               </Link>
             </li>
             <li>
               <Link
                 href="/politique-de-confidentialite"
-                className="hover:text-ink-2"
+                className="inline-flex py-1.5 hover:text-ink-2"
               >
                 Confidentialité
               </Link>
