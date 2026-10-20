@@ -104,8 +104,9 @@ recherches précises :
 ### 2.5 Les photos
 
 2 photos seulement, pour une cible de 10 minimum. Ce sont **les mêmes visuels que
-les 5 emplacements « photo à fournir » du site** : façade, entrée, salle de
-séance, matériel (argile, ballons, tissus…), et un portrait d'elle. Ajouter
+les 4 emplacements « photo à fournir » du site** : façade, entrée, salle de
+séance et matériel (argile, ballons, tissus…). Le portrait est déjà fourni
+(photo : Fabrice Rault). Ajouter
 ensuite une photo de temps en temps plutôt que tout d'un coup.
 
 ### 2.6 Les publications et les questions

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import portraitManuela from "@/assets/images/portrait-manuela.jpg";
 import { CtaBand } from "@/components/contact-cta";
 import { Callout, Container, PageHero, PhotoPlaceholder, SectionTitle } from "@/components/ui";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
@@ -46,11 +48,18 @@ export default function QuiSuisJePage() {
 
       <Container className="grid gap-12 py-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:py-24">
         <div>
-          <PhotoPlaceholder
-            className="rounded-[2rem]"
-            title="Portrait couleur de Manuela, dans un geste qui lui ressemble"
-            note="Cadrage vertical, lumière naturelle, fond neutre. Format conseillé : 1600 × 2000 px."
-          />
+          <figure>
+            <Image
+              src={portraitManuela}
+              alt="Portrait de Manuela Edom, psychomotricienne à Nantes, souriante, les bras croisés."
+              sizes="(max-width: 1024px) 100vw, 38vw"
+              placeholder="blur"
+              className="h-auto w-full rounded-[2rem] border border-line object-cover"
+            />
+            <figcaption className="mt-3 text-sm text-ink-3">
+              Photo : Fabrice Rault
+            </figcaption>
+          </figure>
           <dl className="mt-8 space-y-4 border-t border-line pt-6 text-sm">
             <div className="flex justify-between gap-4">
               <dt className="text-ink-3">En exercice depuis</dt>

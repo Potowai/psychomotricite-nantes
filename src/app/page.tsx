@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import feuilleRose from "@/assets/images/feuille-rose.png";
 import figureLineInk from "@/assets/images/figure-line-ink.png";
+import portraitManuela from "@/assets/images/portrait-manuela.jpg";
 import washBleu from "@/assets/images/wash-bleu.png";
 import { CabinetMap } from "@/components/cabinet-map";
 import { CtaBand } from "@/components/contact-cta";
@@ -324,11 +325,18 @@ export default function HomePage() {
           className="pointer-events-none absolute -right-24 -top-28 w-[680px] max-w-none opacity-25 mix-blend-screen"
         />
         <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
-          <PhotoPlaceholder
-            className="rounded-[2rem]"
-            title="Portrait couleur de Manuela, dans un geste qui lui ressemble"
-            note="Cadrage vertical, lumière naturelle, fond neutre. Format conseillé : 1600 × 2000 px."
-          />
+          <figure>
+            <Image
+              src={portraitManuela}
+              alt="Portrait de Manuela Edom, psychomotricienne à Nantes, souriante, les bras croisés."
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              placeholder="blur"
+              className="h-auto w-full rounded-[2rem] border border-paper/10 object-cover"
+            />
+            <figcaption className="mt-3 text-xs text-paper/50">
+              Photo : Fabrice Rault
+            </figcaption>
+          </figure>
           <div>
             <span
               aria-hidden="true"

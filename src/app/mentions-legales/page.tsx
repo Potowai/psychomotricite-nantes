@@ -116,7 +116,8 @@ export default function MentionsLegalesPage() {
             <h2 className="font-display text-2xl text-ink">Crédits</h2>
             <p>
               Conception et développement du site : <Todo>[à compléter]</Todo>.
-              Photographies : {site.name}, sauf mention contraire.
+              Photographies : {site.name}, sauf mention contraire. Portrait : ©
+              Fabrice Rault.
             </p>
           </Prose>
         </div>
