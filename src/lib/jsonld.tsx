@@ -42,13 +42,8 @@ export function localBusinessSchema() {
       { "@type": "AdministrativeArea", name: "Loire-Atlantique" },
       { "@type": "AdministrativeArea", name: "Pays de la Loire" },
     ],
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        description: "Sur rendez-vous",
-      },
-    ],
+    // Les horaires exacts ne sont pas encore connus : pas de balisage
+    // d'ouverture, pour ne pas publier de créneaux inventés.
     knowsLanguage: ["fr", "en"],
     founder: { "@id": personId },
     employee: { "@id": personId },
