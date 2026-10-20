@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Séances, tarifs et aides au financement",
   description:
-    "Séances de psychomotricité à Nantes : déroulé, médiations corporelles, durée (40 min), tarifs (47 € suivi, 50 € bilan) et aides possibles — mutuelles, CPAM, MDPH (PCH, AEEH).",
+    "Séances de psychomotricité à Nantes : déroulé, médiations corporelles, durée (40 min), tarifs (47 € suivi, 200 € bilan en 4 séances) et aides possibles — mutuelles, CPAM, MDPH (PCH, AEEH).",
   path: "/seances-et-tarifs",
 });
 
@@ -124,7 +124,7 @@ export default function SeancesEtTarifsPage() {
           { label: "Séances & tarifs" },
         ]}
         eyebrow="Séances & tarifs"
-        title="Croissance libérée."
+        title="Le suivi en psychomotricité."
         lead="Le rythme des séances est le plus souvent 1 séance par semaine ou tous les 15 jours, mais cela peut varier — tout comme la durée de l’accompagnement."
       />
 
@@ -190,20 +190,20 @@ export default function SeancesEtTarifsPage() {
             <div className="border-t border-line pt-12">
               <SectionTitle
                 eyebrow="Le lieu"
-                title="Au cabinet, au sein d’un cabinet pluridisciplinaire."
+                title="Les séances ont lieu au sein d’un cabinet pluridisciplinaire."
               />
               <p className="mt-6 text-lg leading-[1.78] text-ink-2">
                 Les séances se déroulent le plus souvent à mon cabinet, au sein
-                d’un cabinet paramédical pluridisciplinaire ({site.colocated.join(", ")}).
-                Je peux me déplacer exceptionnellement à domicile et/ou sur les
+                d’un cabinet pluridisciplinaire qui réunit {site.colocated}. Je
+                peux me déplacer exceptionnellement à domicile et/ou sur les
                 lieux de vie, pour des situations spécifiques.
               </p>
               <p className="mt-5 text-lg leading-[1.78] text-ink-2">
-                La consultation a lieu les{" "}
+                La consultation a lieu{" "}
                 <strong className="font-semibold text-ink">
-                  lundis et samedis
+                  du lundi au vendredi
                 </strong>
-                .{" "}
+                , sur rendez-vous.{" "}
                 <Link href="/contact" className="text-blue-deep link-quiet">
                   Voir le plan d’accès et les transports
                 </Link>
@@ -224,9 +224,15 @@ export default function SeancesEtTarifsPage() {
                   </dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-4 border-b border-line pb-5">
-                  <dt className="text-ink-2">{site.pricing.bilan.label}</dt>
+                  <dt className="text-ink-2">
+                    {site.pricing.bilan.label}
+                    <span className="mt-1 block text-sm text-ink-3">
+                      (prévoir {site.pricing.bilan.sessions} séances ·{" "}
+                      {site.pricing.bilan.unitAmount} €/séance)
+                    </span>
+                  </dt>
                   <dd className="font-display text-3xl text-ink">
-                    {site.pricing.bilan.amount} €
+                    {site.pricing.bilan.total} €
                   </dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-4">

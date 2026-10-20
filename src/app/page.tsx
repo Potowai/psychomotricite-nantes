@@ -4,16 +4,17 @@ import type { Metadata } from "next";
 import feuilleRose from "@/assets/images/feuille-rose.png";
 import figureLineInk from "@/assets/images/figure-line-ink.png";
 import washBleu from "@/assets/images/wash-bleu.png";
+import { CabinetMap } from "@/components/cabinet-map";
 import { CtaBand } from "@/components/contact-cta";
 import { Container, Faq, PhotoPlaceholder, SectionTitle } from "@/components/ui";
 import { JsonLd, faqSchema } from "@/lib/jsonld";
 import { pageMetadata } from "@/lib/seo";
-import { fullAddress, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Psychomotricienne à Nantes — adolescents & adultes",
   description:
-    "Manuela Edom, psychomotricienne diplômée d’État à Nantes. Séances pour adolescent.es et adultes, au cabinet du 2 rue d’Allonville. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Appel ou SMS au 06 84 74 96 70.",
+    "Manuela Edom, psychomotricienne diplômée d’État à Nantes. Séances pour adolescent.es et adultes, au cabinet du 4 rue de la Mitrie. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Appel ou SMS au 06 84 74 96 70.",
   path: "/",
   locale: "fr_FR",
   languages: { "fr-FR": "/", en: "/en", "x-default": "/" },
@@ -67,7 +68,7 @@ const faqItems = [
   {
     question: "Faut-il une ordonnance pour consulter une psychomotricienne ?",
     answer:
-      "Non. Vous pouvez prendre rendez-vous de vous-même, par téléphone ou par SMS. Une prescription médicale peut en revanche faciliter certaines démarches de remboursement (mutuelle, MDPH).",
+      "Oui. Psychomotricien.ne est une profession paramédicale, reconnue par un diplôme d’État, de la même manière que les orthophonistes et les kinésithérapeutes. Les compétences des psychomotricien.nes sont encadrées par le décret n°88-659 du 6 mai 1988. Une prescription médicale est donc obligatoire.",
   },
   {
     question: "La psychomotricité est-elle remboursée ?",
@@ -77,7 +78,7 @@ const faqItems = [
   {
     question: "Combien coûte une séance et combien de temps dure-t-elle ?",
     answer:
-      "Une séance de suivi coûte 47 € et une séance de bilan 50 €. Une séance dure environ 40 minutes, le plus souvent une fois par semaine ou tous les 15 jours. En cas de difficultés financières, nous pouvons en parler.",
+      "Une séance de suivi coûte 47 €. Le bilan psychomoteur se déroule en 4 séances, soit 200 € au total (50 € par séance). Une séance dure environ 40 minutes, le plus souvent une fois par semaine ou tous les 15 jours. En cas de difficultés financières, nous pouvons en parler.",
   },
   {
     question: "Recevez-vous les adultes ? Et les enfants ?",
@@ -161,7 +162,7 @@ export default function HomePage() {
               <div>
                 <dt className="text-ink-3">Au cabinet</dt>
                 <dd className="mt-1 font-display text-2xl text-ink">
-                  lundi et samedi
+                  du lundi au vendredi
                 </dd>
               </div>
             </dl>
@@ -325,7 +326,7 @@ export default function HomePage() {
         <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
           <PhotoPlaceholder
             className="rounded-[2rem]"
-            title="Portrait de Manuela, en situation de travail ou dans un geste qui lui ressemble"
+            title="Portrait couleur de Manuela, dans un geste qui lui ressemble"
             note="Cadrage vertical, lumière naturelle, fond neutre. Format conseillé : 1600 × 2000 px."
           />
           <div>
@@ -362,16 +363,16 @@ export default function HomePage() {
       <section>
         <Container className="grid gap-12 py-20 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:py-28">
           <div>
-            <SectionTitle
-              eyebrow="Informations pratiques"
-              title="Le cabinet, au cœur de Nantes."
-            />
+            <SectionTitle eyebrow="Informations pratiques" title="Le cabinet." />
             <p className="mt-5 text-lg text-ink-2">
-              Je vous reçois au sein d’un cabinet paramédical pluridisciplinaire
-              — psychologue, orthophoniste, réflexologue, neuropsychologue,
-              ostéopathe, diététicienne.
+              Je vous reçois au sein d’un cabinet pluridisciplinaire :{" "}
+              {site.colocated}.
             </p>
-            <address className="mt-8 space-y-1 not-italic text-ink">
+            <p className="mt-3 text-lg text-ink-2">
+              Situé à proximité du centre-ville, quartier Malakoff –
+              Saint-Donatien :
+            </p>
+            <address className="mt-6 space-y-1 not-italic text-ink">
               <span className="block font-display text-2xl">
                 {site.address.name}
               </span>
@@ -380,29 +381,38 @@ export default function HomePage() {
                 {site.address.postalCode} {site.address.city}
               </span>
             </address>
-            <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-blue-deep link-quiet"
-            >
-              Ouvrir dans Google Maps
-              <span aria-hidden="true">↗</span>
-            </a>
+            <CabinetMap className="mt-6" height={260} />
           </div>
 
           <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
-            <InfoCell label="Consultations" value="Lundis et samedis" accent="bg-azure" />
-            <InfoCell label="Accès" value="Rez-de-chaussée · PMR" accent="bg-sage" />
-            <InfoCell label="Stationnement" value="Parking gratuit — 2 h" accent="bg-ochre" />
-            <InfoCell label="Tarifs" value="47 € suivi · 50 € bilan" accent="bg-corail" />
+            <InfoCell
+              label="Consultations"
+              value="Du lundi au vendredi"
+              accent="bg-azure"
+            />
+            <InfoCell
+              label="Quartier"
+              value="Malakoff – Saint-Donatien"
+              accent="bg-sage"
+            />
+            <InfoCell
+              label="Langues"
+              value="Français · Anglais"
+              accent="bg-ochre"
+            />
+            <InfoCell
+              label="Tarifs"
+              value="47 € suivi · 200 € bilan"
+              accent="bg-corail"
+            />
             <div className="bg-blue-soft/50 p-6 sm:col-span-2">
               <p className="text-xs uppercase tracking-[0.16em] text-ink-3">
                 Transports
               </p>
               <ul className="mt-3 space-y-1 text-ink-2">
-                <li>Tramway ligne 1 — arrêt Moutonnerie</li>
-                <li>Bus 11 et 12 — arrêt Dalby ou Casterneau</li>
+                <li>Bus 11 et 12 — arrêt Casterneau · 1 min à pied</li>
+                <li>C1 — arrêt Chalâtres · 10 min à pied</li>
+                <li>Tramway ligne 1 — arrêt Moutonnerie · 20 min à pied</li>
               </ul>
             </div>
           </div>
@@ -416,7 +426,7 @@ export default function HomePage() {
             className="rounded-[2rem] lg:order-2"
             ratio="4 / 3"
             title="Un moment de séance : médiation corporelle, matière, mouvement ou toucher"
-            note="Cadrage horizontal, sans visage identifiable de patient.es. Format conseillé : 1600 × 1200 px."
+            note="Photo couleur, cadrage horizontal, sans visage identifiable de patient.es. Format conseillé : 1600 × 1200 px."
           />
           <div className="lg:order-1">
             <SectionTitle

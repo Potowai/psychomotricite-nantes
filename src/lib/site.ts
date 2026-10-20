@@ -10,7 +10,7 @@ export const site = {
   shortName: "Manuela Edom",
   tagline: "Psychomotricienne à Nantes",
   description:
-    "Psychomotricienne diplômée d'État à Nantes, Manuela Edom reçoit adolescent.es et adultes dans un cabinet paramédical au 2 rue d'Allonville. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys.",
+    "Psychomotricienne diplômée d'État à Nantes, Manuela Edom reçoit adolescent.es et adultes dans un cabinet pluridisciplinaire au 4 rue de la Mitrie. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys.",
 
   practitioner: {
     firstName: "Manuela",
@@ -28,40 +28,35 @@ export const site = {
   },
 
   address: {
-    name: "Cabinet paramédical",
-    street: "2 rue d'Allonville",
+    name: "Cabinet pluridisciplinaire",
+    street: "4 rue de la Mitrie",
     postalCode: "44000",
     city: "Nantes",
     region: "Pays de la Loire",
     country: "France",
     countryCode: "FR",
-    geo: { latitude: 47.2250678, longitude: -1.5309646 },
+    geo: { latitude: 47.2271603, longitude: -1.5330165 },
   },
 
   hours: {
     label: "Consultations au cabinet",
-    days: ["Lundi", "Samedi"],
-    note: "Je vous reçois au cabinet les lundis et samedis.",
+    days: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"],
+    display: "du lundi au vendredi",
+    note: "Je vous reçois au cabinet du lundi au vendredi, sur rendez-vous.",
   },
 
   access: {
-    desk: "Rez-de-chaussée",
-    pmr: "Accès PMR",
-    parking: "Parking gratuit — 2 h",
+    parking:
+      "À proximité : parking du Super U Dalby — 2 h gratuites, 8 min à pied",
     transit: [
-      { line: "Tramway ligne 1", stop: "Moutonnerie" },
-      { line: "Bus 11 et 12", stop: "Dalby ou Casterneau" },
+      { line: "Bus 11 et 12", stop: "Casterneau", walk: "1 min à pied" },
+      { line: "C1", stop: "Chalâtres", walk: "10 min à pied" },
+      { line: "Tramway ligne 1", stop: "Moutonnerie", walk: "20 min à pied" },
     ],
   },
 
-  colocated: [
-    "psychologue",
-    "orthophoniste",
-    "réflexologue",
-    "neuropsychologue",
-    "ostéopathe",
-    "diététicienne",
-  ],
+  colocated:
+    "une psychomotricienne, deux psychologues cliniciennes et une médecin généraliste",
 
   languages: {
     sessions: ["Français", "Anglais"],
@@ -70,12 +65,20 @@ export const site = {
       { language: "Anglais", level: "B2" },
       { language: "Espagnol", level: "B1" },
       { language: "Arabe", level: "notions" },
+      { language: "Roumain", level: "notions" },
     ],
+    interpretation:
+      "Si vous souhaitez faire les séances dans une autre langue, nous pouvons nous renseigner sur les possibilités d’interprétariat.",
   },
 
   pricing: {
     suivi: { amount: 47, label: "Séance de suivi" },
-    bilan: { amount: 50, label: "Séance de bilan" },
+    bilan: {
+      sessions: 4,
+      unitAmount: 50,
+      total: 200,
+      label: "Bilan psychomoteur",
+    },
     durationMinutes: 40,
     note: "Si vous rencontrez des difficultés financières, nous pouvons en parler.",
   },

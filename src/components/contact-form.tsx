@@ -16,11 +16,7 @@ const ageGroups = [
 
 const motifs = [
   "Demande de bilan",
-  "Suivi / séances régulières",
-  "Douance (HPI, HQI/THQI)",
-  "TSA, TDA-H, troubles dys",
-  "Anxiété, burn out, épuisement",
-  "Rapport au corps, image de soi",
+  "Suivi / séances",
   "Autre demande",
 ];
 

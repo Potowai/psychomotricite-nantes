@@ -20,7 +20,7 @@ export function localBusinessSchema() {
     telephone: `+33${site.contact.phoneHref.replace(/^\+33/, "")}`,
     image: `${url}/opengraph-image`,
     logo: `${url}/icon.svg`,
-    priceRange: `${site.pricing.suivi.amount}€–${site.pricing.bilan.amount}€`,
+    priceRange: `${site.pricing.suivi.amount}€–${site.pricing.bilan.total}€`,
     currenciesAccepted: "EUR",
     paymentAccepted: "Espèces, chèque, virement",
     address: {
@@ -45,9 +45,8 @@ export function localBusinessSchema() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Saturday"],
-        opens: "09:00",
-        closes: "19:00",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        description: "Sur rendez-vous",
       },
     ],
     knowsLanguage: ["fr", "en"],
@@ -55,7 +54,10 @@ export function localBusinessSchema() {
     employee: { "@id": personId },
     medicalSpecialty: ["Psychomotor therapy", "Psychomotricité"],
     availableService: [
-      { "@type": "MedicalTherapy", name: "Bilan psychomoteur" },
+      {
+        "@type": "MedicalTherapy",
+        name: `Bilan psychomoteur (${site.pricing.bilan.sessions} séances)`,
+      },
       { "@type": "MedicalTherapy", name: "Séance de psychomotricité de suivi" },
     ],
     sameAs: [
@@ -94,7 +96,7 @@ export function personSchema() {
       "Psychomotricienne diplômée d'État exerçant à Nantes depuis 2016, auprès d'adolescent.es et d'adultes.",
     url: `${url}/qui-suis-je`,
     worksFor: { "@id": businessId },
-    knowsLanguage: ["fr", "en", "es"],
+    knowsLanguage: ["fr", "en", "es", "ro"],
     knowsAbout: [
       "Psychomotricité",
       "Douance (HPI, HQI/THQI)",
@@ -103,6 +105,12 @@ export function personSchema() {
       "Troubles dys",
       "Psychotraumatismes",
       "Transculturalité",
+      "Migration et parcours d'exil",
+      "Parentalité",
+      "Genre, identité et orientation",
+      "Violences sexistes et sexuelles",
+      "Précarité",
+      "Maladie chronique",
     ],
     alumniOf: {
       "@type": "EducationalOrganization",

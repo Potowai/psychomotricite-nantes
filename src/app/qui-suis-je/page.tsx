@@ -40,15 +40,15 @@ export default function QuiSuisJePage() {
           { label: "Qui suis-je ?" },
         ]}
         eyebrow="Qui suis-je ?"
-        title="Au-delà de l’obstacle."
-        lead="Psychomotricienne depuis 2016, j’exerce en cabinet libéral auprès d’adolescent.es et d’adultes (et enfants sur demande ou en fonction des situations). Les demandes peuvent être très variées."
+        title="Psychomotricienne."
+        lead="J’exerce depuis 2016, en cabinet libéral auprès d’adolescent.es et d’adultes (et enfants sur demande ou en fonction des situations). Les demandes peuvent être très variées."
       />
 
       <Container className="grid gap-12 py-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:py-24">
         <div>
           <PhotoPlaceholder
             className="rounded-[2rem]"
-            title="Portrait de Manuela, dans un geste qui lui ressemble"
+            title="Portrait couleur de Manuela, dans un geste qui lui ressemble"
             note="Cadrage vertical, lumière naturelle, fond neutre. Format conseillé : 1600 × 2000 px."
           />
           <dl className="mt-8 space-y-4 border-t border-line pt-6 text-sm">
@@ -138,7 +138,7 @@ export default function QuiSuisJePage() {
           className="rounded-[2rem]"
           ratio="4 / 3"
           title="Une image de terrain : atelier, groupe, ou travail de la matière"
-          note="Cadrage horizontal, sans visage identifiable de patient.es. Format conseillé : 1600 × 1200 px."
+          note="Photo couleur, cadrage horizontal, sans visage identifiable de patient.es. Format conseillé : 1600 × 1200 px."
         />
 
         <div>
@@ -169,9 +169,10 @@ export default function QuiSuisJePage() {
           <Callout title="Langues" tone="sage">
             <p>
               Je parle français (langue maternelle), anglais (B2), espagnol (B1)
-              et j’ai quelques notions d’arabe (très débutante). Les langues pour
-              les séances sont donc le français et l’anglais.
+              et j’ai quelques notions d’arabe et de roumain (très débutante).
+              Les langues pour les séances sont donc le français et l’anglais.
             </p>
+            <p className="mt-3">{site.languages.interpretation}</p>
           </Callout>
 
           <p className="mt-8 text-lg leading-relaxed text-ink-2">

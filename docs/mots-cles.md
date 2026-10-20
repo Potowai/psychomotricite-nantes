@@ -30,7 +30,7 @@ Business Profile compte davantage que la page elle-même.
 | Page | Requêtes cibles | Où les placer |
 |------|-----------------|---------------|
 | `/` | psychomotricienne Nantes · psychomotricien Nantes · psychomotricité Nantes · psychomotricienne D.E. Nantes | `<title>`, H1, première phrase, `LocalBusiness` (déjà en place) |
-| `/contact` | rendez-vous psychomotricien Nantes · prendre rendez-vous psychomotricité Nantes · psychomotricienne Allonville | H1, texte d'intro, libellé du bouton |
+| `/contact` | rendez-vous psychomotricien Nantes · prendre rendez-vous psychomotricité Nantes · psychomotricienne Malakoff Saint-Donatien | H1, texte d'intro, libellé du bouton |
 | `/seances-et-tarifs` | tarif psychomotricien Nantes · prix séance psychomotricité · tarif bilan psychomoteur · psychomotricité remboursée | Titre, tableau des tarifs, FAQ « est-ce remboursé ? » |
 | `/qui-suis-je` | Manuela Edom psychomotricienne · psychomotricienne Nantes diplômée d'État | `<title>`, H1, `Person` (déjà en place) |
 
@@ -71,9 +71,9 @@ celles que les moteurs IA citent le plus volontiers.
 
 **Différenciateurs à faire apparaître** (ils sont réels, donc utilisables partout, mais
 sans en faire des titres racoleurs) : psychomotricienne **diplômée d'État**, reçoit
-**lundi et samedi**, **enfants, adolescents et adultes**, **formatrice**, cabinet
-**pluridisciplinaire** au 2 rue d'Allonville, séances de **40 minutes**, **47 €** le suivi
-et **50 €** le bilan.
+**du lundi au vendredi**, **enfants, adolescents et adultes**, **formatrice**, cabinet
+**pluridisciplinaire** au 4 rue de la Mitrie, séances de **40 minutes**, **47 €** le suivi
+et **200 €** le bilan (4 séances).
 
 ---
 

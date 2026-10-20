@@ -76,7 +76,7 @@ export const motifs: Motif[] = [
       {
         question: "Faut-il un diagnostic de HPI ou de HQI pour consulter ?",
         answer:
-          "Non. Un diagnostic n’est pas nécessaire pour venir. Vous pouvez consulter parce que quelque chose vous pèse, sans avoir de mot pour le nommer.",
+          "Non. Un diagnostic n’est pas nécessaire pour venir. Vous pouvez consulter parce que quelque chose vous pèse, sans avoir de mot pour le nommer. Une prescription médicale reste toutefois obligatoire pour engager le bilan ou le suivi.",
       },
       {
         question: "La psychomotricité « guérit-elle » la douance ?",
@@ -340,7 +340,7 @@ export const motifs: Motif[] = [
       {
         question: "Faut-il une prescription ?",
         answer:
-          "La psychomotricité est une profession paramédicale : elle se pratique souvent sur prescription médicale. N’hésitez pas à en parler à votre médecin.",
+          "La psychomotricité est une profession paramédicale : une prescription médicale est donc obligatoire pour engager un bilan ou un suivi. N’hésitez pas à en parler à votre médecin.",
       },
       {
         question: "Recevez-vous à domicile ?",

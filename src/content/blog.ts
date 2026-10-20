@@ -178,10 +178,10 @@ export const articles: Article[] = [
       {
         type: "ul",
         items: [
-          "Une séance de bilan dure environ 40 minutes et coûte 50 €.",
-          "Une séance de suivi coûte 47 €.",
-          "Aucune ordonnance n’est nécessaire pour la prise de rendez-vous.",
-          "Une prescription médicale peut faciliter certaines démarches (mutuelle, MDPH).",
+          "Une séance dure environ 40 minutes. Une séance de suivi coûte 47 €.",
+          "Le bilan psychomoteur se déroule en 4 séances, soit 200 € au total (50 € par séance).",
+          "Une prescription médicale est donc obligatoire pour engager un bilan ou un suivi.",
+          "Cette prescription peut aussi faciliter certaines démarches (mutuelle, MDPH).",
         ],
       },
       {
@@ -225,13 +225,15 @@ export const articles: Article[] = [
       { type: "h2", text: "Au cabinet, à Nantes" },
       {
         type: "p",
-        text: "Je vous reçois au cabinet paramédical pluridisciplinaire, 2 rue d’Allonville, 44000 Nantes, les lundis et samedis. Le cabinet est en rez-de-chaussée, avec accès PMR et parking gratuit pendant 2 heures.",
+        text: "Je vous reçois au cabinet pluridisciplinaire, 4 rue de la Mitrie, 44000 Nantes, du lundi au vendredi, sur rendez-vous. Le cabinet se situe à proximité du centre-ville, quartier Malakoff – Saint-Donatien.",
       },
       {
         type: "ul",
         items: [
-          "Tramway ligne 1 — arrêt Moutonnerie",
-          "Bus 11 et 12 — arrêt Dalby ou Casterneau",
+          "Bus 11 et 12 — arrêt Casterneau, 1 min à pied",
+          "C1 — arrêt Chalâtres, 10 min à pied",
+          "Tramway ligne 1 — arrêt Moutonnerie, 20 min à pied",
+          "Parking du Super U Dalby — 2 h gratuites, 8 min à pied",
         ],
       },
       {

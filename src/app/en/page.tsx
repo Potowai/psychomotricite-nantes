@@ -10,7 +10,7 @@ import {
   serviceSchema,
 } from "@/lib/jsonld";
 import { pageMetadata } from "@/lib/seo";
-import { fullAddress, mailHref, site, smsHref, telHref } from "@/lib/site";
+import { mailHref, site, smsHref, telHref } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "English-speaking psychomotor therapist in Nantes",
@@ -28,14 +28,14 @@ const faqs = [
       "Yes. French is my mother tongue and I work in English at a B2 level. Sessions can be held in either language, whichever feels more comfortable for you.",
   },
   {
-    question: "Do I need a referral or a diagnosis?",
+    question: "Do I need a prescription or a diagnosis?",
     answer:
-      "No. You can get in touch simply because something feels heavy, without a diagnosis or a word for it. If another professional would be more appropriate, I will tell you and point you in the right direction.",
+      "A medical prescription is required to start a psychomotor assessment or follow-up. A diagnosis is not required to get in touch: you can contact me simply because something feels heavy, without a diagnosis or a word for it. If another professional would be more appropriate, I will tell you and point you in the right direction.",
   },
   {
     question: "How much does a session cost, and is it reimbursed?",
     answer:
-      `A follow-up session is €${site.pricing.suivi.amount} and an assessment (bilan) is €${site.pricing.bilan.amount}; a session lasts about ${site.pricing.durationMinutes} minutes. Psychomotor therapy is not reimbursed by the French public health insurance. Some private health insurers (mutuelles), the MDPH and a few other schemes may contribute — we can talk it through.`,
+      `A follow-up session is €${site.pricing.suivi.amount}. The assessment (bilan) takes ${site.pricing.bilan.sessions} sessions and costs €${site.pricing.bilan.total} in total (€${site.pricing.bilan.unitAmount} per session); a session lasts about ${site.pricing.durationMinutes} minutes. Psychomotor therapy is not reimbursed by the French public health insurance. Some private health insurers (mutuelles), the MDPH and a few other schemes may contribute — we can talk it through.`,
   },
 ];
 
@@ -90,7 +90,9 @@ export default function EnglishPage() {
               <p>
                 Whether you already have a diagnosis or simply a feeling that
                 something is off, you are welcome. There is no right reason and
-                no right moment to get in touch.
+                no right moment to get in touch. A medical prescription is
+                required to start an assessment or follow-up; we can discuss
+                this when you get in touch.
               </p>
             </div>
           </div>
@@ -116,13 +118,16 @@ export default function EnglishPage() {
 
           <Callout title="Practical information" tone="blue">
             <p>
-              {fullAddress} — ground floor, wheelchair accessible, free parking
-              for 2 hours.
+              Multidisciplinary practice, {site.address.street},{" "}
+              {site.address.postalCode} {site.address.city} — close to the city
+              centre, in the Malakoff – Saint-Donatien neighbourhood.
             </p>
             <p className="mt-2">
-              I see people at the practice on <strong>Mondays</strong> and{" "}
-              <strong>Saturdays</strong>, by appointment. Tram line 1 (stop
-              Moutonnerie); buses 11 and 12 (stop Dalby or Casterneau).
+              I see people at the practice{" "}
+              <strong>Monday to Friday</strong>, by appointment. Bus 11 or 12
+              (stop Casterneau, 1 min walk); C1 (stop Chalâtres, 10 min walk);
+              tram line 1 (stop Moutonnerie, 20 min walk). The Super U Dalby car
+              park offers 2 hours of free parking, an 8-minute walk away.
             </p>
             <p className="mt-3">
               <a href={telHref} className="link-quiet font-medium">

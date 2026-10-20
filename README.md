@@ -1,7 +1,7 @@
 # Manuela Edom — Psychomotricienne à Nantes
 
 Site vitrine et ressource pour **Manuela Edom, psychomotricienne D.E.**, cabinet
-paramédical, 2 rue d'Allonville, 44000 Nantes. Refonte complète de l'ancien site
+pluridisciplinaire, 4 rue de la Mitrie, 44000 Nantes. Refonte complète de l'ancien site
 WordPress, pensée pour le référencement (SEO), la visibilité dans les moteurs
 de réponse (GEO) et — surtout — pour que **les gens la contactent**.
 
@@ -13,7 +13,7 @@ de réponse (GEO) et — surtout — pour que **les gens la contactent**.
 
 **Contact** : 06 84 74 96 70 (appel ou SMS) ·
 [medom@psychomotricite.com](mailto:medom@psychomotricite.com) ·
-reçoit les lundis et samedis · 47 € le suivi, 50 € le bilan, séance de 40 minutes.
+reçoit du lundi au vendredi · 47 € le suivi, 200 € le bilan (4 séances), séance de 40 minutes.
 
 ## Stack
 

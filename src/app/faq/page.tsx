@@ -20,7 +20,7 @@ const faq: Item[] = [
     category: "Consulter",
     question: "Faut-il une ordonnance pour consulter une psychomotricienne ?",
     answer:
-      "Non. Vous pouvez prendre rendez-vous de vous-même, par téléphone, par SMS ou via le formulaire de contact. Une prescription médicale n’est pas nécessaire pour venir, mais elle peut faciliter certaines démarches de remboursement (mutuelle, MDPH).",
+      "Oui. Psychomotricien.ne est une profession paramédicale, reconnue par un diplôme d’État, de la même manière que les orthophonistes et les kinésithérapeutes. Les compétences des psychomotricien.nes sont encadrées par le décret n°88-659 du 6 mai 1988. Une prescription médicale est donc obligatoire.",
   },
   {
     category: "Consulter",
@@ -32,7 +32,7 @@ const faq: Item[] = [
     category: "Consulter",
     question: "Faut-il un diagnostic ou un trouble particulier pour venir ?",
     answer:
-      "Non. Les demandes s’inscrivent sur un continuum allant d’une simple volonté d’introspection ou d’une gêne quotidienne, à une souffrance parfois profonde et/ou à des troubles plus sévères. Aucun diagnostic préalable n’est exigé.",
+      "Non. Les demandes s’inscrivent sur un continuum allant d’une simple volonté d’introspection ou d’une gêne quotidienne, à une souffrance parfois profonde et/ou à des troubles plus sévères. Aucun diagnostic préalable n’est exigé. Une prescription médicale est en revanche obligatoire pour engager le bilan ou le suivi.",
   },
   {
     category: "Consulter",
@@ -44,7 +44,7 @@ const faq: Item[] = [
     category: "Tarifs & remboursement",
     question: "Combien coûte une séance ?",
     answer:
-      "Une séance de suivi coûte 47 € et une séance de bilan 50 €. Une séance dure environ 40 minutes. Si vous rencontrez des difficultés financières, nous pouvons en parler.",
+      "Une séance de suivi coûte 47 €. Le bilan psychomoteur se déroule en 4 séances, soit 200 € au total (50 € par séance). Une séance dure environ 40 minutes. Si vous rencontrez des difficultés financières, nous pouvons en parler.",
   },
   {
     category: "Tarifs & remboursement",
@@ -86,19 +86,19 @@ const faq: Item[] = [
     category: "Le déroulé",
     question: "Quelle différence avec l’orthophonie ou la psychologie ?",
     answer:
-      "Ces approches se complètent plus qu’elles ne s’opposent. L’orthophoniste travaille le langage, la parole et les apprentissages du langage écrit. Le psychologue travaille la vie psychique et, lorsqu’il en a la formation, le bilan cognitif. La psychomotricité prend appui sur le corps, le mouvement et les sensations pour retrouver des appuis, une régulation et une place dans la relation. Il est fréquent que ces suivis se fassent en parallèle : je travaille volontiers en lien avec les professionnel.les qui entourent la personne.",
+      "Ces approches se complètent plus qu’elles ne s’opposent. L’orthophoniste travaille le langage, la parole et les apprentissages du langage écrit. Le psychologue travaille la vie psychique par le biais de la parole et, lorsqu’il en a la formation, le bilan cognitif. La psychomotricité prend appui sur le corps, le mouvement et les sensations pour retrouver des appuis, une régulation et une place dans la relation. Il est fréquent que ces suivis se fassent en parallèle : je travaille volontiers en lien avec les professionnel.les qui entourent la personne.",
   },
   {
     category: "Le cabinet",
     question: "Où se trouve le cabinet et comment y accéder ?",
     answer:
-      "Le cabinet est situé au 2 rue d’Allonville, 44000 Nantes, dans un cabinet paramédical pluridisciplinaire. Il est en rez-de-chaussée, avec accès PMR et parking gratuit pendant 2 heures. En transports : tramway ligne 1, arrêt Moutonnerie ; bus 11 et 12, arrêt Dalby ou Casterneau.",
+      "Le cabinet est situé au 4 rue de la Mitrie, 44000 Nantes, dans un cabinet pluridisciplinaire, à proximité du centre-ville, quartier Malakoff – Saint-Donatien. En transports : bus 11 et 12, arrêt Casterneau (1 min à pied) ; C1, arrêt Chalâtres (10 min à pied) ; tramway ligne 1, arrêt Moutonnerie (20 min à pied). À proximité, le parking du Super U Dalby propose 2 h gratuites, à 8 min à pied.",
   },
   {
     category: "Le cabinet",
     question: "Quels sont les horaires de consultation ?",
     answer:
-      "Je vous reçois au cabinet les lundis et samedis, sur rendez-vous. Prenez rendez-vous par téléphone ou SMS au 06 84 74 96 70.",
+      "Je vous reçois au cabinet du lundi au vendredi, sur rendez-vous. Prenez rendez-vous par téléphone ou SMS au 06 84 74 96 70.",
   },
   {
     category: "Douance & neuroatypies",
@@ -110,7 +110,7 @@ const faq: Item[] = [
     category: "Douance & neuroatypies",
     question: "Dans quelles langues les séances ont-elles lieu ?",
     answer:
-      "En français et en anglais. Je parle français (langue maternelle), anglais (B2), espagnol (B1) et j’ai quelques notions d’arabe.",
+      "En français et en anglais. Je parle français (langue maternelle), anglais (B2), espagnol (B1) et j’ai quelques notions d’arabe et de roumain (très débutante). Si vous souhaitez faire les séances dans une autre langue, nous pouvons nous renseigner sur les possibilités d’interprétariat.",
   },
 ];
 

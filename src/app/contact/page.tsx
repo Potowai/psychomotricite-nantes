@@ -1,38 +1,22 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import cabinetExterieur from "@/assets/images/cabinet-exterieur.jpg";
+import { CabinetMap } from "@/components/cabinet-map";
 import { ContactForm } from "@/components/contact-form";
 import {
   Callout,
   Container,
   PageHero,
+  PhotoPlaceholder,
 } from "@/components/ui";
 import { JsonLd, breadcrumbSchema, localBusinessSchema } from "@/lib/jsonld";
 import { pageMetadata } from "@/lib/seo";
-import {
-  fullAddress,
-  mailHref,
-  mapsUrl,
-  site,
-  smsHref,
-  telHref,
-} from "@/lib/site";
+import { mailHref, site, smsHref, telHref } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact & plan d’accès — cabinet à Nantes",
+  title: "Contact & plan d’accès à Nantes",
   description:
-    "Prendre rendez-vous avec Manuela Edom, psychomotricienne à Nantes : 06 84 74 96 70 (appel ou SMS), medom@psychomotricite.com. Cabinet paramédical, 2 rue d’Allonville, 44000 Nantes, lundis et samedis.",
+    "Prendre rendez-vous avec Manuela Edom, psychomotricienne à Nantes : 06 84 74 96 70 (appel ou SMS), medom@psychomotricite.com. Cabinet pluridisciplinaire, 4 rue de la Mitrie, 44000 Nantes, du lundi au vendredi.",
   path: "/contact",
 });
-
-const { latitude, longitude } = site.address.geo;
-const bbox = [
-  longitude - 0.005,
-  latitude - 0.003,
-  longitude + 0.005,
-  latitude + 0.003,
-].join("%2C");
-const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${latitude}%2C${longitude}`;
 
 export default function ContactPage() {
   return (
@@ -44,7 +28,7 @@ export default function ContactPage() {
         ]}
         eyebrow="Contact & rendez-vous"
         title="Prendre rendez-vous."
-        lead="Le plus simple : un appel ou un SMS. Vous pouvez aussi m’écrire via le formulaire — je vous réponds en général sous 24 à 48 heures ouvrées."
+        lead="Vous pouvez me contacter par mail, SMS ou appel. Vous pouvez aussi m’écrire via le formulaire : je vous réponds en général sous 24 à 48 h ouvrées."
       />
 
       {/* Coordonnées en évidence */}
@@ -71,9 +55,6 @@ export default function ContactPage() {
             </p>
             <p className="mt-3 font-display text-2xl text-ink">
               Message direct
-            </p>
-            <p className="mt-1 text-sm text-ink-2">
-              Idéal pour une première prise de contact
             </p>
           </a>
           <a
@@ -102,14 +83,16 @@ export default function ContactPage() {
                 {site.address.postalCode} {site.address.city}
               </span>
             </address>
-            <div className="relative mt-6 overflow-hidden rounded-[1.5rem] border border-line">
-              <Image
-                src={cabinetExterieur}
-                alt="Façade du cabinet paramédical, 2 rue d’Allonville à Nantes."
-                sizes="(max-width: 1024px) 100vw, 42vw"
-                className="h-full w-full object-cover"
-              />
-            </div>
+            <p className="mt-3 text-ink-2">
+              Situé à proximité du centre-ville, quartier Malakoff –
+              Saint-Donatien.
+            </p>
+            <PhotoPlaceholder
+              className="mt-6 rounded-[1.5rem]"
+              ratio="4 / 3"
+              title="Façade du nouveau cabinet, au 4 rue de la Mitrie"
+              note="Photo couleur de la nouvelle façade à venir."
+            />
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2">
@@ -118,21 +101,18 @@ export default function ContactPage() {
                 Horaires
               </h3>
               <p className="mt-3 text-ink-2">
-                Consultations au cabinet les{" "}
-                <strong className="font-semibold text-ink">lundis</strong> et{" "}
-                <strong className="font-semibold text-ink">samedis</strong>, sur
-                rendez-vous.
+                Consultations au cabinet{" "}
+                <strong className="font-semibold text-ink">
+                  du lundi au vendredi
+                </strong>
+                , sur rendez-vous.
               </p>
             </div>
             <div>
               <h3 className="text-xs uppercase tracking-[0.16em] text-ink-3">
-                Accès
+                Stationnement
               </h3>
-              <ul className="mt-3 space-y-1 text-ink-2">
-                <li>{site.access.desk}</li>
-                <li>{site.access.pmr}</li>
-                <li>{site.access.parking}</li>
-              </ul>
+              <p className="mt-3 text-ink-2">{site.access.parking}</p>
             </div>
           </div>
 
@@ -146,32 +126,14 @@ export default function ContactPage() {
                   <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 rounded-full bg-blue" />
                   <span>
                     <strong className="font-medium text-ink">{t.line}</strong> —
-                    arrêt {t.stop}
+                    arrêt {t.stop} · {t.walk}
                   </span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
-            <div className="overflow-hidden rounded-[1.5rem] border border-line">
-              <iframe
-                title={`Plan d’accès au cabinet — ${fullAddress}`}
-                src={mapSrc}
-                loading="lazy"
-                className="h-[320px] w-full"
-              />
-            </div>
-            <a
-              href={mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-quiet mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-blue-deep"
-            >
-              Ouvrir l’itinéraire dans Google Maps
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
+          <CabinetMap />
 
           <Callout title="Autre site" tone="sage">
             <p>

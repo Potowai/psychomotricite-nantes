@@ -76,7 +76,7 @@ export default function MentionsLegalesPage() {
             <p>
               La psychomotricité est une profession paramédicale reconnue par un
               diplôme d’État. Les compétences des psychomotricien.nes sont
-              encadrées par le décret n°88-6559 du 6 mai 1988.
+              encadrées par le décret n°88-659 du 6 mai 1988.
             </p>
 
             <h2 className="font-display text-2xl text-ink">

@@ -4,7 +4,7 @@ Fiche auditée : **Manuela Edom - Psychomotricienne**
 <https://maps.app.goo.gl/AawmkvGEx6YPZzvb6>
 
 - Identifiant de lieu (place ID) : `ChIJV6EZVXTvBUgRwwYgEIICP5w`
-- Coordonnées : 47.22498, -1.5310864 — plus code `6FF9+XH Nantes`
+- Coordonnées de la fiche actuelle : 47.22498, -1.5310864 — plus code `6FF9+XH Nantes` (ancienne adresse, à remplacer par le 4 rue de la Mitrie)
 
 C'est le levier n°1 du SEO local : c'est la fiche qui déclenche le pack local sur
 « psychomotricienne Nantes », bien plus que le contenu du site. Elle existe déjà —
@@ -17,12 +17,12 @@ il ne s'agit donc pas de la créer, mais de la compléter.
 - **Catégorie principale : « Psychomotricien »** — la catégorie exacte existe, et
   c'est déjà celle qui est utilisée. C'est le point le plus important : il
   conditionne les recherches sur lesquelles la fiche peut apparaître.
-- **NAP rigoureusement identique au site** : 2 Rue d'Allonville, 44000 Nantes —
+- **NAP rigoureusement identique au site** : 4 rue de la Mitrie, 44000 Nantes —
   06 84 74 96 70.
 - **Lien vers le site** : psychomotriciennenantes.fr (le bon domaine, qui
   desservira le nouveau site après le basculement du DNS).
-- **Attributs d'accessibilité** déjà renseignés (places assises et toilettes
-  accessibles en fauteuil roulant).
+- **Attributs d'accessibilité** : à vérifier pour le nouveau cabinet (places
+  assises, toilettes accessibles) avant de les conserver sur la fiche.
 - **« S'identifie comme géré par une femme »** activé.
 - **Réponse aux avis** : elle répond, et bien (une réponse chaleureuse et
   personnalisée existe déjà).
@@ -35,7 +35,7 @@ il ne s'agit donc pas de la créer, mais de la compléter.
 | # | Point | État | Cible |
 |---|-------|------|-------|
 | 1 | **Avis** | 1 seul | 10 à 15 la première année |
-| 2 | **Horaires** | **aucun** (« Ajouter des horaires ») | lundi et samedi |
+| 2 | **Horaires** | **aucun** (« Ajouter des horaires ») | du lundi au vendredi |
 | 3 | **Description** | **absente** | ~750 caractères, ses mots |
 | 4 | **Prestations** | **absentes** | 6 à 8 prestations |
 | 5 | **Photos** | 2 | 10 minimum |
@@ -66,10 +66,10 @@ Une fiche sans horaires se fait doubler par des fiches qui en ont, et l'absence
 la rend « incomplète » aux yeux de Google.
 
 → **Rechercher** « Manuela Edom » → *Modifier la fiche* → *Horaires* → renseigner
-**lundi** et **samedi**, avec les heures exactes.
+**du lundi au vendredi**, avec les heures exactes.
 
 > ⚠️ À fournir : les heures exactes (ex. 9 h – 19 h). Le site indique seulement
-> « lundis et samedis », pas les plages — elles ne doivent pas être inventées.
+> « du lundi au vendredi », pas les plages — elles ne doivent pas être inventées.
 
 ### 2.3 La description (prête à copier)
 
@@ -77,14 +77,14 @@ la rend « incomplète » aux yeux de Google.
 exagéré. Proposition, à relire et à ajuster avec ses mots :
 
 > Psychomotricienne diplômée d'État, je reçois adolescent.es et adultes au cabinet
-> paramédical du 2 rue d'Allonville, à Nantes. J'accompagne les personnes
+> pluridisciplinaire du 4 rue de la Mitrie, à Nantes. J'accompagne les personnes
 > concernées par la douance (HPI, HQI/THQI), le TDA-H, les troubles dys,
 > l'anxiété et l'épuisement professionnel, ainsi que les personnes âgées qui
 > souhaitent entretenir équilibre et autonomie. Le travail prend appui sur le
 > corps, le mouvement et les sensations — relaxation, respiration, matière —
 > pour retrouver des appuis et une régulation. Je suis également formatrice sur
-> la douance et la parentalité. Consultations les lundis et samedis, sur
-> rendez-vous. Séance de 40 minutes : 47 € le suivi, 50 € le bilan.
+> la douance et la parentalité. Consultations du lundi au vendredi, sur
+> rendez-vous. Séance de 40 minutes : 47 € le suivi, 200 € le bilan (4 séances).
 
 ### 2.4 Les prestations
 
@@ -145,7 +145,7 @@ les modifications seront perdues ou refusées.
 
 ## 5. Ce qu'il reste à obtenir de Manuela
 
-- [ ] Les **heures exactes** des lundis et samedis
+- [ ] Les **heures exactes** du lundi au vendredi
 - [ ] La confirmation qu'elle a bien **l'accès gestionnaire**
 - [ ] Les **photos** (les 5 du site + 5 autres pour la fiche)
 - [ ] Sa relecture de la **description** (pour que ce soit ses mots)

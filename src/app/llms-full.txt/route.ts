@@ -36,13 +36,16 @@ export function GET() {
 
   lines.push("## Réponses rapides");
   lines.push(
-    "Qu'est-ce que la psychomotricité ? Une profession paramédicale reconnue par un diplôme d'État, encadrée par le décret n°88-6559 du 6 mai 1988. Elle s'intéresse aux liens entre les vécus corporels et psychiques, à la croisée des neurosciences, de l'anatomie, de la psychologie et de la psychiatrie.",
+    "Qu'est-ce que la psychomotricité ? Une profession paramédicale reconnue par un diplôme d'État, encadrée par le décret n°88-659 du 6 mai 1988. Elle s'intéresse aux liens entre les vécus corporels et psychiques, à la croisée des neurosciences, de l'anatomie, de la psychologie et de la psychiatrie.",
   );
   lines.push(
-    `Où consulter ? Au cabinet paramédical, ${site.address.street}, ${site.address.postalCode} ${site.address.city}, les lundis et samedis, sur rendez-vous.`,
+    `Où consulter ? Au cabinet pluridisciplinaire, ${site.address.street}, ${site.address.postalCode} ${site.address.city}, du lundi au vendredi, sur rendez-vous.`,
   );
   lines.push(
-    `Combien coûte une séance ? ${site.pricing.suivi.amount} € la séance de suivi, ${site.pricing.bilan.amount} € la séance de bilan. Une séance dure environ ${site.pricing.durationMinutes} minutes.`,
+    `Combien coûte une séance ? ${site.pricing.suivi.amount} € la séance de suivi ; le bilan psychomoteur se déroule en ${site.pricing.bilan.sessions} séances, soit ${site.pricing.bilan.total} € au total (${site.pricing.bilan.unitAmount} € par séance). Une séance dure environ ${site.pricing.durationMinutes} minutes.`,
+  );
+  lines.push(
+    "Faut-il une ordonnance ? Oui. Une prescription médicale est donc obligatoire pour engager un bilan ou un suivi en psychomotricité.",
   );
   lines.push(
     "Est-ce remboursé par la Sécurité sociale ? Non, les soins de psychomotricité ne sont pas remboursés par l'Assurance maladie à ce jour. Des aides existent : mutuelles (forfait bien-être, recours amiable), prestations extra-légales de la CPAM, MDPH (PCH pour les adultes, complément d'AEEH pour les enfants), caisses de retraite et comités d'entreprise.",
@@ -62,12 +65,16 @@ export function GET() {
     `- Téléphone : ${site.contact.phoneDisplay} (appel ou SMS) — ${site.contact.phoneHref}`,
   );
   lines.push(`- E-mail : ${site.contact.email}`);
-  lines.push("- Horaires : lundis et samedis, sur rendez-vous");
-  lines.push("- Accès : rez-de-chaussée, accès PMR, parking gratuit 2 h");
+  lines.push("- Horaires : du lundi au vendredi, sur rendez-vous");
   lines.push(
-    "- Transports : Tramway ligne 1 (arrêt Moutonnerie) ; Bus 11 et 12 (arrêt Dalby ou Casterneau)",
+    "- Accès : à proximité du centre-ville, quartier Malakoff – Saint-Donatien ; parking du Super U Dalby, 2 h gratuites, 8 min à pied",
   );
-  lines.push(`- Langues des séances : ${site.languages.sessions}`);
+  lines.push(
+    "- Transports : Bus 11 et 12 (arrêt Casterneau, 1 min à pied) ; C1 (arrêt Chalâtres, 10 min à pied) ; Tramway ligne 1 (arrêt Moutonnerie, 20 min à pied)",
+  );
+  lines.push(
+    `- Langues des séances : ${site.languages.sessions.join(" et ")} ; français (langue maternelle), anglais (B2), espagnol (B1), notions d’arabe et de roumain ; interprétariat possible à étudier`,
+  );
   lines.push(
     `- Autre site (parents/enfants) : ${site.otherSite.url}`,
   );

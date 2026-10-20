@@ -44,8 +44,8 @@ Le SEO local vit à 80 % hors du site.
 1. **Google Business Profile**
    - Catégorie principale : **Psychomotricien** — elle existe et est déjà en
      place sur la fiche. Rien à changer de ce côté.
-   - Adresse 2 rue d'Allonville, 44000 Nantes ; téléphone ; site ; horaires **lundi
-     et samedi** ; zone desservie ; lien « Prendre rendez-vous » vers `/contact`.
+   - Adresse 4 rue de la Mitrie, 44000 Nantes ; téléphone ; site ; horaires **du
+     lundi au vendredi** ; zone desservie ; lien « Prendre rendez-vous » vers `/contact`.
    - Description rédigée à partir de ses propres mots (pas de copier-coller).
    - 10+ photos (cabinet, façade, ambiance, en-tête) → dès qu'elle les fournit.
    - Poster 1 actualité/mois ; répondre aux questions (section Q&R).
@@ -57,7 +57,7 @@ Le SEO local vit à 80 % hors du site.
    - PagesJaunes, Bing Places, Apple Business Connect.
    - Annuaires paramédicaux : Resalib, Medoucine, Annuaire-Thérapeutes, annuaires
      de psychomotricité, annuaires locaux nantais.
-   - Le cabinet pluridisciplinaire partagé (2 rue d'Allonville) → se faire citer sur
+   - Le cabinet pluridisciplinaire partagé (4 rue de la Mitrie) → se faire citer sur
      leur page « l'équipe ».
    - **fabuleuxmouvement.fr** → lien croisé réciproque (déjà lié depuis le nouveau site).
 4. **Schema local enrichi** : ajouter `sameAs` (GBP, réseaux) et, une fois les avis en

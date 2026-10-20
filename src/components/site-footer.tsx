@@ -21,9 +21,9 @@ export function SiteFooter() {
               {site.role}
             </p>
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-ink-2">
-              Consultations de psychomotricité pour adolescent.es et adultes, au
-              cœur de Nantes et dans la métropole : Rezé, Saint-Herblain,
-              Orvault, Saint-Sébastien-sur-Loire.
+              Consultations de psychomotricité pour adolescent.es et adultes, à
+              Nantes et dans la métropole : Rezé, Saint-Herblain, Orvault,
+              Saint-Sébastien-sur-Loire.
             </p>
             <a
               href={site.otherSite.url}
@@ -59,11 +59,11 @@ export function SiteFooter() {
             <dl className="mt-6 space-y-2 text-sm text-ink-2">
               <div className="flex gap-2">
                 <dt className="text-ink-3">Reçoit</dt>
-                <dd>{site.hours.days.join(" et ")}</dd>
+                <dd>{site.hours.display}</dd>
               </div>
               <div className="flex gap-2">
                 <dt className="text-ink-3">Accès</dt>
-                <dd>{site.access.desk}, {site.access.pmr.toLowerCase()}</dd>
+                <dd>Sur rendez-vous</dd>
               </div>
             </dl>
           </div>

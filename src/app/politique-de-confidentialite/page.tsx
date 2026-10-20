@@ -31,7 +31,8 @@ export default function ConfidentialitePage() {
               Responsable du traitement
             </h2>
             <p>
-              {site.name}, {site.role}, 2 rue d’Allonville, 44000 Nantes.
+              {site.name}, {site.role}, {site.address.street}, {site.address.postalCode}{" "}
+              {site.address.city}.
               Contact :{" "}
               <a href={mailHref} className="link-quiet">
                 {site.contact.email}

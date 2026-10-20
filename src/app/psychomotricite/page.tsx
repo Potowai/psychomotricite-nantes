@@ -17,22 +17,22 @@ const faqItems = [
   {
     question: "Qu’est-ce que la psychomotricité ?",
     answer:
-      "Une profession paramédicale qui s’intéresse aux liens entre le corps et la vie psychique : la motricité, les sensations, le tonus, le rapport au temps et à l’espace, la relation à l’autre. Elle s’exerce avec un diplôme d’État, comme l’orthophonie.",
+      "Une profession paramédicale qui s’intéresse aux liens entre le corps et la vie psychique : la motricité, les sensations, le tonus, le rapport au temps et à l’espace, la relation à l’autre. Elle s’exerce avec un diplôme d’État, comme l’orthophonie ou la kinésithérapie.",
   },
   {
     question: "À quoi ça sert concrètement ?",
     answer:
-      "À retrouver des appuis : mieux sentir son corps, réguler ce qui déborde, se repérer dans l’espace et dans le temps, oser bouger et prendre sa place. On passe par le mouvement, la relaxation, la respiration, la matière et la parole.",
+      "À retrouver des appuis : mieux sentir son corps, coordonner ses gestes, réguler ce qui déborde, se repérer dans l’espace et dans le temps, oser bouger et prendre sa place. On passe par le mouvement, la relaxation, la respiration, la matière et la parole.",
   },
   {
     question: "Est-ce que ça marche aussi pour un adulte ?",
     answer:
-      "Oui. La psychomotricité ne s’adresse pas qu’aux enfants : je reçois des adolescent.es et des adultes, parfois longtemps après que les difficultés se sont installées. Aucun diagnostic n’est nécessaire pour venir.",
+      "Oui. La psychomotricité ne s’adresse pas qu’aux enfants : je reçois des adolescent.es et des adultes, parfois longtemps après que les difficultés se sont installées. Aucun diagnostic n’est nécessaire pour venir. Une prescription médicale est en revanche obligatoire pour engager le bilan ou le suivi.",
   },
   {
     question: "Quelle différence avec l’orthophonie ou la psychologie ?",
     answer:
-      "Ces approches se complètent plus qu’elles ne s’opposent. L’orthophoniste travaille le langage et les apprentissages du langage écrit ; le psychologue travaille la vie psychique et, selon sa formation, le bilan cognitif. La psychomotricité prend appui sur le corps, le mouvement et les sensations.",
+      "Ces approches se complètent plus qu’elles ne s’opposent. L’orthophoniste travaille le langage et les apprentissages du langage écrit ; le psychologue travaille la vie psychique par le biais de la parole et, selon sa formation, le bilan cognitif. La psychomotricité prend appui sur le corps, le mouvement et les sensations.",
   },
 ];
 
@@ -88,7 +88,7 @@ const motifs = [
       "dysphorie de genre",
     ],
     outro:
-      "Il existe beaucoup de parcours de vie, tous singuliers, dans lesquels le rapport au corps n’est pas serein — et parfois la demande est « simplement » « d’apprendre à aimer son corps ».",
+      "Il existe beaucoup de parcours de vie, tous singuliers, dans lesquels le rapport au corps n’est pas serein — et parfois la demande est « simplement » d’apprendre à se réapproprier son corps, l’habiter, l’aimer.",
   },
   {
     title: "Les étapes de la vie",
@@ -161,18 +161,10 @@ export default function PsychomotricitePage() {
               Psychomotricien.ne est une profession paramédicale, reconnue par un
               diplôme d’État, de la même manière que les orthophonistes et les
               kinésithérapeutes. Les compétences des psychomotricien.nes sont
-              encadrées par le décret n°88-6559 du 6 mai 1988.
+              encadrées par le décret n°88-659 du 6 mai 1988. Une prescription
+              médicale est donc obligatoire.
             </p>
           </Callout>
-
-          <p>
-            Vous souhaitez comprendre comment se déroule un accompagnement, ou
-            savoir si la psychomotricité peut vous concerner ?{" "}
-            <Link href="/contact" className="text-blue-deep link-quiet">
-              Écrivez-moi ou appelez-moi
-            </Link>
-            , je vous répondrai simplement.
-          </p>
         </div>
       </Container>
 
@@ -208,7 +200,7 @@ export default function PsychomotricitePage() {
           <div className="mt-16 border-t border-line pt-10">
             <p className="eyebrow">Pour aller plus loin</p>
             <h2 className="mt-3 font-display text-[1.7rem] leading-tight text-ink sm:text-[2rem]">
-              Certains motifs méritent une page à part entière.
+              Certains motifs particuliers sont développés dans une page dédiée.
             </h2>
             <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {motifPages.map((m) => (

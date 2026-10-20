@@ -89,9 +89,9 @@ de la remettre à niveau : c'est là que se trouvent les gains. Voir
 - **Catégorie** : la catégorie **Psychomotricien** existe et est déjà en place
   sur la fiche — rien à changer de ce côté. C'est la catégorie principale qui détermine les recherches sur
   lesquelles la fiche peut apparaître.
-- **NAP rigoureusement identique** au site : 2 rue d'Allonville, 44000 Nantes,
+- **NAP rigoureusement identique** au site : 4 rue de la Mitrie, 44000 Nantes,
   06 84 74 96 70.
-- **Horaires** : lundi et samedi uniquement.
+- **Horaires** : du lundi au vendredi.
 - **Description** (750 caractères) : rédigée avec ses mots, pas de copier-coller
   du site.
 - **Prestations** : bilan psychomoteur, suivi, douance (HPI, HQI/THQI), TDA-H,
@@ -102,7 +102,7 @@ de la remettre à niveau : c'est là que se trouvent les gains. Voir
 - **Lien de rendez-vous** : « Prendre rendez-vous » vers `/contact`.
 - **Questions & réponses** : reprendre les questions déjà rédigées sur `/faq`.
 - **Publications** : une par mois suffit.
-- **Attributs** : sur rendez-vous, accessibilité PMR (déjà documentés sur le site).
+- **Attributs** : sur rendez-vous ; accessibilité PMR du nouveau cabinet à vérifier avant de la publier.
 - **Avis** : le facteur n°2. Demander systématiquement, jamais d'avis acheté, et
   répondre à chaque avis.
 

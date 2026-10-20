@@ -4,42 +4,42 @@
 /*  Palette — papier chaud, encre bleu-nuit, accents d'aquarelle       */
 /* ------------------------------------------------------------------ */
 @theme {
-  --color-paper: #f6f1e8;
-  --color-paper-2: #efe7da;
-  --color-paper-3: #e4d8c6;
-  --color-ink: #1d2a33;
-  --color-ink-2: #47565f;
-  --color-ink-3: #7a868d;
-  --color-line: #d9cdb9;
+  --color-paper: #fcfaf6;
+  --color-paper-2: #f5efe6;
+  --color-paper-3: #eadfd0;
+  --color-ink: #17252e;
+  --color-ink-2: #3f505a;
+  --color-ink-3: #5d6b73;
+  --color-line: #ded2c0;
 
-  /* Bleus — on reprend le bleu vif de Manuela (#0693e3) */
-  --color-blue: #1d6aa8;
-  --color-blue-deep: #14486f;
-  --color-blue-soft: #d9ecfb;
-  --color-azure: #0693e3;
-  --color-azure-deep: #0577ba;
+  /* Bleus — le bleu vif de Manuela, légèrement densifié pour la lisibilité */
+  --color-blue: #1268a8;
+  --color-blue-deep: #0f466b;
+  --color-blue-soft: #ddeefb;
+  --color-azure: #078bd6;
+  --color-azure-deep: #0673b0;
 
-  /* Corail / rouge (#e8554e) */
-  --color-corail: #e8554e;
-  --color-corail-deep: #c33a33;
+  /* Corail / rouge */
+  --color-corail: #e8524b;
+  --color-corail-deep: #c73a34;
   --color-corail-soft: #fbe2df;
 
-  /* Vert sauge (#67a671) */
-  --color-sage: #679a6d;
+  /* Vert sauge */
+  --color-sage: #5f9468;
   --color-sage-soft: #e2ecdd;
 
   /* Ocre */
-  --color-ochre: #c2913f;
+  --color-ochre: #c08a35;
   --color-ochre-soft: #f5e7cd;
 
-  --color-terracotta: #be5a45;
+  --color-terracotta: #b95540;
 
   --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --radius-card: 1.25rem;
-  --shadow-soft: 0 1px 2px rgba(29, 42, 51, 0.04), 0 12px 32px -12px rgba(29, 42, 51, 0.16);
-  --shadow-lift: 0 2px 4px rgba(29, 42, 51, 0.05), 0 24px 56px -20px rgba(29, 42, 51, 0.22);
+  --shadow-soft: 0 1px 2px rgba(23, 37, 46, 0.04), 0 12px 32px -12px rgba(23, 37, 46, 0.16);
+  --shadow-lift: 0 2px 4px rgba(23, 37, 46, 0.05), 0 24px 56px -20px rgba(23, 37, 46, 0.22);
 }
 
 /* ------------------------------------------------------------------ */
@@ -138,7 +138,7 @@
 /* Motif de fond très discret : grain de papier */
 @utility paper-grain {
   background-image: radial-gradient(
-    rgba(29, 42, 51, 0.035) 1px,
+    rgba(23, 37, 46, 0.032) 1px,
     transparent 1px
   );
   background-size: 22px 22px;
@@ -147,16 +147,16 @@
 /* Texture de carte : papier texturé, relief doux */
 @utility card-texture {
   background-image:
-    radial-gradient(rgba(29, 42, 51, 0.055) 1px, transparent 1.4px),
+    radial-gradient(rgba(23, 37, 46, 0.05) 1px, transparent 1.4px),
     radial-gradient(
       130% 100% at 0% 0%,
-      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.8),
       transparent 58%
     ),
     linear-gradient(
       180deg,
-      rgba(228, 216, 198, 0.55) 0%,
-      rgba(246, 241, 232, 0) 62%
+      rgba(234, 223, 208, 0.6) 0%,
+      rgba(252, 250, 246, 0) 62%
     );
   background-size:
     15px 15px,
