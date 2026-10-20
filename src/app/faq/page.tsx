@@ -86,7 +86,7 @@ const faq: Item[] = [
     category: "Le déroulé",
     question: "Quelle différence avec l’orthophonie ou la psychologie ?",
     answer:
-      "Ces approches se complètent plus qu’elles ne s’opposent. L’orthophoniste travaille le langage, la parole et les apprentissages du langage écrit. Le psychologue travaille la vie psychique par le biais de la parole et, lorsqu’il en a la formation, le bilan cognitif. La psychomotricité prend appui sur le corps, le mouvement et les sensations pour retrouver des appuis, une régulation et une place dans la relation. Il est fréquent que ces suivis se fassent en parallèle : je travaille volontiers en lien avec les professionnel.les qui entourent la personne.",
+      "Ces approches se complètent plus qu’elles ne s’opposent. L’orthophoniste travaille le langage, la parole et les apprentissages du langage écrit. Le psychologue travaille la vie psychique par le biais de la parole et, selon sa formation, le bilan cognitif. La psychomotricité prend appui sur le corps, le mouvement et les sensations pour retrouver des appuis, une régulation et une place dans la relation. Il est fréquent que ces suivis se fassent en parallèle : je travaille volontiers en lien avec les professionnel.les qui entourent la personne.",
   },
   {
     category: "Le cabinet",

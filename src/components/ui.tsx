@@ -207,11 +207,13 @@ export function Faq({
 export function PhotoPlaceholder({
   title,
   note,
+  label = "Photo à fournir",
   ratio = "4 / 5",
   className = "",
 }: {
   title: string;
   note?: string;
+  label?: string;
   ratio?: string;
   className?: string;
 }) {
@@ -240,7 +242,7 @@ export function PhotoPlaceholder({
       </span>
       <figcaption className="max-w-xs">
         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-azure-deep">
-          Photo à fournir
+          {label}
         </span>
         <p className="mt-2 font-display text-lg leading-snug text-ink">
           {title}

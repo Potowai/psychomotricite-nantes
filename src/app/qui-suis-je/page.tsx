@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import portraitManuela from "@/assets/images/portrait-manuela.jpg";
+import portraitManuela from "@/assets/images/portrait-manuela.webp";
 import { CtaBand } from "@/components/contact-cta";
 import { Callout, Container, PageHero, PhotoPlaceholder, SectionTitle } from "@/components/ui";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
@@ -30,7 +30,7 @@ const formations = [
   "le développement de l’enfant",
   "le portage",
   "la transculturalité",
-  "la douance (HPI, HQI/THQI)",
+  "la douance (HQI/THQI)",
 ];
 
 export default function QuiSuisJePage() {
@@ -51,14 +51,10 @@ export default function QuiSuisJePage() {
           <figure>
             <Image
               src={portraitManuela}
-              alt="Portrait de Manuela Edom, psychomotricienne à Nantes, souriante, les bras croisés."
+              alt="Portrait de Manuela Edom, psychomotricienne à Nantes, souriante, le haut des mains au premier plan."
               sizes="(max-width: 1024px) 100vw, 38vw"
-              placeholder="blur"
-              className="h-auto w-full rounded-[2rem] border border-line object-cover"
+              className="h-auto w-full"
             />
-            <figcaption className="mt-3 text-sm text-ink-3">
-              Photo : Fabrice Rault
-            </figcaption>
           </figure>
           <dl className="mt-8 space-y-4 border-t border-line pt-6 text-sm">
             <div className="flex justify-between gap-4">
@@ -146,8 +142,9 @@ export default function QuiSuisJePage() {
         <PhotoPlaceholder
           className="rounded-[2rem]"
           ratio="4 / 3"
+          label="Visuel à venir"
           title="Une image de terrain : atelier, groupe, ou travail de la matière"
-          note="Photo couleur, cadrage horizontal, sans visage identifiable de patient.es. Format conseillé : 1600 × 1200 px."
+          note="Photo ou illustration, sans visage identifiable. Format conseillé : 1600 × 1200 px."
         />
 
         <div>

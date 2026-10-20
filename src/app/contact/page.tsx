@@ -28,7 +28,7 @@ export default function ContactPage() {
         ]}
         eyebrow="Contact & rendez-vous"
         title="Prendre rendez-vous."
-        lead="Vous pouvez me contacter par mail, SMS ou appel. Vous pouvez aussi m’écrire via le formulaire : je vous réponds en général sous 24 à 48 h ouvrées. Une prescription médicale est obligatoire pour engager un bilan ou un suivi."
+        lead="Vous pouvez me contacter par mail, SMS ou appel. Vous pouvez aussi m’écrire via le formulaire, je vous réponds en général sous 24 à 48 h ouvrées."
       />
 
       {/* Coordonnées en évidence */}
@@ -160,6 +160,10 @@ export default function ContactPage() {
             Expliquez-moi votre demande en quelques mots : je vous proposerai un
             rendez-vous, ou je vous orienterai vers la personne la plus juste si
             ce n’est pas moi.
+          </p>
+          <p className="mt-3 text-sm text-ink-3">
+            Une prescription médicale est obligatoire pour engager un bilan ou
+            un suivi.
           </p>
           <div className="mt-8">
             <ContactForm />

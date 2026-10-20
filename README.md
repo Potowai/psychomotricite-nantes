@@ -180,9 +180,12 @@ reste à faire :
 Ces éléments sont marqués dans le site et doivent être complétés par Manuela :
 
 - [ ] **Mentions légales** : numéro **SIRET** et numéro **ADELI / RPPS**.
-- [x] **Portrait professionnel** de Manuela (photo : Fabrice Rault), intégré.
-- [ ] **Photos complémentaires** (4 emplacements marqués « photo à fournir »
-      sur le site : façade, séance, terrain).
+- [x] **Portrait professionnel** de Manuela (photo : Fabrice Rault), intégré en
+      couleur, détouré et recadré pour ne garder que le haut des mains.
+- [ ] **Photos complémentaires** : deux photos sont attendues — la façade du
+      nouveau cabinet et l’intérieur de la salle de séance. Un emplacement
+      « visuel à venir » reste disponible pour une photo ou une illustration de
+      terrain.
 - [ ] **Fiche Google Business Profile** : à compléter — l'audit détaillé et les
       textes prêts à copier sont dans `docs/fiche-google-business.md`.
 - [ ] **Domaine** : confirmer l'accès au registrar et au DNS.
@@ -200,5 +203,6 @@ souhaite un univers visuel proche, il faudra des visuels libres de droits ou
 créés sur mesure.
 
 Les emplacements de photos en attente affichent un **visuel indicatif qui décrit
-la photo à fournir** (façade, salle de séance, matériel…), jamais une image
-d'elle inventée. Le portrait intégré est crédité à Fabrice Rault.
+la photo à fournir** (façade, salle de séance), jamais une image d'elle inventée.
+Le portrait intégré est crédité à Fabrice Rault ; son cadrage conserve seulement
+le haut des mains, comme demandé.

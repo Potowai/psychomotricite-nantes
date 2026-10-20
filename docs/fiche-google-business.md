@@ -104,10 +104,10 @@ recherches précises :
 ### 2.5 Les photos
 
 2 photos seulement, pour une cible de 10 minimum. Ce sont **les mêmes visuels que
-les 4 emplacements « photo à fournir » du site** : façade, entrée, salle de
-séance et matériel (argile, ballons, tissus…). Le portrait est déjà fourni
-(photo : Fabrice Rault). Ajouter
-ensuite une photo de temps en temps plutôt que tout d'un coup.
+les emplacements « photo à fournir » du site** : la façade du nouveau cabinet et
+l’intérieur de la salle de séance. Le portrait est déjà fourni, en couleur,
+détouré et recadré pour ne garder que le haut des mains (photo : Fabrice Rault).
+Ajouter ensuite une photo de temps en temps plutôt que tout d'un coup.
 
 ### 2.6 Les publications et les questions
 
@@ -149,5 +149,5 @@ les modifications seront perdues ou refusées.
 
 - [ ] Les **heures exactes** du lundi au vendredi
 - [ ] La confirmation qu'elle a bien **l'accès gestionnaire**
-- [ ] Les **photos** (les 5 du site + 5 autres pour la fiche)
+- [ ] Les **photos** (les 2 photos du site + 5 autres pour la fiche)
 - [ ] Sa relecture de la **description** (pour que ce soit ses mots)

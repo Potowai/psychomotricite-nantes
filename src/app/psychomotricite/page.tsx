@@ -133,8 +133,8 @@ export default function PsychomotricitePage() {
           />
           <PhotoPlaceholder
             className="mt-10 rounded-[2rem]"
-            title="Une image d’écoute et de sensorialité"
-            note="Gros plan (mains, souffle, mouvement, texture), cadrage vertical. Format conseillé : 1200 × 1600 px."
+            title="La salle de séance, au cabinet"
+            note="Photo couleur de l’intérieur de la salle, sans visage identifiable. Cadrage vertical ou horizontal selon la photo."
           />
         </div>
 

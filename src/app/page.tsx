@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import feuilleRose from "@/assets/images/feuille-rose.png";
 import figureLineInk from "@/assets/images/figure-line-ink.png";
-import portraitManuela from "@/assets/images/portrait-manuela.jpg";
+import portraitManuela from "@/assets/images/portrait-manuela.webp";
 import washBleu from "@/assets/images/wash-bleu.png";
 import { CabinetMap } from "@/components/cabinet-map";
 import { CtaBand } from "@/components/contact-cta";
@@ -328,14 +328,10 @@ export default function HomePage() {
           <figure>
             <Image
               src={portraitManuela}
-              alt="Portrait de Manuela Edom, psychomotricienne à Nantes, souriante, les bras croisés."
+              alt="Portrait de Manuela Edom, psychomotricienne à Nantes, souriante, le haut des mains au premier plan."
               sizes="(max-width: 1024px) 100vw, 45vw"
-              placeholder="blur"
-              className="h-auto w-full rounded-[2rem] border border-paper/10 object-cover"
+              className="h-auto w-full"
             />
-            <figcaption className="mt-3 text-xs text-paper/50">
-              Photo : Fabrice Rault
-            </figcaption>
           </figure>
           <div>
             <span
@@ -410,7 +406,7 @@ export default function HomePage() {
             />
             <InfoCell
               label="Tarifs"
-              value="47 € suivi · 200 € bilan"
+              value="47 € suivi · 200 € bilan (4 séances)"
               accent="bg-corail"
             />
             <div className="bg-blue-soft/50 p-6 sm:col-span-2">
@@ -433,8 +429,8 @@ export default function HomePage() {
           <PhotoPlaceholder
             className="rounded-[2rem] lg:order-2"
             ratio="4 / 3"
-            title="Un moment de séance : médiation corporelle, matière, mouvement ou toucher"
-            note="Photo couleur, cadrage horizontal, sans visage identifiable de patient.es. Format conseillé : 1600 × 1200 px."
+            title="La salle de séance, au cabinet"
+            note="Photo couleur de l’intérieur de la salle, sans visage identifiable de patient.es. Format conseillé : 1600 × 1200 px."
           />
           <div className="lg:order-1">
             <SectionTitle
