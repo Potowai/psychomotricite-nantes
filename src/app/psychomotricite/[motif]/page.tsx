@@ -62,7 +62,7 @@ export default async function MotifPage(
         <div className="mx-auto max-w-3xl space-y-14">
           {motif.sections.map((section) => (
             <section key={section.heading}>
-              <h2 className="font-display text-[1.9rem] leading-tight text-ink sm:text-[2.2rem]">
+              <h2 className="font-display text-display-5 leading-tight text-ink sm:text-[2.2rem]">
                 {section.heading}
               </h2>
               <div className="mt-5 space-y-5 text-lg leading-[1.75] text-ink-2">

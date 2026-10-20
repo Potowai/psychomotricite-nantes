@@ -118,7 +118,7 @@ export default function QuiSuisJePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/50">
                 Ce qui m’importe
               </p>
-              <h2 className="mt-4 text-[2rem] leading-tight text-paper sm:text-[2.4rem]">
+              <h2 className="mt-4 text-display-3 leading-tight text-paper sm:text-[2.4rem]">
                 Des thématiques qui traversent la société, et les corps.
               </h2>
               <p className="mt-5 leading-relaxed text-paper/70">

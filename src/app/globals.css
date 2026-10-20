@@ -40,6 +40,15 @@
   --radius-card: 1.25rem;
   --shadow-soft: 0 1px 2px rgba(23, 37, 46, 0.04), 0 12px 32px -12px rgba(23, 37, 46, 0.16);
   --shadow-lift: 0 2px 4px rgba(23, 37, 46, 0.05), 0 24px 56px -20px rgba(23, 37, 46, 0.22);
+
+  /* Échelle de titres fluide : la taille suit la largeur de l'écran, ce qui
+     garantit qu'un mot long en français ne déborde jamais de sa boîte.
+     Valeurs hautes = mobiles, valeurs basses = grands écrans. */
+  --text-display-1: clamp(1.8rem, 8.4vw, 2.6rem);
+  --text-display-2: clamp(1.9rem, 9.2vw, 2.75rem);
+  --text-display-3: clamp(1.6rem, 7.4vw, 2rem);
+  --text-display-4: clamp(1.4rem, 6.4vw, 1.7rem);
+  --text-display-5: clamp(1.7rem, 7.8vw, 2.1rem);
 }
 
 /* ------------------------------------------------------------------ */
@@ -68,10 +77,20 @@
     letter-spacing: -0.015em;
     color: var(--color-ink);
     text-wrap: balance;
+    /* Filet de sécurité mobile : un mot long en français ne doit jamais
+       déborder de sa boîte ni être rogné par un `overflow-hidden`. */
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   p {
     text-wrap: pretty;
+  }
+
+  /* Un mot long en français ne doit jamais être rogné par un conteneur qui
+     masque le débordement (héros, cadres d'illustration). */
+  p, li, dd, dt, td, th, figcaption, label, summary, legend {
+    overflow-wrap: break-word;
   }
 
   ::selection {
@@ -92,6 +111,14 @@
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  /* Une piste de grille implicite est dimensionnée par son contenu : un mot
+     long en français élargit alors la colonne et la page déborde de l'écran.
+     `minmax(0, 1fr)` impose une piste qui se replie à la place disponible.
+     Les classes `grid-cols-*` (calque utilitaires) prennent le dessus. */
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -178,6 +205,24 @@
     15px 15px,
     100% 100%,
     100% 100%;
+}
+
+/* Cadre d'illustration : le ratio est une hauteur de repos, pas une hauteur
+   imposée. Si la légende est plus longue (petits écrans, titres longs), le
+   cadre grandit au lieu de couper le texte. */
+.photo-placeholder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.photo-placeholder::before {
+  content: "";
+  grid-area: 1 / 1;
+  aspect-ratio: var(--ph-ratio, 4 / 3);
+}
+
+.photo-placeholder > *:not([data-deco]) {
+  grid-area: 1 / 1;
 }
 
 @keyframes fade-up {

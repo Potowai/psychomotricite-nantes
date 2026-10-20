@@ -13,9 +13,9 @@
 
 L’ossature est solide : routes, focus, étiquettes de formulaire et responsive
 sont propres. Les écarts les plus visibles étaient concentrés dans les grilles
-de cartes et dans deux passages sans respiration. Dix corrections ont été
-apportées, puis quatre de plus lors d’une seconde passe sur les points
-signalés.
+de cartes, dans deux passages sans respiration, et sur l'affichage mobile, où
+les titres étaient rognés. Quatorze corrections ont été apportées, en trois
+passes.
 
 | Priorité | Constat | État |
 |---|---|---|
@@ -29,6 +29,8 @@ signalés.
 | Majeur | Formulaire : une seule alerte globale, aucune erreur par champ | Corrigé |
 | Majeur | Bannière de langue en pleine largeur, par-dessus le texte | Corrigé |
 | Moyen | Cadre de la carte blanc tant que les tuiles ne chargent pas | Corrigé |
+| Majeur | Titres rognés sous 414 px, documents plus larges que l'écran | Corrigé |
+| Majeur | Encadrés d'illustration coupant leur légende sur mobile | Corrigé |
 
 ## Constats détaillés
 
@@ -219,6 +221,70 @@ d'une zone cassée pendant le chargement des tuiles.
 l'adresse du cabinet restant affichée juste au-dessus sur les deux pages
 concernées.
 
+## Troisième passe — affichage mobile
+
+### 13 · Majeur · Toutes pages — les titres débordaient et étaient rognés
+
+Sur un écran de 320 à 414 px, le titre `h1` en 41,6 px ne tenait plus dans sa
+boîte. La section du hero porte `overflow-hidden` : le mot le plus long était
+donc **coupé net**, sans défilement possible.
+
+```text
+320 px, page Qui suis-je
+  h1 « Psychomotricienne. »   377 px de large pour 272 px disponibles
+  h1 « Le suivi en psychomotricité. »  319 px pour 309 px
+  → texte rogné par le overflow-hidden du hero
+```
+
+**Correction**
+
+- échelle de titres fluide en `clamp()`, pilotée par la largeur de l'écran
+  (`--text-display-1` à `--text-display-5` dans `@theme`) : la taille suit
+  l'écran, elle ne « saute » plus d'un palier à l'autre ;
+- `overflow-wrap: break-word` et `hyphens: auto` sur les titres et les textes,
+  pour qu'un mot long en français se coupe proprement au lieu d'être rogné ;
+- `minmax(0, 1fr)` sur les pistes de grille : une piste implicite était
+  dimensionnée par son contenu, si bien qu'un mot long élargissait la colonne
+  et provoquait un débordement de toute la page (390 px → 678 px de largeur de
+  document sur la page Contact).
+
+```text
+Avant : 320 px  h1 « Psychomotricienne. »  377 px > 272 px   rogné
+        390 px  page Contact, document   678 px de large     débordement
+Après : 320 px  h1 « Psychomotricienne. »  tient sur 1 ligne   complet
+        390 px  page Contact, document   390 px              identique à l'écran
+```
+
+### 14 · Majeur · Les encadrés d'illustration coupaient leur légende
+
+Les cadres d'illustration imposaient un ratio fixe : quand la légende était
+plus longue que le cadre, le texte était coupé.
+
+```text
+320 px, accueil : légende 270 px de haut pour un cadre de 202 px  → coupée
+```
+
+**Correction :** le ratio est désormais une hauteur de repos. Le cadre est
+une grille dont une cellule porte le ratio ; si le contenu est plus long, la
+grille grandit au lieu de masquer la légende.
+
+### 15 · Confort · Cibles tactiles sur mobile
+
+Le lien d'accueil du fil d'Ariane (16 px) et le lien « fabuleuxmouvement.fr »
+(20 px) étaient plus petits que 24 px.
+
+**Correction :** padding vertical ajouté sans décaler la mise en page
+(`-my-1` / `py-1`).
+
+### 16 · Confort · Barre fixe et onglet de langue
+
+La barre de contact fixe mesurait 63 px de haut pour 56 px de réserve en
+bas de page : le dernier lien du footer pouvait passer dessous. L'onglet de
+langue était positionné à 64 px, au ras de la barre.
+
+**Correction :** réserve portée à 72 px (`pb-[4.5rem]`), onglet de langue
+repositionné à 80 px (`bottom-20`) sur mobile.
+
 ## Vérifications
 
 ```text
@@ -227,10 +293,27 @@ npx tsc --noEmit  OK
 npm run build     OK (34 pages)
 ```
 
+## Contrôle mobile final
+
+140 combinaisons page × largeur testées (320, 360, 390, 414, 768, 1024 et
+1440 px) sur les 20 pages du site, plus les pages 404.
+
+```text
+débordement horizontal        aucun (document = largeur de l'écran)
+texte rogné                    aucun
+texte plus large que sa boîte  aucun
+champs sans nom accessible    aucun
+cibles tactiles < 24 px       uniquement les cas exonérés
+                               (lien d'évitement, cases à cocher enveloppées
+                               par un label de 38 à 100 px)
+```
+
+Les 5 signalements restants dans l'outillage correspondent à un halo
+décoratif en `display: none` : faux positif.
+
 ## Deuxième passe — reprise des points signalés (suite)
 
 ### 11 · Accessibilité · Formulaire — chaque champ porte son erreur
-
 ```text
 Avant :  role=alert unique, aucun aria-invalid, aucun aria-describedby
 Après :  aria-invalid  nom, email, message, consent

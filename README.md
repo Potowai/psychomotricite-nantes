@@ -54,6 +54,7 @@ npm run lint     # ESLint
 | --- | --- |
 | Coordonnées, adresse, horaires, tarifs, navigation | `src/lib/site.ts` (**source unique de vérité**) |
 | Couleurs, typographie, espacements | `src/app/globals.css` (`@theme`) |
+| Échelle de titres fluide (mobile) | `--text-display-1` à `--text-display-5` dans `globals.css` |
 | Métadonnées globales (titre, OG, géo) | `src/app/layout.tsx` |
 | Métadonnées d'une page | `pageMetadata(...)` dans la page concernée |
 | Textes des pages | `src/app/<page>/page.tsx` |

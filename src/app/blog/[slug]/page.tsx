@@ -40,7 +40,7 @@ function BlockView({ block }: { block: Block }) {
       );
     case "h2":
       return (
-        <h2 className="mt-14 text-[1.7rem] leading-tight sm:text-[2rem]">
+        <h2 className="mt-14 text-display-4 leading-tight sm:text-[2rem]">
           {block.text}
         </h2>
       );
@@ -102,7 +102,7 @@ export default async function ArticlePage(props: PageProps<"/blog/[slug]">) {
               <span aria-hidden="true">·</span>
               <span>{article.readingMinutes} min de lecture</span>
             </div>
-            <h1 className="mt-5 text-[2.2rem] leading-[1.06] sm:text-[3rem]">
+            <h1 className="mt-5 text-display-4 leading-[1.06] sm:text-[3rem]">
               {article.title}
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-ink-2">

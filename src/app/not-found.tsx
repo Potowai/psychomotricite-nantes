@@ -22,7 +22,7 @@ export default function NotFound() {
         className="mb-8 h-40 w-auto opacity-70"
       />
       <Eyebrow>Erreur 404</Eyebrow>
-      <h1 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-ink sm:text-5xl">
+      <h1 className="mt-4 max-w-2xl font-display text-display-3 leading-tight text-ink sm:text-5xl">
         Cette page s’est peut-être perdue en chemin.
       </h1>
       <p className="mt-5 max-w-xl text-lg text-ink-2">

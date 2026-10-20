@@ -126,7 +126,7 @@ export function LanguageBanner() {
     <aside
       lang={suggestion.lang}
       aria-label="Suggestion de langue"
-      className="pointer-events-none fixed right-3 bottom-16 z-40 sm:right-4 lg:bottom-6"
+      className="pointer-events-none fixed right-3 bottom-20 z-40 sm:right-4 lg:bottom-6"
     >
       <div
         className="relative"

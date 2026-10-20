@@ -200,7 +200,7 @@ export default function PsychomotricitePage() {
 
           <div className="mt-16 border-t border-line pt-10">
             <p className="eyebrow">Pour aller plus loin</p>
-            <h2 className="mt-3 font-display text-[1.7rem] leading-tight text-ink sm:text-[2rem]">
+            <h2 className="mt-3 font-display text-display-4 leading-tight text-ink sm:text-[2rem]">
               Certains motifs particuliers sont développés dans une page dédiée.
             </h2>
             <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">

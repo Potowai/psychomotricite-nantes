@@ -42,7 +42,7 @@ export default function BlogIndexPage() {
                   <span aria-hidden="true">·</span>
                   <span>{article.readingMinutes} min de lecture</span>
                 </div>
-                <h2 className="mt-4 font-display text-[1.7rem] leading-tight">
+                <h2 className="mt-4 font-display text-display-4 leading-tight">
                   <Link
                     href={`/blog/${article.slug}`}
                     className="transition-colors group-hover:text-blue-deep"

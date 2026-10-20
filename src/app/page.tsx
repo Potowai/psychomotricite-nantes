@@ -113,7 +113,7 @@ export default function HomePage() {
             <p className="eyebrow">
               Psychomotricienne diplômée d’État · Nantes
             </p>
-            <h1 className="mt-5 text-[2.75rem] leading-[1.0] sm:text-[3.6rem] lg:text-[4.4rem]">
+            <h1 className="mt-5 text-display-2 leading-[1.0] sm:text-[3.6rem] lg:text-[4.4rem]">
               Le lien entre le corps
               <br />
               et l’esprit.

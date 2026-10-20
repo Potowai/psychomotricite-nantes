@@ -28,7 +28,10 @@ export function Breadcrumbs({
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-2">
             {item.href ? (
-              <Link href={item.href} className="transition-colors hover:text-ink-2">
+              <Link
+                href={item.href}
+                className="-my-1 inline-block py-1 transition-colors hover:text-ink-2"
+              >
                 {item.label}
               </Link>
             ) : (
@@ -84,7 +87,7 @@ export function PageHero({
           {eyebrow && (
             <p className="eyebrow mt-8">{eyebrow}</p>
           )}
-          <h1 className="mt-4 text-[2.6rem] leading-[1.02] sm:text-[3.4rem] lg:text-[4rem]">
+          <h1 className="mt-4 text-display-1 leading-[1.02] sm:text-[3.4rem] lg:text-[4rem]">
             {title}
           </h1>
           {lead && (
@@ -122,7 +125,7 @@ export function SectionTitle({
   return (
     <div className={className}>
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-      <h2 className="mt-3 text-[2rem] leading-tight sm:text-[2.5rem]">{title}</h2>
+      <h2 className="mt-3 text-display-3 leading-tight sm:text-[2.5rem]">{title}</h2>
     </div>
   );
 }
@@ -207,6 +210,10 @@ export function Faq({
  * Le cadre est traité comme une illustration éditoriale à part entière
  * (papier texturé, filet, motif d'aquarelle) pour que la page reste composée
  * et lisible en attendant le visuel définitif.
+ *
+ * Le ratio est une hauteur de repos, pas une hauteur imposée : si le texte
+ * est plus long (petits écrans, titres longs), le cadre grandit au lieu de
+ * couper la légende.
  */
 export function PhotoPlaceholder({
   title,
@@ -223,46 +230,50 @@ export function PhotoPlaceholder({
 }) {
   return (
     <figure
-      className={`relative flex w-full min-w-0 max-w-full flex-col items-center justify-center gap-4 self-start overflow-hidden rounded-2xl border border-dashed border-azure/45 bg-paper-2/70 p-8 text-center ${className}`}
-      style={{ aspectRatio: ratio }}
+      className={`photo-placeholder relative w-full min-w-0 max-w-full self-start overflow-hidden rounded-2xl border border-dashed border-azure/45 bg-paper-2/70 text-center ${className}`}
+      style={{ "--ph-ratio": ratio } as React.CSSProperties}
     >
       <span
+        data-deco
         aria-hidden="true"
         className="card-texture pointer-events-none absolute inset-0 opacity-70"
       />
       <span
+        data-deco
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-azure/10 to-transparent"
       />
-      <span
-        aria-hidden="true"
-        className="grid h-12 w-12 place-items-center rounded-full border border-azure/40 bg-paper text-azure-deep"
-      >
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+      <div className="z-10 flex flex-col items-center justify-center gap-4 p-8">
+        <span
+          aria-hidden="true"
+          className="grid h-12 w-12 place-items-center rounded-full border border-azure/40 bg-paper text-azure-deep"
         >
-          <path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h.7l.9-1.5A1.5 1.5 0 0 1 9.4 3.8h5.2a1.5 1.5 0 0 1 1.3.7l.9 1.5h.7A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z" />
-          <circle cx="12" cy="12.3" r="3.3" />
-        </svg>
-      </span>
-      <figcaption className="relative max-w-xs">
-        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-azure-deep">
-          {label}
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h.7l.9-1.5A1.5 1.5 0 0 1 9.4 3.8h5.2a1.5 1.5 0 0 1 1.3.7l.9 1.5h.7A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z" />
+            <circle cx="12" cy="12.3" r="3.3" />
+          </svg>
         </span>
-        <p className="mt-2 font-display text-lg leading-snug text-ink">
-          {title}
-        </p>
-        {note && (
-          <p className="mt-2 text-sm leading-relaxed text-ink-2">{note}</p>
-        )}
-      </figcaption>
+        <figcaption className="max-w-xs">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-azure-deep">
+            {label}
+          </span>
+          <p className="mt-2 font-display text-lg leading-snug text-ink">
+            {title}
+          </p>
+          {note && (
+            <p className="mt-2 text-sm leading-relaxed text-ink-2">{note}</p>
+          )}
+        </figcaption>
+      </div>
     </figure>
   );
 }

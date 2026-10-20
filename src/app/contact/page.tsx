@@ -143,7 +143,7 @@ export default function ContactPage() {
                 href={site.otherSite.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-deep link-quiet"
+                className="-my-1 inline-block py-1 text-blue-deep link-quiet"
               >
                 {site.otherSite.label}
               </a>
@@ -154,7 +154,7 @@ export default function ContactPage() {
 
         {/* Formulaire */}
         <div>
-          <h2 className="font-display text-[2rem] leading-tight text-ink">
+          <h2 className="font-display text-display-3 leading-tight text-ink">
             Écrivez-moi
           </h2>
           <p className="mt-3 text-ink-2">

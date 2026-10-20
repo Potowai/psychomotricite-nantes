@@ -36,7 +36,7 @@ export function CtaBand({
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/50">
             Prendre rendez-vous
           </p>
-          <h2 className="mt-4 max-w-xl text-[2.1rem] leading-tight text-paper sm:text-[2.6rem]">
+          <h2 className="mt-4 max-w-xl text-display-5 leading-tight text-paper sm:text-[2.6rem]">
             {title}
           </h2>
           <p className="mt-5 max-w-xl leading-relaxed text-paper/70">{text}</p>
