@@ -10,6 +10,8 @@ type CabinetMapProps = {
   showLink?: boolean;
 };
 
+const addressLine = `${site.address.street}, ${site.address.postalCode} ${site.address.city}`;
+
 /**
  * Carte navigable du cabinet, partagée entre l'accueil et la page contact.
  *
@@ -18,7 +20,7 @@ type CabinetMapProps = {
  * habiller. Ici on garde les tuiles OpenStreetMap (aucune clé, aucune
  * dépendance à un service tiers) mais on les désature et on les réchauffe,
  * on dessine l'épingle dans le bleu du site et l'adresse reste affichée
- * au-dessus d'elle.
+ * au-dessus d'elle, avec l'itinéraire et la copie de l'adresse à portée.
  *
  * Le script et les tuiles ne partent qu'à l'approche de la carte : le
  * premier rendu de la page ne les porte pas.
@@ -30,7 +32,10 @@ export function CabinetMap({
 }: CabinetMapProps) {
   const shell = useRef<HTMLDivElement>(null);
   const holder = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<import("leaflet").Map | null>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
   const [ready, setReady] = useState(false);
+  const [full, setFull] = useState(false);
 
   useEffect(() => {
     const shellEl = shell.current;
@@ -39,6 +44,7 @@ export function CabinetMap({
 
     let map: import("leaflet").Map | undefined;
     let resize: ResizeObserver | undefined;
+    let copyTimer: ReturnType<typeof setTimeout> | undefined;
     let cancelled = false;
 
     const start = async () => {
@@ -56,6 +62,7 @@ export function CabinetMap({
         // au pincement ou avec les boutons.
         scrollWheelZoom: false,
       });
+      mapRef.current = map;
 
       // L'épingle et son cartouche occupent de la hauteur : on décale le
       // centre vers le nord pour que l'adresse arrive un peu sous le milieu,
@@ -64,7 +71,7 @@ export function CabinetMap({
       const zoom = 16;
       const focus = map
         .project([latitude, longitude], zoom)
-        .subtract([0, Math.round(height * 0.13)]);
+        .subtract([0, Math.round(height * 0.17)]);
       map.setView(map.unproject(focus, zoom), zoom);
 
       L.control.attribution({ prefix: false }).addTo(map);
@@ -95,25 +102,64 @@ export function CabinetMap({
         tooltipAnchor: [0, -40],
       });
 
-      L.marker([latitude, longitude], {
+      const marker = L.marker([latitude, longitude], {
         icon: pin,
         title: fullAddress,
         riseOnHover: true,
         keyboard: false,
-      })
-        .addTo(map)
+      }).addTo(map);
+
+      marker
         .bindTooltip(
-          `<p class="cabinet-tip__name">${site.address.name}</p><p class="cabinet-tip__addr">${site.address.street}<br>${site.address.postalCode} ${site.address.city}</p>`,
+          `<p class="cabinet-tip__name">${site.address.name}</p>` +
+            `<p class="cabinet-tip__addr">${site.address.street}, ${site.address.postalCode} ${site.address.city}</p>` +
+            `<div class="cabinet-tip__actions">` +
+            `<a class="cabinet-tip__go" href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Itinéraire</a>` +
+            `<button class="cabinet-tip__copy" type="button" data-copy>Copier</button>` +
+            `</div>` +
+            `<span class="cabinet-tip__status" role="status" data-status></span>`,
           {
             permanent: true,
             direction: "top",
             offset: [0, -6],
             opacity: 1,
-            interactive: false,
+            interactive: true,
             className: "cabinet-tip",
           },
         )
         .openTooltip();
+
+      // Copie de l'adresse : utile pour la coller dans une appli de taxi ou de
+      // navigation. Le retour s'annonce dans une zone role="status".
+      const tipEl = marker.getTooltip()?.getElement();
+      const copyBtn = tipEl?.querySelector<HTMLButtonElement>("[data-copy]");
+      const statusEl = tipEl?.querySelector<HTMLElement>("[data-status]");
+
+      copyBtn?.addEventListener("click", async () => {
+        let copied = false;
+        try {
+          await navigator.clipboard.writeText(addressLine);
+          copied = true;
+        } catch {
+          const field = document.createElement("textarea");
+          field.value = addressLine;
+          field.setAttribute("readonly", "");
+          field.style.position = "fixed";
+          field.style.opacity = "0";
+          document.body.appendChild(field);
+          field.select();
+          copied = document.execCommand("copy");
+          field.remove();
+        }
+        if (!copied) return;
+        copyBtn.textContent = "Copié";
+        if (statusEl) statusEl.textContent = "Adresse copiée";
+        clearTimeout(copyTimer);
+        copyTimer = setTimeout(() => {
+          copyBtn.textContent = "Copier";
+          if (statusEl) statusEl.textContent = "";
+        }, 2400);
+      });
 
       resize = new ResizeObserver(() => map?.invalidateSize());
       resize.observe(holderEl);
@@ -134,17 +180,48 @@ export function CabinetMap({
       cancelled = true;
       io.disconnect();
       resize?.disconnect();
+      clearTimeout(copyTimer);
       map?.remove();
+      mapRef.current = null;
       map = undefined;
     };
   }, [height]);
+
+  // Plein écran : la taille change sans transition, il suffit de recaler la
+  // carte une fois la nouvelle boîte appliquée.
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => mapRef.current?.invalidateSize());
+    return () => cancelAnimationFrame(frame);
+  }, [full]);
+
+  useEffect(() => {
+    if (!full) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeRef.current?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setFull(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previous;
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [full]);
 
   return (
     <div className={className}>
       <div
         ref={shell}
-        className="carte-shell relative overflow-hidden rounded-[1.5rem] border border-line bg-paper-2 shadow-[var(--shadow-soft)]"
-        style={{ height }}
+        role={full ? "dialog" : undefined}
+        aria-modal={full ? true : undefined}
+        aria-label={full ? `Plan d’accès — ${fullAddress}` : undefined}
+        className={`carte-shell relative overflow-hidden bg-paper-2 ${
+          full
+            ? "carte-full"
+            : "rounded-[1.5rem] border border-line shadow-[var(--shadow-soft)]"
+        }`}
+        style={full ? undefined : { height }}
       >
         {/* React ne gère que l'enveloppe : Leaflet ajoute ses classes sur le
             div intérieur, qu'aucun rendu ne vient réécrire. */}
@@ -160,6 +237,39 @@ export function CabinetMap({
             data-map
           />
         </div>
+
+        <button
+          ref={closeRef}
+          type="button"
+          onClick={() => setFull((value) => !value)}
+          aria-expanded={full}
+          aria-label={full ? "Réduire le plan" : "Agrandir le plan"}
+          className="carte-expand absolute right-3 top-3 z-[900] grid h-9 w-9 place-items-center rounded-xl border border-line bg-paper text-ink shadow-[var(--shadow-soft)] transition-colors hover:bg-blue-soft"
+        >
+          {full ? (
+            <svg viewBox="0 0 16 16" aria-hidden="true" className="h-4 w-4">
+              <path
+                d="M4 4l8 8M12 4l-8 8"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+              />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 16 16" aria-hidden="true" className="h-4 w-4">
+              <path
+                d="M6 2H2v4M10 14h4v-4M14 6V2h-4M2 10v4h4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+        </button>
+
         {/* Sans JavaScript, la carte ne peut pas se dessiner : on garde un
             accès direct au plan plutôt qu'un cadre vide. */}
         <noscript>
