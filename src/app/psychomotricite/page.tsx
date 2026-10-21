@@ -54,7 +54,6 @@ const motifs = [
       "troubles neurologiques",
       "douleurs chroniques",
       "accidents",
-      "handicap",
     ],
     outro:
       "Dans ces situations, le corps est atteint dans son intégrité et/ou sa gestualité.",
