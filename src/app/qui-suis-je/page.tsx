@@ -175,7 +175,7 @@ export default function QuiSuisJePage() {
             ))}
           </ul>
 
-          <Callout title="Langues" tone="sage">
+          <Callout title="Langues" tone="peach" className="mt-8">
             <p>
               Je parle français (langue maternelle), anglais (B2), espagnol (B1)
               et j’ai quelques notions d’arabe et de roumain (très débutante dans

@@ -440,3 +440,37 @@ Contrôle après reprise de la bande : 45 combinaisons page × largeur (9 pages,
 au probe de contraste calculé sur le fond réellement composé — aucun seuil
 franchi.
 
+## Sixième passe — trois familles de couleur
+
+### 20 · Majeur · Quatre accents se disputaient la même page
+
+Le site portait du vert sauge, de l'ocre, du corail et du bleu. Quatre familles
+pour un même niveau de lecture : les cartes d'articles changeaient même de
+couleur à chaque ligne, et un encadré vert voisinait avec un encadré rouge.
+
+**Correction**
+
+- trois familles, et rien d'autre : **bleu** (azure, blue, ink), **peach**
+  (paper-2, paper-3, line, peach) et **noir & blanc** (ink-2, ink-3, paper) ;
+- tous les accents décoratifs passent à l'azure : filets des cartes
+  d'articles, numéros des étapes, pastilles d'informations pratiques, barre
+  du bandeau de rendez-vous, filet de citation ;
+- les encadrés n'ont plus que deux tons : bleu pour l'information, peach pour
+  l'attention ;
+- le rouge ne sert plus qu'aux erreurs de formulaire, et les astérisques de
+  champ obligatoire passent en encre : par défaut, aucune trace de rouge ;
+- l'image de partage et le manifeste suivent la palette ;
+- l'encadré « Langues » reprend 32 px d'air au-dessus de lui : il touchait
+  les pastilles de formations.
+
+```text
+familles d'accent        4 → 3
+teintes vertes, ocre     2 + 1 → 0
+corail décoratif         oui → non (erreurs seulement)
+contraste alerte         4,9:1 → 6,7:1 sur la bande
+contraste corps/peach    — → 7,8:1
+```
+
+Balayage des couleurs calculées sur 10 pages : quatorze valeurs distinctes,
+toutes issues des trois familles. Aucun seuil de contraste franchi.
+

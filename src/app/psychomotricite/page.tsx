@@ -147,7 +147,7 @@ export default function PsychomotricitePage() {
             considérer le corps dans toute sa complexité : existentielle,
             expressive, émotionnelle, identitaire.
           </p>
-          <blockquote className="border-l-2 border-corail/60 pl-6 font-display text-[1.5rem] leading-snug text-ink">
+          <blockquote className="border-l-2 border-azure/60 pl-6 font-display text-[1.5rem] leading-snug text-ink">
             « Considérer le corps dans toute sa complexité : existentielle,
             expressive, émotionnelle, identitaire. »
           </blockquote>

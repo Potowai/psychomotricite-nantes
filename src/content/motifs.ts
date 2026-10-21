@@ -20,7 +20,7 @@ export type Motif = {
   title: string;
   lead: string;
   sections: MotifSection[];
-  note?: { title: string; text: string; tone: "blue" | "terracotta" | "sage" };
+  note?: { title: string; text: string; tone: "blue" | "peach" };
   faq: MotifFaq[];
   related?: string[];
 };
@@ -70,7 +70,7 @@ export const motifs: Motif[] = [
     note: {
       title: "Je suis aussi formatrice",
       text: "Je suis formatrice sur la thématique de la douance (HPI, HQI/THQI), ainsi que sur la parentalité, le développement de l’enfant, le portage et la transculturalité.",
-      tone: "sage",
+      tone: "peach",
     },
     faq: [
       {
@@ -136,7 +136,7 @@ export const motifs: Motif[] = [
     note: {
       title: "En complément, jamais à la place",
       text: "Le TDA-H est une neuroatypie : il ne s’agit pas d’un défaut de volonté. Mon accompagnement se fait en complément — jamais à la place — d’un suivi médical.",
-      tone: "terracotta",
+      tone: "peach",
     },
     faq: [
       {
@@ -203,7 +203,7 @@ export const motifs: Motif[] = [
     note: {
       title: "Un accompagnement qui complète les soins",
       text: "Si vous traversez une souffrance profonde ou une crise, la psychomotricité ne remplace pas un accompagnement médical ou psychologique : elle peut le compléter. En cas de doute, nous en parlons — et je vous réoriente si besoin.",
-      tone: "terracotta",
+      tone: "peach",
     },
     faq: [
       {
@@ -334,7 +334,7 @@ export const motifs: Motif[] = [
     note: {
       title: "En complément du suivi médical",
       text: "La psychomotricité s’inscrit en complément du suivi médical (médecin, kinésithérapeute, ergothérapeute…). Elle n’a pas vocation à le remplacer.",
-      tone: "terracotta",
+      tone: "peach",
     },
     faq: [
       {

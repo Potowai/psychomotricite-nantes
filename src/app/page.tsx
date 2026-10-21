@@ -297,16 +297,12 @@ export default function HomePage() {
           </div>
 
           <ol className="space-y-2">
-            {etapes.map((e, i) => (
+            {etapes.map((e) => (
               <li
                 key={e.n}
                 className="grid gap-4 border-t border-line py-7 sm:grid-cols-[auto_1fr] sm:gap-8"
               >
-                <span
-                  className={`font-display text-2xl ${
-                    ["text-azure-deep", "text-corail-deep", "text-sage"][i % 3]
-                  }`}
-                >
+                <span className="font-display text-2xl text-azure-deep">
                   {e.n}
                 </span>
                 <div>
@@ -340,7 +336,7 @@ export default function HomePage() {
           <div>
             <span
               aria-hidden="true"
-              className="mb-5 block h-1.5 w-12 rounded-full bg-corail"
+              className="mb-5 block h-1.5 w-12 rounded-full bg-azure"
             />
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/50">
               Qui suis-je ?
@@ -396,22 +392,18 @@ export default function HomePage() {
             <InfoCell
               label="Consultations"
               value="Du lundi au vendredi, sur rendez-vous"
-              accent="bg-azure"
             />
             <InfoCell
               label="Quartier"
               value="Malakoff – Saint-Donatien"
-              accent="bg-sage"
             />
             <InfoCell
               label="Langues"
               value="Français · Anglais"
-              accent="bg-ochre"
             />
             <InfoCell
               label="Tarifs"
               value="47 € suivi · 200 € bilan (4 séances)"
-              accent="bg-corail"
             />
             <div className="bg-blue-soft/50 p-6 sm:col-span-2">
               <p className="text-xs uppercase tracking-[0.16em] text-ink-2">
@@ -493,17 +485,15 @@ export default function HomePage() {
 function InfoCell({
   label,
   value,
-  accent = "bg-azure",
 }: {
   label: string;
   value: string;
-  accent?: string;
 }) {
   return (
     <div className="bg-paper p-6">
       <span
         aria-hidden="true"
-        className={`mb-4 block h-1 w-8 rounded-full ${accent}`}
+        className="mb-4 block h-1 w-8 rounded-full bg-azure"
       />
       <p className="text-xs uppercase tracking-[0.16em] text-ink-3">{label}</p>
       <p className="mt-2 font-display text-xl text-ink">{value}</p>

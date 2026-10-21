@@ -250,7 +250,7 @@ export default function SeancesEtTarifsPage() {
               </p>
             </div>
 
-            <Callout title="Remboursement" tone="terracotta">
+            <Callout title="Remboursement" tone="peach">
               <p>
                 Les psychomotricien.nes sont auxiliaires de la médecine ; à la
                 différence des kinés et des orthophonistes, leurs soins ne
@@ -259,7 +259,7 @@ export default function SeancesEtTarifsPage() {
               </p>
             </Callout>
 
-            <Callout title="Ordonnance" tone="sage">
+            <Callout title="Ordonnance" tone="blue">
               <p>
                 La psychomotricité est une profession paramédicale : une
                 prescription médicale est obligatoire pour engager un bilan ou un

@@ -151,18 +151,21 @@ export function Callout({
   title,
   children,
   tone = "blue",
+  className = "",
 }: {
   title?: string;
   children: ReactNode;
-  tone?: "blue" | "terracotta" | "sage";
+  tone?: "blue" | "peach";
+  className?: string;
 }) {
   const tones = {
     blue: "border-azure/30 bg-blue-soft/60",
-    terracotta: "border-corail/30 bg-corail-soft/60",
-    sage: "border-sage/30 bg-sage-soft/60",
+    peach: "border-peach/70 bg-peach-soft",
   } as const;
   return (
-    <aside className={`rounded-2xl border p-6 sm:p-7 ${tones[tone]}`}>
+    <aside
+      className={`rounded-2xl border p-6 sm:p-7 ${tones[tone]} ${className}`}
+    >
       {title && (
         <p className="font-display text-xl text-ink">{title}</p>
       )}

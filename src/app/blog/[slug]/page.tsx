@@ -53,7 +53,7 @@ function BlockView({ block }: { block: Block }) {
             <li key={item} className="flex gap-3 leading-relaxed text-ink-2">
               <span
                 aria-hidden="true"
-                className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-corail"
+                className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-azure"
               />
               <span>{item}</span>
             </li>

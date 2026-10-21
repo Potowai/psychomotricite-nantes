@@ -43,7 +43,7 @@ const MIN_MESSAGE = 10;
 const fieldClass =
   "w-full rounded-xl border border-line bg-paper px-4 py-3 text-base text-ink outline-none transition-colors placeholder:text-ink-3/70 focus:border-blue focus:ring-2 focus:ring-blue/15";
 const fieldClassError =
-  "border-corail/70 focus:border-corail focus:ring-corail/20";
+  "border-alert/70 focus:border-alert focus:ring-alert/20";
 const labelClass = "block text-sm font-medium text-ink";
 
 /** Ordre d'affichage du résumé d'erreurs, aligné sur l'ordre du formulaire. */
@@ -97,7 +97,7 @@ function validate(values: Values): Errors {
 function FieldError({ id, message }: { id: string; message?: string }) {
   if (!message) return null;
   return (
-    <p id={id} className="mt-2 flex items-start gap-1.5 text-sm text-corail-deep">
+    <p id={id} className="mt-2 flex items-start gap-1.5 text-sm text-alert">
       <svg
         aria-hidden="true"
         width="16"
@@ -272,7 +272,7 @@ export function ContactForm() {
         ref={successRef}
         tabIndex={-1}
         role="status"
-        className="rounded-[2rem] border border-sage/40 bg-sage/10 p-8"
+        className="rounded-[2rem] border border-blue/40 bg-blue-soft p-8"
       >
         <p className="font-display text-2xl text-ink">Merci, c’est bien envoyé.</p>
         <p className="mt-3 leading-relaxed text-ink-2">
@@ -315,7 +315,7 @@ export function ContactForm() {
           tabIndex={-1}
           role="alert"
           aria-labelledby="erreurs-formulaire"
-          className="rounded-2xl border border-corail/40 bg-corail-soft/60 p-5"
+          className="rounded-2xl border border-alert/40 bg-alert-soft p-5"
         >
           <h3
             id="erreurs-formulaire"
@@ -339,7 +339,7 @@ export function ContactForm() {
         <p
           data-global-error
           role="alert"
-          className="rounded-xl border border-corail/40 bg-corail-soft/60 px-4 py-3 text-sm text-ink"
+          className="rounded-xl border border-alert/40 bg-alert-soft px-4 py-3 text-sm text-ink"
         >
           {error} Vous pouvez aussi m’appeler au{" "}
           <a href={`tel:${site.contact.phoneHref}`} className="link-quiet font-medium">
@@ -352,7 +352,7 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="nom" className={labelClass}>
-            Nom et prénom <span className="text-corail-deep" aria-hidden="true">*</span>
+            Nom et prénom <span className="text-ink-3" aria-hidden="true">*</span>
           </label>
           <input
             id="nom"
@@ -397,7 +397,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="email" className={labelClass}>
-          E-mail <span className="text-corail-deep" aria-hidden="true">*</span>
+          E-mail <span className="text-ink-3" aria-hidden="true">*</span>
         </label>
         <input
           id="email"
@@ -465,7 +465,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className={labelClass}>
-          Votre demande <span className="text-corail-deep" aria-hidden="true">*</span>
+          Votre demande <span className="text-ink-3" aria-hidden="true">*</span>
         </label>
         <textarea
           id="message"
@@ -569,7 +569,7 @@ export function ContactForm() {
       </button>
 
       <p className="text-center text-xs text-ink-3">
-        Champs obligatoires marqués d’un <span className="text-corail-deep" aria-hidden="true">*</span>.
+        Champs obligatoires marqués d’un <span className="text-ink-3" aria-hidden="true">*</span>.
       </p>
     </form>
   );

@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
-/*  Palette — craie claire, encre bleu-nuit, accents d'aquarelle        */
+/*  Palette — trois familles, et rien d'autre                          */
 /*                                                                     */
-/*  Le fond est quasi neutre (3 points d'écart entre rouge et bleu) :   */
-/*  plus de voile jaune sur toute la page, la lecture est plus nette et  */
-/*  les bleus de l'aquarelle ressortent. L'encre devient un bleu nuit   */
-/*  plutôt qu'un noir gris, et les accents gagnent en chroma.           */
+/*  Blues (azure, blue, ink), peach (paper-2, paper-3, line, peach) et  */
+/*  noir & blanc (ink, ink-2, ink-3, paper). Pas de vert, pas d'ocre,   */
+/*  pas de corail décoratif : chaque accent est une nuance de bleu, un  */
+/*  aplat de peach, ou de l'encre. Le rouge ne sert qu'à signaler une   */
+/*  erreur de formulaire.                                              */
 /* ------------------------------------------------------------------ */
 @theme {
   --color-paper: #fdfcfa;
@@ -27,20 +28,15 @@
   --color-azure: #0a8ade;
   --color-azure-deep: #0a6aae;
 
-  /* Corail / rouge */
-  --color-corail: #e64a3e;
-  --color-corail-deep: #c33a2f;
-  --color-corail-soft: #fbe0dc;
+  /* Peach — deuxième famille. Surfaces et bordures seulement, jamais de
+     texte : à cette clarté, un texte peach ne passerait pas le contraste.
+     Les nuances proches sont paper-2, paper-3 et line. */
+  --color-peach: #e8cdb4;
+  --color-peach-soft: #f9ecdf;
 
-  /* Vert sauge */
-  --color-sage: #4f9270;
-  --color-sage-soft: #e0ebda;
-
-  /* Ocre */
-  --color-ochre: #b57d26;
-  --color-ochre-soft: #f6e6c6;
-
-  --color-terracotta: #b4503a;
+  /* Alerte — réservée aux erreurs de formulaire, jamais décorative. */
+  --color-alert: #a4262c;
+  --color-alert-soft: #fbeae7;
 
   --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;

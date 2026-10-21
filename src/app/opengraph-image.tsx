@@ -29,8 +29,8 @@ export default function OpengraphImage() {
             width: 460,
             height: 460,
             borderRadius: 460,
-            background: "#b4503a",
-            opacity: 0.14,
+            background: "#e8cdb4",
+            opacity: 0.55,
           }}
         />
         <div
@@ -52,7 +52,7 @@ export default function OpengraphImage() {
               width: 16,
               height: 16,
               borderRadius: 16,
-              background: "#b4503a",
+              background: "#0a8ade",
             }}
           />
           <div

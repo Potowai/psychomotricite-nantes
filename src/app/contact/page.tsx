@@ -136,7 +136,7 @@ export default function ContactPage() {
 
           <CabinetMap />
 
-          <Callout title="Autre site" tone="sage">
+          <Callout title="Autre site" tone="peach">
             <p>
               Mon autre site internet, pour les parents et les enfants :{" "}
               <a

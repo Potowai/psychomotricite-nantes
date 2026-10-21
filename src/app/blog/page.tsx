@@ -28,14 +28,12 @@ export default function BlogIndexPage() {
 
       <Container className="py-16 lg:py-20">
         <ul className="grid gap-x-8 gap-y-8 sm:grid-cols-2">
-          {articles.map((article, i) => (
+          {articles.map((article) => (
             <li key={article.slug}>
               <article className="group flex h-full flex-col rounded-[1.5rem] border border-line/70 bg-paper-2 p-7 transition-shadow duration-300 hover:shadow-[var(--shadow-soft)]">
                 <span
                   aria-hidden="true"
-                  className={`mb-5 block h-1.5 w-10 rounded-full ${
-                    ["bg-azure", "bg-corail", "bg-sage", "bg-ochre"][i % 4]
-                  }`}
+                  className="mb-5 block h-1.5 w-10 rounded-full bg-azure"
                 />
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs uppercase tracking-[0.14em] text-ink-3">
                   <time dateTime={article.date}>{formatDate(article.date)}</time>

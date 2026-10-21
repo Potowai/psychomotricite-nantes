@@ -31,7 +31,7 @@ export function CtaBand({
         <div>
           <span
             aria-hidden="true"
-            className="mb-5 block h-1.5 w-12 rounded-full bg-corail"
+            className="mb-5 block h-1.5 w-12 rounded-full bg-azure"
           />
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/50">
             Prendre rendez-vous

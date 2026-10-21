@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata({
 
 function Todo({ children }: { children: React.ReactNode }) {
   return (
-    <span className="rounded bg-ochre/15 px-1.5 py-0.5 text-ink-2">
+    <span className="rounded bg-paper-3 px-1.5 py-0.5 text-ink-2">
       {children}
     </span>
   );
