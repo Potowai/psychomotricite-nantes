@@ -508,3 +508,39 @@ consentement ; la soumission à vide affiche toujours le résumé d'erreurs et
 place le focus dessus ; aucune différence de position entre les deux colonnes
 d'une même rangée, sur 1280 px comme sur 390 px.
 
+## Huitième passe — la carte d'accès
+
+### 22 · Modéré · Une iframe nue, sans adresse sur l'épingle
+
+Le plan venait de l'iframe d'openstreetmap.org : elle imposait sa pastille
+générique, ses boutons et son cadre gris, rien ne pouvait être habillé, et
+l'adresse ne pouvait pas être posée sur le repère.
+
+**Correction**
+
+- Leaflet à la place de l'iframe, avec les mêmes tuiles OpenStreetMap —
+  aucune clé d'API, aucun service tiers ajouté ;
+- les tuiles sont désaturées et réchauffées pour entrer dans la palette :
+  la carte devient un plan sépia discret, l'épingle bleue ressort seule ;
+- épingle dessinée dans l'azure du site, avec un cartouche permanent au-dessus
+  d'elle : nom du cabinet, rue, code postal et ville ;
+- le centre est décalé de 13 % de la hauteur vers le nord pour que l'épingle
+  et son cartouche tiennent entièrement dans le cadre, y compris sur la carte
+  courte de l'accueil (260 px) ;
+- zoom en français, attribution réduite à une pastille discrète, commandes
+  habillées comme les cartes du site ;
+- la molette continue de faire défiler la page ; on zoome au double-clic, au
+  pincement ou avec les boutons ;
+- sans JavaScript, un lien direct vers le plan remplace le cadre vide.
+
+```text
+poids ajouté, chargé seulement à l'approche de la carte   145 Ko (~45 Ko gzip)
+carte de l'accueil      260 px · cartouche entièrement visible
+carte contact           320 px · cartouche entièrement visible
+carte après navigation client et redimensionnement  OK
+```
+
+Vérifié : 45 combinaisons page × largeur sans débordement, aucun seuil de
+contraste franchi, aucun message d'erreur en console, et la carte reste
+utilisable au clavier (région nommée, boutons de zoom atteignables).
+

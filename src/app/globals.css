@@ -252,3 +252,149 @@
     animation: none;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/*  Carte d'accès — Leaflet, habillée comme le reste du site           */
+/*                                                                     */
+/*  Les tuiles Mapnik sont saturées et bavardes : on les désature et on */
+/*  les réchauffe pour qu'elles tiennent dans la palette, sans toucher  */
+/*  aux données. Seul le calque des tuiles est filtré — l'épingle, le   */
+/*  cartouche d'adresse et les commandes gardent leurs couleurs.        */
+/* ------------------------------------------------------------------ */
+.leaflet-container {
+  background: var(--color-paper-2);
+  font-family: var(--font-sans);
+}
+
+/* Le fond de Leaflet est gris : sans cette règle, le cadre vire au gris
+   pendant le chargement des tuiles. */
+.carte-shell .leaflet-container {
+  background: var(--color-paper-2);
+}
+
+/* Le conteneur que Leaflet pilote : la taille ne doit pas dépendre d'une
+   classe que React réécrit au premier rendu. */
+.carte-shell [data-map] {
+  position: absolute;
+  inset: 0;
+}
+
+.leaflet-tile-pane {
+  filter: grayscale(1) sepia(0.15) brightness(1.12) contrast(0.84);
+}
+
+.leaflet-container .leaflet-control-attribution {
+  margin: 0 6px 6px 0;
+  padding: 2px 8px;
+  background: color-mix(in srgb, var(--color-paper) 92%, transparent);
+  color: var(--color-ink-2);
+  font-size: 10px;
+  line-height: 1.5;
+  border-radius: 8px;
+}
+
+.leaflet-container .leaflet-control-attribution a {
+  color: var(--color-blue-deep);
+}
+
+/* Épingle */
+.cabinet-pin {
+  border: 0;
+  background: none;
+}
+
+.cabinet-pin__body {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--color-paper);
+  border-radius: 50% 50% 50% 0;
+  background: var(--color-azure);
+  box-shadow: 0 8px 18px -8px rgba(21, 42, 60, 0.65);
+  transform: rotate(-45deg);
+}
+
+.cabinet-pin__dot {
+  position: absolute;
+  inset: 0;
+  width: 8px;
+  height: 8px;
+  margin: auto;
+  border-radius: 999px;
+  background: var(--color-paper);
+}
+
+/* Cartouche d'adresse, posé au-dessus de l'épingle */
+.leaflet-tooltip.cabinet-tip {
+  padding: 9px 13px;
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-soft);
+  white-space: nowrap;
+}
+
+.leaflet-tooltip-top.cabinet-tip::before {
+  border-top-color: var(--color-paper);
+}
+
+.cabinet-tip__name {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.cabinet-tip__addr {
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-ink-2);
+}
+
+/* Commandes de zoom */
+.leaflet-container .leaflet-bar {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.leaflet-container .leaflet-bar a,
+.leaflet-container .leaflet-bar a:hover {
+  width: 34px;
+  height: 34px;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.leaflet-container .leaflet-bar a:last-child {
+  border-bottom: 0;
+}
+
+.leaflet-container .leaflet-bar a:hover {
+  background: var(--color-blue-soft);
+}
+
+.leaflet-container .leaflet-control-zoom {
+  margin: 0 12px 26px 0;
+}
+
+/* Le cartouche ne doit pas dépasser du cadre sur les petits écrans */
+@media (max-width: 380px) {
+  .leaflet-tooltip.cabinet-tip {
+    padding: 7px 10px;
+  }
+
+  .cabinet-tip__name,
+  .cabinet-tip__addr {
+    font-size: 11px;
+  }
+}
+
