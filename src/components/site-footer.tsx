@@ -12,7 +12,7 @@ export function SiteFooter() {
   const year = 2026;
 
   return (
-    <footer className="border-t border-line bg-paper-2">
+    <footer className="bg-paper-2">
       <div className="container-page py-16">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr] lg:gap-16">
           <div>

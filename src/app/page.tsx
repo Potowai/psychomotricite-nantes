@@ -217,7 +217,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- Motifs ---------------- */}
-      <section className="border-y border-line bg-paper-2">
+      <section className="bg-paper-2">
         <Container className="py-20 lg:py-28">
           <div className="max-w-2xl">
             <SectionTitle
@@ -429,7 +429,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- Ressources ---------------- */}
-      <section className="border-t border-line bg-paper-2">
+      <section className="bg-paper-2">
         <Container className="grid gap-12 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <PhotoPlaceholder
             className="rounded-[2rem] lg:order-2"

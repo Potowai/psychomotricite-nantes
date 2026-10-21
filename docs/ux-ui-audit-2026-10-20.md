@@ -392,3 +392,51 @@ sous le bouton couvre l'ensemble. Le champ « Téléphone » est également
 facultatif par défaut, l'exigence conditionnée est expliquée sous le choix du
 canal de contact.
 
+## Cinquième passe — la bande de section
+
+### 19 · Majeur · La bande de section se lisait comme une coupure
+
+Le passage des bandes en pleine opacité avait réglé le manque de rythme, mais
+introduit une fatigue à la lecture. `#f8ece2` sur `#fdfcfa` donne un écart de
+**7,6 en Lab** (ΔL\* 4,9) sur toute la largeur, et chaque bande était encadrée
+par deux filets `border-line` d'1 px. L'œil ne lit pas une teinte : il lit une
+ligne dure, deux fois par bande.
+
+Sur l'accueil, la séquence mesurée était : bande L\*86 → bloc nuit L\*2 →
+bande L\*86 → bloc nuit L\*2. Le seuil de perception d'un bord net se situe
+autour de ΔL\* 2-3.
+
+**Correction**
+
+- bande ramenée à `#fbf5ef` : écart de 7,6 à **3,5**, ΔL\* de 4,9 à **2,1** ;
+- filet `border-line` retiré des sept sections en `bg-paper-2` (accueil ×2,
+  psychomotricité, séances & tarifs, contact, article, pied de page) ;
+- les filets restent sur les **cartes**, les accordéons et les tableaux : ils
+  portent la limite des objets, pas celle des sections ;
+- l'astérisque « champ obligatoire » passe en `corail-deep` (3,59:1 → 4,89:1)
+  et devient décoratif, `required` portant déjà l'information.
+
+```text
+                        avant      après
+écart Lab de la bande    7,6        3,5
+ΔL* de la bande          4,9        2,1
+filets de section         2          0
+corps 18 px sur bande   7,80:1    8,40:1
+meta 12 px sur bande    5,30:1    5,70:1
+lien bleu sur bande     4,90:1    5,30:1
+astérisque corail       3,59:1 ✗  4,89:1 ✓
+```
+
+## Vérifications
+
+```text
+npm run lint      OK
+npx tsc --noEmit  OK
+npm run build     OK (34 pages)
+```
+
+Contrôle après reprise de la bande : 45 combinaisons page × largeur (9 pages,
+360 à 1440 px) au probe de débordement et de rognage — aucun écart ; 7 pages
+au probe de contraste calculé sur le fond réellement composé — aucun seuil
+franchi.
+

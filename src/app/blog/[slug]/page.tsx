@@ -139,7 +139,7 @@ export default async function ArticlePage(props: PageProps<"/blog/[slug]">) {
         </Container>
       </article>
 
-      <section className="border-t border-line bg-paper-2">
+      <section className="bg-paper-2">
         <Container className="py-16">
           <h2 className="eyebrow">À lire aussi</h2>
           <ul className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2">

@@ -169,7 +169,7 @@ export default function PsychomotricitePage() {
         </div>
       </Container>
 
-      <section className="border-y border-line bg-paper-2">
+      <section className="bg-paper-2">
         <Container className="py-16 lg:py-24">
           <div className="max-w-2xl">
             <SectionTitle

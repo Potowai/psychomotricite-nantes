@@ -352,7 +352,7 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="nom" className={labelClass}>
-            Nom et prénom <span className="text-corail">*</span>
+            Nom et prénom <span className="text-corail-deep" aria-hidden="true">*</span>
           </label>
           <input
             id="nom"
@@ -397,7 +397,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="email" className={labelClass}>
-          E-mail <span className="text-corail">*</span>
+          E-mail <span className="text-corail-deep" aria-hidden="true">*</span>
         </label>
         <input
           id="email"
@@ -465,7 +465,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className={labelClass}>
-          Votre demande <span className="text-corail">*</span>
+          Votre demande <span className="text-corail-deep" aria-hidden="true">*</span>
         </label>
         <textarea
           id="message"
@@ -569,7 +569,7 @@ export function ContactForm() {
       </button>
 
       <p className="text-center text-xs text-ink-3">
-        Champs obligatoires marqués d’un <span className="text-corail">*</span>.
+        Champs obligatoires marqués d’un <span className="text-corail-deep" aria-hidden="true">*</span>.
       </p>
     </form>
   );

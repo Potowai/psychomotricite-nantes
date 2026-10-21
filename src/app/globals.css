@@ -10,7 +10,10 @@
 /* ------------------------------------------------------------------ */
 @theme {
   --color-paper: #fdfcfa;
-  --color-paper-2: #f8ece2;
+  /* Bande de section : volontairement très proche du fond. Au-delà de ~3,5
+     d'écart Lab, un aplat pleine largeur se lit comme une ligne dure et
+     fatigue l'œil. On garde le rythme, pas la coupure. */
+  --color-paper-2: #fbf5ef;
   --color-paper-3: #f1e4d6;
   --color-ink: #152a3c;
   --color-ink-2: #3a4b56;

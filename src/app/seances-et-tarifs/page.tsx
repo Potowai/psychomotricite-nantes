@@ -270,7 +270,7 @@ export default function SeancesEtTarifsPage() {
         </div>
       </Container>
 
-      <section className="border-y border-line bg-paper-2">
+      <section className="bg-paper-2">
         <Container className="py-16 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
             <div>
