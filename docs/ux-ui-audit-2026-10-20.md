@@ -474,3 +474,37 @@ contraste corps/peach    — → 7,8:1
 Balayage des couleurs calculées sur 10 pages : quatorze valeurs distinctes,
 toutes issues des trois familles. Aucun seuil de contraste franchi.
 
+## Septième passe — champs facultatifs plutôt qu'astérisques
+
+### 21 · Modéré · L'astérisque obligatoire ne se lisait pas
+
+La légende « Champs obligatoires marqués d'un * », posée sous le bouton
+d'envoi, demandait un aller-retour entre le bas du formulaire et chaque
+libellé, pour un signe de huit pixels. Les recherches sur les formulaires
+publics convergent : marquer les champs facultatifs est plus fiable que
+marquer les obligatoires — le lecteur n'a rien à décoder, et l'immense
+majorité des champs restent muets.
+
+**Correction**
+
+- astérisques retirés des trois libellés qui en portaient un, légende de bas
+  de formulaire supprimée ;
+- les trois champs réellement facultatifs portent « (facultatif) », en encre
+  secondaire et graisse normale : téléphone, âge de la personne, motif ;
+- l'attribut `required` et la validation ne changent pas : rien ne bouge pour
+  les technologies d'assistance ni pour l'anti-spam ;
+- « Âge de la personne concernée » devient « Âge de la personne » : le
+  libellé tenait sur deux lignes et décalait le second menu de la rangée.
+
+```text
+astérisques visibles      4 → 0
+mentions « facultatif »   0 → 3
+champs required           4 → 4 (inchangé)
+libellés sur deux lignes  1 → 0
+```
+
+Vérifié : les quatre champs `required` restent nom, e-mail, message et
+consentement ; la soumission à vide affiche toujours le résumé d'erreurs et
+place le focus dessus ; aucune différence de position entre les deux colonnes
+d'une même rangée, sur 1280 px comme sur 390 px.
+

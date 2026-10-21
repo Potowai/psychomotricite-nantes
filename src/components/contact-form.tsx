@@ -352,7 +352,7 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="nom" className={labelClass}>
-            Nom et prénom <span className="text-ink-3" aria-hidden="true">*</span>
+            Nom et prénom
           </label>
           <input
             id="nom"
@@ -371,7 +371,8 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="telephone" className={labelClass}>
-            Téléphone
+            Téléphone{" "}
+            <span className="font-normal text-ink-2">(facultatif)</span>
           </label>
           <input
             id="telephone"
@@ -397,7 +398,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="email" className={labelClass}>
-          E-mail <span className="text-ink-3" aria-hidden="true">*</span>
+          E-mail
         </label>
         <input
           id="email"
@@ -421,7 +422,8 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="age" className={labelClass}>
-            Âge de la personne concernée
+            Âge de la personne{" "}
+            <span className="font-normal text-ink-2">(facultatif)</span>
           </label>
           <select
             id="age"
@@ -442,7 +444,8 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="motif" className={labelClass}>
-            Motif de la demande
+            Motif de la demande{" "}
+            <span className="font-normal text-ink-2">(facultatif)</span>
           </label>
           <select
             id="motif"
@@ -465,7 +468,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className={labelClass}>
-          Votre demande <span className="text-ink-3" aria-hidden="true">*</span>
+          Votre demande
         </label>
         <textarea
           id="message"
@@ -567,10 +570,6 @@ export function ContactForm() {
       >
         {status === "sending" ? "Envoi en cours…" : "Envoyer ma demande"}
       </button>
-
-      <p className="text-center text-xs text-ink-3">
-        Champs obligatoires marqués d’un <span className="text-ink-3" aria-hidden="true">*</span>.
-      </p>
     </form>
   );
 }
