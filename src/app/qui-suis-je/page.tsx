@@ -80,7 +80,7 @@ export default function QuiSuisJePage() {
         <div className="space-y-7 text-lg leading-[1.78] text-ink-2">
           <p>
             Ayant développé une connaissance fine de la douance, je reçois très
-            fréquemment des personnes HPI ou HQI/THQI. J’accompagne également des
+            fréquemment des personnes HQI/THQI. J’accompagne également des
             personnes concernées par d’autres neuroatypies comme les TSA, le
             TDA-H et/ou les troubles dys.
           </p>

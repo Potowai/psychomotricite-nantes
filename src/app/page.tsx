@@ -200,8 +200,7 @@ export default function HomePage() {
               disciplines.
             </p>
             <p>
-              Les séances s’adressent à toute personne, du bébé à la personne
-              âgée. Les demandes s’inscrivent sur un continuum : d’une simple
+              Les demandes s’inscrivent sur un continuum : d’une simple
               volonté d’introspection ou d’une gêne quotidienne, à une
               souffrance parfois profonde, et/ou à des troubles plus sévères.
             </p>
@@ -451,7 +450,7 @@ export default function HomePage() {
             <ul className="mt-8 space-y-4">
               <ResourceLink
                 href="/blog/douance-hqi-thqi-et-psychomotricite"
-                title="Douance (HPI, HQI/THQI) et psychomotricité"
+                title="Douance (HQI/THQI) et psychomotricité"
               />
               <ResourceLink
                 href="/blog/anxiete-burn-out-pourquoi-passer-par-le-corps"
