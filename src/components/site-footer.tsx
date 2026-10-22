@@ -25,6 +25,7 @@ const copy: Record<
     phoneNote: string;
     fullAddressLabel: string;
     phoneLabel: string;
+    credit: string;
   }
 > = {
   fr: {
@@ -48,6 +49,7 @@ const copy: Record<
     phoneNote: "Appel ou SMS",
     fullAddressLabel: "Adresse complète",
     phoneLabel: "Téléphone",
+    credit: "Site réalisé avec amour par",
   },
   en: {
     role: "Psychomotor therapist (D.E.)",
@@ -70,6 +72,7 @@ const copy: Record<
     phoneNote: "Call or text",
     fullAddressLabel: "Full address",
     phoneLabel: "Phone",
+    credit: "Site made with love by",
   },
   es: {
     role: "Psicomotricista D.E.",
@@ -92,6 +95,7 @@ const copy: Record<
     phoneNote: "Llamada o SMS",
     fullAddressLabel: "Dirección completa",
     phoneLabel: "Teléfono",
+    credit: "Sitio hecho con amor por",
   },
 };
 
@@ -203,10 +207,25 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
 
         <hr className="rule mt-14" />
 
-        <div className="mt-6 flex flex-col gap-3 text-xs text-ink-3 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} {site.name} — {t.role}. {t.rights}
-          </p>
+        <div className="mt-6 flex flex-col gap-3 text-xs text-ink-3 sm:flex-row sm:items-start sm:justify-between">
+          <div className="space-y-1.5">
+            <p>
+              © {year} {site.name} — {t.role}. {t.rights}
+            </p>
+            <p>
+              {t.credit}{" "}
+              <a
+                href={site.credits.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink-2 underline decoration-line underline-offset-4 transition-colors hover:text-ink"
+              >
+                {site.credits.author}
+                <span aria-hidden="true">↗</span>
+                <span className="sr-only">({t.newWindow})</span>
+              </a>
+            </p>
+          </div>
           <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <li>
               <Link

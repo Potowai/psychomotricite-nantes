@@ -90,6 +90,11 @@ export const site = {
     note: "mon autre site, pour les parents et les enfants",
   },
 
+  credits: {
+    author: "Alexis Fiolleau",
+    repo: "https://github.com/Potowai/psychomotricite-nantes",
+  },
+
   social: {
     googleBusiness: null as string | null,
   },
