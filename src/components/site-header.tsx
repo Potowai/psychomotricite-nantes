@@ -105,9 +105,11 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
   return (
     <header
       className={`sticky top-0 z-50 border-b transition-colors duration-300 ${
-        scrolled || open
-          ? "border-line/70 bg-paper/85 backdrop-blur-md"
-          : "border-transparent bg-paper/0"
+        open
+          ? "border-line/70 bg-paper"
+          : scrolled
+            ? "border-line/70 bg-paper/85 backdrop-blur-md"
+            : "border-transparent bg-paper/0"
       }`}
     >
       <div className="container-page flex items-center justify-between gap-6 py-4">

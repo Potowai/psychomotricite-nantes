@@ -272,6 +272,15 @@
   background: var(--color-paper-2);
 }
 
+/* Leaflet empile ses calques à des z-index de 200 à 700 (tuiles, épingle,
+   cartouche). Sans contexte d'empilement propre, la carte sort de la pile
+   de la page et passe au-dessus de l'en-tête collant et de la barre
+   d'appels sur mobile. On l'enferme dans son propre contexte : elle reste
+   sous le chrome du site, et le plein écran garde son z-index à part. */
+.carte-shell {
+  isolation: isolate;
+}
+
 /* Le conteneur que Leaflet pilote : la taille ne doit pas dépendre d'une
    classe que React réécrit au premier rendu. */
 .carte-shell [data-map] {

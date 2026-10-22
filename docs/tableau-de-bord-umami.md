@@ -20,6 +20,49 @@ L'accès se fait sur <https://cloud.umami.is/analytics/eu/dashboard>.
 n'est pas basculé, l'adresse déclarée doit rester celle qui sert réellement
 les pages, sinon plus rien n'est compté.
 
+## 1 bis. Ce qui est déjà fait (22 octobre 2026)
+
+Le compte Umami Cloud est en place et vérifié de bout en bout :
+
+| Élément | État |
+| --- | --- |
+| Site déclaré | **« Manuela Edom — psychomotricienne à Nantes »**, domaine `psychomotricite-nantes.vercel.app`, identifiant `8f671c4e-a1e3-41af-891c-26d8860d133f` |
+| Collecte | **vérifiée** : un clic « Appeler » fait depuis la production est bien enregistré en Umami (événement `clic_telephone`) |
+| Vercel Web Analytics | désactivé (`NEXT_PUBLIC_ANALYTICS_VERCEL=off`) — Umami est le seul outil de mesure |
+| Tableau « Contacts » | **créé** (type Mixed), avec sa description |
+
+Il reste **5 minutes de manipulation** pour le remplir : le sélecteur de site
+du formulaire de composant n'est pas cliquable au travers de mon relais
+d'automatisation (c'est le seul point que je n'ai pas pu faire).
+
+### Les 5 minutes restantes
+
+Dans **Boards → Contacts → Design** :
+
+1. *Add row* → le bouton du widget (l'icône ronde).
+2. **Type** : `Website`.
+3. **Website** : choisir `Manuela Edom — psychomotricienne à Nantes`
+   (c'est le seul site du compte, c'est le premier de la liste).
+4. **Titre** : le nom du composant (voir le tableau ci-dessous).
+5. **Components** : le bouton qui correspond au type de graphique voulu —
+   les quatre boutons sont, dans l'ordre : *carte*, *courbe*, *histogramme*,
+   *tableau*.
+6. **Save** (en bas à droite), puis **Save** (en haut à droite) pour
+   enregistrer le tableau.
+
+Répéter pour chaque composant : *Add row* → … → *Save*.
+
+### Les six composants à créer
+
+| Titre | Graphique | Ce qu'il montre |
+| --- | --- | --- |
+| Conversions (30 jours) | courbe | l'évolution des 4 événements de contact |
+| Types de conversion | histogramme | clic téléphone / SMS / e-mail / formulaire, côte à côte |
+| Pages qui convertissent | tableau | les pages qui amènent le plus de clics téléphone |
+| Référents (30 jours) | histogramme | d'où viennent les visites — **y compris les moteurs de réponse** |
+| En direct | carte | les visites du moment, filtrées sur `clic_telephone` |
+| Volume (30 jours) | courbe | les visiteurs, pour situer l'échelle |
+
 ## 2. Le tableau de bord par défaut — six blocs, dans cet ordre
 
 Umami affiche une page par site. L'ordre des blocs se règle dans les
@@ -53,23 +96,12 @@ visites par semaine donnent, en moyenne, un contact par semaine. Deux semaines
 sans contact, c'est le signal qu'il faut agir (fiche Google, avis, ou
 positionnement).
 
-## 3. Le tableau « Contacts » (à créer dans un onglet *Boards*)
+## 3. Le tableau « Contacts »
 
-Si l'offre gratuite permet un tableau personnalisé, un seul tableau vaut le
-peine — celui qui répond à « ai-je des contacts ? » :
-
-- **Événements** (30 j), trié par nombre ;
-- **Sources de trafic**, filtré sur les 4 événements ;
-- **Pages**, filtré sur les 4 événements : la page qui génère le plus de
-  clics téléphone est la page à retravailler en premier ;
-- **Visitations en cours**, filtré sur `clic_telephone` : on sait ainsi, en
-  direct, qu'une personne vient de demander un rendez-vous.
-
-Nom suggéré : `Contacts`.
-
-Si l'offre gratuite ne permet pas de tableau personnalisé, l'équivalent
-gratuit est de filtrer manuellement la page *Événements* et de la garder en
-favori dans le navigateur.
+Il est créé (§ 1 bis) ; il reste à y ajouter les six composants (§ 7, et
+les 5 minutes restantes). Son contenu est le tableau de bord de travail du
+site : les conversions, les pages qui convertissent, les référents, le temps
+réel.
 
 ## 4. Le trafic des moteurs de réponse (le contrôle GEO)
 
