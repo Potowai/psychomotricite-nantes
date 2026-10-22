@@ -1,7 +1,7 @@
 import { Container, PageHero, Prose } from "@/components/ui";
 import { copy } from "@/i18n/copies/privacy";
 import { analyticsTools } from "@/lib/analytics";
-import { pages, type Locale } from "@/lib/i18n";
+import { pages, roleLabel, type Locale } from "@/lib/i18n";
 import { mailHref, site, telHref } from "@/lib/site";
 
 export function PrivacyPage({ locale }: { locale: Locale }) {
@@ -30,7 +30,7 @@ export function PrivacyPage({ locale }: { locale: Locale }) {
               {t.controller.title}
             </h2>
             <p>
-              {site.name}, {site.role}, {site.address.street},{" "}
+              {site.name}, {roleLabel[locale]}, {site.address.street},{" "}
               {site.address.postalCode} {site.address.city}. {t.controller.contactLabel}{" "}
               <a href={mailHref} className="link-quiet">
                 {site.contact.email}

@@ -1,7 +1,7 @@
 import { Container, PageHero, Prose } from "@/components/ui";
 import { copy } from "@/i18n/copies/legal";
-import { pages, type Locale } from "@/lib/i18n";
-import { fullAddress, mailHref, site, telHref } from "@/lib/site";
+import { fullAddressFor, pages, type Locale } from "@/lib/i18n";
+import { mailHref, site, telHref } from "@/lib/site";
 
 function Todo({ children }: { children: React.ReactNode }) {
   return (
@@ -34,7 +34,7 @@ export function LegalPage({ locale }: { locale: Locale }) {
             <p>
               {site.name}, {t.publisher.role} {t.publisher.diploma}
               <br />
-              {fullAddress}
+              {fullAddressFor(locale)}
               <br />
               {t.publisher.phoneLabel}{" "}
               <a href={telHref} className="link-quiet">

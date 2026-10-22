@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LanguageSwitch } from "@/components/language-switch";
-import { footerNav, pages, type Locale } from "@/lib/i18n";
-import { fullAddress, mailHref, mapsUrl, site, telHref } from "@/lib/site";
+import { addressName, footerNav, fullAddressFor, pages, type Locale } from "@/lib/i18n";
+import { mailHref, mapsUrl, site, telHref } from "@/lib/site";
 
 const copy: Record<
   Locale,
@@ -134,7 +134,7 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
               {t.practice}
             </h2>
             <address className="mt-5 space-y-1 text-sm not-italic text-ink-2">
-              <span className="block">{site.address.name}</span>
+              <span className="block">{addressName[locale]}</span>
               <span className="block">{site.address.street}</span>
               <span className="block">
                 {site.address.postalCode} {site.address.city}
@@ -231,7 +231,7 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
         </div>
       </div>
       <p className="sr-only">
-        {t.fullAddressLabel} : {fullAddress}. {t.phoneLabel} :{" "}
+        {t.fullAddressLabel} : {fullAddressFor(locale)}. {t.phoneLabel} :{" "}
         {site.contact.phoneDisplay}.
       </p>
     </footer>

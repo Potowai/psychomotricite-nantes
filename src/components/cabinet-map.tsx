@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { type Locale } from "@/lib/i18n";
-import { fullAddress, mapsUrl, site } from "@/lib/site";
+import { addressName, fullAddressFor, type Locale } from "@/lib/i18n";
+import { mapsUrl, site } from "@/lib/site";
 import "leaflet/dist/leaflet.css";
 
 type CabinetMapProps = {
@@ -177,14 +177,14 @@ export function CabinetMap({
 
       const marker = L.marker([latitude, longitude], {
         icon: pin,
-        title: fullAddress,
+        title: fullAddressFor(locale),
         riseOnHover: true,
         keyboard: false,
       }).addTo(map);
 
       marker
         .bindTooltip(
-          `<p class="cabinet-tip__name">${site.address.name}</p>` +
+          `<p class="cabinet-tip__name">${addressName[locale]}</p>` +
             `<p class="cabinet-tip__addr">${site.address.street}, ${site.address.postalCode} ${site.address.city}</p>` +
             `<div class="cabinet-tip__actions">` +
             `<a class="cabinet-tip__go" href="${mapsUrl}" target="_blank" rel="noopener noreferrer">${itinerary}</a>` +
@@ -290,7 +290,7 @@ export function CabinetMap({
         ref={shell}
         role={full ? "dialog" : undefined}
         aria-modal={full ? true : undefined}
-        aria-label={full ? `${t.dialogLabel} — ${fullAddress}` : undefined}
+        aria-label={full ? `${t.dialogLabel} — ${fullAddressFor(locale)}` : undefined}
         className={`carte-shell relative overflow-hidden bg-paper-2 ${
           full
             ? "carte-full"
@@ -308,7 +308,7 @@ export function CabinetMap({
           <div
             ref={holder}
             role="region"
-            aria-label={`${t.regionLabel} — ${fullAddress}`}
+            aria-label={`${t.regionLabel} — ${fullAddressFor(locale)}`}
             data-map
           />
         </div>

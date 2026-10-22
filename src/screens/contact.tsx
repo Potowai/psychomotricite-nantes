@@ -7,7 +7,7 @@ import {
   PhotoPlaceholder,
 } from "@/components/ui";
 import { copy } from "@/i18n/copies/contact";
-import { pages, type Locale } from "@/lib/i18n";
+import { addressName, pages, type Locale } from "@/lib/i18n";
 import { JsonLd, breadcrumbSchema, localBusinessSchema } from "@/lib/jsonld";
 import { mailHref, site, smsHref, telHref } from "@/lib/site";
 
@@ -74,7 +74,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
           <div>
             <h2 className="font-display text-2xl text-ink">{t.practice.title}</h2>
             <address className="mt-4 space-y-1 not-italic text-ink-2">
-              <span className="block">{site.address.name}</span>
+              <span className="block">{addressName[locale]}</span>
               <span className="block">{site.address.street}</span>
               <span className="block">
                 {site.address.postalCode} {site.address.city}

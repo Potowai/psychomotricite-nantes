@@ -133,9 +133,10 @@ export type ArticleKey = keyof typeof articlePaths;
  * page par page : tant qu'une traduction manque, on mène à l'accueil de
  * cette langue plutôt qu'à une adresse qui répond 404.
  *
- * À compléter quand les versions anglaise et espagnole seront prêtes.
+ * Les trois versions sont complètes : le sélecteur de langue mène donc
+ * toujours à la page équivalente.
  */
-export const completeLocales: Locale[] = ["fr"];
+export const completeLocales: Locale[] = ["fr", "en", "es"];
 
 /** Toutes les paires connues, dans l'ordre du site. */
 const allPaths: Paths[] = [
@@ -171,6 +172,25 @@ export function pathInLocale(path: string, locale: Locale): string {
     Object.values(pair).some((value) => value === path),
   );
   return entry ? entry[locale] : pages.home[locale];
+}
+
+/** Nom du lieu de consultation, dans la langue demandée. */
+export const addressName: Record<Locale, string> = {
+  fr: "Cabinet pluridisciplinaire",
+  en: "Multidisciplinary practice",
+  es: "Consultorio multidisciplinario",
+};
+
+/** Titre professionnel, dans la langue demandée. */
+export const roleLabel: Record<Locale, string> = {
+  fr: "Psychomotricienne D.E.",
+  en: "Psychomotor therapist (D.E.)",
+  es: "Psicomotricista D.E.",
+};
+
+/** Adresse complète, dans la langue demandée. */
+export function fullAddressFor(locale: Locale): string {
+  return `${addressName[locale]}, 4 rue de la Mitrie, 44000 Nantes`;
 }
 
 /** L'adresse d'un article dans la langue demandée, à partir de son slug local. */
