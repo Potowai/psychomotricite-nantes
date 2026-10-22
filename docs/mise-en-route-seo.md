@@ -133,6 +133,20 @@ Une fois le site créé dans Umami : récupérer l'URL du script
 (`NEXT_PUBLIC_UMAMI_SRC`) et l'identifiant du site
 (`NEXT_PUBLIC_UMAMI_WEBSITE_ID`), les saisir dans Vercel, redéployer.
 
+**Umami Cloud — valeurs retenues** (création du compte le 22 octobre 2026) :
+
+```
+NEXT_PUBLIC_UMAMI_SRC=https://cloud.umami.is/script.js
+NEXT_PUBLIC_UMAMI_WEBSITE_ID=8f671c4e-a1e3-41af-891c-26d8860d133f
+```
+
+Le site déclaré dans Umami est pour l'instant `psychomotricite-nantes.vercel.app` :
+son adresse sera changée dans Umami au moment de la bascule du domaine
+(Réglages du site → Domain), sans rien modifier dans le code.
+
+⚠️ Les variables `NEXT_PUBLIC_*` sont figées au build : après les avoir
+ajoutées dans Vercel, il faut **redéployer** (Deployments → Redeploy).
+
 ### Vercel Web Analytics et Speed Insights
 
 Utiles en complément, ou à la place d'Umami si l'on ne veut pas gérer de

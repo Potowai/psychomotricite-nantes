@@ -64,6 +64,8 @@ const copy: Record<
     another: string;
     errorTitle: string;
     orCall: string;
+    /** Objet du message pré-rempli, dans la langue du formulaire. */
+    subject: string;
     /** Étiquettes du brouillon pré-rempli, dans la langue du formulaire. */
     mailLabels: {
       name: string;
@@ -126,6 +128,7 @@ const copy: Record<
     another: "Écrire un autre message",
     errorTitle: "Le formulaire n’a pas pu été envoyé",
     orCall: "Vous pouvez aussi m’appeler ou m’envoyer un SMS au",
+    subject: "Demande de contact — {name}",
     mailLabels: {
       name: "Nom",
       email: "E-mail",
@@ -195,6 +198,7 @@ const copy: Record<
     another: "Write another message",
     errorTitle: "The form could not be sent",
     orCall: "You can also call or text me on",
+    subject: "Contact request — {name}",
     mailLabels: {
       name: "Name",
       email: "E-mail",
@@ -263,6 +267,7 @@ const copy: Record<
     another: "Escribir otro mensaje",
     errorTitle: "No se ha podido enviar el formulario",
     orCall: "También puede llamarme o enviarme un SMS al",
+    subject: "Solicitud de contacto — {name}",
     mailLabels: {
       name: "Nombre",
       email: "Correo electrónico",
@@ -391,7 +396,7 @@ function buildDraft(
   ];
 
   const full = lines.join("\n");
-  const subject = `Demande de contact — ${values.nom.trim()}`;
+  const subject = t.subject.replace("{name}", values.nom.trim());
 
   let body = full;
   let href = mailtoHref(subject, body);
