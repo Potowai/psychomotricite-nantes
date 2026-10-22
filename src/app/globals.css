@@ -394,13 +394,17 @@
   transition: background-color 0.15s, color 0.15s, border-color 0.15s;
 }
 
-.cabinet-tip__go {
+/* Leaflet impose `.leaflet-container a { color: #0078A8 }`, plus spécifique
+   que le lien seul : sans ce cran de plus, le libellé « Itinéraire » se
+   peignait en bleu sur le fond bleu profond du bouton. */
+.leaflet-container a.cabinet-tip__go {
   background: var(--color-blue-deep);
   color: var(--color-paper);
 }
 
-.cabinet-tip__go:hover {
+.leaflet-container a.cabinet-tip__go:hover {
   background: var(--color-ink);
+  color: var(--color-paper);
 }
 
 .cabinet-tip__copy {
