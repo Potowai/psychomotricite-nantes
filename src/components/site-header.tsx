@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { mainNav, pages, type Locale } from "@/lib/i18n";
-import { LanguageSwitch } from "@/components/language-switch";
+import { LanguageMenu } from "@/components/language-switch";
 import { site, telHref } from "@/lib/site";
 
 const labels: Record<
@@ -143,7 +143,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <LanguageSwitch locale={locale} />
+          <LanguageMenu locale={locale} />
           <a
             href={telHref}
             className="inline-flex py-2 text-sm text-ink-2 tabular-nums transition-colors hover:text-blue-deep"
@@ -212,7 +212,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
                 {copy.book}
               </Link>
             </div>
-            <LanguageSwitch
+            <LanguageMenu
               locale={locale}
               className="mt-6 border-t border-line/60 pt-4"
             />

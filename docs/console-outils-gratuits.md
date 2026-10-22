@@ -43,6 +43,11 @@ l'environnement de production Vercel, et Vercel Web Analytics est désactivé.
 Le plan de pilotage du tableau de bord est dans
 [`tableau-de-bord-umami.md`](./tableau-de-bord-umami.md).
 
+⚠️ Sur l'offre gratuite, l'**API REST d'Umami est réservée à l'offre Pro**
+(20 $/mois) : pas de jeton, donc pas de rapport automatique par l'API. Les
+tableaux personnalisés, les événements et leurs propriétés restent
+disponibles — c'est tout ce qu'il faut ici.
+
 **Umami auto-hébergé** : gratuit et sans limite, mais il faut un petit serveur.
 La recette est prête dans `docker-compose.umami.yml` (Umami + PostgreSQL,
 cinq minutes de mise en route). C'est la seule façon d'avoir la mesure

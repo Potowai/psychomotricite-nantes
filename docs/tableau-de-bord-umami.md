@@ -100,18 +100,80 @@ ce qui arrive, le contrôle manuel dit ce qui est cité.
   signal, pas un rejet.
 - **Les pages vues** : le double d'une visite, pas deux contacts.
 
-## 6. Le contrôle automatique (option)
+## 6. Le contrôle automatique — ce qui est possible en gratuit
 
-Umami expose une **API REST** et un jeton gratuit dans les réglages du
-compte (*Settings → API tokens*). Avec ce jeton, le contrôle peut être
-automatisé : un script qui récupère chaque semaine les visiteurs, les pages,
-les référents et les 4 événements, et écrit un résumé dans
-`docs/rapport-umami-<date>.md` — le même mécanisme que l'audit du site.
+Sur l'offre gratuite, l'**API REST est réservée à l'offre Pro** (l'interface
+l'affiche explicitement : « API access requires a Pro plan »). Pas de jeton,
+pas de rapport automatique par l'API : le contrôle se fait à l'œil, sur le
+tableau.
 
-C'est la partie « piloter » de l'outil : le tableau de bord sert à explorer,
-le rapport automatique sert à ne rien louper.
+Deux contournements restent possibles le jour où on le souhaite :
 
-## 7. La routine
+- **l'URL de partage** (*Share URL* dans les réglages du site) : elle rend
+  les statistiques publiquement consultables via un lien non devinable. Un
+  script pourrait la lire chaque semaine. Deux réserves : le lien est public
+  (les conversions d'une pratique libérale n'ont pas à être publiques), et
+  l'API Pro reste la voie propre ;
+- **passer à Pro** (20 $/mois) si le volume de contacts le justifie un jour.
+  Ce n'est pas justifié aujourd'hui.
+
+En attendant, l'audit du site (`npm run audit`) joue le rôle de rapport
+automatique : il tourne chaque lundi, et il écrit ce qui va ou ce qui ne va
+pas. Le tableau de bord, lui, sert à explorer.
+
+## 7. Construire le tableau « Contacts » — 10 minutes
+
+L'interface d'Umami (v3+) permet un tableau personnalisé : c'est ce qui
+transforme un outil de curiosité en outil de pilotage.
+
+1. **Boards** (menu de gauche) → *Add board*.
+2. Nom : `Contacts`.
+3. *Add component* → choisir le type de graphique :
+   - **Line chart** (courbe) pour l'évolution ;
+   - **Bar chart** pour un classement ;
+   - **Table** pour une liste lisible.
+4. Choisir la **source** : `Website` (le site) ou `Event` (les conversions).
+5. Choisir la **mesure** : `Visitors`, `Page views`, `Sessions`, `Unique
+   events`.
+6. Enregistrer, puis dupliquer le composant (`Duplicate`) pour en ajouter
+   d'autres — c'est plus rapide que de repartir de zéro.
+
+Les six composants du tableau « Contacts » :
+
+| Composant | Type | Source | Mesure | Filtre |
+| --- | --- | --- | --- | --- |
+| Conversions (30 j) | Line chart | Event | Unique events | events ∈ {clic_telephone, clic_sms, clic_email, formulaire_ouvert} |
+| Types de conversion | Bar chart | Event | Unique events | groupé par nom d'événement |
+| Pages qui convertissent | Table | Website | Unique events | idem, avec la page en dimension |
+| Référents | Bar chart | Website | Visitors | référents ∈ {chatgpt.com, perplexity.ai, claude.ai, copilot.microsoft.com, gemini.google.com} |
+| En direct | Realtime | Website | Visitors | — |
+| Volume | Line chart | Website | Visitors | 30 jours |
+
+### Deux réglages utiles
+
+- **Période par défaut** : 30 jours. En dessous, le bruit domine ; au-dessus,
+  on ne voit plus ce qui vient de changer.
+- **Filtre IP** : l'exclusion d'adresses IP est réservée à l'offre Pro, donc
+  les visites depuis le cabinet compteront. Ce n'est pas grave : on regarde
+  les conversions, pas le volume brut.
+
+### Ce que l'offre gratuite ne permet pas
+
+À savoir pour ne pas chercher l'option qui n'existe pas :
+
+| Fonction | Offre requise |
+| --- | --- |
+| API REST | **Pro** |
+| Filtres IP | **Pro** |
+| Rapports par e-mail | **Pro** |
+| Équipes | **Pro** |
+| Marque blanche | **Business** |
+
+Les **tableaux** (boards), les **événements** et leurs propriétés, le
+temps réel et les décompositions (pages, référents, pays, appareils) sont
+disponibles sur l'offre gratuite : c'est tout ce qu'il faut ici.
+
+## 8. La routine
 
 | Fréquence | Action | Durée |
 | --- | --- | --- |
@@ -119,7 +181,7 @@ le rapport automatique sert à ne rien louper.
 | Chaque mois | *Pages* : identifier la page morte et la page à retravailler | 10 min |
 | Chaque trimestre | contrôle IA (`docs/prompts-ia.md`) + rapport de Search Console | 30 min |
 
-## 8. Nettoyage
+## 9. Nettoyage
 
 Umami conserve 6 mois sur l'offre gratuite : rien à purge. En revanche, les
 statistiques du site **de préproduction** (`vercel.app`) ne sont pas
