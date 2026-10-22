@@ -97,35 +97,6 @@ export const site = {
 
 export type NavItem = { href: string; label: string };
 
-export const mainNav: NavItem[] = [
-  { href: "/", label: "Accueil" },
-  { href: "/psychomotricite", label: "La psychomotricité" },
-  { href: "/qui-suis-je", label: "Qui suis-je ?" },
-  { href: "/seances-et-tarifs", label: "Séances & tarifs" },
-  { href: "/blog", label: "Ressources" },
-  { href: "/contact", label: "Contact" },
-];
-
-export const footerNav: { title: string; items: NavItem[] }[] = [
-  {
-    title: "Le cabinet",
-    items: [
-      { href: "/psychomotricite", label: "La psychomotricité" },
-      { href: "/qui-suis-je", label: "Qui suis-je ?" },
-      { href: "/seances-et-tarifs", label: "Séances & tarifs" },
-      { href: "/contact", label: "Contact & accès" },
-    ],
-  },
-  {
-    title: "Ressources",
-    items: [
-      { href: "/blog", label: "Articles" },
-      { href: "/faq", label: "Questions fréquentes" },
-      { href: "/en", label: "English" },
-    ],
-  },
-];
-
 export const fullAddress = `${site.address.name}, ${site.address.street}, ${site.address.postalCode} ${site.address.city}`;
 
 export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(

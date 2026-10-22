@@ -1,11 +1,15 @@
 "use client";
 
 import { useEffect } from "react";
-import { track } from "@vercel/analytics";
+import { trackEvent } from "@/lib/analytics";
 
 /**
- * Mesure des conversions : clics sur téléphone, SMS et e-mail, ainsi que les
- * envois du formulaire de contact. Aucune donnée personnelle n'est transmise.
+ * Mesure des conversions : clics sur téléphone, SMS et e-mail, ainsi que
+ * l'ouverture du brouillon de message par le formulaire. Aucune donnée
+ * personnelle n'est transmise.
+ *
+ * Les événements partent vers tous les outils de mesure actifs (Vercel,
+ * Umami) : le choix de l'outil ne change pas ce qui est mesuré.
  */
 export function AnalyticsEvents() {
   useEffect(() => {
@@ -13,14 +17,14 @@ export function AnalyticsEvents() {
       const link = (event.target as HTMLElement | null)?.closest("a[href]");
       if (!link) return;
       const href = link.getAttribute("href") ?? "";
-      if (href.startsWith("tel:")) track("clic_telephone");
-      else if (href.startsWith("sms:")) track("clic_sms");
-      else if (href.startsWith("mailto:")) track("clic_email");
+      if (href.startsWith("tel:")) trackEvent("clic_telephone");
+      else if (href.startsWith("sms:")) trackEvent("clic_sms");
+      else if (href.startsWith("mailto:")) trackEvent("clic_email");
     }
 
     function onContactSubmit(event: Event) {
       const detail = (event as CustomEvent<{ motif?: string }>).detail;
-      track("formulaire_envoye", { motif: detail?.motif ?? "non_precise" });
+      trackEvent("formulaire_ouvert", { motif: detail?.motif || "non_precise" });
     }
 
     document.addEventListener("click", onClick);

@@ -1,75 +1,81 @@
 import type { MetadataRoute } from "next";
 import { articlesFor } from "@/content/blog";
 import { motifs } from "@/content/motifs";
+import {
+  articlePaths,
+  motifPaths,
+  pages,
+  type ArticleKey,
+  type Locale,
+  type MotifKey,
+} from "@/lib/i18n";
 import { site } from "@/lib/site";
 
 const SITE_UPDATED = new Date("2026-10-16");
 
+/** Une page et ses trois versions : le sitemap en liste les trois. */
+type Entry = {
+  paths: Record<Locale, string>;
+  lastModified: Date;
+  changeFrequency: "daily" | "weekly" | "monthly" | "yearly";
+  priority: number;
+};
+
+function entry(
+  paths: Record<Locale, string>,
+  lastModified: Date,
+  changeFrequency: Entry["changeFrequency"],
+  priority: number,
+): Entry {
+  return { paths, lastModified, changeFrequency, priority };
+}
+
+const staticPages: Entry[] = [
+  entry(pages.home, SITE_UPDATED, "monthly", 1),
+  entry(pages.psychomotricite, SITE_UPDATED, "monthly", 0.9),
+  entry(pages.about, SITE_UPDATED, "monthly", 0.8),
+  entry(pages.sessions, SITE_UPDATED, "monthly", 0.9),
+  entry(pages.contact, SITE_UPDATED, "yearly", 0.9),
+  entry(pages.faq, SITE_UPDATED, "monthly", 0.7),
+  entry(pages.resources, SITE_UPDATED, "weekly", 0.7),
+];
+
+const motifPages: Entry[] = motifs.map((motif) => {
+  const paths = motifPaths[motif.slug as MotifKey];
+  return entry(paths, SITE_UPDATED, "monthly", 0.8);
+});
+
+const articlePages: Entry[] = articlesFor().map((article) => {
+  const paths = articlePaths[article.slug as ArticleKey];
+  return entry(
+    paths,
+    new Date(article.updated ?? article.date),
+    "yearly",
+    0.6,
+  );
+});
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: `${site.url}/`,
-      lastModified: SITE_UPDATED,
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    {
-      url: `${site.url}/psychomotricite`,
-      lastModified: SITE_UPDATED,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${site.url}/qui-suis-je`,
-      lastModified: SITE_UPDATED,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${site.url}/seances-et-tarifs`,
-      lastModified: SITE_UPDATED,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${site.url}/contact`,
-      lastModified: SITE_UPDATED,
-      changeFrequency: "yearly",
-      priority: 0.9,
-    },
-    {
-      url: `${site.url}/faq`,
-      lastModified: SITE_UPDATED,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${site.url}/blog`,
-      lastModified: SITE_UPDATED,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${site.url}/en`,
-      lastModified: SITE_UPDATED,
-      changeFrequency: "yearly",
-      priority: 0.6,
-    },
-  ];
+  const entries = [...staticPages, ...motifPages, ...articlePages];
 
-  const motifRoutes: MetadataRoute.Sitemap = motifs.map((motif) => ({
-    url: `${site.url}/psychomotricite/${motif.slug}`,
-    lastModified: SITE_UPDATED,
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }));
+  return entries.flatMap((item) => {
+    const languages: Record<string, string> = {};
+    (Object.keys(item.paths) as Locale[]).forEach((locale) => {
+      const path = item.paths[locale];
+      if (path) {
+        languages[locale === "fr" ? "fr-FR" : locale] = `${site.url}${path}`;
+      }
+    });
+    if (item.paths.fr) languages["x-default"] = `${site.url}${item.paths.fr}`;
 
-  const articleRoutes: MetadataRoute.Sitemap = articlesFor().map((article) => ({
-    url: `${site.url}/blog/${article.slug}`,
-    lastModified: new Date(article.updated ?? article.date),
-    changeFrequency: "yearly",
-    priority: 0.6,
-  }));
-
-  return [...staticRoutes, ...motifRoutes, ...articleRoutes];
+    return (Object.keys(item.paths) as Locale[])
+      .filter((locale) => item.paths[locale])
+      .map((locale) => ({
+        url: `${site.url}${item.paths[locale]}`,
+        lastModified: item.lastModified,
+        changeFrequency: item.changeFrequency,
+        priority: item.priority,
+        alternates: { languages },
+      }));
+  });
 }

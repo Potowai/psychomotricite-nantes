@@ -3,6 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import {
+  localeLabel,
+  locales,
+  pathInLocale,
+  type Locale,
+} from "@/lib/i18n";
 
 const STORAGE_KEY = "lang-banner-fermee";
 
@@ -14,20 +20,10 @@ type Suggestion = {
   closeLabel: string;
 };
 
-const versAnglais: Suggestion = {
-  message: "This site is also available in English.",
-  action: "English",
-  href: "/en",
-  lang: "en",
-  closeLabel: "Close this message",
-};
-
-const versFrancais: Suggestion = {
-  message: "Ce site est aussi disponible en français.",
-  action: "Français",
-  href: "/",
-  lang: "fr",
-  closeLabel: "Fermer ce message",
+const messages: Record<Locale, { message: string; close: string }> = {
+  fr: { message: "Ce site est aussi disponible en anglais et en espagnol.", close: "Fermer ce message" },
+  en: { message: "This site is also available in French and Spanish.", close: "Close this message" },
+  es: { message: "Este sitio también está disponible en francés e inglés.", close: "Cerrar este mensaje" },
 };
 
 const abonnes = new Set<() => void>();
@@ -51,8 +47,8 @@ function fermerBanniere() {
 }
 
 /**
- * Renvoie la suggestion à afficher, sous forme de clé stable : « en », « fr » ou
- * « » quand il'y a rien à proposer. Lue uniquement côté navigateur.
+ * Renvoie la suggestion à afficher, sous forme de clé stable : « en », « es »
+ * ou « » quand il n'y a rien à proposer. Lue uniquement côté navigateur.
  */
 function cleSuggestion(pathname: string, cheminDArrivee: string): string {
   try {
@@ -69,11 +65,21 @@ function cleSuggestion(pathname: string, cheminDArrivee: string): string {
     navigator.languages && navigator.languages.length > 0
       ? navigator.languages
       : [navigator.language];
-  const prefereFrancais = (preferences[0] ?? "").toLowerCase().startsWith("fr");
-  const surPageAnglaise = pathname === "/en" || pathname.startsWith("/en/");
+  const prefere = (preferences[0] ?? "").toLowerCase();
+  const langueDuSite: Locale = pathname.startsWith("/en")
+    ? "en"
+    : pathname.startsWith("/es")
+      ? "es"
+      : "fr";
 
-  if (surPageAnglaise) return prefereFrancais ? "fr" : "";
-  return prefereFrancais ? "" : "en";
+  // On ne propose que la langue du navigateur si elle fait partie du site et
+  // qu'on ne se trouve pas déjà dessus.
+  for (const code of locales) {
+    if (code === langueDuSite) continue;
+    if (prefere.startsWith(code) || prefere.startsWith(`${code}-`)) return code;
+  }
+
+  return "";
 }
 
 /**
@@ -100,8 +106,21 @@ export function LanguageBanner() {
     () => "",
   );
 
-  const suggestion =
-    cle === "en" ? versAnglais : cle === "fr" ? versFrancais : null;
+  const suggestion: Suggestion | null = (() => {
+    if (cle !== "en" && cle !== "es") return null;
+    const langueDuSite: Locale = pathname.startsWith("/en")
+      ? "en"
+      : pathname.startsWith("/es")
+        ? "es"
+        : "fr";
+    return {
+      message: messages[langueDuSite].message,
+      action: localeLabel[cle],
+      href: pathInLocale(pathname, cle),
+      lang: cle,
+      closeLabel: messages[langueDuSite].close,
+    };
+  })();
 
   // Survol ou clic : le panneau se déploie. Le clavier passe par le bouton,
   // qui reste un vrai bouton à bascule (Entrée / Espace).
@@ -125,7 +144,7 @@ export function LanguageBanner() {
   return (
     <aside
       lang={suggestion.lang}
-      aria-label="Suggestion de langue"
+      aria-label={suggestion.message}
       className="pointer-events-none fixed right-3 bottom-20 z-40 sm:right-4 lg:bottom-6"
     >
       <div
@@ -147,6 +166,7 @@ export function LanguageBanner() {
           <p className="text-xs text-ink-2 sm:text-sm">{suggestion.message}</p>
           <Link
             href={suggestion.href}
+            hrefLang={suggestion.lang}
             className="whitespace-nowrap rounded-full bg-ink px-3 py-1.5 text-xs font-medium text-paper transition-colors hover:bg-blue-deep"
           >
             {suggestion.action}

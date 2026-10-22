@@ -3,31 +3,90 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { mainNav, site, telHref } from "@/lib/site";
+import { mainNav, pages, type Locale } from "@/lib/i18n";
+import { LanguageSwitch } from "@/components/language-switch";
+import { site, telHref } from "@/lib/site";
 
-function Wordmark({ compact = false }: { compact?: boolean }) {
+const labels: Record<
+  Locale,
+  {
+    role: string;
+    home: string;
+    book: string;
+    call: string;
+    menu: string;
+    close: string;
+    nav: string;
+    mobileNav: string;
+    language: string;
+  }
+> = {
+  fr: {
+    role: "Psychomotricienne D.E.",
+    home: "accueil",
+    book: "Prendre rendez-vous",
+    call: "Appeler",
+    menu: "Ouvrir le menu",
+    close: "Fermer le menu",
+    nav: "Navigation principale",
+    mobileNav: "Navigation mobile",
+    language: "Langue du site",
+  },
+  en: {
+    role: "Psychomotor therapist (D.E.)",
+    home: "home",
+    book: "Book an appointment",
+    call: "Call",
+    menu: "Open menu",
+    close: "Close menu",
+    nav: "Main navigation",
+    mobileNav: "Mobile navigation",
+    language: "Site language",
+  },
+  es: {
+    role: "Psicomotricista D.E.",
+    home: "inicio",
+    book: "Pedir cita",
+    call: "Llamar",
+    menu: "Abrir el menú",
+    close: "Cerrar el menú",
+    nav: "Navegación principal",
+    mobileNav: "Navegación móvil",
+    language: "Idioma del sitio",
+  },
+};
+
+function Wordmark({
+  locale,
+  compact = false,
+}: {
+  locale: Locale;
+  compact?: boolean;
+}) {
   return (
     <Link
-      href="/"
+      href={pages.home[locale]}
       className="group inline-flex flex-col leading-none"
-      aria-label={`${site.name} — accueil`}
+      aria-label={`${site.name} — ${labels[locale].home}`}
     >
       <span className="font-display text-2xl tracking-tight text-ink transition-colors group-hover:text-blue-deep sm:text-[1.75rem]">
         {site.name}
       </span>
       {!compact && (
         <span className="mt-1 text-[0.68rem] font-medium uppercase tracking-[0.22em] text-ink-3">
-          {site.role}
+          {labels[locale].role}
         </span>
       )}
     </Link>
   );
 }
 
-export function SiteHeader() {
+export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const copy = labels[locale];
+  const nav = mainNav(locale);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -52,25 +111,22 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-page flex items-center justify-between gap-6 py-4">
-        <Wordmark />
+        <Wordmark locale={locale} />
 
-        <nav aria-label="Navigation principale" className="hidden lg:block">
+        <nav aria-label={copy.nav} className="hidden lg:block">
           <ul className="flex items-center gap-7">
-            {mainNav
-              .filter((item) => item.href !== "/")
+            {nav
+              .filter((item) => item.href !== pages.home[locale])
               .map((item) => {
                 const active =
-                  pathname === item.href ||
-                  (item.href !== "/" && pathname.startsWith(item.href));
+                  pathname === item.href || pathname.startsWith(`${item.href}/`);
                 return (
                   <li key={item.href}>
                     <Link
                       href={item.href}
                       aria-current={active ? "page" : undefined}
                       className={`relative inline-flex py-2 text-sm transition-colors ${
-                        active
-                          ? "text-blue-deep"
-                          : "text-ink-2 hover:text-ink"
+                        active ? "text-blue-deep" : "text-ink-2 hover:text-ink"
                       }`}
                     >
                       {item.label}
@@ -87,6 +143,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
+          <LanguageSwitch locale={locale} />
           <a
             href={telHref}
             className="inline-flex py-2 text-sm text-ink-2 tabular-nums transition-colors hover:text-blue-deep"
@@ -94,18 +151,18 @@ export function SiteHeader() {
             {site.contact.phoneDisplay}
           </a>
           <Link
-            href="/contact"
+            href={pages.contact[locale]}
             className="rounded-full bg-ink px-5 py-2.5 text-sm text-paper transition-colors hover:bg-blue-deep"
           >
-            Prendre rendez-vous
+            {copy.book}
           </Link>
         </div>
 
         <button
           type="button"
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
-          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-label={open ? copy.close : copy.menu}
           className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink lg:hidden"
         >
           <span className="relative block h-3 w-5">
@@ -125,9 +182,9 @@ export function SiteHeader() {
 
       {open && (
         <div className="border-t border-line/70 bg-paper lg:hidden">
-          <nav aria-label="Navigation mobile" className="container-page py-6">
+          <nav aria-label={copy.mobileNav} className="container-page py-6">
             <ul className="flex flex-col gap-1">
-              {mainNav.map((item) => (
+              {nav.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -145,16 +202,20 @@ export function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-2 rounded-full border border-ink px-5 py-3 text-ink"
               >
-                Appeler — {site.contact.phoneDisplay}
+                {copy.call} — {site.contact.phoneDisplay}
               </a>
               <Link
-                href="/contact"
+                href={pages.contact[locale]}
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center rounded-full bg-ink px-5 py-3 text-paper"
               >
-                Prendre rendez-vous
+                {copy.book}
               </Link>
             </div>
+            <LanguageSwitch
+              locale={locale}
+              className="mt-6 border-t border-line/60 pt-4"
+            />
           </nav>
         </div>
       )}

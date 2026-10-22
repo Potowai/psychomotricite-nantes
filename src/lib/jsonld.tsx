@@ -44,7 +44,7 @@ export function localBusinessSchema() {
     ],
     // Les horaires exacts ne sont pas encore connus : pas de balisage
     // d'ouverture, pour ne pas publier de créneaux inventés.
-    knowsLanguage: ["fr", "en"],
+    knowsLanguage: ["fr", "en", "es"],
     founder: { "@id": personId },
     employee: { "@id": personId },
     medicalSpecialty: ["Psychomotor therapy", "Psychomotricité"],
@@ -121,7 +121,7 @@ export function websiteSchema() {
     "@id": `${url}/#website`,
     url,
     name: `${site.name} — ${site.role}`,
-    inLanguage: "fr-FR",
+    inLanguage: ["fr-FR", "en", "es"],
     publisher: { "@id": businessId },
   };
 }
@@ -158,18 +158,22 @@ export function articleSchema(article: {
   datePublished: string;
   dateModified?: string;
   image?: string;
+  path?: string;
+  locale?: "fr" | "en" | "es";
 }) {
+  const inLanguage = article.locale ?? "fr";
+  const path = article.path ?? `/blog/${article.slug}`;
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
-    url: `${url}/blog/${article.slug}`,
-    mainEntityOfPage: `${url}/blog/${article.slug}`,
+    url: `${url}${path}`,
+    mainEntityOfPage: `${url}${path}`,
     datePublished: article.datePublished,
     dateModified: article.dateModified ?? article.datePublished,
     image: `${url}${article.image ?? "/opengraph-image"}`,
-    inLanguage: "fr-FR",
+    inLanguage,
     author: { "@id": personId },
     publisher: { "@id": businessId },
   };
@@ -201,6 +205,7 @@ export function medicalWebPageSchema(page: {
   name: string;
   description: string;
   path: string;
+  locale?: "fr" | "en" | "es";
 }) {
   return {
     "@context": "https://schema.org",
@@ -208,7 +213,7 @@ export function medicalWebPageSchema(page: {
     name: page.name,
     description: page.description,
     url: `${url}${page.path}`,
-    inLanguage: "fr-FR",
+    inLanguage: page.locale ?? "fr",
     about: { "@id": businessId },
     publisher: { "@id": businessId },
     audience: {

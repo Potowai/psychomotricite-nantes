@@ -30,11 +30,15 @@ après chaque ajout.
 
 | Variable | Où la trouver | À quoi ça sert |
 |---|---|---|
-| `RESEND_API_KEY` | resend.com → API Keys | Le formulaire de contact envoie vraiment les e-mails. Sans elle, les messages ne partent pas. |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console, méthode « balise HTML » | Vérifie le site pour Google. |
 | `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Bing Webmaster Tools, méthode « balise meta » | Vérifie le site pour Bing. |
-| `NEXT_PUBLIC_UMAMI_SRC` | Umami (auto-hébergé ou Cloud) | Mesure d'audience sans cookie — optionnel. |
+| `NEXT_PUBLIC_UMAMI_SRC` | Umami (auto-hébergé ou Cloud) | Mesure d'audience sans cookie — le choix recommandé. |
 | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | Umami, identifiant du site | Idem. |
+| `NEXT_PUBLIC_ANALYTICS_VERCEL` | — | Mettre `off` pour ne pas charger Vercel Web Analytics. |
+| `NEXT_PUBLIC_SPEED_INSIGHTS` | — | Mettre `off` pour ne pas charger Vercel Speed Insights. |
+
+Le formulaire de contact n'a besoin d'aucune variable : il ouvre l'application
+de messagerie du visiteur avec le message pré-rempli, le site n'envoie rien.
 
 Les deux balises de vérification sont déjà câblées dans le code : **rien n'est
 émis tant que les variables sont absentes**, donc il n'y a jamais de balise vide.
@@ -108,42 +112,52 @@ de la remettre à niveau : c'est là que se trouvent les gains. Voir
 
 ---
 
-## 5. Vercel Analytics et Speed Insights
+## 5. Mesurer l'audience : Umami (recommandé), Vercel, ou les deux
 
-Le code est déjà en place (composants `<Analytics />` et `<SpeedInsights />`),
-mais **la collecte est désactivée par défaut**.
+Le code est en place pour les deux, et le choix se fait **par variables
+d'environnement**, sans toucher au code.
+
+### Umami — le choix recommandé
+
+Umami est intégré mais **inactif** tant que les variables du §1 sont absentes.
+
+Deux possibilités :
+
+- **Umami Cloud**, offre Hobby gratuite : 100 000 événements par mois,
+  1 site, 6 mois de conservation, sans carte bancaire.
+- **Auto-hébergé** (Docker + PostgreSQL) — la recette est prête dans
+  `docker-compose.umami.yml` à la racine du dépôt. Gratuit et sans limite,
+  mais il faut un petit serveur.
+
+Une fois le site créé dans Umami : récupérer l'URL du script
+(`NEXT_PUBLIC_UMAMI_SRC`) et l'identifiant du site
+(`NEXT_PUBLIC_UMAMI_WEBSITE_ID`), les saisir dans Vercel, redéployer.
+
+### Vercel Web Analytics et Speed Insights
+
+Utiles en complément, ou à la place d'Umami si l'on ne veut pas gérer de
+compte supplémentaire.
 
 **Project → Analytics** → activer Web Analytics.
 **Project → Speed Insights** → activer Speed Insights.
 
-Les deux sont sans cookie, donc pas de bandeau de consentement, et conformes à la
-politique de confidentialité du site (qui les nomme déjà).
+Pour ne pas charger du tout ces scripts, ajouter dans Vercel :
+`NEXT_PUBLIC_ANALYTICS_VERCEL=off` et/ou `NEXT_PUBLIC_SPEED_INSIGHTS=off`.
+
+### Les deux ensemble
+
+Les événements de conversion partent vers **tous** les outils actifs : changer
+d'outil ne perd rien.
 
 Événements suivis automatiquement :
 
 - `clic_telephone` — un clic sur le numéro (lien `tel:`)
 - `clic_sms` — un clic sur le SMS (lien `sms:`)
 - `clic_email` — un clic sur l'adresse e-mail
-- `formulaire_envoye` — un formulaire de contact envoyé (avec le motif choisi)
+- `formulaire_ouvert` — le formulaire a ouvert le brouillon de message (avec le motif choisi)
 
 Ce sont ces quatre chiffres qui disent si le site génère des contacts, pas le
 nombre de visites.
-
----
-
-## 6. Umami (optionnel — pour posséder ses données)
-
-Umami est intégré au code mais **inactif** tant que les variables du §1 sont
-absentes.
-
-Deux possibilités :
-
-- **Umami Cloud**, offre Hobby gratuite — le plus simple.
-- **Auto-hébergé** (Docker + PostgreSQL) — sur un petit serveur européen.
-
-Une fois le site créé dans Umami : récupérer l'URL du script (`NEXT_PUBLIC_UMAMI_SRC`)
-et l'identifiant du site (`NEXT_PUBLIC_UMAMI_WEBSITE_ID`), les saisir dans Vercel,
-redéployer.
 
 ⚠️ **Attention CNIL** : « sans cookie » ne veut pas dire « exempté de
 consentement ». L'exemption (art. 82 de la loi Informatique et Libertés) est
@@ -153,9 +167,9 @@ utilisateurs informés, durée de vie ~13 mois et conservation maximale 25 mois.
 Les règles ont été publiées le 4 juillet 2025 et s'appliquent depuis le
 1er janvier 2026.
 
-Si Umami est activé, ajouter son nom à la section « Cookies » de la page
-politique de confidentialité (elle ne cite aujourd'hui que Vercel Web Analytics et
-Speed Insights).
+La page « Politique de confidentialité » nomme **automatiquement** les outils
+réellement en service (Vercel Web Analytics, Vercel Speed Insights, Umami) :
+il n'y a rien à y modifier quand on change d'outil.
 
 ---
 
@@ -167,10 +181,18 @@ Rien à faire, elles tournent toutes seules. Résultats visibles dans l'onglet
 | Automatisation | Déclencheur | Effet |
 |---|---|---|
 | **IndexNow** | chaque `push` sur `main` | Attend le déploiement puis soumet toutes les URLs du sitemap à Bing, Yandex, Naver et Seznam. |
-| **Contrôle SEO & performance** | tous les lundis à 6 h | Interroge l'API PageSpeed Insights et affiche les scores Lighthouse (performance, SEO, accessibilité, bonnes pratiques) des pages principales, pour repérer une régression. |
+| **Audit + PageSpeed** | tous les lundis à 6 h | Lance `scripts/audit-site.mjs` sur le site déployé (titres, descriptions, canonical, hreflang, liens morts) et interroge l'API PageSpeed Insights pour les scores Lighthouse des pages principales. |
 | **Déploiement** | chaque `push` sur `main` | Vercel reconstruit et publie le site. |
 
 IndexNow ne concerne pas Google : Google reste piloté par le sitemap et les liens.
+
+L'audit se lance aussi à la main, en local, sur le build de production :
+
+```bash
+npm run build && npm start          # dans un terminal
+npm run audit                       # audit de http://localhost:3000
+npm run audit:prod                  # audit du site déployé
+```
 
 ---
 

@@ -1,0 +1,16 @@
+import type { Metadata } from "next";
+import { copy } from "@/i18n/copies/not-found";
+import { NotFoundPage } from "@/screens/not-found";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: copy.es.meta.title,
+  description: copy.es.meta.description,
+  path: "/es/404",
+  locale: "es",
+  noindex: true,
+});
+
+export default function NotFound() {
+  return <NotFoundPage locale="es" />;
+}

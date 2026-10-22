@@ -34,7 +34,7 @@ Deux leviers distincts :
 | 1.3 | Fournir **SIRET** et **ADELI / RPPS** | Manuela | Obligatoire pour les mentions légales et indispensable pour les annuaires |
 | 1.4 | Fournir la **photo de façade** et les **deux illustrations** (portrait reçu) | Manuela | Les visuels réels et les illustrations augmentent la confiance et l’attachement |
 | 1.5 | **Optimiser** la fiche **Google Business Profile** existante (accès gestionnaire à confirmer) | Manuela + Alexis | **Le levier n°1** pour « psychomotricienne Nantes » : la fiche existe déjà, mais une fiche jamais retravaillée laisse la plupart des gains sur la table |
-| 1.6 | Clé **Resend** (ou autre) pour que le formulaire envoie vraiment les e-mails | Alexis | Sans elle, les messages ne partent pas |
+| 1.6 | Vérifier le formulaire de contact en conditions réelles (il ouvre la messagerie du visiteur, sans envoi par le site) | Moi | Un formulaire qui ne s'ouvre pas = aucun contact |
 
 ---
 

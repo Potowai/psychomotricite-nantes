@@ -1,8 +1,12 @@
 name: Contrôle SEO & performance
 
-# Garde-fou gratuit : interroge l'API PageSpeed Insights (Lighthouse : performance,
-# SEO, accessibilité, bonnes pratiques) sur les pages clés, une fois par semaine.
-# Aucune clé requise, quota public d'environ 25 000 requêtes par jour.
+# Garde-fou gratuit : PageSpeed Insights (Lighthouse : performance, SEO,
+# accessibilité, bonnes pratiques) sur les pages clés, plus l'audit maison
+# (titres, descriptions, canonical, hreflang, liens morts).
+#
+# L'API PageSpeed Insights accepte une clé (secret PAGESPEED_API_KEY). Sans
+# clé, le quota public est partagé et tombe vite à 429 : le rapport est alors
+# ignoré, sans faire échouer le contrôle.
 
 on:
   schedule:
@@ -10,17 +14,42 @@ on:
   workflow_dispatch:
 
 jobs:
-  pagespeed:
+  audit:
     runs-on: ubuntu-latest
     steps:
-      - name: PageSpeed Insights (mobile)
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Audit du site déployé (titres, liens, hreflang)
         env:
           ORIGIN: https://psychomotricite-nantes.vercel.app
         run: |
+          node scripts/audit-site.mjs "$ORIGIN" || echo "::warning::l'audit a relevé des erreurs"
+
+      - name: PageSpeed Insights (mobile)
+        env:
+          ORIGIN: https://psychomotricite-nantes.vercel.app
+          PSI_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+        run: |
           for path in "/" "/contact" "/psychomotricite" "/seances-et-tarifs"; do
-            echo "::group::${ORIGIN}${path}"
-            curl -sS \
-              "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${ORIGIN}${path}&strategy=mobile&category=performance&category=seo&category=accessibility&category=best-practices" \
-              | jq -r '.lighthouseResult.categories | to_entries[] | "\(.key): \((.value.score * 100) | round)/100"'
+            url="${ORIGIN}${path}"
+            if [ -n "$PSI_KEY" ]; then
+              api="https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${PSI_KEY}"
+            else
+              api="https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}"
+            fi
+            echo "::group::${url}"
+            curl -sS "$api" | jq -r '
+              if .lighthouseResult then
+                (.lighthouseResult.categories | to_entries[] | "\(.key): \((.value.score * 100) | round)/100"),
+                "LCP: \(.lighthouseResult.audits["largest-contentful-paint"].displayValue)",
+                "CLS: \(.lighthouseResult.audits["cumulative-layout-shift"].displayValue)",
+                "TBT: \(.lighthouseResult.audits["total-blocking-time"].displayValue)"
+              else
+                "réponse: \(.error.message // "inconnue")"
+              end'
             echo "::endgroup::"
           done

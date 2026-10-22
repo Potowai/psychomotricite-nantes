@@ -1,0 +1,48 @@
+# Umami — mesure d'audience auto-hébergée
+#
+# Alternative libre à Vercel Web Analytics : MIT, sans cookie, sans donnée
+# personnelle, et les données restent chez soi.
+#
+#   1. Sur un petit serveur (VPS), copier ce fichier et lancer :
+#        docker compose -f docker-compose.umami.yml up -d
+#   2. Créer le compte administrateur sur https://umami.exemple.fr (première
+#      visite : le formulaire de création apparaît).
+#   3. Créer un site, noter son identifiant (le « website ID »).
+#   4. Dans Vercel → Settings → Environment Variables :
+#        NEXT_PUBLIC_UMAMI_SRC=https://umami.exemple.fr/script.js
+#        NEXT_PUBLIC_UMAMI_WEBSITE_ID=<identifiant du site>
+#      puis redéployer.
+#   5. Pour ne plus utiliser Vercel Web Analytics, ajouter aussi :
+#        NEXT_PUBLIC_ANALYTICS_VERCEL=off
+#
+# Umami Cloud (offre gratuite : 100 000 événements par mois, 1 site, 6 mois de
+# conservation) évite l'étape 1 : il suffit de l'URL du script
+# https://cloud.umami.is/script.js et du même identifiant de site.
+
+services:
+  umami:
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    restart: always
+    ports:
+      - "127.0.0.1:3000:3000" # derrière un reverse proxy HTTPS
+    environment:
+      DATABASE_URL: postgresql://umami:umami@db:5432/umami
+      DATABASE_TYPE: postgresql
+      APP_SECRET: a-remplacer-par-une-longue-chaine-aleatoire
+      # Umami refuse de démarrer sans ces deux variables.
+      METRICS_ENABLED: "false"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16-alpine
+    restart: always
+    volumes:
+      - umami-db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: umami
+      POSTGRES_DB: umami
+
+volumes:
+  umami-db:

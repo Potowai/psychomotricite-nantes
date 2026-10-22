@@ -61,7 +61,19 @@ const nextConfig: NextConfig = {
     },
   },
   async redirects() {
-    return legacyRedirects.map((r) => ({ ...r, permanent: true }));
+    return [
+      // Les anciennes URL WordPress : priorité, pour ne pas perdre le
+      // référencement acquis, même en www.
+      ...legacyRedirects.map((r) => ({ ...r, permanent: true })),
+      // Le site canonique est sans « www » : le www est renvoyé vers
+      // l'adresse de référence, quoi qu'il arrive côté configuration Vercel.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.psychomotriciennenantes.fr" }],
+        destination: "https://psychomotriciennenantes.fr/:path*",
+        permanent: true,
+      },
+    ];
   },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];

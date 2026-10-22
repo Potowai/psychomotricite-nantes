@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { type Locale } from "@/lib/i18n";
 import { fullAddress, mapsUrl, site } from "@/lib/site";
 import "leaflet/dist/leaflet.css";
 
@@ -8,6 +9,68 @@ type CabinetMapProps = {
   className?: string;
   height?: number;
   showLink?: boolean;
+  locale?: Locale;
+};
+
+const mapCopy: Record<
+  Locale,
+  {
+    itinerary: string;
+    copy: string;
+    copied: string;
+    addressCopied: string;
+    zoomIn: string;
+    zoomOut: string;
+    enlarge: string;
+    reduce: string;
+    dialogLabel: string;
+    regionLabel: string;
+    openMap: string;
+    openDirections: string;
+  }
+> = {
+  fr: {
+    itinerary: "Itinéraire",
+    copy: "Copier",
+    copied: "Copié",
+    addressCopied: "Adresse copiée",
+    zoomIn: "Zoom avant",
+    zoomOut: "Zoom arrière",
+    enlarge: "Agrandir le plan",
+    reduce: "Réduire le plan",
+    dialogLabel: "Plan d’accès",
+    regionLabel: "Plan d’accès au cabinet",
+    openMap: "Voir le plan sur OpenStreetMap",
+    openDirections: "Ouvrir l’itinéraire dans Google Maps",
+  },
+  en: {
+    itinerary: "Directions",
+    copy: "Copy",
+    copied: "Copied",
+    addressCopied: "Address copied",
+    zoomIn: "Zoom in",
+    zoomOut: "Zoom out",
+    enlarge: "Enlarge the map",
+    reduce: "Reduce the map",
+    dialogLabel: "Access map",
+    regionLabel: "Access map to the practice",
+    openMap: "See the map on OpenStreetMap",
+    openDirections: "Open directions in Google Maps",
+  },
+  es: {
+    itinerary: "Cómo llegar",
+    copy: "Copiar",
+    copied: "Copiado",
+    addressCopied: "Dirección copiada",
+    zoomIn: "Acercar",
+    zoomOut: "Alejar",
+    enlarge: "Ampliar el plano",
+    reduce: "Reducir el plano",
+    dialogLabel: "Plano de acceso",
+    regionLabel: "Plano de acceso al consultorio",
+    openMap: "Ver el plano en OpenStreetMap",
+    openDirections: "Abrir la ruta en Google Maps",
+  },
 };
 
 const addressLine = `${site.address.street}, ${site.address.postalCode} ${site.address.city}`;
@@ -29,7 +92,17 @@ export function CabinetMap({
   className = "",
   height = 320,
   showLink = true,
+  locale = "fr",
 }: CabinetMapProps) {
+  const t = mapCopy[locale];
+  const {
+    zoomIn,
+    zoomOut,
+    itinerary,
+    copy: copyLabel,
+    copied: copiedLabel,
+    addressCopied,
+  } = t;
   const shell = useRef<HTMLDivElement>(null);
   const holder = useRef<HTMLDivElement>(null);
   const mapRef = useRef<import("leaflet").Map | null>(null);
@@ -78,8 +151,8 @@ export function CabinetMap({
       L.control
         .zoom({
           position: "bottomright",
-          zoomInTitle: "Zoom avant",
-          zoomOutTitle: "Zoom arrière",
+          zoomInTitle: zoomIn,
+          zoomOutTitle: zoomOut,
         })
         .addTo(map);
 
@@ -114,8 +187,8 @@ export function CabinetMap({
           `<p class="cabinet-tip__name">${site.address.name}</p>` +
             `<p class="cabinet-tip__addr">${site.address.street}, ${site.address.postalCode} ${site.address.city}</p>` +
             `<div class="cabinet-tip__actions">` +
-            `<a class="cabinet-tip__go" href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Itinéraire</a>` +
-            `<button class="cabinet-tip__copy" type="button" data-copy>Copier</button>` +
+            `<a class="cabinet-tip__go" href="${mapsUrl}" target="_blank" rel="noopener noreferrer">${itinerary}</a>` +
+            `<button class="cabinet-tip__copy" type="button" data-copy>${copyLabel}</button>` +
             `</div>` +
             `<span class="cabinet-tip__status" role="status" data-status></span>`,
           {
@@ -152,11 +225,11 @@ export function CabinetMap({
           field.remove();
         }
         if (!copied) return;
-        copyBtn.textContent = "Copié";
-        if (statusEl) statusEl.textContent = "Adresse copiée";
+        copyBtn.textContent = copiedLabel;
+        if (statusEl) statusEl.textContent = addressCopied;
         clearTimeout(copyTimer);
         copyTimer = setTimeout(() => {
-          copyBtn.textContent = "Copier";
+          copyBtn.textContent = copyLabel;
           if (statusEl) statusEl.textContent = "";
         }, 2400);
       });
@@ -185,7 +258,9 @@ export function CabinetMap({
       mapRef.current = null;
       map = undefined;
     };
-  }, [height]);
+  },
+    [height, locale, zoomIn, zoomOut, itinerary, copyLabel, copiedLabel, addressCopied],
+  );
 
   // Plein écran : la taille change sans transition, il suffit de recaler la
   // carte une fois la nouvelle boîte appliquée.
@@ -215,7 +290,7 @@ export function CabinetMap({
         ref={shell}
         role={full ? "dialog" : undefined}
         aria-modal={full ? true : undefined}
-        aria-label={full ? `Plan d’accès — ${fullAddress}` : undefined}
+        aria-label={full ? `${t.dialogLabel} — ${fullAddress}` : undefined}
         className={`carte-shell relative overflow-hidden bg-paper-2 ${
           full
             ? "carte-full"
@@ -233,7 +308,7 @@ export function CabinetMap({
           <div
             ref={holder}
             role="region"
-            aria-label={`Plan d’accès au cabinet — ${fullAddress}`}
+            aria-label={`${t.regionLabel} — ${fullAddress}`}
             data-map
           />
         </div>
@@ -243,7 +318,7 @@ export function CabinetMap({
           type="button"
           onClick={() => setFull((value) => !value)}
           aria-expanded={full}
-          aria-label={full ? "Réduire le plan" : "Agrandir le plan"}
+          aria-label={full ? t.reduce : t.enlarge}
           className="carte-expand absolute right-3 top-3 z-[900] grid h-9 w-9 place-items-center rounded-xl border border-line bg-paper text-ink shadow-[var(--shadow-soft)] transition-colors hover:bg-blue-soft"
         >
           {full ? (
@@ -280,7 +355,7 @@ export function CabinetMap({
               rel="noopener noreferrer"
               className="link-quiet text-sm font-medium text-blue-deep"
             >
-              Voir le plan sur OpenStreetMap
+              {t.openMap}
             </a>
           </div>
         </noscript>
@@ -292,7 +367,7 @@ export function CabinetMap({
           rel="noopener noreferrer"
           className="link-quiet mt-3 inline-flex items-center gap-1.5 py-1 text-sm font-medium text-blue-deep"
         >
-          Ouvrir l’itinéraire dans Google Maps
+          {t.openDirections}
           <span aria-hidden="true">→</span>
         </a>
       )}

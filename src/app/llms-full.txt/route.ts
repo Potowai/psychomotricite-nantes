@@ -30,6 +30,10 @@ export function GET() {
   lines.push(`# ${site.name} — ${site.role} à Nantes`);
   lines.push("");
   lines.push(
+    "> Version française. Index court en anglais : /en/llms.txt — en espagnol : /es/llms.txt",
+  );
+  lines.push("");
+  lines.push(
     `${site.practitioner.firstName} ${site.practitioner.lastName} est psychomotricienne diplômée d'État (D.E.). Elle exerce en cabinet libéral à Nantes depuis ${site.practitioner.since}, auprès d'adolescent.es et d'adultes, et reçoit également des enfants selon les situations. Elle accompagne très fréquemment des personnes HPI, HQI/THQI (douance) et des personnes concernées par d'autres neuroatypies : TSA, TDA-H, troubles dys.`,
   );
   lines.push("");

@@ -8,7 +8,7 @@ de réponse (GEO) et — surtout — pour que **les gens la contactent**.
 | | |
 | --- | --- |
 | **Site en ligne** | <https://psychomotricite-nantes.vercel.app> |
-| **Domaine prévu** | `psychomotriciennenantes.fr` (bascule DNS à faire) |
+| **Domaine prévu** | `psychomotriciennenantes.fr` (hébergé chez WordPress.com — bascule DNS à faire, voir `docs/mise-en-ligne-domaine.md`) |
 | **Dépôt** | privé — déploiement automatique Vercel à chaque `push` sur `main` |
 
 **Contact** : 06 84 74 96 70 (appel ou SMS) ·
@@ -30,6 +30,7 @@ npm install
 npm run dev      # http://localhost:3000
 npm run build    # build de production (c'est aussi ce qui vérifie les types)
 npm run lint     # ESLint
+npm run audit    # audit du site local : titres, liens, hreflang, JSON-LD
 ```
 
 ## Pages
@@ -60,8 +61,7 @@ npm run lint     # ESLint
 | Textes des pages | `src/app/<page>/page.tsx` |
 | Articles du blog | `src/content/blog.ts` |
 | Contenu des 5 pages « motifs » | `src/content/motifs.ts` |
-| Formulaire de contact (champs) | `src/components/contact-form.tsx` |
-| Traitement du formulaire | `src/app/api/contact/route.ts` |
+| Formulaire de contact (champs, brouillon) | `src/components/contact-form.tsx` |
 | Suggestion « autre langue » | `src/components/language-banner.tsx` |
 | Images | `src/assets/images/` |
 | Redirections et en-têtes de sécurité | `next.config.ts` |
@@ -115,11 +115,14 @@ l'enverrait vers l'anglais, sortant tout le site français de l'index.
 Tous les outils sont **sans cookie**, donc aucun bandeau de consentement n'est
 nécessaire — c'est cohérent avec la politique de confidentialité.
 
-- **Vercel Web Analytics** et **Speed Insights** (`src/app/layout.tsx`).
-- **Umami** en option (`src/components/umami.tsx`) : s'active tout seul dès que
-  `NEXT_PUBLIC_UMAMI_SRC` et `NEXT_PUBLIC_UMAMI_WEBSITE_ID` sont renseignées.
+- **Umami** (recommandé) ou **Vercel Web Analytics** et **Speed Insights** :
+  le choix se fait par variables d'environnement, sans toucher au code
+  (`src/lib/analytics.ts`, `src/components/umami.tsx`). Les événements de
+  conversion sont envoyés à tous les outils actifs, donc changer d'outil ne
+  perd rien. La politique de confidentialité nomme automatiquement les
+  outils réellement en service.
 - **Suivi des conversions** (`src/components/analytics-events.tsx`) :
-  `clic_telephone`, `clic_sms`, `clic_email`, `formulaire_envoye` (avec le motif
+  `clic_telephone`, `clic_sms`, `clic_email`, `formulaire_ouvert` (avec le motif
   demandé). C'est ce qui permet de dire si le site génère des contacts, et pas
   seulement des visites.
 
@@ -135,12 +138,21 @@ Deux workflows GitHub Actions :
 
 ## Formulaire de contact
 
-Le formulaire valide les champs, filtre les robots (champ « pot de miel »),
-limite le débit par IP, puis :
+Le formulaire **n'envoie rien par le site** : il ouvre l'application de
+messagerie du visiteur avec le message pré-rempli (nom, e-mail, téléphone,
+âge, motif, préférence de contact, message). Le visiteur l'envoie depuis sa
+propre boîte, et la réponse arrive avec son adresse réelle.
 
-- **sans configuration** : écrit le message dans les logs du serveur ;
-- **avec `RESEND_API_KEY`** : envoie un e-mail à Manuela (répondez directement au
-  visiteur grâce à `reply-to`).
+C'est le plus simple et le plus robuste : aucun service d'envoi à configure,
+aucun coût, aucune donnée qui transite par le site, et rien qui puisse
+échouer en silence.
+
+Le panneau qui suit l'ouverture de la messagerie reprend le message complet
+à l'écran (copiable), l'adresse e-mail, le téléphone et le SMS — pour les
+visiteurs dont la messagerie ne s'ouvre pas, ou qui préfèrent écrire au
+numéro. Le corps pré-rempli est raccourci si l'URI `mailto:` dépasse la
+limite des clients de messagerie (environ 2 000 caractères) : le texte entier
+reste affiché, lui, jamais coupé.
 
 ## Variables d'environnement
 
@@ -149,13 +161,12 @@ chaque fonctionnalité s'active quand sa variable existe.
 
 | Variable | Effet |
 | --- | --- |
-| `RESEND_API_KEY` | Envoie réellement les e-mails du formulaire |
-| `CONTACT_FROM_EMAIL` | Adresse d'expédition (domaine vérifié dans Resend) |
-| `CONTACT_TO_EMAIL` | Adresse de réception des messages |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Balise de vérification Search Console |
 | `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Balise de vérification Bing Webmaster |
-| `NEXT_PUBLIC_UMAMI_SRC` | URL du script Umami |
+| `NEXT_PUBLIC_UMAMI_SRC` | URL du script Umami (Cloud ou auto-hébergé) |
 | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | Identifiant de site Umami |
+| `NEXT_PUBLIC_ANALYTICS_VERCEL` | `off` pour ne pas charger Vercel Web Analytics |
+| `NEXT_PUBLIC_SPEED_INSIGHTS` | `off` pour ne pas charger Vercel Speed Insights |
 
 ## Documents de travail
 
@@ -166,18 +177,28 @@ chaque fonctionnalité s'active quand sa variable existe.
 | `docs/fiche-google-business.md` | Audit de la fiche Google et corrections à faire |
 | `docs/outils-seo-gratuits.md` | Outils gratuits retenus (et ceux écartés, avec raisons) |
 | `docs/mise-en-route-seo.md` | Ce qu'il reste à activer côté comptes |
+| `docs/console-outils-gratuits.md` | Accès direct aux outils gratuits : suivi, mots-clés, audit |
 | `docs/ux-ui-audit-2026-10-20.md` | Audit UX/UI et accessibilité, avec mesures et corrections |
+| `docs/mise-en-ligne-domaine.md` | Runbook de bascule du domaine vers Vercel (étapes, qui fait quoi) |
 
 ## Déploiement (Vercel)
 
-Le projet est déjà en ligne et se redéploie à chaque `push` sur `main`. Ce qui
-reste à faire :
+Le projet est déjà en ligne et se redéploie à chaque `push` sur `main`. Le
+domaine `psychomotriciennenantes.fr` est, lui, hébergé chez WordPress.com :
+c'est le DNS qu'il faut faire pointer vers Vercel. La procédure complète —
+qui fait quoi, dans quel ordre, et comment revenir en arrière — est dans
+`docs/mise-en-ligne-domaine.md`.
 
-1. Renseigner les variables d'environnement dans le tableau de bord Vercel.
-2. Activer **Web Analytics** et **Speed Insights** dans le tableau de bord.
-3. Faire pointer `psychomotriciennenantes.fr` vers Vercel (changer les
-   enregistrements DNS chez le registrar actuel).
-4. Vérifier dans la Search Console et soumettre le nouveau sitemap.
+En bref :
+
+1. Vercel : ajouter le domaine et le `www` (redirigé vers l'apex, qui est
+   l'adresse canonique ; le code prévoit déjà ce renvoi).
+2. WordPress.com : remplacer les serveurs de noms par ceux de Vercel
+   (`ns1` / `ns2.vercel-dns.com`).
+3. Search Console : vérifier le domaine et soumettre le nouveau sitemap.
+
+Rien d'autre à configurer : le formulaire ouvre la messagerie du visiteur,
+sans envoi par le site.
 
 ## À finaliser (informations manquantes)
 
@@ -194,9 +215,8 @@ Ces éléments sont marqués dans le site et doivent être complétés par Manue
       reste disponible pour une image de terrain.
 - [ ] **Fiche Google Business Profile** : à compléter — l'audit détaillé et les
       textes prêts à copier sont dans `docs/fiche-google-business.md`.
-- [ ] **Domaine** : confirmer l'accès au registrar et au DNS.
-- [ ] **Envoi des e-mails** du formulaire : créer la clé Resend (ou un service
-      équivalent).
+- [ ] **Domaine** : les accès WordPress.com et Vercel sont confirmés ; la
+      bascule suit `docs/mise-en-ligne-domaine.md`.
 - [ ] Réseaux sociaux éventuels (Instagram, LinkedIn) à ajouter si souhaité.
 
 ## Note sur les images
