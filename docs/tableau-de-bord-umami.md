@@ -37,18 +37,22 @@ d'automatisation (c'est le seul point que je n'ai pas pu faire).
 
 ### Les 5 minutes restantes
 
-Dans **Boards → Contacts → Design** :
+**Le raccourci** : un composant hérite du site si le **tableau** lui-même est
+rattaché à un site. Il suffit donc de choisir le site **une seule fois**,
+au niveau du tableau.
 
-1. *Add row* → le bouton du widget (l'icône ronde).
-2. **Type** : `Website`.
-3. **Website** : choisir `Manuela Edom — psychomotricienne à Nantes`
-   (c'est le seul site du compte, c'est le premier de la liste).
-4. **Titre** : le nom du composant (voir le tableau ci-dessous).
-5. **Components** : le bouton qui correspond au type de graphique voulu —
-   les quatre boutons sont, dans l'ordre : *carte*, *courbe*, *histogramme*,
-   *tableau*.
-6. **Save** (en bas à droite), puis **Save** (en haut à droite) pour
-   enregistrer le tableau.
+**Étape 1 — rattacher le tableau au site** (une fois pour tout) :
+*Boards → Contacts → Edit* → **Board type** : passer de `Mixed` à `Website`
+→ **Website** : choisir `Manuela Edom — psychomotricienne à Nantes` (c'est le
+seul site du compte, c'est le premier de la liste) → *Save*.
+
+**Étape 2 — ajouter les composants** : *Boards → Contacts → Design* → *Add
+row* → le bouton du widget. Le site est déjà pré-rempli ; il reste à choisir :
+
+- **Title** : le nom du composant (tableau ci-dessous) ;
+- **Components** : le bouton du type de graphique — les quatre boutons sont,
+  dans l'ordre : *carte*, *courbe*, *histogramme*, *tableau* ;
+- **Save** (en bas à droite), puis *Save* (en haut à droite).
 
 Répéter pour chaque composant : *Add row* → … → *Save*.
 
