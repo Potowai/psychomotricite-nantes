@@ -214,6 +214,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
             </div>
             <LanguageMenu
               locale={locale}
+              placement="above"
               className="mt-6 border-t border-line/60 pt-4"
             />
           </nav>

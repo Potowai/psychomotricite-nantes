@@ -72,9 +72,13 @@ function CheckIcon() {
 export function LanguageMenu({
   locale = "fr",
   className = "",
+  placement = "below",
 }: {
   locale?: Locale;
   className?: string;
+  /** « above » ouvre le menu vers le haut — utile dans le menu mobile, où la
+      place manque en bas d'écran. */
+  placement?: "below" | "above";
 }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -118,7 +122,9 @@ export function LanguageMenu({
 
       {open && (
         <ul
-          className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-max min-w-[11rem] overflow-hidden rounded-2xl border border-line bg-paper p-1.5 shadow-[var(--shadow-lift)]"
+          className={`absolute right-0 z-50 w-max min-w-[11rem] overflow-hidden rounded-2xl border border-line bg-paper p-1.5 shadow-[var(--shadow-lift)] ${
+            placement === "above" ? "bottom-[calc(100%+0.5rem)]" : "top-[calc(100%+0.5rem)]"
+          }`}
           aria-label={ariaLabel[locale]}
         >
           {locales.map((code) => {
