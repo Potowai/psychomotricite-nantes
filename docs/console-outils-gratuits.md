@@ -98,7 +98,58 @@ Voir `plan-seo-geo.md` § 1 et `docs/mots-cles.md`.
 
 ---
 
-## 4. Automatisation déjà en place
+## 4. GEO — être cité par les moteurs de réponse
+
+### Ce qui est déjà en place, gratuitement
+
+C'est le gros du travail, et il est fait dans le code :
+
+| Brique | Où | Pourquoi |
+| --- | --- | --- |
+| `robots.txt` | `src/app/robots.ts` | 16 robots de recherche IA explicitement autorisés (GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, Amazonbot…) |
+| `llms.txt` et `llms-full.txt` | `src/lib/llms.ts` | La carte que les moteurs de réponse lisent : nom, adresse, téléphone, horaires, tarifs, pages, articles — en 3 langues |
+| Données structurées | `src/lib/jsonld.ts` | `MedicalBusiness`, `Person`, `WebSite`, `Service`, `FAQPage`, `BreadcrumbList`, `BlogPosting`, `Offer`… |
+| Coordonnées en texte visible | toutes les pages | un robot lit le texte, pas le balisage |
+| Sitemap complet | `src/app/sitemap.ts` | 48 URL, les 3 langues |
+| Contrôle automatisé | `npm run audit` | vérifie les robots, `llms.txt`, le NAP visible et l'inventaire des types |
+
+### Les outils de mesure gratuits
+
+| Outil | Accès | Ce qu'il donne | Temps |
+| --- | --- | --- | --- |
+| **Search Console → rapport « Generative AI »** | <https://search.google.com/search-console> | **Nouveau (juin 2026)** : les impressions du site dans les AI Overviews, l'AI Mode et les fonctionnalités IA de Discover. Déploiement progressif, impressions seulement (ni clics, ni requêtes) | 0 |
+| **Ahrefs — compte gratuit** | <https://ahrefs.com/free> | Site Audit (5 000 crédits/mois), Site Explorer (1 000 liens et mots-clés), **Web Analytics jusqu'à 1 M d'événements, qui suit explicitement le trafic venu des assistants IA** | 10 min |
+| **Umami** → filtre « référents » | <https://umami.is> | Les visites venant de `chatgpt.com`, `perplexity.ai`, `claude.ai`, `copilot.microsoft.com`, `gemini.google.com` : la mesure du trafic IA, gratuite | 0 |
+| **Contrôle trimestriel** | `docs/prompts-ia.md` | 12 questions à poser dans ChatGPT, Perplexity et Google : la citation se voit à l'œil, elle n'apparaît dans aucun tableau de bord | 10 min/trimestre |
+
+### Les tableaux de bord GEO à ne pas acheter
+
+Profound, Otterly.ai, Peec AI, Scrunch AI, Relixir, ZipTie, LLMrefs,
+Writesonic GEO : **tous payants** (de 20 à 100 €/mois), tous construits sur des
+crédits de requêtes IA, tous mesurant la citation sur des requêtes
+génériques nationales (« meilleur psychomotricien »). Pour une praticienne
+locale, ils affichent des zéros et n'apportent rien que la Search Console
+et le contrôle trimestriel ne donnent déjà.
+
+Le seul cas où cela changerait : un cabinet qui vise plusieurs villes, ou un
+contenu national (blog, ressources). Ce n'est pas le cas ici.
+
+### Le vrai levier, ce n'est pas l'IA
+
+Les moteurs de réponse citent rarement un professionnel local nommé. Ce
+qui fait qu'une IA répond « Manuela Edom, au 4 rue de la Mitrie », c'est :
+
+1. la **fiche Google Business Profile** complète et à jour, avec des avis ;
+2. un **NAP rigoureusement identique** partout (site, annuaires, fiche) ;
+3. les **données structurées** et `llms.txt` (déjà en place) ;
+4. une **page par motif** clairement écrite (déjà le cas).
+
+Autrement dit : le GEO est un effet de bord d'un bon SEO local, pas un
+projet à part.
+
+---
+
+## 5. Automatisation déjà en place
 
 | Automatisation | Où | Effet |
 | --- | --- | --- |
@@ -113,9 +164,10 @@ cette machine.
 
 ---
 
-## 5. Le chemin le court (15 minutes)
+## 6. Le chemin le court (15 minutes)
 
-1. **Clics** : activer Web Analytics + Speed Insights dans Vercel (2 min).
+1. **Clics** : activer Web Analytics + Speed Insights dans Vercel (2 min) —
+   ou installer Umami, c'est fait.
 2. **Compte** : créer la propriété Search Console et y soumettre
    `sitemap.xml` (10 min) — c'est l'outil le plus rentable de la liste.
 3. **Compte** : créer le compte Bing Webmaster (5 min) et importer depuis
@@ -124,6 +176,9 @@ cette machine.
    auditer le site déployé.
 5. **Chaque mois** : 30 minutes de Search Console, comme décrit dans
    `mise-en-route-seo.md` § 8.
+6. **Chaque trimestre** : 10 minutes de contrôle IA (`docs/prompts-ia.md`),
+   et jeter un œil au rapport « Generative AI » de la Search Console s'il
+   s'affiche.
 
 Le reste de la liste est en option : à ouvrir quand un besoin précis
 apparaît, pas avant.

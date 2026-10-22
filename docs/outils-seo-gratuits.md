@@ -128,12 +128,23 @@ cette liste.
 
 ## 6. GEO — visibilité dans les moteurs IA (ChatGPT, Perplexity, AI Overviews)
 
-**Verdict : à ignorer pour l'instant.**
+**Verdict : les tableaux de bord GEO sont à ignorer — mais deux signaux
+gratuits sont apparus, côté Google et côté Ahrefs.**
 
-Raison de fond : les moteurs de réponse IA recommandent très rarement un **praticien local
-nommé**. Pour « bon psychomotricien à Nantes », ils citent des annuaires ou des
-établissements. Le levier reste local (fiche Google, avis, NAP cohérent), pas un tableau
-de bord de visibilité IA.
+Depuis juin 2026, la **Search Console propose un rapport « Generative AI »** :
+des vues dédiées aux impressions dans les AI Overviews, l'AI Mode et les
+fonctionnalités IA de Discover. Déploiement progressif, impressions seulement
+(ni clics, ni requêtes, ni ventilation AI Overviews / AI Mode) — mais c'est
+la première donnée de première partie sur la visibilité IA.
+
+Et le **compte gratuit Ahrefs** inclut un Web Analytics jusqu'à 1 million
+d'événements par projet, qui suit explicitement le trafic venu des
+assistants IA. Encore une fois, une source de première partie.
+
+Raison de fond : les moteurs de réponse recommandent très rarement un
+**praticien local nommé**. Pour « bon psychomotricien à Nantes », ils citent
+des annuaires ou des établissements. Le levier reste local (fiche Google,
+avis, NAP cohérent), pas un tableau de bord de visibilité IA.
 
 Outils existants, pour information :
 
@@ -144,10 +155,14 @@ Outils existants, pour information :
 - **Open-Sight**, **Trendos** — commerciaux (Trendos a un palier gratuit, mais opaque).
 - **Bright Data GEO/AEO Tracker** — tableau de bord open source, mais **données payantes**.
 - **OpenSEO « AI Visibility »** — code MIT mais **clé DataForSEO payante**.
+- **Profound, Otterly.ai, Peec AI, Scrunch AI, Relixir, ZipTie, LLMrefs** — tous
+  payants (20 à 100 €/mois), tous à crédits, tous pensés pour du contenu
+  national. Sans intérêt pour un cabinet local.
 
-**À faire à la place (2 minutes, une fois par trimestre) :** poser la question à ChatGPT
-et à Perplexity — « psychomotricien Nantes », « psychomotricienne pour un ado TDAH à
-Nantes » — et regarder si elle ou son cabinet apparaissent. C'est gratuit et suffisant.
+**À faire à la place (10 minutes, une fois par trimestre)** : le contrôle
+documenté dans [`prompts-ia.md`](./prompts-ia.md) — 12 questions à poser dans
+ChatGPT, Perplexity et Google, en notant si le site est cité et quelle page
+l'est. C'est gratuit, et c'est la seule mesure qui dise quelque chose.
 
 ---
 

@@ -204,8 +204,138 @@ for (const file of ["/robots.txt", "/llms.txt", "/llms-full.txt", "/rss.xml", "/
 }
 
 const robots = await (await head(`${ORIGIN}/robots.txt`)).text();
-for (const bot of ["GPTBot", "ClaudeBot", "PerplexityBot"]) {
-  if (!robots.includes(bot)) report("Avertissement", "/robots.txt", `${bot} non autorisé explicitement`);
+
+/* ------------------------------------------------------------- GEO / IA */
+
+/**
+ * Les robots de recherche des moteurs de réponse : ils doivent être
+ * autorisés explicitement, sinon c'est un oubli (et non un blocage).
+ */
+const aiCrawlers = [
+  "GPTBot",
+  "OAI-SearchBot",
+  "ChatGPT-User",
+  "PerplexityBot",
+  "Perplexity-User",
+  "ClaudeBot",
+  "Claude-SearchBot",
+  "Claude-User",
+  "Google-Extended",
+  "Applebot-Extended",
+  "Amazonbot",
+  "DuckAssistBot",
+  "MistralAI-User",
+];
+
+function parseRobots(text) {
+  const blocks = new Map();
+  let agents = [];
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.split("#")[0].trim();
+    if (!line) continue;
+    const [rawKey, ...rest] = line.split(":");
+    const key = rawKey.trim().toLowerCase();
+    const value = rest.join(":").trim();
+    if (key === "user-agent") {
+      agents.push(value.toLowerCase());
+    } else if (key === "disallow" || key === "allow") {
+      for (const agent of agents) {
+        const entry = blocks.get(agent) ?? { allow: [], disallow: [] };
+        entry[key].push(value);
+        blocks.set(agent, entry);
+      }
+    }
+  }
+  return blocks;
+}
+
+const robotBlocks = parseRobots(robots);
+for (const bot of aiCrawlers) {
+  const block = robotBlocks.get(bot.toLowerCase());
+  if (!block) {
+    report("Avertissement", "/robots.txt", `${bot} n'est pas autorisé explicitement`);
+    continue;
+  }
+  if (block.disallow.some((rule) => rule === "/" || rule === "")) {
+    report("Erreur", "/robots.txt", `${bot} est bloqué : il ne pourra pas citer le site`);
+  }
+}
+
+// llms.txt : la carte que les moteurs de réponse lisent en priorité.
+const llmsRes = await head(`${ORIGIN}/llms.txt`);
+if (!llmsRes.ok) {
+  report("Erreur", "/llms.txt", `HTTP ${llmsRes.status}`);
+} else {
+  const llms = await llmsRes.text();
+  if (!llms.startsWith("# ")) {
+    report("Avertissement", "/llms.txt", "pas de titre de premier niveau");
+  }
+  if (!/^> /m.test(llms)) {
+    report("Avertissement", "/llms.txt", "pas de résumé (ligne « > »)");
+  }
+  for (const [label, needle] of [
+    ["le nom", "Manuela Edom"],
+    ["l'adresse", "4 rue de la Mitrie"],
+    ["la ville et le code postal", "44000 Nantes"],
+    ["le téléphone", "06 84 74 96 70"],
+  ]) {
+    if (!llms.includes(needle)) {
+      report("Avertissement", "/llms.txt", `${label} absent de la carte`);
+    }
+  }
+}
+
+const llmsFullRes = await head(`${ORIGIN}/llms-full.txt`);
+if (!llmsFullRes.ok) {
+  report("Erreur", "/llms-full.txt", `HTTP ${llmsFullRes.status}`);
+} else {
+  const full = await llmsFullRes.text();
+  if (full.length < 2000) {
+    report("Avertissement", "/llms-full.txt", `version complète trop courte (${full.length} caractères)`);
+  }
+}
+
+// Les coordonnées doivent être dans le texte visible : c'est ce qu'un
+// robot lit pour extraire la fiche du cabinet.
+const homeHtml = await (await head(`${ORIGIN}/`)).text();
+for (const [label, needle] of [
+  ["l'adresse", "4 rue de la Mitrie"],
+  ["le code postal", "44000"],
+  ["le téléphone", "06 84 74 96 70"],
+]) {
+  if (!homeHtml.includes(needle)) {
+    report("Avertissement", "/", `${label} absent du texte visible de l'accueil`);
+  }
+}
+
+// Inventaire des types de données structurées : ce que les moteurs de
+// réponse savent lire.
+const expectedTypes = [
+  "MedicalBusiness",
+  "Person",
+  "WebSite",
+  "Service",
+  "FAQPage",
+  "BreadcrumbList",
+  // `Article` ou sa sous-classe `BlogPosting` : les deux sont valides.
+  ["Article", "BlogPosting"],
+];
+const foundTypes = new Set();
+for (const pathname of urls) {
+  const html = await (await head(`${ORIGIN}${pathname}`)).text();
+  for (const match of html.matchAll(/"@type"\s*:\s*"([^"]+)"/g)) {
+    foundTypes.add(match[1]);
+  }
+}
+for (const type of expectedTypes) {
+  const wanted = Array.isArray(type) ? type : [type];
+  if (!wanted.some((name) => foundTypes.has(name))) {
+    report(
+      "Avertissement",
+      "JSON-LD",
+      `type « ${wanted.join(" » ou « ")} » absent du site`,
+    );
+  }
 }
 
 /* ------------------------------------------------------------------ rapport */
