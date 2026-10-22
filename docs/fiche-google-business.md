@@ -58,6 +58,14 @@ avis**. Google compte le nombre d'avis autant que leur note.
 
 - Un **QR code** de ce lien, imprimé et posé au cabinet, fonctionne bien : les
   gens font l'avis en sortant, quand c'est encore frais.
+
+  Le QR code est prêt : **`public/qr-avis-google.png`** (600 × 600 px, 4,5 Ko).
+  Il s'imprime directement en A5, ou en affiche à l'accueil. Un simple
+  « Envoyez un avis » suffit au-dessus.
+
+  > Rappel : demander l'avis **à la fin d'un accompagnement**, quand les
+  > choses ont bougé — jamais au premier rendez-vous, et jamais en échange
+  > d'une réduction.
 - Continuer à **répondre à chaque avis** — c'est déjà le cas, ne pas s'arrêter.
 
 ### 2.2 Les horaires
@@ -109,6 +117,14 @@ complément des deux illustrations prévues pour le site. Le portrait est déjà
 fourni, en couleur, détouré et recadré pour ne garder que le haut des mains
 (photo : Fabrice Rault). Ajouter ensuite une photo de temps en temps plutôt que
 tout d'un coup.
+
+> **Dès maintenant** : la façade photographiée est déjà disponible dans le
+> dépôt (`src/assets/images/cabinet-exterieur.jpg`). Elle porte un filigrane
+> « © Google » de Street View : sans problème pour la fiche Google — c'est de
+> l'imagerie que Google possède déjà — mais pas pour le site, d'où les
+> emplacements « photo à venir » qui restent en place. Voir
+> `visuels-attendus.md` pour la procédure d'intégration quand un visuel
+> propre sera disponible.
 
 ### 2.6 Les publications et les questions
 

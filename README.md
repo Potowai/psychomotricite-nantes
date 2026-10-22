@@ -178,7 +178,9 @@ chaque fonctionnalité s'active quand sa variable existe.
 | `docs/outils-seo-gratuits.md` | Outils gratuits retenus (et ceux écartés, avec raisons) |
 | `docs/mise-en-route-seo.md` | Ce qu'il reste à activer côté comptes |
 | `docs/console-outils-gratuits.md` | Accès direct aux outils gratuits : suivi, mots-clés, audit |
+| `docs/tableau-de-bord-umami.md` | Plan de pilotage du tableau de bord Umami (les blocs, les conversions, la routine) |
 | `docs/prompts-ia.md` | Contrôle trimestriel de la visibilité dans les moteurs de réponse |
+| `docs/visuels-attendus.md` | Les photos manquantes et la procédure pour les intégrer |
 | `docs/ux-ui-audit-2026-10-20.md` | Audit UX/UI et accessibilité, avec mesures et corrections |
 | `docs/mise-en-ligne-domaine.md` | Runbook de bascule du domaine vers Vercel (étapes, qui fait quoi) |
 

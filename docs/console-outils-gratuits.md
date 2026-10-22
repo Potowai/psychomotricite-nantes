@@ -14,7 +14,7 @@ version opératoire : les liens, le temps à y passer, et ce qu'on y regarde.
 
 | Outil | Accès | Déjà en place ? | Ce qu'il donne | Temps |
 | --- | --- | --- | --- | --- |
-| **Umami** (Cloud gratuit ou auto-hébergé) | <https://umami.is> | Code installé, **inactif** (2 variables d'environnement) | Le choix recommandé : sans cookie, données chez soi, tableaux de bord complets (temps réel, filtres, pages de provenance, événements de conversion) | 15 min |
+| **Umami** (Cloud gratuit ou auto-hébergé) | <https://umami.is> | Code installé, **actif en production** | Le choix recommandé : sans cookie, données chez soi, tableaux de bord complets (temps réel, filtres, pages de provenance, événements de conversion). Le plan de pilotage est dans `tableau-de-bord-umami.md` | 15 min |
 | **Vercel Web Analytics** | <https://vercel.com/psychomotricite-nantes/~/analytics> | Code installé, **désactivable par une variable** | Pages vues, visiteurs, référents, pays, appareils | 2 min |
 | **Vercel Speed Insights** | <https://vercel.com/psychomotricite-nantes/~/speed-insights> | Idem | Core Web Vitals **terrain** (LCP, CLS, INP) sur le trafic réel | 2 min |
 | **Search Console → Performance** | <https://search.google.com/search-console> | À créer | Ce que tapent **réellement** les visiteurs : requêtes, impressions, clics, position | 10 min |
@@ -35,7 +35,13 @@ Tout est piloté par des variables d'environnement, sans toucher au code :
 
 **Umami Cloud gratuit** : 100 000 événements par mois, 1 site, 6 mois de
 conservation, sans cookie, aucune inscription bancaire. Largement au-dessus
-des besoins de ce site (17 pages, quelques centaines de visites par mois).
+des besoins de ce site (48 pages, quelques centaines de visites par mois).
+
+**C'est fait** : le site est déclaré dans Umami Cloud
+(`8f671c4e-a1e3-41af-891c-26d8860d133f`), les variables sont posées dans
+l'environnement de production Vercel, et Vercel Web Analytics est désactivé.
+Le plan de pilotage du tableau de bord est dans
+[`tableau-de-bord-umami.md`](./tableau-de-bord-umami.md).
 
 **Umami auto-hébergé** : gratuit et sans limite, mais il faut un petit serveur.
 La recette est prête dans `docker-compose.umami.yml` (Umami + PostgreSQL,
