@@ -44,8 +44,18 @@ function pick(html, pattern) {
   return match ? match[1].trim() : null;
 }
 
+// Préproduction protégée par Vercel Authentication : fournir le secret de
+// contournement (Protection Bypass for Automation) pour auditer l'aperçu.
+const bypassSecret = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
+const fetchOptions = {
+  redirect: "follow",
+  ...(bypassSecret
+    ? { headers: { "x-vercel-protection-bypass": bypassSecret } }
+    : {}),
+};
+
 async function head(url) {
-  const res = await fetch(url, { redirect: "follow" });
+  const res = await fetch(url, fetchOptions);
   return res;
 }
 

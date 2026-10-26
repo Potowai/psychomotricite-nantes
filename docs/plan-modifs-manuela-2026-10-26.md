@@ -354,6 +354,14 @@ relues en 390 px et 1440 px.
 
 - [x] `npm run lint` et `npm run build` verts.
 - [x] `npm run audit` : toutes les pages des 5 langues, 0 erreur.
+
+Aperçu déployé le 26 octobre :
+`https://psychomotricite-nantes-847x7f0t0-potowais-projects.vercel.app`
+(protégé par Vercel Authentication ; le lien de contournement est envoyé
+séparément, il ne doit pas être commité). Audit de l'aperçu : 55 pages,
+0 erreur, 55 avertissements non bloquants.
+
+Fichier de relecture RO/AR : `docs/relecture-ro-ar.md`.
 - [x] Contraste et tailles de cible sur les blocs modifiés.
 - [ ] Aperçu Vercel envoyé à Manuela et à ses ami·es, retour consolidé
       (une seule liste, pas de messages épars).
