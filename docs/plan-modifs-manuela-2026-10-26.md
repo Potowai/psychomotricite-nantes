@@ -187,7 +187,7 @@ s'arrêter ; vérifié par capture avant/après.
 
 ### 1.11 Relecture de cohérence
 
-Passer les 7 fiches motifs et Séances & tarifs : jours, quartier,
+Passer les 5 fiches motifs et Séances & tarifs : jours, quartier,
 prescription, ton. Rien d'autre ne doit bouger.
 
 ---
@@ -297,7 +297,7 @@ redirigent, le sitemap ne contient plus d'article, le build passe.
 ### 4.2 Charpente
 
 - [x] `src/lib/i18n.ts` : `locales`, libellés, `htmlLang`, `ogLocale`,
-      `hreflang`, `dir`, `completeLocales`, `pages`, `motifPaths` (7 fiches),
+      `hreflang`, `dir`, `completeLocales`, `pages`, `motifPaths` (5 fiches),
       `navLabels`, `footerNav`, `addressName`, `roleLabel`.
 - [x] `site-shell.tsx` : lien d'évitement, pied de page, barre mobile.
 - [x] `site-header.tsx` : libellés des 5 langues, menu qui tient à 5 entrées.
@@ -307,8 +307,7 @@ redirigent, le sitemap ne contient plus d'article, le build passe.
 
 ### 4.3 Traductions
 
-15 pages par langue (8 pages fixes + 7 fiches motifs), soit ~7 500 mots par
-langue. Modules de copie : `home`, `about`, `psychomotricite`, `sessions`,
+13 pages par langue (8 pages fixes + 5 fiches motifs). Modules de copie : `home`, `about`, `psychomotricite`, `sessions`,
 `contact`, `faq`, `legal`, `privacy`, `motif`, `not-found`.
 
 - [x] Glossaire arrêté avant de traduire (psychomotricité, bilan, séance,
@@ -321,7 +320,7 @@ langue. Modules de copie : `home`, `about`, `psychomotricite`, `sessions`,
 
 ### 4.4 Routes
 
-- [x] `src/app/(ro)/ro/…` : 15 pages + `layout.tsx` + `not-found` +
+- [x] `src/app/(ro)/ro/…` : 13 pages + `layout.tsx` + `not-found` +
       `opengraph-image` + `llms.txt`.
 - [x] `src/app/(ar)/ar/…` : idem, avec `dir="rtl"`.
 
