@@ -5,7 +5,10 @@ import { articlesFor as articlesFr } from "@/content/blog";
 import { articlesFor as articlesEn } from "@/content/blog.en";
 import { articlesFor as articlesEs } from "@/content/blog.es";
 import { copy } from "@/i18n/copies/resources";
-import { articlePath, pages, type Locale } from "@/lib/i18n";
+import { articlePath, pages } from "@/lib/i18n";
+
+/** Les ressources sont hors ligne : seules les trois langues d'origine sont typées. */
+type LegacyLocale = "fr" | "en" | "es";
 import { JsonLd, breadcrumbSchema } from "@/lib/jsonld";
 import { formatDate } from "@/lib/format";
 
@@ -15,7 +18,7 @@ const collections = {
   es: articlesEs,
 };
 
-export function ResourcesPage({ locale }: { locale: Locale }) {
+export function ResourcesPage({ locale }: { locale: LegacyLocale }) {
   const t = copy[locale];
   const articles = collections[locale]();
 

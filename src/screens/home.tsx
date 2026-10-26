@@ -27,14 +27,14 @@ export function HomePage({ locale }: { locale: Locale }) {
           alt=""
           aria-hidden="true"
           sizes="(max-width: 1024px) 300px, 620px"
-          className="pointer-events-none absolute -bottom-8 -right-16 w-[300px] max-w-none opacity-70 mix-blend-multiply lg:-top-28 lg:bottom-auto lg:-right-24 lg:w-[620px] lg:opacity-80"
+          className="pointer-events-none absolute -bottom-8 -end-16 w-[300px] max-w-none opacity-70 mix-blend-multiply lg:-top-28 lg:bottom-auto lg:-end-24 lg:w-[620px] lg:opacity-80"
         />
         <Image
           src={feuilleRose}
           alt=""
           aria-hidden="true"
           sizes="300px"
-          className="pointer-events-none absolute -left-16 bottom-6 hidden w-[300px] max-w-none -rotate-12 opacity-60 mix-blend-multiply md:block"
+          className="pointer-events-none absolute -start-16 bottom-6 hidden w-[300px] max-w-none -rotate-12 opacity-60 mix-blend-multiply md:block"
         />
         <Container className="relative grid gap-10 pb-16 pt-12 md:pt-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-16 lg:pb-24">
           <div className="animate-fade-up">
@@ -64,7 +64,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 {t.hero.ctaSecondary}
                 <span
                   aria-hidden="true"
-                  className="transition-transform group-hover:translate-x-1"
+                  className="arrow transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1"
                 >
                   →
                 </span>
@@ -89,7 +89,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
-            <div className="absolute right-0 top-1/2 hidden h-[82%] w-[82%] -translate-y-1/2 rounded-full bg-azure-soft/70 blur-3xl lg:block" />
+            <div className="absolute end-0 top-1/2 hidden h-[82%] w-[82%] -translate-y-1/2 rounded-full bg-azure-soft/70 blur-3xl lg:block" />
             <Image
               src={figureLineInk}
               alt={t.hero.figureAlt}
@@ -117,7 +117,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               className="inline-flex items-center gap-2 text-blue-deep link-quiet"
             >
               {t.manifest.link}
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true" className="arrow">→</span>
             </Link>
           </div>
         </Container>
@@ -157,7 +157,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 />
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute right-6 top-4 font-display text-[3.25rem] leading-none text-ink/[0.08]"
+                  className="pointer-events-none absolute end-6 top-4 font-display text-[3.25rem] leading-none text-ink/[0.08]"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -196,7 +196,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               className="mt-6 inline-flex items-center gap-2 text-blue-deep link-quiet"
             >
               {t.stepsSection.link}
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true" className="arrow">→</span>
             </Link>
           </div>
 
@@ -226,7 +226,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           alt=""
           aria-hidden="true"
           sizes="680px"
-          className="pointer-events-none absolute -right-24 -top-28 w-[680px] max-w-none opacity-25 mix-blend-screen"
+          className="pointer-events-none absolute -end-24 -top-28 w-[680px] max-w-none opacity-25 mix-blend-screen"
         />
         <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
           <figure>
@@ -256,7 +256,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               className="mt-8 inline-flex items-center gap-2 border-b border-paper/40 pb-1 text-paper transition-colors hover:border-paper"
             >
               {t.aboutSection.link}
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true" className="arrow">→</span>
             </Link>
           </div>
         </Container>

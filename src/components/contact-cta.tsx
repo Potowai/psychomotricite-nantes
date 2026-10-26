@@ -45,6 +45,24 @@ const copy: Record<
     form: "O escríbame por el formulario",
     appointment: "Cita",
   },
+  ro: {
+    eyebrow: "Programează o ședință",
+    title: "Să vorbim despre cererea dumneavoastră",
+    text: "O nelămurire, o întrebare, o situație aparte? Scrieți-mi sau sunați-mă: vă voi propune o ședință sau vă voi îndruma către persoana potrivită, dacă nu sunt eu.",
+    call: "Sună",
+    sms: "Trimite un SMS",
+    form: "Sau scrieți-mi prin formular",
+    appointment: "Ședință",
+  },
+  ar: {
+    eyebrow: "احجز موعدًا",
+    title: "لنتحدث عن طلبكم",
+    text: "لديكم سؤال أو شك أو وضع خاص؟ راسلوني أو اتصلوا بي: سأقترح عليكم موعدًا، أو سأوجهكم إلى الشخص الأنسب إن لم أكن أنا.",
+    call: "اتصل",
+    sms: "أرسل رسالة نصية",
+    form: "أو راسلوني عبر النموذج",
+    appointment: "موعد",
+  },
 };
 
 export function CtaBand({
@@ -65,13 +83,13 @@ export function CtaBand({
         alt=""
         aria-hidden="true"
         sizes="640px"
-        className="pointer-events-none absolute -left-28 -top-24 w-[640px] max-w-none opacity-25 mix-blend-screen"
+        className="pointer-events-none absolute -start-28 -top-24 w-[640px] max-w-none opacity-25 mix-blend-screen"
       />
       <Image
         src={figurePaper}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -right-6 bottom-0 hidden h-[115%] w-auto opacity-[0.07] lg:block"
+        className="pointer-events-none absolute -end-6 bottom-0 hidden h-[115%] w-auto opacity-[0.07] lg:block"
       />
       <Container className="relative grid gap-10 py-16 md:py-20 lg:grid-cols-[1.4fr_1fr] lg:items-center">
         <div>
@@ -95,7 +113,7 @@ export function CtaBand({
             href={telHref}
             className="group flex items-center justify-between gap-4 rounded-full bg-paper px-6 py-4 text-ink transition-colors hover:bg-blue-soft"
           >
-            <span className="font-display text-xl">
+            <span className="font-display text-xl" dir="ltr">
               {site.contact.phoneDisplay}
             </span>
             <span className="text-xs uppercase tracking-widest text-azure-deep">
@@ -107,14 +125,14 @@ export function CtaBand({
             className="flex items-center justify-between gap-4 rounded-full border border-paper/30 px-6 py-4 text-paper transition-colors hover:border-azure/80"
           >
             <span className="font-display text-xl">{t.sms}</span>
-            <span aria-hidden="true">→</span>
+            <span aria-hidden="true" className="arrow">→</span>
           </a>
           <a
             href={mailHref}
             className="flex items-center justify-between gap-4 rounded-full border border-paper/30 px-6 py-4 text-paper transition-colors hover:border-azure/80"
           >
             <span className="text-sm">{site.contact.email}</span>
-            <span aria-hidden="true">→</span>
+            <span aria-hidden="true" className="arrow">→</span>
           </a>
           <Link
             href={pages.contact[locale]}

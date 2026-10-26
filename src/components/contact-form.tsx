@@ -126,7 +126,7 @@ const copy: Record<
     privacy: "Politique de confidentialité",
     submit: "Ouvrir ma messagerie",
     another: "Écrire un autre message",
-    errorTitle: "Le formulaire n’a pas pu été envoyé",
+    errorTitle: "Le formulaire n’a pas pu être envoyé",
     orCall: "Vous pouvez aussi m’appeler ou m’envoyer un SMS au",
     subject: "Demande de contact · {name}",
     mailLabels: {
@@ -299,6 +299,139 @@ const copy: Record<
       "Unas palabras más me ayudarán a orientarle correctamente.",
     errConsent:
       "Acepte que sus datos se utilicen para poder volver a contactarle.",
+  },
+  ro: {
+    ageGroups: [
+      "Copil (sub 12 ani)",
+      "Adolescent (12–17 ani)",
+      "Tânăr adult (18–25 ani)",
+      "Adult (26–60 ani)",
+      "Persoană vârstnică (peste 60 ani)",
+      "Prefer să nu precizez",
+    ],
+    motifs: ["Cerere de bilanț", "Urmărire / ședințe", "Altă cerere"],
+    channels: { phone: "Telefon", sms: "SMS", email: "E-mail" },
+    name: "Nume și prenume",
+    namePlaceholder: "Numele dumneavoastră",
+    phone: "Telefon",
+    optional: "(opțional)",
+    phonePlaceholder: "Pentru a fi sunat(ă)",
+    email: "E-mail",
+    emailPlaceholder: "dumneavoastră@exemplu.ro",
+    age: "Vârsta persoanei",
+    choose: "Alegeți…",
+    reason: "Motivul cererii",
+    message: "Cererea dumneavoastră",
+    messagePlaceholder:
+      "Descrieți-mi în câteva cuvinte situația sau întrebarea dumneavoastră.",
+    preference: "Cum preferați să fiți contactat(ă)?",
+    preferenceHint:
+      "În mod implicit, răspund prin e-mail. Un număr de telefon este necesar dacă alegeți telefonul sau SMS-ul.",
+    consent:
+      "Accept ca datele mele să fie folosite pentru a fi contactat(ă) în legătură cu cererea mea. Nicio dată nu este transmisă terților.",
+    privacy: "Politica de confidențialitate",
+    submit: "Deschide aplicația de e-mail",
+    another: "Scrieți alt mesaj",
+    errorTitle: "Formularul nu a putut fi trimis",
+    orCall: "Mă puteți suna sau trimite un SMS la",
+    subject: "Cerere de contact · {name}",
+    mailLabels: {
+      name: "Nume",
+      email: "E-mail",
+      phone: "Telefon",
+      age: "Vârsta persoanei",
+      reason: "Motiv",
+      preference: "Preferință de contact",
+      message: "Mesaj",
+    },
+    draftTitle: "Se deschide aplicația de e-mail",
+    draftText:
+      "Mesajul a fost precompletat în aplicația dumneavoastră de e-mail. Mai rămâne doar să apăsați «Trimite» pentru a-mi ajunge.",
+    draftTruncated:
+      "Mesajul era prea lung pentru a fi precompletat integral, așa că a fost scurtat. Textul complet este mai jos, gata de copiat în aplicația de e-mail.",
+    draftNoApp:
+      "Nu s-a deschis nicio fereastră? Copiați mesajul de mai jos și trimiteți-l la",
+    reopenMail: "Redeschide aplicația de e-mail",
+    copyMessage: "Copiază mesajul",
+    copied: "Mesaj copiat în clipboard.",
+    errName: "Vă rog să indicați numele și prenumele.",
+    errEmail: "Vă rog să indicați adresa de e-mail.",
+    errEmailShort: "Această adresă de e-mail pare incompletă.",
+    errPhoneNeeded: "Un număr de telefon este necesar pentru a vă putea suna.",
+    errPhoneSms:
+      "Un număr de telefon este necesar pentru a vă putea scrie prin SMS.",
+    errPhoneShort: "Acest număr pare incomplet.",
+    errMessage: "Vă rog să descrieți cererea în câteva cuvinte.",
+    errMessageShort:
+      "Câteva cuvinte în plus mă vor ajuta să vă orientez mai bine.",
+    errConsent:
+      "Vă rog să acceptați ca datele dumneavoastră să fie folosite pentru a vă contacta.",
+  },
+  ar: {
+    ageGroups: [
+      "طفل (أقل من 12 سنة)",
+      "مراهق (12–17 سنة)",
+      "شاب بالغ (18–25 سنة)",
+      "بالغ (26–60 سنة)",
+      "شخص مسن (أكثر من 60 سنة)",
+      "أفضل عدم التحديد",
+    ],
+    motifs: ["طلب تقييم", "متابعة / جلسات", "طلب آخر"],
+    channels: { phone: "الهاتف", sms: "رسالة نصية", email: "البريد الإلكتروني" },
+    name: "الاسم واللقب",
+    namePlaceholder: "اسمكم",
+    phone: "الهاتف",
+    optional: "(اختياري)",
+    phonePlaceholder: "ليتم الاتصال بكم",
+    email: "البريد الإلكتروني",
+    emailPlaceholder: "you@example.com",
+    age: "عمر الشخص",
+    choose: "اختر…",
+    reason: "سبب الطلب",
+    message: "طلبكم",
+    messagePlaceholder:
+      "صفوا لي في بضع كلمات وضعكم أو سؤالكم.",
+    preference: "كيف تفضلون أن نتواصل معكم؟",
+    preferenceHint:
+      "أرد افتراضيًا بالبريد الإلكتروني. يلزم رقم هاتف إذا اخترتم الهاتف أو الرسالة النصية.",
+    consent:
+      "أوافق على استخدام معلوماتي للتواصل معي بخصوص طلبي. لا تُنقل أي بيانات إلى أطراف ثالثة.",
+    privacy: "سياسة الخصوصية",
+    submit: "فتح تطبيق البريد",
+    another: "كتابة رسالة أخرى",
+    errorTitle: "تعذر إرسال النموذج",
+    orCall: "يمكنكم أيضًا الاتصال بي أو إرسال رسالة نصية إلى",
+    subject: "طلب تواصل · {name}",
+    mailLabels: {
+      name: "الاسم",
+      email: "البريد الإلكتروني",
+      phone: "الهاتف",
+      age: "عمر الشخص",
+      reason: "السبب",
+      preference: "تفضيل التواصل",
+      message: "الرسالة",
+    },
+    draftTitle: "يُفتح تطبيق البريد لديكم",
+    draftText:
+      "تمت تعبئة الرسالة مسبقًا في تطبيق البريد لديكم. كل ما عليكم فعله هو الضغط على «إرسال» لتصل إليّ.",
+    draftTruncated:
+      "كانت رسالتكم أطول من أن تُعبأ بالكامل، لذا تم اختصارها. النص الكامل أدناه، جاهز للنسخ إلى تطبيق البريد.",
+    draftNoApp:
+      "لم تُفتح أي نافذة؟ انسخوا الرسالة أدناه وأرسلوها إلى",
+    reopenMail: "إعادة فتح تطبيق البريد",
+    copyMessage: "نسخ الرسالة",
+    copied: "تم نسخ الرسالة إلى الحافظة.",
+    errName: "يرجى إدخال الاسم واللقب.",
+    errEmail: "يرجى إدخال عنوان البريد الإلكتروني.",
+    errEmailShort: "يبدو عنوان البريد الإلكتروني غير مكتمل.",
+    errPhoneNeeded: "يلزم رقم هاتف للاتصال بكم.",
+    errPhoneSms: "يلزم رقم هاتف للتواصل معكم عبر رسالة نصية.",
+    errPhoneShort: "يبدو هذا الرقم غير مكتمل.",
+    errMessage: "يرجى وصف طلبكم في بضع كلمات.",
+    errMessageShort:
+      "بضع كلمات إضافية ستساعدني على توجيهكم بشكل أفضل.",
+    errConsent:
+      "يرجى الموافقة على استخدام معلوماتكم للتواصل معكم.",
   },
 };
 
@@ -581,7 +714,7 @@ export function ContactForm({ locale = "fr" }: { locale?: Locale }) {
         <p className="mt-2 text-sm text-ink-2">
           {t.orCall}{" "}
           <a href={`tel:${site.contact.phoneHref}`} className="link-quiet font-medium">
-            {site.contact.phoneDisplay}
+            <span dir="ltr">{site.contact.phoneDisplay}</span>
           </a>
           .
         </p>
@@ -633,7 +766,7 @@ export function ContactForm({ locale = "fr" }: { locale?: Locale }) {
           >
             {t.errorTitle}
           </h3>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-ink-2">
+          <ul className="mt-2 list-disc space-y-1 ps-5 text-sm text-ink-2">
             {errorList.map(({ field, message }) => (
               <li key={field}>
                 <a href={`#${field}`} className="link-quiet">

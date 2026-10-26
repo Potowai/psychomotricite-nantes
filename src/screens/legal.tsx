@@ -38,7 +38,7 @@ export function LegalPage({ locale }: { locale: Locale }) {
               <br />
               {t.publisher.phoneLabel}{" "}
               <a href={telHref} className="link-quiet">
-                {site.contact.phoneDisplay}
+                <span dir="ltr">{site.contact.phoneDisplay}</span>
               </a>
               <br />
               {t.publisher.emailLabel}{" "}

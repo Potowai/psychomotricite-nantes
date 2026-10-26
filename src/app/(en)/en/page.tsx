@@ -3,12 +3,17 @@ import { copy } from "@/i18n/copies/home";
 import { HomePage } from "@/screens/home";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata({
-  title: copy.en.meta.title,
-  description: copy.en.meta.description,
-  path: "/en",
-  locale: "en",
-});
+export const metadata: Metadata = {
+  ...pageMetadata({
+    title: copy.en.meta.title,
+    description: copy.en.meta.description,
+    path: "/en",
+    locale: "en",
+  }),
+  // La page d'accueil garde son titre exact, sans suffixe : il contient déjà
+  // la ville, et le doublon allongeait le titre au-delà de 60 caractères.
+  title: { absolute: copy.en.meta.title },
+};
 
 export default function Page() {
   return <HomePage locale="en" />;

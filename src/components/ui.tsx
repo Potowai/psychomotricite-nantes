@@ -79,7 +79,7 @@ export function PageHero({
         alt=""
         aria-hidden="true"
         sizes="560px"
-        className="pointer-events-none absolute -right-24 -top-28 hidden w-[560px] max-w-none opacity-70 mix-blend-multiply lg:block"
+        className="pointer-events-none absolute -end-24 -top-28 hidden w-[560px] max-w-none opacity-70 mix-blend-multiply lg:block"
       />
       <Container className="relative grid gap-12 py-14 md:py-20 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
         <div className="animate-fade-up">
@@ -196,7 +196,7 @@ export function Faq({
               +
             </span>
           </summary>
-          <div className="pb-6 pr-12 leading-relaxed text-ink-2">
+          <div className="pb-6 pe-12 leading-relaxed text-ink-2">
             {item.answer}
           </div>
         </details>

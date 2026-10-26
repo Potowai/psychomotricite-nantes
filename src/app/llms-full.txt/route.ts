@@ -1,5 +1,4 @@
 import { motifs } from "@/content/motifs";
-import type { Block } from "@/content/blog";
 import { fullAddress, site } from "@/lib/site";
 
 /**
@@ -8,27 +7,13 @@ import { fullAddress, site } from "@/lib/site";
  * des phrases autoportantes, faciles à citer.
  */
 
-function blockToText(block: Block): string {
-  switch (block.type) {
-    case "lead":
-    case "p":
-    case "h2":
-    case "quote":
-      return block.text;
-    case "ul":
-      return block.items.map((item) => `- ${item}`).join("\n");
-    case "note":
-      return block.title ? `${block.title} : ${block.text}` : block.text;
-  }
-}
-
 export function GET() {
   const lines: string[] = [];
 
   lines.push(`# ${site.name} · ${site.role} à Nantes`);
   lines.push("");
   lines.push(
-    "> Version française. Index court en anglais : /en/llms.txt ; en espagnol : /es/llms.txt",
+    "> Version française. Index courts : anglais /en/llms.txt, espagnol /es/llms.txt, roumain /ro/llms.txt, arabe /ar/llms.txt",
   );
   lines.push("");
   lines.push(

@@ -483,3 +483,39 @@
   }
 }
 
+
+/* ------------------------------------------------------------------ */
+/*  Arabe : police dédiée et sens d'écriture                          */
+/* ------------------------------------------------------------------ */
+
+/*
+  Les polices latines n'ont pas les glyphes arabes : on bascule sur Noto,
+  chargée dans la racine /ar. Les variables sont posées par next/font sur
+  <html>, donc la surcharge ci-dessous n'a d'effet que sur les pages arabes.
+*/
+html[lang="ar"] {
+  --font-display: var(--font-arabic-display), "Noto Naskh Arabic", Georgia, serif;
+  --font-sans: var(--font-arabic-sans), "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+}
+
+html[lang="ar"] body {
+  line-height: 1.85;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4 {
+  line-height: 1.45;
+}
+
+/* L'arabe est une écriture liée : l'espacement des lettres casse les attaches. */
+html[lang="ar"] :where(*) {
+  letter-spacing: normal !important;
+}
+
+/* Une flèche qui indique la suite pointe vers la gauche en écriture arabe. */
+html[dir="rtl"] .arrow {
+  display: inline-block;
+  transform: scaleX(-1);
+}

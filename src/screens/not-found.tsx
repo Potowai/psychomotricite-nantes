@@ -24,7 +24,7 @@ export function NotFoundPage({ locale }: { locale: Locale }) {
       <p className="mt-5 max-w-xl text-lg text-ink-2">
         {t.bodyBefore}{" "}
         <a href={telHref} className="link-quiet">
-          {site.contact.phoneDisplay}
+          <span dir="ltr">{site.contact.phoneDisplay}</span>
         </a>
         {t.bodyAfter}
       </p>

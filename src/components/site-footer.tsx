@@ -97,6 +97,52 @@ const copy: Record<
     phoneLabel: "Teléfono",
     credit: "Sitio hecho con amor por",
   },
+  ro: {
+    role: "Psihomotricistă D.E.",
+    line1: "Bilanț și ședințe de psihomotricitate cu programare.",
+    line2:
+      "Consultații la cabinet, în Nantes, accesibile din Rezé, Saint-Herblain, Orvault și Saint-Sébastien-sur-Loire.",
+    otherSite: "celălalt site al meu, pentru părinți și copii",
+    newWindow: "fereastră nouă",
+    practice: "Cabinetul",
+    seeMap: "Vezi harta de acces",
+    receives: "Primește",
+    access: "Acces",
+    contact: "Contact",
+    plan: "Harta site-ului",
+    rights: "Toate drepturile rezervate.",
+    legal: "Note legale",
+    privacy: "Confidențialitate",
+    language: "Limba site-ului",
+    hours: "de luni până joi, cu programare",
+    phoneNote: "Apel sau SMS",
+    fullAddressLabel: "Adresă completă",
+    phoneLabel: "Telefon",
+    credit: "Site făcut cu drag de",
+  },
+  ar: {
+    role: "أخصائية العلاج النفسي الحركي",
+    line1: "تقييم وجلسات علاج نفسي حركي بموعد مسبق.",
+    line2:
+      "استشارات في العيادة، في نانت، يسهل الوصول إليها من ريزيه وسان إيربلان وأورفو وسان سيباستيان سور لوار.",
+    otherSite: "موقعي الآخر، للآباء والأطفال",
+    newWindow: "نافذة جديدة",
+    practice: "العيادة",
+    seeMap: "عرض خريطة الوصول",
+    receives: "تستقبل",
+    access: "الوصول",
+    contact: "اتصال",
+    plan: "خريطة الموقع",
+    rights: "جميع الحقوق محفوظة.",
+    legal: "الإشعارات القانونية",
+    privacy: "الخصوصية",
+    language: "لغة الموقع",
+    hours: "من الاثنين إلى الخميس، بموعد مسبق",
+    phoneNote: "مكالمة أو رسالة نصية",
+    fullAddressLabel: "العنوان الكامل",
+    phoneLabel: "الهاتف",
+    credit: "موقع صُنع بحب من طرف",
+  },
 };
 
 export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
@@ -139,9 +185,13 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
             </h2>
             <address className="mt-5 space-y-1 text-sm not-italic text-ink-2">
               <span className="block">{addressName[locale]}</span>
-              <span className="block">{site.address.street}</span>
               <span className="block">
-                {site.address.postalCode} {site.address.city}
+                <bdi>{site.address.street}</bdi>
+              </span>
+              <span className="block">
+                <bdi>
+                  {site.address.postalCode} {site.address.city}
+                </bdi>
               </span>
             </address>
             <a
@@ -172,11 +222,12 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
               <li>
                 <a
                   href={telHref}
+                  dir="ltr"
                   className="inline-flex py-1 text-ink-2 link-quiet tabular-nums"
                 >
                   {site.contact.phoneDisplay}
                 </a>
-                <span className="ml-2 text-xs text-ink-3">{t.phoneNote}</span>
+                <span className="ms-2 text-xs text-ink-3">{t.phoneNote}</span>
               </li>
               <li>
                 <a
@@ -251,7 +302,7 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
       </div>
       <p className="sr-only">
         {t.fullAddressLabel} : {fullAddressFor(locale)}. {t.phoneLabel} :{" "}
-        {site.contact.phoneDisplay}.
+        <span dir="ltr">{site.contact.phoneDisplay}</span>.
       </p>
     </footer>
   );

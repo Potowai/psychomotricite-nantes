@@ -1,11 +1,11 @@
 import Image from "next/image";
+import argileMains from "@/assets/images/argile-mains.jpg";
 import portraitManuela from "@/assets/images/portrait-manuela.webp";
 import { CtaBand } from "@/components/contact-cta";
 import {
   Callout,
   Container,
   PageHero,
-  PhotoPlaceholder,
   SectionTitle,
 } from "@/components/ui";
 import { copy } from "@/i18n/copies/about";
@@ -115,12 +115,11 @@ export function AboutPage({ locale }: { locale: Locale }) {
       </section>
 
       <Container className="grid gap-12 py-16 lg:grid-cols-2 lg:gap-20 lg:py-24">
-        <PhotoPlaceholder
-          className="rounded-[2rem]"
-          ratio="4 / 3"
-          label={t.approach.placeholder.label}
-          title={t.approach.placeholder.title}
-          note={t.approach.placeholder.note}
+        <Image
+          src={argileMains}
+          alt={t.approach.placeholder.title}
+          sizes="(min-width: 1024px) 45vw, 100vw"
+          className="h-full w-full rounded-[2rem] object-cover"
         />
 
         <div>

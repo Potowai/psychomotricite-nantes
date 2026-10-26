@@ -55,10 +55,10 @@ en dernier : on ne traduit jamais un texte qu'on va réécrire.
 
 ## Lot 0 — Cadre
 
-- [ ] 0.1 Branche `modifs-manuela-novembre`, un commit par lot.
-- [ ] 0.2 Captures de référence (accueil, psychomotricité, qui-suis-je,
+- [x] 0.1 Branche `modifs-manuela-novembre`, un commit par lot.
+- [x] 0.2 Captures de référence (accueil, psychomotricité, qui-suis-je,
       contact) en 390 px et 1440 px, avant modification.
-- [ ] 0.3 Vérifier que `npm run dev` tourne et que le build est vert avant
+- [x] 0.3 Vérifier que `npm run dev` tourne et que le build est vert avant
       de toucher au code.
 
 **Fini quand** : l'état de départ est capturé et le build passe.
@@ -215,11 +215,11 @@ cadratin.
 
 ### 2.2 Application
 
-- [ ] `src/i18n/copies/*` (36 fichiers, 3 langues)
-- [ ] `src/content/motifs*.ts`
-- [ ] `src/components/*` (pied de page, formulaire, carte, en-tête)
-- [ ] `src/lib/seo.ts`, `jsonld.tsx`, `llms.ts`
-- [ ] `src/app/llms*.txt`, métadonnées de pages
+- [x] `src/i18n/copies/*` (36 fichiers, 3 langues)
+- [x] `src/content/motifs*.ts`
+- [x] `src/components/*` (pied de page, formulaire, carte, en-tête)
+- [x] `src/lib/seo.ts`, `jsonld.tsx`, `llms.ts`
+- [x] `src/app/llms*.txt`, métadonnées de pages
 
 ### 2.3 Garde-fou
 
@@ -296,14 +296,14 @@ redirigent, le sitemap ne contient plus d'article, le build passe.
 
 ### 4.2 Charpente
 
-- [ ] `src/lib/i18n.ts` : `locales`, libellés, `htmlLang`, `ogLocale`,
+- [x] `src/lib/i18n.ts` : `locales`, libellés, `htmlLang`, `ogLocale`,
       `hreflang`, `dir`, `completeLocales`, `pages`, `motifPaths` (7 fiches),
       `navLabels`, `footerNav`, `addressName`, `roleLabel`.
-- [ ] `site-shell.tsx` : lien d'évitement, pied de page, barre mobile.
-- [ ] `site-header.tsx` : libellés des 5 langues, menu qui tient à 5 entrées.
-- [ ] `language-switch.tsx` : 5 langues, noms en écriture native (Română,
+- [x] `site-shell.tsx` : lien d'évitement, pied de page, barre mobile.
+- [x] `site-header.tsx` : libellés des 5 langues, menu qui tient à 5 entrées.
+- [x] `language-switch.tsx` : 5 langues, noms en écriture native (Română,
       العربية).
-- [ ] `language-banner.tsx` : détection `navigator.language` pour ro/ar.
+- [x] `language-banner.tsx` : détection `navigator.language` pour ro/ar.
 
 ### 4.3 Traductions
 
@@ -311,39 +311,39 @@ redirigent, le sitemap ne contient plus d'article, le build passe.
 langue. Modules de copie : `home`, `about`, `psychomotricite`, `sessions`,
 `contact`, `faq`, `legal`, `privacy`, `motif`, `not-found`.
 
-- [ ] Glossaire arrêté avant de traduire (psychomotricité, bilan, séance,
+- [x] Glossaire arrêté avant de traduire (psychomotricité, bilan, séance,
       douance, TSA, TDA-H, troubles dys, ordonnance, mutuelle).
-- [ ] Roumain : `*.ro.ts` + `content/motifs.ro.ts`.
-- [ ] Arabe : `*.ar.ts` + `content/motifs.ar.ts`.
+- [x] Roumain : `*.ro.ts` + `content/motifs.ro.ts`.
+- [x] Arabe : `*.ar.ts` + `content/motifs.ar.ts`.
 - [ ] Traductions envoyées à Manuela pour relecture par des proches
       arabophones et roumanophones (fichier de relecture simple, phrase par
       phrase).
 
 ### 4.4 Routes
 
-- [ ] `src/app/(ro)/ro/…` : 15 pages + `layout.tsx` + `not-found` +
+- [x] `src/app/(ro)/ro/…` : 15 pages + `layout.tsx` + `not-found` +
       `opengraph-image` + `llms.txt`.
-- [ ] `src/app/(ar)/ar/…` : idem, avec `dir="rtl"`.
+- [x] `src/app/(ar)/ar/…` : idem, avec `dir="rtl"`.
 
 ### 4.5 RTL (arabe)
 
-- [ ] Propriétés logiques (`ms-`/`me-`, `ps-`/`pe-`, `start`/`end`) à la
+- [x] Propriétés logiques (`ms-`/`me-`, `ps-`/`pe-`, `start`/`end`) à la
       place de `ml-`/`mr-`, `left`/`right`, `text-left`.
-- [ ] `letter-spacing` remis à 0 sur les textes arabes (les eyebrows à
+- [x] `letter-spacing` remis à 0 sur les textes arabes (les eyebrows à
       0.18em cassent la liaison des lettres).
-- [ ] Flèches et chevrons retournés ; fils d'Ariane inversés.
-- [ ] Téléphone, e-mail, prix et adresse en `dir="ltr"` dans un contexte RTL.
-- [ ] Carte Leaflet, formulaire, menu de langue, barre mobile vérifiés.
-- [ ] Hauteur de ligne augmentée pour l'arabe.
+- [x] Flèches et chevrons retournés ; fils d'Ariane inversés.
+- [x] Téléphone, e-mail, prix et adresse en `dir="ltr"` dans un contexte RTL.
+- [x] Carte Leaflet, formulaire, menu de langue, barre mobile vérifiés.
+- [x] Hauteur de ligne augmentée pour l'arabe.
 
 ### 4.6 Référencement
 
-- [ ] Métadonnées traduites (title, description, Open Graph).
-- [ ] `alternatesFor` sur 5 langues, réciproques.
-- [ ] `sitemap.ts` : 5 langues.
-- [ ] `llms.txt` et `llms-full.txt` : 5 langues.
-- [ ] JSON-LD : `knowsLanguage` = fr, en, es, ro, ar.
-- [ ] `robots.ts` inchangé.
+- [x] Métadonnées traduites (title, description, Open Graph).
+- [x] `alternatesFor` sur 5 langues, réciproques.
+- [x] `sitemap.ts` : 5 langues.
+- [x] `llms.txt` et `llms-full.txt` : 5 langues.
+- [x] JSON-LD : `knowsLanguage` = fr, en, es, ro, ar.
+- [x] `robots.ts` inchangé.
 
 **Fini quand** : les 5 langues sont complètes, aucune page ne renvoie 404,
 aucune chaîne non traduite, `dir` correct, hreflang réciproque, captures RTL
@@ -353,9 +353,9 @@ relues en 390 px et 1440 px.
 
 ## Lot 5 — QA et bascule
 
-- [ ] `npm run lint` et `npm run build` verts.
-- [ ] `npm run audit` : toutes les pages des 5 langues, 0 erreur.
-- [ ] Contraste et tailles de cible sur les blocs modifiés.
+- [x] `npm run lint` et `npm run build` verts.
+- [x] `npm run audit` : toutes les pages des 5 langues, 0 erreur.
+- [x] Contraste et tailles de cible sur les blocs modifiés.
 - [ ] Aperçu Vercel envoyé à Manuela et à ses ami·es, retour consolidé
       (une seule liste, pas de messages épars).
 - [ ] Runbook `docs/mise-en-ligne-domaine.md` : domaine, `www`, DNS.
@@ -376,6 +376,10 @@ groupe, matière), contact (façade du cabinet).
 **Règle de lancement** : aucune mention « Illustration à venir » ne doit être
 visible le 7 novembre. Si les visuels ne sont pas là, on met une photo
 existante (`cabinet-exterieur.jpg`, `plan-quartier.jpg`) ou on retire le bloc.
+
+- [x] Blocs remplacés par `corps-mains.jpg` (psychomotricité),
+      `argile-mains.jpg` (qui-suis-je) et `cabinet-exterieur.jpg` (contact).
+      Plus aucun « Illustration à venir » dans le rendu.
 
 ### 6.2 Articles (janvier/février)
 

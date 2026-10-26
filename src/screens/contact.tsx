@@ -1,11 +1,8 @@
+import Image from "next/image";
+import cabinetExterieur from "@/assets/images/cabinet-exterieur.jpg";
 import { CabinetMap } from "@/components/cabinet-map";
 import { ContactForm } from "@/components/contact-form";
-import {
-  Callout,
-  Container,
-  PageHero,
-  PhotoPlaceholder,
-} from "@/components/ui";
+import { Callout, Container, PageHero } from "@/components/ui";
 import { copy } from "@/i18n/copies/contact";
 import { addressName, pages, type Locale } from "@/lib/i18n";
 import { JsonLd, breadcrumbSchema, localBusinessSchema } from "@/lib/jsonld";
@@ -37,7 +34,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
               {t.contactCards.phone.label}
             </p>
             <p className="mt-3 font-display text-2xl text-ink tabular-nums">
-              {site.contact.phoneDisplay}
+              <span dir="ltr">{site.contact.phoneDisplay}</span>
             </p>
             <p className="mt-1 text-sm text-ink-2">
               {t.contactCards.phone.note}
@@ -75,19 +72,22 @@ export function ContactPage({ locale }: { locale: Locale }) {
             <h2 className="font-display text-2xl text-ink">{t.practice.title}</h2>
             <address className="mt-4 space-y-1 not-italic text-ink-2">
               <span className="block">{addressName[locale]}</span>
-              <span className="block">{site.address.street}</span>
               <span className="block">
-                {site.address.postalCode} {site.address.city}
+                <bdi>{site.address.street}</bdi>
+              </span>
+              <span className="block">
+                <bdi>
+                  {site.address.postalCode} {site.address.city}
+                </bdi>
               </span>
             </address>
             <p className="mt-3 text-ink-2">{t.practice.neighbourhood}</p>
             <p className="mt-1 text-ink-2">{t.practice.accessibility}</p>
-            <PhotoPlaceholder
-              className="mt-6 rounded-[1.5rem]"
-              ratio="4 / 3"
-              label={t.practice.placeholder.label}
-              title={t.practice.placeholder.title}
-              note={t.practice.placeholder.note}
+            <Image
+              src={cabinetExterieur}
+              alt={t.practice.placeholder.title}
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="mt-6 aspect-[4/3] w-full rounded-[1.5rem] object-cover"
             />
           </div>
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { readdirSync } from "node:fs";
 import path from "node:path";
-import { alternatesFor, ogLocale, pages, type Locale } from "./i18n";
+import { alternatesFor, locales, ogLocale, pages, type Locale } from "./i18n";
 import { site } from "./site";
 
 /**
@@ -56,6 +56,22 @@ function isPublished(urlPath: string): boolean {
   });
 }
 
+/**
+ * Cartes de partage statiques, par langue.
+ *
+ * Elles sont produites par les routes `opengraph-image.tsx` de chaque racine
+ * (`src/app/(fr)/opengraph-image.tsx`, `(en)/en/…`, etc.) puis enregistrées
+ * dans `public/og/`. Une URL stable évite de dépendre du hash de build et
+ * permet à toutes les pages d'une langue d'utiliser la même carte.
+ */
+const defaultImage: Record<Locale, string> = {
+  fr: "/og/fr.png",
+  en: "/og/en.png",
+  es: "/og/es.png",
+  ro: "/og/ro.png",
+  ar: "/og/ar.png",
+};
+
 type PageMeta = {
   title: string;
   description: string;
@@ -77,7 +93,7 @@ export function pageMetadata({
   title,
   description,
   path,
-  image = "/opengraph-image",
+  image,
   type = "website",
   publishedTime,
   modifiedTime,
@@ -87,6 +103,7 @@ export function pageMetadata({
 }: PageMeta): Metadata {
   const canonical = path === "/" ? "/" : path;
   const alternates = languages ?? alternatesFor(canonical);
+  const imageUrl = image ?? defaultImage[locale];
 
   // On ne déclare que les versions qui existent : une entrée hreflang vers
   // une page absente est pire que pas d'entrée du tout.
@@ -112,7 +129,7 @@ export function pageMetadata({
       type,
       locale: ogLocale[locale],
       url: canonical,
-      siteName: `${site.name} · ${site.role}`,
+      siteName: `${site.name} · ${metaCopy[locale].role}`,
       title,
       description,
       ...(type === "article"
@@ -120,7 +137,7 @@ export function pageMetadata({
         : {}),
       images: [
         {
-          url: image,
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: `${title} · ${site.name}`,
@@ -131,7 +148,7 @@ export function pageMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [image],
+      images: [imageUrl],
     },
   };
 }
@@ -171,6 +188,22 @@ const metaCopy: Record<
       "Manuela Edom es psicomotricista diplomada de Estado en Nantes. Sesiones para adolescentes y personas adultas, y para niños ante solicitudes específicas, en el consultorio de la calle de la Mitrie 4. Altas capacidades (HPI, HQI/THQI), TEA, TDAH, dificultades específicas del aprendizaje.",
     category: "Salud",
   },
+  ro: {
+    role: "Psihomotricistă D.E.",
+    titleDefault: `${site.name} · psihomotricistă în Nantes`,
+    titleTemplate: `%s · ${site.name}, Nantes`,
+    description:
+      "Manuela Edom este psihomotricistă diplomata de stat în Nantes. Ședințe pentru adolescenți și adulți, precum și pentru copii la cerere, în cabinetul din 4 rue de la Mitrie. Supradotare (HPI, HQI/THQI), TSA, TDAH, tulburări specifice de învățare.",
+    category: "Sănătate",
+  },
+  ar: {
+    role: "أخصائية العلاج النفسي الحركي",
+    titleDefault: `${site.name} · أخصائية علاج نفسي حركي في نانت`,
+    titleTemplate: `%s · ${site.name}, نانت`,
+    description:
+      "مانويلا إيدوم أخصائية علاج نفسي حركي حاصلة على دبلوم الدولة في نانت. جلسات للمراهقين والبالغين، وللأطفال عند الطلب، في العيادة الكائنة في 4 rue de la Mitrie. الاستعداد العالي (HPI، HQI/THQI)، اضطراب طيف التوحد، اضطراب نقص الانتباه وفرط النشاط، صعوبات التعلم المحددة.",
+    category: "الصحة",
+  },
 };
 
 /**
@@ -209,9 +242,9 @@ export function buildMetadata(locale: Locale): Metadata {
     openGraph: {
       type: "website",
       locale: ogLocale[locale],
-      alternateLocale: (["fr", "en", "es"] as Locale[]).filter(
-        (code) => code !== locale,
-      ).map((code) => ogLocale[code]),
+      alternateLocale: locales
+        .filter((code) => code !== locale)
+        .map((code) => ogLocale[code]),
       url: "/",
       siteName: `${site.name} · ${t.role}`,
       title: t.titleDefault,

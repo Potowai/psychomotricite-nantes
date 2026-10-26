@@ -63,7 +63,8 @@ export function FaqPage({ locale }: { locale: Locale }) {
         ]}
       />
       <p className="sr-only">
-        {site.name}, {t.srOnly.role} {t.srOnly.city} · {site.contact.phoneDisplay}.
+        {site.name}, {t.srOnly.role} {t.srOnly.city} ·{" "}
+        <span dir="ltr">{site.contact.phoneDisplay}</span>.
       </p>
     </>
   );

@@ -97,6 +97,16 @@ const toolNames: Record<Locale, { umami: string; vercel: string; speed: string }
     vercel: "Vercel Web Analytics",
     speed: "Vercel Speed Insights",
   },
+  ro: {
+    umami: "Umami (auto-găzduit)",
+    vercel: "Vercel Web Analytics",
+    speed: "Vercel Speed Insights",
+  },
+  ar: {
+    umami: "Umami (مستضاف ذاتيًا)",
+    vercel: "Vercel Web Analytics",
+    speed: "Vercel Speed Insights",
+  },
 };
 
 /**

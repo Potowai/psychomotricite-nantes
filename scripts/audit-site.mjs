@@ -198,7 +198,7 @@ for (const link of internal) {
 
 /* ------------------------------------------------------------- robots, llms */
 
-for (const file of ["/robots.txt", "/llms.txt", "/llms-full.txt", "/rss.xml", "/manifest.webmanifest"]) {
+for (const file of ["/robots.txt", "/llms.txt", "/llms-full.txt", "/manifest.webmanifest"]) {
   const res = await head(`${ORIGIN}${file}`);
   if (!res.ok) report("Erreur", file, `HTTP ${res.status}`);
 }

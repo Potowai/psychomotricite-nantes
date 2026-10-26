@@ -6,6 +6,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
   localeLabel,
   locales,
+  pages,
   pathInLocale,
   type Locale,
 } from "@/lib/i18n";
@@ -24,6 +25,8 @@ const messages: Record<Locale, { message: string; close: string }> = {
   fr: { message: "Ce site est aussi disponible en anglais et en espagnol.", close: "Fermer ce message" },
   en: { message: "This site is also available in French and Spanish.", close: "Close this message" },
   es: { message: "Este sitio también está disponible en francés e inglés.", close: "Cerrar este mensaje" },
+  ro: { message: "Acest site este disponibil și în franceză, engleză, spaniolă și arabă.", close: "Închide mesajul" },
+  ar: { message: "هذا الموقع متاح أيضًا بالفرنسية والإنجليزية والإسبانية والرومانية.", close: "إغلاق هذه الرسالة" },
 };
 
 const abonnes = new Set<() => void>();
@@ -46,11 +49,25 @@ function fermerBanniere() {
   for (const abonne of abonnes) abonne();
 }
 
+/** Langue de la page courante, déduite de son préfixe d'adresse. */
+function langueDuChemin(pathname: string): Locale {
+  for (const code of locales) {
+    if (code === "fr") continue;
+    const home = pages.home[code];
+    if (pathname === home || pathname.startsWith(`${home}/`)) return code;
+  }
+  return "fr";
+}
+
 /**
- * Renvoie la suggestion à afficher, sous forme de clé stable : « en », « es »
- * ou « » quand il n'y a rien à proposer. Lue uniquement côté navigateur.
+ * Renvoie la suggestion à afficher, sous forme de clé stable : « en », « es »,
+ * « ro », « ar », ou « » quand il n'y a rien à proposer. Lue uniquement côté
+ * navigateur.
  */
-function cleSuggestion(pathname: string, cheminDArrivee: string): string {
+function cleSuggestion(
+  pathname: string,
+  cheminDArrivee: string,
+): Locale | "" {
   try {
     if (window.localStorage.getItem(STORAGE_KEY) === "1") return "";
   } catch {
@@ -66,11 +83,7 @@ function cleSuggestion(pathname: string, cheminDArrivee: string): string {
       ? navigator.languages
       : [navigator.language];
   const prefere = (preferences[0] ?? "").toLowerCase();
-  const langueDuSite: Locale = pathname.startsWith("/en")
-    ? "en"
-    : pathname.startsWith("/es")
-      ? "es"
-      : "fr";
+  const langueDuSite = langueDuChemin(pathname);
 
   // On ne propose que la langue du navigateur si elle fait partie du site et
   // qu'on ne se trouve pas déjà dessus.
@@ -100,19 +113,15 @@ export function LanguageBanner() {
   const [verrouille, setVerrouille] = useState(false);
   const refBouton = useRef<HTMLButtonElement>(null);
 
-  const cle = useSyncExternalStore(
+  const cle = useSyncExternalStore<Locale | "">(
     souscrire,
     () => cleSuggestion(pathname, cheminDArrivee.current),
     () => "",
   );
 
   const suggestion: Suggestion | null = (() => {
-    if (cle !== "en" && cle !== "es") return null;
-    const langueDuSite: Locale = pathname.startsWith("/en")
-      ? "en"
-      : pathname.startsWith("/es")
-        ? "es"
-        : "fr";
+    if (!cle) return null;
+    const langueDuSite = langueDuChemin(pathname);
     return {
       message: messages[langueDuSite].message,
       action: localeLabel[cle],
@@ -143,9 +152,8 @@ export function LanguageBanner() {
 
   return (
     <aside
-      lang={suggestion.lang}
       aria-label={suggestion.message}
-      className="pointer-events-none fixed right-3 bottom-20 z-40 sm:right-4 lg:bottom-6"
+      className="pointer-events-none fixed end-3 bottom-24 z-40 sm:end-4 lg:bottom-6"
     >
       <div
         className="relative"
@@ -157,7 +165,7 @@ export function LanguageBanner() {
         <div
           inert={!ouvert}
           aria-hidden={!ouvert}
-          className={`absolute right-0 bottom-[calc(100%+0.5rem)] flex w-max max-w-[min(20rem,calc(100vw-1.5rem))] items-center gap-2 rounded-full border border-line bg-paper/95 py-1.5 pl-4 pr-1.5 shadow-lg backdrop-blur-md transition-all duration-300 ${
+          className={`absolute end-0 bottom-[calc(100%+0.5rem)] flex w-max max-w-[min(20rem,calc(100vw-1.5rem))] items-center gap-2 rounded-full border border-line bg-paper/95 py-1.5 ps-4 pe-1.5 shadow-lg backdrop-blur-md transition-all duration-300 ${
             ouvert
               ? "pointer-events-auto translate-y-0 opacity-100"
               : "pointer-events-none translate-y-2 opacity-0"
@@ -167,6 +175,7 @@ export function LanguageBanner() {
           <Link
             href={suggestion.href}
             hrefLang={suggestion.lang}
+            lang={suggestion.lang}
             className="whitespace-nowrap rounded-full bg-ink px-3 py-1.5 text-xs font-medium text-paper transition-colors hover:bg-blue-deep"
           >
             {suggestion.action}

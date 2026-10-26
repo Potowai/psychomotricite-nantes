@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { CtaBand } from "@/components/contact-cta";
 import { Callout, Container, Faq, PageHero, SectionTitle } from "@/components/ui";
-import { articlesFor as articlesFr } from "@/content/blog";
-import { articlesFor as articlesEn } from "@/content/blog.en";
-import { articlesFor as articlesEs } from "@/content/blog.es";
 import { getMotif as getMotifFr, motifs as motifsFr } from "@/content/motifs";
 import { getMotif as getMotifEn, motifs as motifsEn } from "@/content/motifs.en";
 import { getMotif as getMotifEs, motifs as motifsEs } from "@/content/motifs.es";
+import { getMotif as getMotifRo, motifs as motifsRo } from "@/content/motifs.ro";
+import { getMotif as getMotifAr, motifs as motifsAr } from "@/content/motifs.ar";
 import { copy } from "@/i18n/copies/motif";
-import { articlePath, motifPath, pages, type Locale } from "@/lib/i18n";
-import { formatDate } from "@/lib/format";
+import { motifPath, pages, type Locale } from "@/lib/i18n";
 import {
   JsonLd,
   breadcrumbSchema,
@@ -22,12 +20,8 @@ const motifCollections = {
   fr: { motifs: motifsFr, getMotif: getMotifFr },
   en: { motifs: motifsEn, getMotif: getMotifEn },
   es: { motifs: motifsEs, getMotif: getMotifEs },
-};
-
-const articleCollections = {
-  fr: articlesFr,
-  en: articlesEn,
-  es: articlesEs,
+  ro: { motifs: motifsRo, getMotif: getMotifRo },
+  ar: { motifs: motifsAr, getMotif: getMotifAr },
 };
 
 export function MotifPage({
@@ -44,9 +38,6 @@ export function MotifPage({
 
   const path = motifPath(locale, motif.slug);
   const others = collection.motifs.filter((m) => m.slug !== motif.slug);
-  const related = motif.related
-    ? articleCollections[locale]().filter((a) => motif.related?.includes(a.slug))
-    : [];
 
   return (
     <>
@@ -107,34 +98,6 @@ export function MotifPage({
               <Faq items={motif.faq} />
             </div>
           </div>
-
-          {related.length > 0 && (
-            <div className="rounded-[1.75rem] border border-line bg-paper-2 p-7 sm:p-9">
-              <p className="eyebrow">{t.related.title}</p>
-              <ul className="mt-5 space-y-5">
-                {related.map((article) => (
-                  <li key={article.slug}>
-                    <Link
-                      href={articlePath(locale, article.slug)}
-                      className="group block"
-                    >
-                      <p className="text-xs text-ink-3">
-                        {formatDate(article.date, locale)} ·{" "}
-                        {t.related.readingTime.replace(
-                          "{minutes}",
-                          String(article.readingMinutes),
-                        )}
-                      </p>
-                      <p className="mt-1 font-display text-xl leading-snug text-ink group-hover:text-azure-deep">
-                        {article.title}
-                      </p>
-                      <p className="mt-1.5 text-ink-2">{article.description}</p>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
 
           <div className="border-t border-line pt-8">
             <p className="eyebrow">{t.others.title}</p>

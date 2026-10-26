@@ -2,11 +2,11 @@
  * Source unique des langues, des adresses et de la navigation.
  *
  * Le français reste à la racine (`/`, `/contact`…), l'anglais vit sous `/en`,
- * l'espagnol sous `/es`. Aucune URL française ne change : le référencement
- * local reste intact.
+ * l'espagnol sous `/es`, le roumain sous `/ro`, l'arabe sous `/ar`.
+ * Aucune URL française ne change : le référencement local reste intact.
  */
 
-export const locales = ["fr", "en", "es"] as const;
+export const locales = ["fr", "en", "es", "ro", "ar"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "fr";
 
@@ -14,24 +14,41 @@ export const localeLabel: Record<Locale, string> = {
   fr: "Français",
   en: "English",
   es: "Español",
+  ro: "Română",
+  ar: "العربية",
 };
 
 export const localeShort: Record<Locale, string> = {
   fr: "FR",
   en: "EN",
   es: "ES",
+  ro: "RO",
+  ar: "AR",
 };
 
 export const htmlLang: Record<Locale, string> = {
   fr: "fr",
   en: "en",
   es: "es",
+  ro: "ro",
+  ar: "ar",
+};
+
+/** Sens d'écriture, pour l'attribut `dir` et les styles logiques. */
+export const direction: Record<Locale, "ltr" | "rtl"> = {
+  fr: "ltr",
+  en: "ltr",
+  es: "ltr",
+  ro: "ltr",
+  ar: "rtl",
 };
 
 export const ogLocale: Record<Locale, string> = {
   fr: "fr_FR",
   en: "en_GB",
   es: "es_ES",
+  ro: "ro_RO",
+  ar: "ar_AR",
 };
 
 /** Valeur de `hreflang` pour chaque langue. */
@@ -39,36 +56,70 @@ export const hreflang: Record<Locale, string> = {
   fr: "fr-FR",
   en: "en",
   es: "es",
+  ro: "ro",
+  ar: "ar",
 };
 
 type Paths = Record<Locale, string>;
 
 /** Pages fixes, avec leur adresse dans chaque langue. */
 export const pages = {
-  home: { fr: "/", en: "/en", es: "/es" },
+  home: { fr: "/", en: "/en", es: "/es", ro: "/ro", ar: "/ar" },
   psychomotricite: {
     fr: "/psychomotricite",
     en: "/en/psychomotor-therapy",
     es: "/es/psicomotricidad",
+    ro: "/ro/psihomotricitate",
+    ar: "/ar/psychomotor-therapy",
   },
-  about: { fr: "/qui-suis-je", en: "/en/about", es: "/es/sobre-mi" },
+  about: {
+    fr: "/qui-suis-je",
+    en: "/en/about",
+    es: "/es/sobre-mi",
+    ro: "/ro/despre-mine",
+    ar: "/ar/about",
+  },
   sessions: {
     fr: "/seances-et-tarifs",
     en: "/en/sessions-and-fees",
     es: "/es/sesiones-y-tarifas",
+    ro: "/ro/consultatii-si-tarife",
+    ar: "/ar/sessions-and-fees",
   },
-  contact: { fr: "/contact", en: "/en/contact", es: "/es/contacto" },
-  faq: { fr: "/faq", en: "/en/faq", es: "/es/preguntas-frecuentes" },
-  resources: { fr: "/blog", en: "/en/resources", es: "/es/recursos" },
+  contact: {
+    fr: "/contact",
+    en: "/en/contact",
+    es: "/es/contacto",
+    ro: "/ro/contact",
+    ar: "/ar/contact",
+  },
+  faq: {
+    fr: "/faq",
+    en: "/en/faq",
+    es: "/es/preguntas-frecuentes",
+    ro: "/ro/intrebari-frecvente",
+    ar: "/ar/faq",
+  },
+  resources: {
+    fr: "/blog",
+    en: "/en/resources",
+    es: "/es/recursos",
+    ro: "/ro/resurse",
+    ar: "/ar/resources",
+  },
   legal: {
     fr: "/mentions-legales",
     en: "/en/legal-notice",
     es: "/es/aviso-legal",
+    ro: "/ro/note-legale",
+    ar: "/ar/legal-notice",
   },
   privacy: {
     fr: "/politique-de-confidentialite",
     en: "/en/privacy",
     es: "/es/privacidad",
+    ro: "/ro/confidentialitate",
+    ar: "/ar/privacy",
   },
 } satisfies Record<string, Paths>;
 
@@ -78,26 +129,36 @@ export const motifPaths = {
     fr: "/psychomotricite/douance-hqi-thqi",
     en: "/en/psychomotor-therapy/giftedness-hqi-thqi",
     es: "/es/psicomotricidad/altas-capacidades-hqi-thqi",
+    ro: "/ro/psihomotricitate/supradotare-hpi-hqi-thqi",
+    ar: "/ar/psychomotor-therapy/giftedness-hqi-thqi",
   },
   tdah: {
     fr: "/psychomotricite/tdah",
     en: "/en/psychomotor-therapy/adhd",
     es: "/es/psicomotricidad/tdah",
+    ro: "/ro/psihomotricitate/tdah",
+    ar: "/ar/psychomotor-therapy/adhd",
   },
   "anxiete-burn-out": {
     fr: "/psychomotricite/anxiete-burn-out",
     en: "/en/psychomotor-therapy/anxiety-and-burnout",
     es: "/es/psicomotricidad/ansiedad-y-burnout",
+    ro: "/ro/psihomotricitate/anxietate-si-burnout",
+    ar: "/ar/psychomotor-therapy/anxiety-and-burnout",
   },
   "troubles-dys": {
     fr: "/psychomotricite/troubles-dys",
     en: "/en/psychomotor-therapy/specific-learning-difficulties",
     es: "/es/psicomotricidad/dificultades-especificas-del-aprendizaje",
+    ro: "/ro/psihomotricitate/tulburari-specifice-de-invatare",
+    ar: "/ar/psychomotor-therapy/specific-learning-difficulties",
   },
   "personne-agee": {
     fr: "/psychomotricite/personne-agee",
     en: "/en/psychomotor-therapy/older-adults",
     es: "/es/psicomotricidad/personas-mayores",
+    ro: "/ro/psihomotricitate/persoane-varstnice",
+    ar: "/ar/psychomotor-therapy/older-adults",
   },
 } satisfies Record<string, Paths>;
 
@@ -107,21 +168,29 @@ export const articlePaths = {
     fr: "/blog/douance-hqi-thqi-et-psychomotricite",
     en: "/en/resources/giftedness-hqi-thqi-and-psychomotor-therapy",
     es: "/es/recursos/altas-capacidades-y-psicomotricidad",
+    ro: "/ro/resurse/supradotare-si-psihomotricitate",
+    ar: "/ar/resources/giftedness-and-psychomotor-therapy",
   },
   "anxiete-burn-out-pourquoi-passer-par-le-corps": {
     fr: "/blog/anxiete-burn-out-pourquoi-passer-par-le-corps",
     en: "/en/resources/anxiety-and-burnout-why-work-through-the-body",
     es: "/es/recursos/ansiedad-y-burnout-por-que-pasar-por-el-cuerpo",
+    ro: "/ro/resurse/anxietate-si-burnout-de-ce-prin-corp",
+    ar: "/ar/resources/anxiety-and-burnout-why-through-the-body",
   },
   "le-bilan-psychomoteur": {
     fr: "/blog/le-bilan-psychomoteur",
     en: "/en/resources/the-psychomotor-assessment",
     es: "/es/recursos/el-balance-psicomotor",
+    ro: "/ro/resurse/bilantul-psihomotor",
+    ar: "/ar/resources/the-psychomotor-assessment",
   },
   "psychomotricite-adulte-nantes": {
     fr: "/blog/psychomotricite-adulte-nantes",
     en: "/en/resources/psychomotor-therapy-for-adults-in-nantes",
     es: "/es/recursos/psicomotricidad-para-adultos-en-nantes",
+    ro: "/ro/resurse/psihomotricitate-pentru-adulti-in-nantes",
+    ar: "/ar/resources/psychomotor-therapy-for-adults-in-nantes",
   },
 } satisfies Record<string, Paths>;
 
@@ -136,7 +205,7 @@ export type ArticleKey = keyof typeof articlePaths;
  * Les trois versions sont complètes : le sélecteur de langue mène donc
  * toujours à la page équivalente.
  */
-export const completeLocales: Locale[] = ["fr", "en", "es"];
+export const completeLocales: Locale[] = ["fr", "en", "es", "ro", "ar"];
 
 /** Toutes les paires connues, dans l'ordre du site. */
 const allPaths: Paths[] = [
@@ -159,6 +228,8 @@ export function alternatesFor(path: string) {
     "fr-FR": entry.fr,
     en: entry.en,
     es: entry.es,
+    ro: entry.ro,
+    ar: entry.ar,
     "x-default": entry.fr,
   };
 }
@@ -179,6 +250,8 @@ export const addressName: Record<Locale, string> = {
   fr: "Cabinet pluridisciplinaire",
   en: "Multidisciplinary practice",
   es: "Consultorio multidisciplinario",
+  ro: "Cabinet pluridisciplinar",
+  ar: "عيادة متعددة التخصصات",
 };
 
 /** Titre professionnel, dans la langue demandée. */
@@ -186,6 +259,8 @@ export const roleLabel: Record<Locale, string> = {
   fr: "Psychomotricienne D.E.",
   en: "Psychomotor therapist (D.E.)",
   es: "Psicomotricista D.E.",
+  ro: "Psihomotricistă D.E.",
+  ar: "أخصائية العلاج النفسي الحركي",
 };
 
 /** Adresse complète, dans la langue demandée. */
@@ -249,6 +324,26 @@ const navLabels: Record<
     contact: "Contacto",
     practice: "El consultorio",
     faq: "Preguntas frecuentes",
+  },
+  ro: {
+    home: "Acasă",
+    psychomotricite: "Psihomotricitate",
+    about: "Despre mine",
+    sessions: "Ședințe și tarife",
+    resources: "Resurse",
+    contact: "Contact",
+    practice: "Cabinetul",
+    faq: "Întrebări frecvente",
+  },
+  ar: {
+    home: "الرئيسية",
+    psychomotricite: "العلاج النفسي الحركي",
+    about: "من أنا",
+    sessions: "الجلسات والأسعار",
+    resources: "موارد",
+    contact: "اتصال",
+    practice: "العيادة",
+    faq: "أسئلة شائعة",
   },
 };
 

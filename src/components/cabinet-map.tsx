@@ -71,6 +71,34 @@ const mapCopy: Record<
     openMap: "Ver el plano en OpenStreetMap",
     openDirections: "Abrir la ruta en Google Maps",
   },
+  ro: {
+    itinerary: "Traseu",
+    copy: "Copiază",
+    copied: "Copiat",
+    addressCopied: "Adresă copiată",
+    zoomIn: "Mărește",
+    zoomOut: "Micșorează",
+    enlarge: "Mărește harta",
+    reduce: "Micșorează harta",
+    dialogLabel: "Hartă de acces",
+    regionLabel: "Hartă de acces la cabinet",
+    openMap: "Vezi harta pe OpenStreetMap",
+    openDirections: "Deschide traseul în Google Maps",
+  },
+  ar: {
+    itinerary: "الاتجاهات",
+    copy: "نسخ",
+    copied: "تم النسخ",
+    addressCopied: "تم نسخ العنوان",
+    zoomIn: "تكبير",
+    zoomOut: "تصغير",
+    enlarge: "تكبير الخريطة",
+    reduce: "تصغير الخريطة",
+    dialogLabel: "خريطة الوصول",
+    regionLabel: "خريطة الوصول إلى العيادة",
+    openMap: "عرض الخريطة على OpenStreetMap",
+    openDirections: "فتح الاتجاهات في Google Maps",
+  },
 };
 
 const addressLine = `${site.address.street}, ${site.address.postalCode} ${site.address.city}`;
@@ -319,7 +347,7 @@ export function CabinetMap({
           onClick={() => setFull((value) => !value)}
           aria-expanded={full}
           aria-label={full ? t.reduce : t.enlarge}
-          className="carte-expand absolute right-3 top-3 z-[900] grid h-9 w-9 place-items-center rounded-xl border border-line bg-paper text-ink shadow-[var(--shadow-soft)] transition-colors hover:bg-blue-soft"
+          className="carte-expand absolute end-3 top-3 z-[900] grid h-9 w-9 place-items-center rounded-xl border border-line bg-paper text-ink shadow-[var(--shadow-soft)] transition-colors hover:bg-blue-soft"
         >
           {full ? (
             <svg viewBox="0 0 16 16" aria-hidden="true" className="h-4 w-4">
@@ -368,7 +396,7 @@ export function CabinetMap({
           className="link-quiet mt-3 inline-flex items-center gap-1.5 py-1 text-sm font-medium text-blue-deep"
         >
           {t.openDirections}
-          <span aria-hidden="true">→</span>
+          <span aria-hidden="true" className="arrow">→</span>
         </a>
       )}
     </div>

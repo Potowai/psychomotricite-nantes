@@ -1,4 +1,5 @@
 import { motifs } from "@/content/motifs";
+import { type Locale } from "./i18n";
 import { site } from "./site";
 
 const url = site.url;
@@ -44,7 +45,7 @@ export function localBusinessSchema() {
     ],
     // Les horaires exacts ne sont pas encore connus : pas de balisage
     // d'ouverture, pour ne pas publier de créneaux inventés.
-    knowsLanguage: ["fr", "en", "es"],
+    knowsLanguage: ["fr", "en", "es", "ro", "ar"],
     founder: { "@id": personId },
     employee: { "@id": personId },
     medicalSpecialty: ["Psychomotor therapy", "Psychomotricité"],
@@ -96,7 +97,7 @@ export function personSchema() {
       "Psychomotricienne diplômée d'État exerçant à Nantes depuis 2016, auprès d'adolescent.es et d'adultes.",
     url: `${url}/qui-suis-je`,
     worksFor: { "@id": businessId },
-    knowsLanguage: ["fr", "en", "es", "ro"],
+    knowsLanguage: ["fr", "en", "es", "ro", "ar"],
     knowsAbout: [
       "Psychomotricité",
       "Douance (HPI, HQI/THQI)",
@@ -164,7 +165,7 @@ export function articleSchema(article: {
   dateModified?: string;
   image?: string;
   path?: string;
-  locale?: "fr" | "en" | "es";
+  locale?: Locale;
 }) {
   const inLanguage = article.locale ?? "fr";
   const path = article.path ?? `/blog/${article.slug}`;
@@ -210,7 +211,7 @@ export function medicalWebPageSchema(page: {
   name: string;
   description: string;
   path: string;
-  locale?: "fr" | "en" | "es";
+  locale?: Locale;
 }) {
   return {
     "@context": "https://schema.org",

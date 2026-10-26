@@ -8,7 +8,10 @@ import {
 import { articlesFor as articlesEn } from "@/content/blog.en";
 import { articlesFor as articlesEs } from "@/content/blog.es";
 import { copy } from "@/i18n/copies/article";
-import { articlePath, pages, type Locale } from "@/lib/i18n";
+import { articlePath, pages } from "@/lib/i18n";
+
+/** Les ressources sont hors ligne : seules les trois langues d'origine sont typées. */
+type LegacyLocale = "fr" | "en" | "es";
 import { formatDate } from "@/lib/format";
 import { JsonLd, articleSchema, breadcrumbSchema } from "@/lib/jsonld";
 import { site } from "@/lib/site";
@@ -68,7 +71,7 @@ export function ArticlePage({
   locale,
   slug,
 }: {
-  locale: Locale;
+  locale: LegacyLocale;
   slug: string;
 }) {
   const t = copy[locale];

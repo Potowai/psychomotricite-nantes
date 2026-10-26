@@ -66,7 +66,7 @@ export function PrivacyPage({ locale }: { locale: Locale }) {
               </a>{" "}
               {t.rights.orCall}
               <a href={telHref} className="link-quiet">
-                {site.contact.phoneDisplay}
+                <span dir="ltr">{site.contact.phoneDisplay}</span>
               </a>
               {t.rights.end}{" "}
               <a

@@ -14,6 +14,8 @@ const skipLink: Record<Locale, string> = {
   fr: "Aller au contenu principal",
   en: "Skip to main content",
   es: "Ir al contenido principal",
+  ro: "Sari la conținutul principal",
+  ar: "الانتقال إلى المحتوى الرئيسي",
 };
 
 /**
@@ -31,7 +33,7 @@ export function SiteShell({
     <>
       <a
         href="#contenu"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:text-paper"
+        className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:text-paper"
       >
         {skipLink[locale]}
       </a>

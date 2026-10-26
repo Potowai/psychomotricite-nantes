@@ -1,11 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
+import corpsMains from "@/assets/images/corps-mains.jpg";
 import { CtaBand } from "@/components/contact-cta";
 import {
   Callout,
   Container,
   Faq,
   PageHero,
-  PhotoPlaceholder,
   SectionTitle,
 } from "@/components/ui";
 import { copy } from "@/i18n/copies/psychomotricite";
@@ -39,17 +40,17 @@ export function PsychomotricitePage({ locale }: { locale: Locale }) {
             eyebrow={t.intro.eyebrow}
             title={t.intro.title}
           />
-          <PhotoPlaceholder
-            className="mt-10 rounded-[2rem]"
-            label={t.intro.placeholder.label}
-            title={t.intro.placeholder.title}
-            note={t.intro.placeholder.note}
+          <Image
+            src={corpsMains}
+            alt={t.intro.placeholder.title}
+            sizes="(min-width: 1024px) 32vw, 100vw"
+            className="mt-10 h-auto w-full rounded-[2rem] object-cover"
           />
         </div>
 
         <div className="space-y-7 text-lg leading-[1.75] text-ink-2">
           <p>{t.intro.body}</p>
-          <blockquote className="border-l-2 border-azure/60 pl-6 font-display text-[1.5rem] leading-snug text-ink">
+          <blockquote className="border-s-2 border-azure/60 ps-6 font-display text-[1.5rem] leading-snug text-ink">
             {t.intro.quote}
           </blockquote>
           <p>{t.intro.bodyAfter}</p>
@@ -114,7 +115,7 @@ export function PsychomotricitePage({ locale }: { locale: Locale }) {
                     </span>
                     <span className="mt-4 text-sm font-medium text-azure-deep">
                       {t.motifsSection.moreLinkLabel}{" "}
-                      <span aria-hidden="true">→</span>
+                      <span aria-hidden="true" className="arrow">→</span>
                     </span>
                   </Link>
                 </li>

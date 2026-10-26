@@ -15,12 +15,16 @@ const ariaLabel: Record<Locale, string> = {
   fr: "Langue du site",
   en: "Site language",
   es: "Idioma del sitio",
+  ro: "Limba site-ului",
+  ar: "لغة الموقع",
 };
 
 const changeLabel: Record<Locale, string> = {
   fr: "Changer de langue",
   en: "Change language",
   es: "Cambiar de idioma",
+  ro: "Schimbă limba",
+  ar: "تغيير اللغة",
 };
 
 function GlobeIcon() {
@@ -122,7 +126,7 @@ export function LanguageMenu({
 
       {open && (
         <ul
-          className={`absolute right-0 z-50 w-max min-w-[11rem] overflow-hidden rounded-2xl border border-line bg-paper p-1.5 shadow-[var(--shadow-lift)] ${
+          className={`absolute end-0 z-50 w-max min-w-[11rem] overflow-hidden rounded-2xl border border-line bg-paper p-1.5 shadow-[var(--shadow-lift)] ${
             placement === "above" ? "bottom-[calc(100%+0.5rem)]" : "top-[calc(100%+0.5rem)]"
           }`}
           aria-label={ariaLabel[locale]}
@@ -144,7 +148,7 @@ export function LanguageMenu({
                   }`}
                 >
                   <span>
-                    <span className="mr-2 text-xs tracking-wide text-ink-3">
+                    <span className="me-2 text-xs tracking-wide text-ink-3">
                       {localeShort[code]}
                     </span>
                     {localeLabel[code]}
@@ -177,7 +181,7 @@ export function LanguageSwitch({
 
   return (
     <nav aria-label={ariaLabel[locale]} className={className}>
-      <ul className="flex items-center gap-1">
+      <ul dir="ltr" className="flex items-center gap-1">
         {locales.map((code) => {
           const active = code === locale;
           return (

@@ -54,6 +54,28 @@ const labels: Record<
     mobileNav: "Navegación móvil",
     language: "Idioma del sitio",
   },
+  ro: {
+    role: "Psihomotricistă D.E.",
+    home: "acasă",
+    book: "Programează o ședință",
+    call: "Sună",
+    menu: "Deschide meniul",
+    close: "Închide meniul",
+    nav: "Navigare principală",
+    mobileNav: "Navigare mobilă",
+    language: "Limba site-ului",
+  },
+  ar: {
+    role: "أخصائية العلاج النفسي الحركي",
+    home: "الرئيسية",
+    book: "احجز موعدًا",
+    call: "اتصل",
+    menu: "فتح القائمة",
+    close: "إغلاق القائمة",
+    nav: "التنقل الرئيسي",
+    mobileNav: "التنقل على الهاتف",
+    language: "لغة الموقع",
+  },
 };
 
 function Wordmark({
@@ -133,7 +155,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
                     >
                       {item.label}
                       <span
-                        className={`absolute bottom-1.5 left-0 h-px bg-blue transition-all duration-300 ${
+                        className={`absolute bottom-1.5 start-0 h-px bg-blue transition-all duration-300 ${
                           active ? "w-full" : "w-0"
                         }`}
                       />
@@ -148,6 +170,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
           <LanguageMenu locale={locale} />
           <a
             href={telHref}
+            dir="ltr"
             className="inline-flex py-2 text-sm text-ink-2 tabular-nums transition-colors hover:text-blue-deep"
           >
             {site.contact.phoneDisplay}
@@ -169,12 +192,12 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
         >
           <span className="relative block h-3 w-5">
             <span
-              className={`absolute left-0 block h-px w-5 bg-ink transition-transform duration-300 ${
+              className={`absolute start-0 block h-px w-5 bg-ink transition-transform duration-300 ${
                 open ? "top-1.5 rotate-45" : "top-0"
               }`}
             />
             <span
-              className={`absolute left-0 block h-px w-5 bg-ink transition-transform duration-300 ${
+              className={`absolute start-0 block h-px w-5 bg-ink transition-transform duration-300 ${
                 open ? "top-1.5 -rotate-45" : "top-3"
               }`}
             />
@@ -204,7 +227,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-2 rounded-full border border-ink px-5 py-3 text-ink"
               >
-                {copy.call} · {site.contact.phoneDisplay}
+                {copy.call} · <span dir="ltr">{site.contact.phoneDisplay}</span>
               </a>
               <Link
                 href={pages.contact[locale]}
