@@ -356,7 +356,7 @@ relues en 390 px et 1440 px.
 - [x] `npm run audit` : toutes les pages des 5 langues, 0 erreur.
 
 Aperçu déployé le 26 octobre :
-`https://psychomotricite-nantes-847x7f0t0-potowais-projects.vercel.app`
+`https://psychomotricite-nantes-manuela.vercel.app`
 (protégé par Vercel Authentication ; le lien de contournement est envoyé
 séparément, il ne doit pas être commité). Audit de l'aperçu : 55 pages,
 0 erreur, 55 avertissements non bloquants.
