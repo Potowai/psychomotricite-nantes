@@ -355,11 +355,13 @@ relues en 390 px et 1440 px.
 - [x] `npm run lint` et `npm run build` verts.
 - [x] `npm run audit` : toutes les pages des 5 langues, 0 erreur.
 
-Aperçu déployé le 26 octobre :
-`https://psychomotricite-nantes-manuela.vercel.app`
-(protégé par Vercel Authentication ; le lien de contournement est envoyé
-séparément, il ne doit pas être commité). Audit de l'aperçu : 55 pages,
-0 erreur, 55 avertissements non bloquants.
+Mise en production Vercel le 26 octobre :
+`https://psychomotricite-nantes.vercel.app` (public, sans cookie).
+Audit : 55 pages, 0 erreur, 55 avertissements non bloquants.
+
+Le domaine `psychomotriciennenantes.fr` pointe encore vers WordPress.com :
+la bascule DNS reste l'étape B du runbook `docs/mise-en-ligne-domaine.md`,
+à faire avec Manuela. Le secret de contournement de l'aperçu a été révoqué.
 
 Fichier de relecture RO/AR : `docs/relecture-ro-ar.md`.
 - [x] Contraste et tailles de cible sur les blocs modifiés.

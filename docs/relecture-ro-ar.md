@@ -5,7 +5,9 @@ lecture des pages : il sert à vérifier les phrases qui doivent être exactes
 (horaires, adresse, tarifs, PMR, prescription) et à recueillir les
 corrections au même endroit.
 
-- Aperçu : lien Vercel envoyé séparément (protégé par Vercel Authentication).
+- Site en production Vercel : <https://psychomotricite-nantes.vercel.app>
+  (public, sans cookie). Le domaine `psychomotriciennenantes.fr` sera actif
+  après la bascule DNS.
 - Pages à lire : `/ro` et `/ar`, puis les pages listées plus bas.
 - Date cible : avant le **mercredi 4 novembre 2026**, pour garder le jeudi
   et le vendredi pour les dernières corrections.
@@ -206,7 +208,7 @@ tarifaires ; les libellés ci-dessus sont ceux qui les entourent.
 ## 16. Pages à lire
 
 Pour chaque page, cocher après lecture. Les liens sont à préfixer par
-l'adresse de l'aperçu.
+l'adresse de production Vercel.
 
 ### Roumain
 
