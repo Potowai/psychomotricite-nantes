@@ -40,15 +40,15 @@ export const site = {
 
   hours: {
     label: "Consultations au cabinet",
-    days: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"],
-    display: "du lundi au vendredi, sur rendez-vous",
-    note: "Je vous reçois au cabinet du lundi au vendredi, sur rendez-vous.",
+    days: ["Lundi", "Mardi", "Mercredi", "Jeudi"],
+    display: "du lundi au jeudi, sur rendez-vous",
+    note: "Je vous reçois au cabinet du lundi au jeudi, sur rendez-vous.",
   },
 
   access: {
     summary: "Bus 11/12 · C1 · Tram 1",
     parking:
-      "À proximité : parking du Super U Dalby — 2 h gratuites, 8 min à pied",
+      "À proximité : parking du Super U Dalby : 2 h gratuites, 8 min à pied",
     transit: [
       { line: "Bus 11 et 12", stop: "Casterneau", walk: "1 min à pied" },
       { line: "C1", stop: "Chalâtres", walk: "10 min à pied" },

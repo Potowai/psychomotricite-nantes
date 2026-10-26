@@ -27,7 +27,7 @@ export const es: Copy = {
     text: "No dude en contactarme para explicarme su solicitud: le propondré una cita, o le reorientaré hacia otro profesional si fuera necesario.",
   },
   jsonLd: {
-    serviceSuffix: "— psicomotricidad",
+    serviceSuffix: "· psicomotricidad",
     breadcrumbCurrent: "La psicomotricidad",
   },
 };

@@ -28,7 +28,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         lead={t.hero.lead}
       />
 
-      <Container className="grid gap-12 py-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:py-24">
+      <Container className="grid gap-12 pt-16 pb-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:py-24">
         <div>
           <figure>
             <Image
@@ -70,11 +70,24 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <p className="mt-4">{t.intro.openBody}</p>
             <p className="mt-4">{t.intro.openBodyAfter}</p>
           </div>
+
+          <a
+            href="#themes"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-blue-deep link-quiet"
+          >
+            {t.intro.next}
+            <span
+              aria-hidden="true"
+              className="transition-transform group-hover:translate-y-0.5"
+            >
+              ↓
+            </span>
+          </a>
         </div>
       </Container>
 
-      <section className="border-y border-line bg-ink text-paper">
-        <Container className="py-16 lg:py-24">
+      <section id="themes" className="scroll-mt-24 border-y border-line bg-ink text-paper">
+        <Container className="py-12 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/50">

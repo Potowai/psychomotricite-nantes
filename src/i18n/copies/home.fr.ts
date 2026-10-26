@@ -1,6 +1,6 @@
 export const home = {
   meta: {
-    title: "Psychomotricienne à Nantes — adolescents & adultes",
+    title: "Psychomotricienne à Nantes · adolescents & adultes",
     description:
       "Manuela Edom, psychomotricienne diplômée d’État à Nantes. Séances pour adolescent.es et adultes, et enfants sur demandes spécifiques, au cabinet du 4 rue de la Mitrie. Douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Appel ou SMS au 06 84 74 96 70.",
   },
@@ -9,7 +9,7 @@ export const home = {
     titleLines: ["Le lien entre le corps", "et l’esprit."],
     accent: "Le lien à l’autre.",
     lead:
-      "Je suis Manuela Edom, psychomotricienne à Nantes depuis 2016. J’accompagne adolescent.es et adultes, là où le corps raconte quelque chose de ce que l’on traverse.",
+      "Psychomotricienne à Nantes, j’accompagne adolescent.es et adultes (et enfants sur demandes spécifiques).",
     ctaPrimary: "Prendre rendez-vous",
     ctaSecondary: "Comprendre la psychomotricité",
     figureAlt:
@@ -21,7 +21,7 @@ export const home = {
         value: "ados et adultes",
         note: "(et enfants sur demandes spécifiques)",
       },
-      { label: "Au cabinet", value: "du lundi au vendredi, sur rendez-vous" },
+      { label: "Au cabinet", value: "du lundi au jeudi, sur rendez-vous" },
     ],
   },
   manifest: {
@@ -38,7 +38,7 @@ export const home = {
     eyebrow: "Ce qui vous amène",
     title: "Les motifs qui conduisent à consulter sont variés.",
     intro:
-      "Ils peuvent concerner directement le corps et la motricité, davantage les émotions et la relation aux autres — ou le rapport au corps lui-même.",
+      "Ils peuvent concerner directement le corps et la motricité, davantage les émotions et la relation aux autres, ou le rapport au corps lui-même.",
     items: [
       {
         title: "Le corps et la motricité",
@@ -50,7 +50,7 @@ export const home = {
       },
       {
         title: "Le rapport au corps",
-        text: "Troubles du comportement alimentaire, vécu de violences, dysphorie de genre — ou, plus simplement, le désir « d’apprendre à aimer son corps ».",
+        text: "Troubles du comportement alimentaire, vécu de violences, dysphorie de genre, ou plus simplement, le désir « d’apprendre à aimer son corps ».",
       },
       {
         title: "Les étapes de la vie",
@@ -77,7 +77,7 @@ export const home = {
       {
         n: "02",
         title: "Le bilan psychomoteur",
-        text: "Si besoin, un bilan psychomoteur peut être réalisé. Ce n’est pas une étape obligatoire pour donner suite à des séances. C’est le temps d’une première photographie : où en est la personne dans son corps — motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité. On y lit les difficultés, et aussi les ressources.",
+        text: "Si besoin, un bilan psychomoteur peut être réalisé. Ce n’est pas une étape obligatoire pour donner suite à des séances. C’est le temps d’une première photographie : où en est la personne dans son corps (motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité). On y lit les difficultés, et aussi les ressources.",
       },
       {
         n: "03",
@@ -102,43 +102,22 @@ export const home = {
     intro:
       "Je vous reçois au sein d’un cabinet pluridisciplinaire : une psychomotricienne, deux psychologues cliniciennes et une médecin généraliste.",
     neighbourhood:
-      "Situé à proximité du centre-ville, quartier Malakoff – Saint-Donatien :",
+      "Situé à proximité du centre-ville, quartier Saint Donatien, Dalby, Malakoff :",
     addressName: "Cabinet pluridisciplinaire",
     street: "4 rue de la Mitrie",
     postalCity: "44000 Nantes",
     info: [
-      { label: "Consultations", value: "Du lundi au vendredi, sur rendez-vous" },
-      { label: "Quartier", value: "Malakoff – Saint-Donatien" },
+      { label: "Consultations", value: "Du lundi au jeudi, sur rendez-vous" },
+      { label: "Quartier", value: "Saint Donatien, Dalby, Malakoff" },
       { label: "Langues", value: "Français · Anglais" },
       { label: "Tarifs", value: "47 € suivi · 200 € bilan (4 séances)" },
     ],
     transportTitle: "Transports",
     transport: [
-      "Bus 11 et 12 — arrêt Casterneau · 1 min à pied",
-      "C1 — arrêt Chalâtres · 10 min à pied",
-      "Tramway ligne 1 — arrêt Moutonnerie · 20 min à pied",
+      "Bus 11 et 12 · arrêt Casterneau · 1 min à pied",
+      "C1 · arrêt Chalâtres · 10 min à pied",
+      "Tramway ligne 1 · arrêt Moutonnerie · 20 min à pied",
     ],
-  },
-  resources: {
-    eyebrow: "Ressources",
-    title: "Comprendre ce que le corps dit.",
-    intro:
-      "Des articles pour explorer la psychomotricité, la douance, les neuroatypies et le rapport au corps — écrits pour être utiles, que vous consultiez ou non.",
-    links: [
-      { key: "douance-hqi-thqi-et-psychomotricite", title: "Douance (HQI/THQI) et psychomotricité" },
-      {
-        key: "anxiete-burn-out-pourquoi-passer-par-le-corps",
-        title: "Anxiété et burn out : pourquoi passer par le corps ?",
-      },
-      { key: "le-bilan-psychomoteur", title: "Le bilan psychomoteur : à quoi s’attendre" },
-    ],
-    all: "Toutes les ressources",
-    placeholder: {
-      label: "Illustration à venir",
-      title:
-        "Un moment de séance : médiation corporelle, matière, mouvement ou toucher",
-      note: "Illustration de l’amie de Manuela, sans visage identifiable. Format conseillé : 1600 × 1200 px.",
-    },
   },
   faqSection: {
     eyebrow: "Questions fréquentes",
@@ -148,7 +127,7 @@ export const home = {
         question:
           "Faut-il une ordonnance pour consulter une psychomotricienne ?",
         answer:
-          "Oui. Psychomotricien.ne est une profession paramédicale, reconnue par un diplôme d’État, de la même manière que les orthophonistes et les kinésithérapeutes. Les compétences des psychomotricien.nes sont encadrées par le décret n°88-659 du 6 mai 1988. Une prescription médicale est donc obligatoire.",
+          "Oui. Psychomotricien.ne est une profession paramédicale, reconnue par un diplôme d’État, de la même manière que les orthophonistes et les kinésithérapeutes. Les compétences des psychomotricien.nes sont encadrées par le décret n°88-659 du 6 mai 1988. Une prescription médicale est nécessaire pour engager un bilan ou un suivi, mais elle n’est pas demandée lors d’un premier rendez-vous.",
       },
       {
         question: "La psychomotricité est-elle remboursée ?",

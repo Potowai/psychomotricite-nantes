@@ -16,7 +16,7 @@ export const motif = {
   },
   others: {
     title: "Autres motifs de consultation",
-    before: "Votre situation ne figure pas ici ? Elle n’en est pas moins légitime — ",
+    before: "Votre situation ne figure pas ici ? Elle n’en est pas moins légitime : ",
     link: "écrivez-moi ou appelez-moi",
     after: " pour m’expliquer votre demande.",
   },
@@ -25,7 +25,7 @@ export const motif = {
     text: "N’hésitez pas à me contacter pour m’expliquer votre demande : je vous proposerai un rendez-vous, ou je vous réorienterai vers un.e autre professionnel.le si besoin.",
   },
   jsonLd: {
-    serviceSuffix: "— psychomotricité",
+    serviceSuffix: "· psychomotricité",
     breadcrumbCurrent: "La psychomotricité",
   },
 };

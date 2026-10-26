@@ -2,7 +2,7 @@ export const contact = {
   meta: {
     title: "Contact & plan d’accès à Nantes",
     description:
-      "Prendre rendez-vous avec Manuela Edom, psychomotricienne à Nantes : 06 84 74 96 70 (appel ou SMS), medom@psychomotricite.com. Cabinet pluridisciplinaire, 4 rue de la Mitrie, 44000 Nantes, du lundi au vendredi, sur rendez-vous.",
+      "Prendre rendez-vous avec Manuela Edom, psychomotricienne à Nantes : 06 84 74 96 70 (appel ou SMS), medom@psychomotricite.com. Cabinet pluridisciplinaire, 4 rue de la Mitrie, 44000 Nantes, du lundi au jeudi, sur rendez-vous.",
   },
   breadcrumb: {
     home: "Accueil",
@@ -29,7 +29,8 @@ export const contact = {
   practice: {
     title: "Le cabinet",
     neighbourhood:
-      "Situé à proximité du centre-ville, quartier Malakoff – Saint-Donatien.",
+      "Situé à proximité du centre-ville, quartier Saint Donatien, Dalby, Malakoff.",
+    accessibility: "Cabinet accessible PMR.",
     placeholder: {
       label: "Photo à venir",
       title: "Façade du nouveau cabinet, au 4 rue de la Mitrie",
@@ -40,12 +41,12 @@ export const contact = {
     hours: {
       title: "Horaires",
       before: "Consultations au cabinet ",
-      emphasis: "du lundi au vendredi",
+      emphasis: "du lundi au jeudi",
       after: ", sur rendez-vous.",
     },
     parking: {
       title: "Stationnement",
-      text: "À proximité : parking du Super U Dalby — 2 h gratuites, 8 min à pied",
+      text: "À proximité : parking du Super U Dalby : 2 h gratuites, 8 min à pied",
     },
     transit: {
       title: "Transports en commun",
@@ -66,8 +67,6 @@ export const contact = {
     title: "Écrivez-moi",
     intro:
       "Expliquez-moi votre demande en quelques mots : je vous proposerai un rendez-vous, ou je vous orienterai vers la personne la plus juste si ce n’est pas moi.",
-    prescription:
-      "Une prescription médicale est obligatoire pour engager un bilan ou un suivi.",
   },
   jsonLd: {
     breadcrumbCurrent: "Contact",

@@ -25,7 +25,7 @@ export const legal = {
   },
   host: {
     title: "Hébergement",
-    body: "Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis — ",
+    body: "Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis : ",
     link: "vercel.com",
     end: ".",
   },

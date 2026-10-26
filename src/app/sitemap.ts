@@ -1,14 +1,6 @@
 import type { MetadataRoute } from "next";
-import { articlesFor } from "@/content/blog";
 import { motifs } from "@/content/motifs";
-import {
-  articlePaths,
-  motifPaths,
-  pages,
-  type ArticleKey,
-  type Locale,
-  type MotifKey,
-} from "@/lib/i18n";
+import { motifPaths, pages, type Locale, type MotifKey } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
 const SITE_UPDATED = new Date("2026-10-16");
@@ -37,7 +29,6 @@ const staticPages: Entry[] = [
   entry(pages.sessions, SITE_UPDATED, "monthly", 0.9),
   entry(pages.contact, SITE_UPDATED, "yearly", 0.9),
   entry(pages.faq, SITE_UPDATED, "monthly", 0.7),
-  entry(pages.resources, SITE_UPDATED, "weekly", 0.7),
 ];
 
 const motifPages: Entry[] = motifs.map((motif) => {
@@ -45,18 +36,8 @@ const motifPages: Entry[] = motifs.map((motif) => {
   return entry(paths, SITE_UPDATED, "monthly", 0.8);
 });
 
-const articlePages: Entry[] = articlesFor().map((article) => {
-  const paths = articlePaths[article.slug as ArticleKey];
-  return entry(
-    paths,
-    new Date(article.updated ?? article.date),
-    "yearly",
-    0.6,
-  );
-});
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const entries = [...staticPages, ...motifPages, ...articlePages];
+  const entries = [...staticPages, ...motifPages];
 
   return entries.flatMap((item) => {
     const languages: Record<string, string> = {};

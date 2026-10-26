@@ -259,7 +259,6 @@ export function mainNav(locale: Locale): NavItem[] {
     { href: pages.psychomotricite[locale], label: labels.psychomotricite },
     { href: pages.about[locale], label: labels.about },
     { href: pages.sessions[locale], label: labels.sessions },
-    { href: pages.resources[locale], label: labels.resources },
     { href: pages.contact[locale], label: labels.contact },
   ];
 }
@@ -274,12 +273,6 @@ export function footerNav(locale: Locale): { title: string; items: NavItem[] }[]
         { href: pages.about[locale], label: labels.about },
         { href: pages.sessions[locale], label: labels.sessions },
         { href: pages.contact[locale], label: labels.contact },
-      ],
-    },
-    {
-      title: labels.resources,
-      items: [
-        { href: pages.resources[locale], label: labels.resources },
         { href: pages.faq[locale], label: labels.faq },
       ],
     },

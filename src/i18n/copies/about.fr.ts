@@ -32,16 +32,17 @@ export const about = {
       "En complément de la psychomotricité, mon appétence pour d’autres disciplines comme la sociologie, les sciences politiques et la philosophie m’a aussi conduite sur les bancs de l’Université. Cela m’amène à penser la psychomotricité comme ouverte sur le monde.",
     openBodyAfter:
       "Tout comme le.a patient.e s’inscrit dans la société dans laquelle il.elle vit, un.e soignant.e n’exerce pas en dehors de la société dans laquelle il.elle s’inscrit. Le vécu corporel est aussi à lire, à comprendre et à actualiser au regard des thématiques sociétales contemporaines.",
+    next: "La suite : ce qui m’importe",
   },
   themes: {
     eyebrow: "Ce qui m’importe",
     title: "Des thématiques qui traversent la société, et les corps.",
     intro: "Je me suis intéressée plus particulièrement à :",
     items: [
-      "la migration et les parcours d’exil — transculturel",
+      "la migration et les parcours d’exil (transculturel)",
       "la parentalité",
-      "la question du genre — identité et orientation",
-      "les violences sexistes et sexuelles — l’inceste, les violences faites aux femmes",
+      "la question du genre (identité et orientation)",
+      "les violences sexistes et sexuelles (l’inceste, les violences faites aux femmes)",
       "la précarité",
       "le travail du sexe / la prostitution",
       "le vécu des patient.es ayant une maladie chronique",

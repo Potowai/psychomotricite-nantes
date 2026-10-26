@@ -21,18 +21,17 @@ export const psychomotricite = {
       title: "Une image d’écoute et de sensorialité",
       note: "Gros plan : mains, souffle, mouvement, texture. Illustration sans visage identifiable.",
     },
-    body: "La psychomotricité est une pratique qui a pour repère principal de considérer le corps dans toute sa complexité : existentielle, expressive, émotionnelle, identitaire.",
-    quote:
-      "« Considérer le corps dans toute sa complexité : existentielle, expressive, émotionnelle, identitaire. »",
+    body: "La psychomotricité est une pratique qui a pour repère principal de considérer le corps dans toute sa complexité :",
+    quote: "« Existentielle, expressive, émotionnelle, identitaire. »",
     bodyAfter:
       "Les séances de psychomotricité s’adressent à toute personne, du bébé à la personne âgée. Les demandes s’inscrivent sur un continuum allant d’une simple volonté d’introspection ou d’une gêne quotidienne pour certain.es, à une souffrance, parfois profonde, et/ou des troubles plus sévères, pour d’autres.",
     calloutTitle: "Une profession paramédicale",
     calloutText:
-      "Psychomotricien.ne est une profession paramédicale, reconnue par un diplôme d’État, de la même manière que les orthophonistes et les kinésithérapeutes. Les compétences des psychomotricien.nes sont encadrées par le décret n°88-659 du 6 mai 1988. Une prescription médicale est donc obligatoire.",
+      "Psychomotricien.ne est une profession paramédicale, reconnue par un diplôme d’État, de la même manière que les orthophonistes et les kinésithérapeutes. Les compétences des psychomotricien.nes sont encadrées par le décret n°88-659 du 6 mai 1988. Une prescription médicale est nécessaire pour engager un bilan ou un suivi, mais elle n’est pas demandée lors d’un premier rendez-vous.",
   },
   motifsSection: {
     eyebrow: "Les motifs qui amènent à consulter",
-    title: "Ils sont variés — et tous singuliers.",
+    title: "Ils sont variés, et tous singuliers.",
     items: [
       {
         title: "Le corps et la motricité",
@@ -86,7 +85,7 @@ export const psychomotricite = {
           "dysphorie de genre",
         ],
         outro:
-          "Il existe beaucoup de parcours de vie, tous singuliers, dans lesquels le rapport au corps n’est pas serein — et parfois la demande est « simplement » d’apprendre à se réapproprier son corps, l’habiter, l’aimer.",
+          "Il existe beaucoup de parcours de vie, tous singuliers, dans lesquels le rapport au corps n’est pas serein, et parfois la demande est « simplement » d’apprendre à se réapproprier son corps, l’habiter, l’aimer.",
       },
       {
         title: "Les étapes de la vie",
@@ -151,7 +150,7 @@ export const psychomotricite = {
       {
         question: "Est-ce que ça marche aussi pour un adulte ?",
         answer:
-          "Oui. La psychomotricité ne s’adresse pas qu’aux enfants : je reçois des adolescent.es et des adultes, parfois longtemps après que les difficultés se sont installées. Aucun diagnostic n’est nécessaire pour venir. Une prescription médicale est en revanche obligatoire pour engager le bilan ou le suivi.",
+          "Oui. La psychomotricité ne s’adresse pas qu’aux enfants : je reçois des adolescent.es et des adultes, parfois longtemps après que les difficultés se sont installées. Aucun diagnostic n’est nécessaire pour venir. ",
       },
       {
         question: "Quelle différence avec l’orthophonie ou la psychologie ?",

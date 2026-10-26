@@ -165,7 +165,7 @@ export const articles: Article[] = [
         items: [
           "Una sesión dura unos 40 minutos. Una sesión de seguimiento cuesta 47 €.",
           "El balance psicomotor se desarrolla en 4 sesiones, es decir, 200 € en total (50 € por sesión).",
-          "Por tanto, es obligatoria una prescripción médica para iniciar un balance o un seguimiento.",
+          "Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
           "Esta prescripción también puede facilitar ciertas gestas (mutua, MDPH).",
         ],
       },
@@ -210,7 +210,7 @@ export const articles: Article[] = [
       { type: "h2", text: "En el consultorio, en Nantes" },
       {
         type: "p",
-        text: "Les recibo en el consultorio multidisciplinario, calle de la Mitrie 4, 44000 Nantes, de lunes a viernes, con cita previa. El consultorio está cerca del centro de la ciudad, en el barrio Malakoff – Saint-Donatien.",
+        text: "Les recibo en el consultorio multidisciplinario, calle de la Mitrie 4, 44000 Nantes, de lunes a jueves, con cita previa. El consultorio está cerca del centro de la ciudad, en el barrio de Saint Donatien, Dalby y Malakoff.",
       },
       {
         type: "ul",

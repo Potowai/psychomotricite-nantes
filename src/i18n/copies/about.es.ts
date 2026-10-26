@@ -34,16 +34,17 @@ export const es: Copy = {
       "Además de la psicomotricidad, mi interés por otras disciplinas como la sociología, las ciencias políticas y la filosofía también me llevó a la universidad. Eso me lleva a pensar la psicomotricidad como abierta al mundo.",
     openBodyAfter:
       "Igual que la persona paciente se inscribe en la sociedad en la que vive, un profesional de la salud no ejerce fuera de la sociedad en la que se inscribe. La vivencia corporal también hay que leer, comprender y actualizar a la luz de los temas sociales contemporáneos.",
+    next: "A continuación: lo que me importa",
   },
   themes: {
     eyebrow: "Lo que me importa",
     title: "Temas que atraviesan la sociedad, y los cuerpos.",
     intro: "Me he interesado especialmente por:",
     items: [
-      "la migración y los trayectos de exilio — transcultural",
+      "la migración y los trayectos de exilio (transcultural)",
       "la parentalidad",
-      "la cuestión de género — identidad y orientación",
-      "las violencias machistas y sexuales — el incesto, la violencia contra las mujeres",
+      "la cuestión de género (identidad y orientación)",
+      "las violencias machistas y sexuales (el incesto, la violencia contra las mujeres)",
       "la precariedad",
       "el trabajo sexual / la prostitución",
       "la vivencia de las personas pacientes con una enfermedad crónica",

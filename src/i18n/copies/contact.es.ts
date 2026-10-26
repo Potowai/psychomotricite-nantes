@@ -4,7 +4,7 @@ export const es: Copy = {
   meta: {
     title: "Contacto y plano de acceso en Nantes",
     description:
-      "Pedir cita con Manuela Edom, psicomotricista en Nantes: 06 84 74 96 70 (llamada o SMS), medom@psychomotricite.com. Consultorio multidisciplinario, calle de la Mitrie 4, 44000 Nantes, de lunes a viernes, con cita previa.",
+      "Pedir cita con Manuela Edom, psicomotricista en Nantes: 06 84 74 96 70 (llamada o SMS), medom@psychomotricite.com. Consultorio multidisciplinario, calle de la Mitrie 4, 44000 Nantes, de lunes a jueves, con cita previa.",
   },
   breadcrumb: {
     home: "Inicio",
@@ -31,7 +31,8 @@ export const es: Copy = {
   practice: {
     title: "El consultorio",
     neighbourhood:
-      "Situado cerca del centro de la ciudad, en el barrio Malakoff – Saint-Donatien.",
+      "Situado cerca del centro de la ciudad, en el barrio de Saint Donatien, Dalby y Malakoff.",
+    accessibility: "Consultorio accesible para personas con movilidad reducida.",
     placeholder: {
       label: "Foto pendiente",
       title: "Fachada del nuevo consultorio, en la calle de la Mitrie 4",
@@ -42,12 +43,12 @@ export const es: Copy = {
     hours: {
       title: "Horarios",
       before: "Consultas en el consultorio ",
-      emphasis: "de lunes a viernes",
+      emphasis: "de lunes a jueves",
       after: ", con cita previa.",
     },
     parking: {
       title: "Aparcamiento",
-      text: "Cerca: aparcamiento del Super U Dalby — 2 h gratuitas, 8 min a pie",
+      text: "Cerca: aparcamiento del Super U Dalby: 2 h gratuitas, 8 min a pie",
     },
     transit: {
       title: "Transporte público",
@@ -68,8 +69,6 @@ export const es: Copy = {
     title: "Escríbame",
     intro:
       "Cuénteme su solicitud en unas pocas palabras: le propondré una cita, o le orientaré hacia la persona más adecuada si esa no soy yo.",
-    prescription:
-      "Es obligatoria una prescripción médica para iniciar un balance o un seguimiento.",
   },
   jsonLd: {
     breadcrumbCurrent: "Contacto",

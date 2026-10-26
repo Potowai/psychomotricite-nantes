@@ -67,7 +67,7 @@ function Wordmark({
     <Link
       href={pages.home[locale]}
       className="group inline-flex flex-col leading-none"
-      aria-label={`${site.name} — ${labels[locale].home}`}
+      aria-label={`${site.name} · ${labels[locale].home}`}
     >
       <span className="font-display text-2xl tracking-tight text-ink transition-colors group-hover:text-blue-deep sm:text-[1.75rem]">
         {site.name}
@@ -204,7 +204,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-2 rounded-full border border-ink px-5 py-3 text-ink"
               >
-                {copy.call} — {site.contact.phoneDisplay}
+                {copy.call} · {site.contact.phoneDisplay}
               </a>
               <Link
                 href={pages.contact[locale]}

@@ -27,7 +27,7 @@ export const en: Copy = {
   },
   host: {
     title: "Hosting",
-    body: "This website is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, United States — ",
+    body: "This website is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, United States: ",
     link: "vercel.com",
     end: ".",
   },

@@ -112,7 +112,7 @@ export function pageMetadata({
       type,
       locale: ogLocale[locale],
       url: canonical,
-      siteName: `${site.name} — ${site.role}`,
+      siteName: `${site.name} · ${site.role}`,
       title,
       description,
       ...(type === "article"
@@ -123,7 +123,7 @@ export function pageMetadata({
           url: image,
           width: 1200,
           height: 630,
-          alt: `${title} — ${site.name}`,
+          alt: `${title} · ${site.name}`,
         },
       ],
     },
@@ -148,25 +148,25 @@ const metaCopy: Record<
 > = {
   fr: {
     role: "Psychomotricienne D.E.",
-    titleDefault: `${site.name} — ${site.role} à Nantes`,
+    titleDefault: `${site.name} · ${site.role} à Nantes`,
     // Suffixe court : Google n'affiche qu'environ 60 caractères, et c'est
     // le sujet de la page qui doit rester lisible.
-    titleTemplate: `%s — ${site.name}, Nantes`,
+    titleTemplate: `%s · ${site.name}, Nantes`,
     description: site.description,
     category: "Santé",
   },
   en: {
     role: "Psychomotor therapist (D.E.)",
-    titleDefault: `${site.name} — psychomotor therapist in Nantes`,
-    titleTemplate: `%s — ${site.name}, Nantes`,
+    titleDefault: `${site.name} · psychomotor therapist in Nantes`,
+    titleTemplate: `%s · ${site.name}, Nantes`,
     description:
       "Manuela Edom is a state-certified psychomotor therapist in Nantes. Sessions for teenagers and adults, and children in specific situations, at the practice at 4 rue de la Mitrie. Giftedness (HPI, HQI/THQI), ASD, ADHD, specific learning difficulties.",
     category: "Health",
   },
   es: {
     role: "Psicomotricista D.E.",
-    titleDefault: `${site.name} — psicomotricista en Nantes`,
-    titleTemplate: `%s — ${site.name}, Nantes`,
+    titleDefault: `${site.name} · psicomotricista en Nantes`,
+    titleTemplate: `%s · ${site.name}, Nantes`,
     description:
       "Manuela Edom es psicomotricista diplomada de Estado en Nantes. Sesiones para adolescentes y personas adultas, y para niños ante solicitudes específicas, en el consultorio de la calle de la Mitrie 4. Altas capacidades (HPI, HQI/THQI), TEA, TDAH, dificultades específicas del aprendizaje.",
     category: "Salud",
@@ -187,7 +187,7 @@ export function buildMetadata(locale: Locale): Metadata {
       template: t.titleTemplate,
     },
     description: t.description,
-    applicationName: `${site.name} — ${t.role}`,
+    applicationName: `${site.name} · ${t.role}`,
     authors: [{ name: site.name, url: `${site.url}${pages.about[locale]}` }],
     creator: site.name,
     publisher: site.name,
@@ -206,11 +206,6 @@ export function buildMetadata(locale: Locale): Metadata {
           }
         : {}),
     },
-    alternates: {
-      types: {
-        "application/rss+xml": "/rss.xml",
-      },
-    },
     openGraph: {
       type: "website",
       locale: ogLocale[locale],
@@ -218,7 +213,7 @@ export function buildMetadata(locale: Locale): Metadata {
         (code) => code !== locale,
       ).map((code) => ogLocale[code]),
       url: "/",
-      siteName: `${site.name} — ${t.role}`,
+      siteName: `${site.name} · ${t.role}`,
       title: t.titleDefault,
       description: t.description,
     },

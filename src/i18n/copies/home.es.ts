@@ -2,7 +2,7 @@ import type { Copy } from "./home.fr";
 
 export const es: Copy = {
   meta: {
-    title: "Psicomotricista en Nantes — adolescentes y personas adultas",
+    title: "Psicomotricista en Nantes · adolescentes y personas adultas",
     description:
       "Manuela Edom, psicomotricista diplomada de Estado en Nantes. Sesiones para adolescentes y personas adultas, y para niños ante solicitudes específicas, en el consultorio de la calle de la Mitrie 4. Altas capacidades (HPI, HQI/THQI), TEA, TDAH, dificultades específicas del aprendizaje. Llamada o SMS al 06 84 74 96 70.",
   },
@@ -11,7 +11,7 @@ export const es: Copy = {
     titleLines: ["El vínculo entre el cuerpo", "y la mente."],
     accent: "El vínculo con el otro.",
     lead:
-      "Soy Manuela Edom, psicomotricista en Nantes desde 2016. Acompaño a adolescentes y personas adultas, allí donde el cuerpo cuenta algo de lo que se está atravesando.",
+      "Psicomotricista en Nantes, acompaño a adolescentes y personas adultas (y niños ante solicitudes específicas).",
     ctaPrimary: "Pedir cita",
     ctaSecondary: "Entender la psicomotricidad",
     figureAlt:
@@ -23,7 +23,7 @@ export const es: Copy = {
         value: "adolescentes y personas adultas",
         note: "(y niños ante solicitudes específicas)",
       },
-      { label: "En el consultorio", value: "de lunes a viernes, con cita previa" },
+      { label: "En el consultorio", value: "de lunes a jueves, con cita previa" },
     ],
   },
   manifest: {
@@ -79,7 +79,7 @@ export const es: Copy = {
       {
         n: "02",
         title: "El balance psicomotor",
-        text: "Si hace falta, se puede realizar un balance psicomotor. No es un paso obligatorio para dar curso a sesiones. Es el momento de una primera fotografía: dónde está la persona en su cuerpo — motricidad fina y global, relación con el tiempo y el espacio, vivencia corporal, sensorialidad. Ahí se leen las dificultades, y también los recursos.",
+        text: "Si hace falta, se puede realizar un balance psicomotor. No es un paso obligatorio para dar curso a sesiones. Es el momento de una primera fotografía: dónde está la persona en su cuerpo (motricidad fina y global, relación con el tiempo y el espacio, vivencia corporal, sensorialidad). Ahí se leen las dificultades, y también los recursos.",
       },
       {
         n: "03",
@@ -104,49 +104,22 @@ export const es: Copy = {
     intro:
       "Les recibo en un consultorio multidisciplinario: una psicomotricista, dos psicólogas clínicas y una médica generalista.",
     neighbourhood:
-      "Situado cerca del centro de la ciudad, en el barrio Malakoff – Saint-Donatien:",
+      "Situado cerca del centro de la ciudad, en el barrio de Saint Donatien, Dalby y Malakoff:",
     addressName: "Consultorio multidisciplinario",
     street: "4 rue de la Mitrie",
     postalCity: "44000 Nantes",
     info: [
-      { label: "Consultas", value: "De lunes a viernes, con cita previa" },
-      { label: "Barrio", value: "Malakoff – Saint-Donatien" },
+      { label: "Consultas", value: "De lunes a jueves, con cita previa" },
+      { label: "Barrio", value: "Saint Donatien, Dalby, Malakoff" },
       { label: "Idiomas", value: "Francés · Inglés" },
       { label: "Tarifas", value: "47 € seguimiento · 200 € balance (4 sesiones)" },
     ],
     transportTitle: "Transportes",
     transport: [
-      "Autobús 11 y 12 — parada Casterneau · 1 min a pie",
-      "C1 — parada Chalâtres · 10 min a pie",
-      "Tranvía línea 1 — parada Moutonnerie · 20 min a pie",
+      "Autobús 11 y 12 · parada Casterneau · 1 min a pie",
+      "C1 · parada Chalâtres · 10 min a pie",
+      "Tranvía línea 1 · parada Moutonnerie · 20 min a pie",
     ],
-  },
-  resources: {
-    eyebrow: "Recursos",
-    title: "Comprender lo que dice el cuerpo.",
-    intro:
-      "Artículos para explorar la psicomotricidad, las altas capacidades, las neurodivergencias y la relación con el cuerpo, escritos para ser útiles, los lea o no.",
-    links: [
-      {
-        key: "douance-hqi-thqi-et-psychomotricite",
-        title: "Altas capacidades (HQI/THQI) y psicomotricidad",
-      },
-      {
-        key: "anxiete-burn-out-pourquoi-passer-par-le-corps",
-        title: "Ansiedad y burnout: ¿por qué pasar por el cuerpo?",
-      },
-      {
-        key: "le-bilan-psychomoteur",
-        title: "El balance psicomotor: qué esperar",
-      },
-    ],
-    all: "Todos los recursos",
-    placeholder: {
-      label: "Ilustración pendiente",
-      title:
-        "Un momento de sesión: mediación corporal, materia, movimiento o tacto",
-      note: "Ilustración de la amiga de Manuela, sin rostro identificable. Formato recomendado: 1600 × 1200 px.",
-    },
   },
   faqSection: {
     eyebrow: "Preguntas frecuentes",
@@ -155,7 +128,7 @@ export const es: Copy = {
       {
         question: "¿Necesito una prescripción para consultar con una psicomotricista?",
         answer:
-          "Sí. La psicomotricidad es una profesión paramédical, reconocida por un diplomado de Estado, igual que la logopedia o la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto de 6 de mayo de 1988. Por tanto, es obligatoria una prescripción médica.",
+          "Sí. La psicomotricidad es una profesión paramédica, reconocida por un diplomado de Estado, igual que la logopedia o la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto de 6 de mayo de 1988. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
       },
       {
         question: "¿Se reembolsa la psicomotricidad?",

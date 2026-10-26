@@ -6,9 +6,9 @@ import portraitManuela from "@/assets/images/portrait-manuela.webp";
 import washBleu from "@/assets/images/wash-bleu.png";
 import { CabinetMap } from "@/components/cabinet-map";
 import { CtaBand } from "@/components/contact-cta";
-import { Container, Faq, PhotoPlaceholder, SectionTitle } from "@/components/ui";
+import { Container, Faq, SectionTitle } from "@/components/ui";
 import { copy } from "@/i18n/copies/home";
-import { articlePaths, pages, type Locale } from "@/lib/i18n";
+import { pages, type Locale } from "@/lib/i18n";
 import { JsonLd, faqSchema } from "@/lib/jsonld";
 
 /* Texture d'abord, une seule couleur : son bleu */
@@ -304,42 +304,6 @@ export function HomePage({ locale }: { locale: Locale }) {
         </Container>
       </section>
 
-      {/* ---------------- Ressources ---------------- */}
-      <section className="bg-paper-2">
-        <Container className="grid gap-12 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-          <PhotoPlaceholder
-            className="rounded-[2rem] lg:order-2"
-            ratio="4 / 3"
-            label={t.resources.placeholder.label}
-            title={t.resources.placeholder.title}
-            note={t.resources.placeholder.note}
-          />
-          <div className="lg:order-1">
-            <SectionTitle
-              eyebrow={t.resources.eyebrow}
-              title={t.resources.title}
-            />
-            <p className="mt-5 text-lg text-ink-2">{t.resources.intro}</p>
-            <ul className="mt-8 space-y-4">
-              {t.resources.links.map((link) => (
-                <ResourceLink
-                  key={link.key}
-                  href={articlePaths[link.key as keyof typeof articlePaths][locale]}
-                  title={link.title}
-                />
-              ))}
-            </ul>
-            <Link
-              href={pages.resources[locale]}
-              className="mt-8 inline-flex items-center gap-2 text-blue-deep link-quiet"
-            >
-              {t.resources.all}
-              <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </Container>
-      </section>
-
       {/* ---------------- FAQ ---------------- */}
       <section>
         <Container className="grid gap-12 py-20 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20 lg:py-28">
@@ -374,26 +338,5 @@ function InfoCell({
       <p className="text-xs uppercase tracking-[0.16em] text-ink-3">{label}</p>
       <p className="mt-2 font-display text-xl text-ink">{value}</p>
     </div>
-  );
-}
-
-function ResourceLink({ href, title }: { href: string; title: string }) {
-  return (
-    <li>
-      <Link
-        href={href}
-        className="group flex items-baseline justify-between gap-4 border-b border-line pb-4"
-      >
-        <span className="font-display text-xl text-ink transition-colors group-hover:text-blue-deep">
-          {title}
-        </span>
-        <span
-          aria-hidden="true"
-          className="translate-y-0 text-ink-3 transition-transform group-hover:translate-x-1"
-        >
-          →
-        </span>
-      </Link>
-    </li>
   );
 }

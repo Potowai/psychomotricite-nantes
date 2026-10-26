@@ -15,7 +15,7 @@ export const motifs: Motif[] = [
       {
         heading: "¿De qué hablamos?",
         paragraphs: [
-          "Las altas capacidades — también llamadas alto potencial intelectual (HPI), o HQI y THQI cuando el cociente es muy alto — designan un funcionamiento cognitivo particular, marcado a menudo por una gran rapidez de pensamiento, una intensidad emocional y una sensibilidad fuerte.",
+          "Las altas capacidades (también llamadas alto potencial intelectual (HPI), o HQI y THQI cuando el cociente es muy alto) designan un funcionamiento cognitivo particular, marcado a menudo por una gran rapidez de pensamiento, una intensidad emocional y una sensibilidad fuerte.",
           "No es ni una enfermedad ni una superioridad: es una manera de estar en el mundo que, en ciertos momentos, puede resultar cansada. La sensación de estar desfasado, la necesidad de sentido, la dificultad de encontrar el lugar propio pesan a veces más que el pensamiento mismo.",
           "En muchas personas HPI, HQI o THQI, el cuerpo es el primero en decirlo: tensiones, agitación, somatizaciones, dificultad para ralentizar, para asentarse, para dejar que una emoción lo atraviese sin quedar desbordado.",
         ],
@@ -32,7 +32,7 @@ export const motifs: Motif[] = [
           "agitación, tensión corporal, somatizaciones",
           "el cansancio de tener que sobreadaptarse o de «hacerse más pequeño»",
           "dificultad para ubicarse en sus sensaciones y en su cuerpo",
-          "un período de vida —estudios, trabajo, parentalidad— que lo descoloca todo",
+          "un período de vida (estudios, trabajo, parentalidad) que lo descoloca todo",
         ],
       },
       {
@@ -54,12 +54,12 @@ export const motifs: Motif[] = [
         question:
           "¿Hace falta un diagnóstico de HPI o de HQI para consultar?",
         answer:
-          "No. No hace falta un diagnóstico para venir. Puede consultar porque algo le pesa, sin tener una palabra para nombrarlo. Aun así, sigue siendo obligatoria una prescripción médica para iniciar el balance o el seguimiento.",
+          "No. No hace falta un diagnóstico para venir. Puede consultar porque algo le pesa, sin tener una palabra para nombrarlo. Aun así, sigue siendo necesaria una prescripción médica para iniciar el balance o el seguimiento, pero no se pide en la primera cita.",
       },
       {
         question: "¿La psicomotricidad «cura» las altas capacidades?",
         answer:
-          "No — las altas capacidades no son algo que curar. El trabajo versa sobre lo vivido: las tensiones, el cansancio, el lugar que se permite ocupar.",
+          "No, las altas capacidades no son algo que curar. El trabajo versa sobre lo vivido: las tensiones, el cansancio, el lugar que se permite ocupar.",
       },
       {
         question: "¿Recibe a adolescentes HPI o HQI/THQI?",
@@ -82,7 +82,7 @@ export const motifs: Motif[] = [
       {
         heading: "¿De qué hablamos?",
         paragraphs: [
-          "El TDAH — trastorno por déficit de atención e hiperactividad, con o sin hiperactividad — concierne la manera de sostener la atención, de regular la agitación y la impulsividad.",
+          "El TDAH (trastorno por déficit de atención e hiperactividad, con o sin hiperactividad) concierne la manera de sostener la atención, de regular la agitación y la impulsividad.",
           "No se trata de una falta de atención, sino de una atención difícil de dirigir y de mantener. El cuerpo está plenamente implicado: moverse, levantarse, balancearse, o por el contrario quedarse quieto, son a menudo formas de resistir.",
           "A menudo se suman la fatiga, la sensación de no llegar y las dificultades en las relaciones o en el trabajo.",
         ],
@@ -99,7 +99,7 @@ export const motifs: Motif[] = [
           "fatiga constante, agotamiento por «aguantar» las cosas",
           "dificultades de organización, planificación y gestión del tiempo",
           "una relación complicada con el cuerpo y las sensaciones",
-          "momentos de discontinuidad —estudios, trabajo— que hacen aflorar las dificultades",
+          "momentos de discontinuidad (estudios, trabajo) que hacen aflorar las dificultades",
         ],
       },
       {
@@ -107,7 +107,7 @@ export const motifs: Motif[] = [
         paragraphs: [
           "La sesión propone experimentar más que constreñir: moverse, apoyarse, asentarse, sentir, y poco a poco distinguir qué ayuda.",
           "El trabajo versa sobre la regulación tónico-emocional, la localización de las sensaciones, la relación con el tiempo y el espacio, la motricidad, así como sobre las funciones ejecutivas: organizarse, planificar, empezar y terminar. Tantos apoyos que pueden trasladarse a lo cotidiano.",
-          "Las mediaciones corporales —movimiento, respiración, tacto, materia— se eligen con usted, según lo que le resulte.",
+          "Las mediaciones corporales (movimiento, respiración, tacto, materia) se eligen con usted, según lo que le resulte.",
         ],
       },
     ],
@@ -148,7 +148,7 @@ export const motifs: Motif[] = [
       {
         heading: "¿De qué hablamos?",
         paragraphs: [
-          "La ansiedad, el estrés crónico y el agotamiento profesional (burnout) no son fragilidades: son señales. El cuerpo suele estar muy implicado —tensiones, sueño, shortness of breath, dolor, trastornos digestivos, fatiga que no se va.",
+          "La ansiedad, el estrés crónico y el agotamiento profesional (burnout) no son fragilidades: son señales. El cuerpo suele estar muy implicado: tensiones, sueño, falta de aire, dolor, trastornos digestivos, fatiga que no se va.",
           "Se puede tener «todo lo necesario» y sentirse, aun así, vaciado, o en alerta permanente. A veces faltan las palabras para decirlo; el cuerpo, en cambio, guarda la huella.",
           "La sesión de psicomotricidad no sustituye un seguimiento médico o psicológico. Ofrece otro punto de entrada.",
         ],
@@ -159,7 +159,7 @@ export const motifs: Motif[] = [
           "No hace falta estar «en el fondo» para consultar. A menudo se viene porque se nota que un equilibrio se ha desplazado.",
         ],
         items: [
-          "una ansiedad —generalizada o puntual— que ocupa mucho espacio, pensamientos en bucle",
+          "una ansiedad (generalizada o puntual) que ocupa mucho espacio, pensamientos en bucle",
           "ataques de pánico, un cuerpo que se desborda sin aviso",
           "un agotamiento que resiste al descanso (burnout)",
           "tensiones, dolores o somatizaciones ligados al estrés",
@@ -215,7 +215,7 @@ export const motifs: Motif[] = [
       {
         heading: "¿De qué hablamos?",
         paragraphs: [
-          "Bajo la etiqueta «dificultades específicas del aprendizaje» se agrupan varios trastornos duraderos de los aprendizajes: dispraxia —también llamada trastorno de la coordinación (TDC o TAC)—, dislexia, disgrafia, discalculia, disortografía, disfasia… No dicen nada de la inteligencia, pero hacen costosos ciertos gestos o ciertos aprendizajes.",
+          "Bajo la etiqueta «dificultades específicas del aprendizaje» se agrupan varios trastornos duraderos de los aprendizajes: dispraxia (también llamada trastorno de la coordinación, TDC o TAC), dislexia, disgrafia, discalculia, disortografía, disfasia… No dicen nada de la inteligencia, pero hacen costosos ciertos gestos o ciertos aprendizajes.",
           "El cuerpo está muy presente: un gesto torpe, una escritura difícil, una ubicación en el espacio o el tiempo que exige mucho esfuerzo, una fatigabilidad importante.",
           "Al acumular tanto esfuerzo invisible, la autoestima puede erosionarse. La psicomotricidad tiene en cuenta esta dimensión tanto como la motricidad.",
         ],
@@ -305,7 +305,7 @@ export const motifs: Motif[] = [
         paragraphs: [
           "La sesión se adapta a sus posibilidades del momento. Puede celebrarse sentado/a o de pie, a partir de movimientos sencillos, de la respiración, del tacto, de la relajación.",
           "Se trata de mantener la movilidad, el equilibrio, la propiocepción y la ubicación en el espacio, pero también de recuperar la seguridad interior y el placer del movimiento.",
-          "Puedo, en determinadas situaciones, desplazarme a su domicilio —en el marco de una continuidad domiciliaria o de un centro residencial (EHPAD, residencia)—.",
+          "Puedo, en determinadas situaciones, desplazarme a su domicilio (en el marco de una continuidad domiciliaria o de un centro residencial, EHPAD o residencia).",
         ],
       },
     ],
@@ -318,7 +318,7 @@ export const motifs: Motif[] = [
       {
         question: "¿Hace falta una prescripción?",
         answer:
-          "La psicomotricidad es una profesión paramédical: es obligatoria una prescripción médica para iniciar un balance o un seguimiento. No dude en hablarlo con su médico.",
+          "La psicomotricidad es una profesión paramédica: se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita. No dude en hablarlo con su médico.",
       },
       {
         question: "¿Se desplaza al domicilio?",

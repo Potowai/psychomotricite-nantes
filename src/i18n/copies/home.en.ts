@@ -2,7 +2,7 @@ import type { Copy } from "./home.fr";
 
 export const en: Copy = {
   meta: {
-    title: "Psychomotor therapist in Nantes — teenagers & adults",
+    title: "Psychomotor therapist in Nantes · teenagers & adults",
     description:
       "Manuela Edom, state-certified psychomotor therapist in Nantes. Sessions for teenagers and adults, and children in specific situations, at the practice at 4 rue de la Mitrie. Giftedness (HPI, HQI/THQI), ASD, ADHD, specific learning difficulties. Call or text 06 84 74 96 70.",
   },
@@ -11,7 +11,7 @@ export const en: Copy = {
     titleLines: ["The link between the body", "and the mind."],
     accent: "The link to the other.",
     lead:
-      "I am Manuela Edom, a psychomotor therapist in Nantes since 2016. I work with teenagers and adults, where the body tells something of what you are going through.",
+      "A psychomotor therapist in Nantes, I work with teenagers and adults (and children in specific situations).",
     ctaPrimary: "Book an appointment",
     ctaSecondary: "Understand psychomotor therapy",
     figureAlt:
@@ -23,7 +23,7 @@ export const en: Copy = {
         value: "teenagers and adults",
         note: "(and children in specific situations)",
       },
-      { label: "At the practice", value: "Monday to Friday, by appointment" },
+      { label: "At the practice", value: "Monday to Thursday, by appointment" },
     ],
   },
   manifest: {
@@ -40,7 +40,7 @@ export const en: Copy = {
     eyebrow: "What brings you here",
     title: "The reasons that lead people to consult are varied.",
     intro:
-      "They may concern the body and movement directly, the emotions and the way we relate to others more deeply — or the relationship to the body itself.",
+      "They may concern the body and movement directly, the emotions and the way we relate to others more deeply, or the relationship to the body itself.",
     items: [
       {
         title: "The body and movement",
@@ -52,7 +52,7 @@ export const en: Copy = {
       },
       {
         title: "The relationship to the body",
-        text: "Eating disorders, the experience of violence, gender dysphoria — or, more simply, the wish “to learn to love one’s body”.",
+        text: "Eating disorders, the experience of violence, gender dysphoria, or more simply, the wish “to learn to love one’s body”.",
       },
       {
         title: "The stages of life",
@@ -79,7 +79,7 @@ export const en: Copy = {
       {
         n: "02",
         title: "The psychomotor assessment",
-        text: "If needed, a psychomotor assessment can be carried out. It is not a mandatory step before sessions. It is the time of a first photograph: where the person stands in their body — fine and gross motor skills, relationship to time and space, bodily experience, sensitivity. Difficulties are read there, and so are resources.",
+        text: "If needed, a psychomotor assessment can be carried out. It is not a mandatory step before sessions. It is the time of a first photograph: where the person stands in their body (fine and gross motor skills, relationship to time and space, bodily experience, sensitivity). Difficulties are read there, and so are resources.",
       },
       {
         n: "03",
@@ -104,49 +104,22 @@ export const en: Copy = {
     intro:
       "I see people in a multidisciplinary practice: a psychomotor therapist, two clinical psychologists and a general practitioner.",
     neighbourhood:
-      "Close to the city centre, in the Malakoff – Saint-Donatien neighbourhood:",
+      "Close to the city centre, in the Saint Donatien, Dalby and Malakoff area:",
     addressName: "Multidisciplinary practice",
     street: "4 rue de la Mitrie",
     postalCity: "44000 Nantes",
     info: [
-      { label: "Consultations", value: "Monday to Friday, by appointment" },
-      { label: "Neighbourhood", value: "Malakoff – Saint-Donatien" },
+      { label: "Consultations", value: "Monday to Thursday, by appointment" },
+      { label: "Neighbourhood", value: "Saint Donatien, Dalby, Malakoff" },
       { label: "Languages", value: "French · English" },
       { label: "Fees", value: "€47 follow-up · €200 assessment (4 sessions)" },
     ],
     transportTitle: "Getting there",
     transport: [
-      "Bus 11 and 12 — Casterneau stop · 1 min walk",
-      "C1 — Chalâtres stop · 10 min walk",
-      "Tram line 1 — Moutonnerie stop · 20 min walk",
+      "Bus 11 and 12 · Casterneau stop · 1 min walk",
+      "C1 · Chalâtres stop · 10 min walk",
+      "Tram line 1 · Moutonnerie stop · 20 min walk",
     ],
-  },
-  resources: {
-    eyebrow: "Resources",
-    title: "Understanding what the body says.",
-    intro:
-      "Articles to explore psychomotor therapy, giftedness, neurodivergence and the relationship to the body — written to be useful, whether you read them or not.",
-    links: [
-      {
-        key: "douance-hqi-thqi-et-psychomotricite",
-        title: "Giftedness (HQI/THQI) and psychomotor therapy",
-      },
-      {
-        key: "anxiete-burn-out-pourquoi-passer-par-le-corps",
-        title: "Anxiety and burnout: why go through the body?",
-      },
-      {
-        key: "le-bilan-psychomoteur",
-        title: "The psychomotor assessment: what to expect",
-      },
-    ],
-    all: "All resources",
-    placeholder: {
-      label: "Illustration to come",
-      title:
-        "A moment of a session: bodily mediation, material, movement or touch",
-      note: "Illustration by Manuela’s friend, with no identifiable face. Suggested format: 1600 × 1200 px.",
-    },
   },
   faqSection: {
     eyebrow: "Frequently asked questions",
@@ -156,7 +129,7 @@ export const en: Copy = {
         question:
           "Do I need a prescription to see a psychomotor therapist?",
         answer:
-          "Yes. Psychomotor therapy is a paramedical profession, recognised by a state diploma, in the same way as speech and occupational therapy. The skills of psychomotor therapists are framed by the decree of 6 May 1988. A medical prescription is therefore required.",
+          "Yes. Psychomotor therapy is a paramedical profession, recognised by a state diploma, in the same way as speech and occupational therapy. The skills of psychomotor therapists are framed by the decree of 6 May 1988. A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
       },
       {
         question: "Is psychomotor therapy reimbursed?",

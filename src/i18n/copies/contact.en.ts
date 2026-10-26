@@ -4,7 +4,7 @@ export const en: Copy = {
   meta: {
     title: "Contact & access map in Nantes",
     description:
-      "Book an appointment with Manuela Edom, psychomotor therapist in Nantes: 06 84 74 96 70 (call or text), medom@psychomotricite.com. Multidisciplinary practice, 4 rue de la Mitrie, 44000 Nantes, Monday to Friday, by appointment.",
+      "Book an appointment with Manuela Edom, psychomotor therapist in Nantes: 06 84 74 96 70 (call or text), medom@psychomotricite.com. Multidisciplinary practice, 4 rue de la Mitrie, 44000 Nantes, Monday to Thursday, by appointment.",
   },
   breadcrumb: {
     home: "Home",
@@ -31,7 +31,8 @@ export const en: Copy = {
   practice: {
     title: "The practice",
     neighbourhood:
-      "Close to the city centre, in the Malakoff – Saint-Donatien neighbourhood.",
+      "Close to the city centre, in the Saint Donatien, Dalby and Malakoff area.",
+    accessibility: "Wheelchair accessible.",
     placeholder: {
       label: "Photo to come",
       title: "Front of the new practice, at 4 rue de la Mitrie",
@@ -42,12 +43,12 @@ export const en: Copy = {
     hours: {
       title: "Opening times",
       before: "Consultations at the practice ",
-      emphasis: "Monday to Friday",
+      emphasis: "Monday to Thursday",
       after: ", by appointment.",
     },
     parking: {
       title: "Parking",
-      text: "Nearby: Super U Dalby car park — 2 hours free, 8 min walk",
+      text: "Nearby: Super U Dalby car park: 2 hours free, 8 min walk",
     },
     transit: {
       title: "Public transport",
@@ -68,8 +69,6 @@ export const en: Copy = {
     title: "Write to me",
     intro:
       "Tell me about your request in a few words: I will suggest an appointment, or point you to whoever is best placed if that is not me.",
-    prescription:
-      "A medical prescription is required to start an assessment or follow-up.",
   },
   jsonLd: {
     breadcrumbCurrent: "Contact",

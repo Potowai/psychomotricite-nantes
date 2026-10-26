@@ -180,7 +180,7 @@ export const articles: Article[] = [
         items: [
           "Une séance dure environ 40 minutes. Une séance de suivi coûte 47 €.",
           "Le bilan psychomoteur se déroule en 4 séances, soit 200 € au total (50 € par séance).",
-          "Une prescription médicale est donc obligatoire pour engager un bilan ou un suivi.",
+          "Une prescription médicale est nécessaire pour engager un bilan ou un suivi, mais elle n’est pas demandée lors d’un premier rendez-vous.",
           "Cette prescription peut aussi faciliter certaines démarches (mutuelle, MDPH).",
         ],
       },
@@ -225,7 +225,7 @@ export const articles: Article[] = [
       { type: "h2", text: "Au cabinet, à Nantes" },
       {
         type: "p",
-        text: "Je vous reçois au cabinet pluridisciplinaire, 4 rue de la Mitrie, 44000 Nantes, du lundi au vendredi, sur rendez-vous. Le cabinet se situe à proximité du centre-ville, quartier Malakoff – Saint-Donatien.",
+        text: "Je vous reçois au cabinet pluridisciplinaire, 4 rue de la Mitrie, 44000 Nantes, du lundi au jeudi, sur rendez-vous. Le cabinet se situe à proximité du centre-ville, quartier Saint Donatien, Dalby, Malakoff.",
       },
       {
         type: "ul",

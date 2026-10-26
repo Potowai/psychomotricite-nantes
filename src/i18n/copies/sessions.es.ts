@@ -4,7 +4,7 @@ export const es: Copy = {
   meta: {
     title: "Sesiones, tarifas y ayudas a la financiación",
     description:
-      "Sesiones de psicomotricidad en Nantes: cómo sedevelopan, mediaciones corporales, duración (40 min), tarifas (47 € seguimiento, 200 € balance en 4 sesiones) y las ayudas que pueden existir — mutuas, CPAM, MDPH (PCH, AEEH).",
+      "Sesiones de psicomotricidad en Nantes: cómo sedevelopan, mediaciones corporales, duración (40 min), tarifas (47 € seguimiento, 200 € balance en 4 sesiones) y las ayudas que pueden existir: mutuas, CPAM, MDPH (PCH, AEEH).",
   },
   breadcrumb: {
     home: "Inicio",
@@ -57,7 +57,7 @@ export const es: Copy = {
     body: "Las sesiones se desarrollan lo más habitualmente en mi consultorio, en un consultorio multidisciplinario que reúne una psicomotricista, dos psicólogas clínicas y una médica generalista. Puedo desplazarme excepcionalmente a domicilio y/o a los lugares de vida, para situaciones específicas.",
     opening: {
       before: "La consulta tiene lugar ",
-      emphasis: "de lunes a viernes",
+      emphasis: "de lunes a jueves",
       after: ", con cita previa. ",
     },
     accessLink: "Ver el plano de acceso y los transportes",
@@ -77,14 +77,14 @@ export const es: Copy = {
     },
     prescription: {
       title: "Prescripción",
-      text: "La psicomotricidad es una profesión paramédical: es obligatoria una prescripción médica para iniciar un balance o un seguimiento.",
+      text: "La psicomotricidad es una profesión paramédica: Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
     },
   },
   funding: {
     eyebrow: "Ayudas a la financiación",
     title: "No se quede solo.a frente a las trámites.",
     intro:
-      "Varios dispositivos pueden participar en la financiación de las sesiones. Aquí lo esencial — y para el detalle del expediente, puedo acompañarle.",
+      "Varios dispositivos pueden participar en la financiación de las sesiones. Aquí lo esencial. Para el detalle del expediente, puedo acompañarle.",
     items: [
       {
         question: "Las mutuas",
@@ -124,7 +124,7 @@ export const es: Copy = {
         },
       },
       {
-        question: "La MDPH — PCH y complemento de la AEEH",
+        question: "La MDPH: PCH y complemento de la AEEH",
         answer: {
           paragraphs: [
             {

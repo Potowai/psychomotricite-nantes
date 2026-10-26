@@ -1,4 +1,3 @@
-import { articlesFor } from "@/content/blog";
 import { motifs } from "@/content/motifs";
 import type { Block } from "@/content/blog";
 import { fullAddress, site } from "@/lib/site";
@@ -19,18 +18,17 @@ function blockToText(block: Block): string {
     case "ul":
       return block.items.map((item) => `- ${item}`).join("\n");
     case "note":
-      return block.title ? `${block.title} — ${block.text}` : block.text;
+      return block.title ? `${block.title} : ${block.text}` : block.text;
   }
 }
 
 export function GET() {
-  const articles = articlesFor();
   const lines: string[] = [];
 
-  lines.push(`# ${site.name} — ${site.role} à Nantes`);
+  lines.push(`# ${site.name} · ${site.role} à Nantes`);
   lines.push("");
   lines.push(
-    "> Version française. Index court en anglais : /en/llms.txt — en espagnol : /es/llms.txt",
+    "> Version française. Index court en anglais : /en/llms.txt ; en espagnol : /es/llms.txt",
   );
   lines.push("");
   lines.push(
@@ -43,13 +41,13 @@ export function GET() {
     "Qu'est-ce que la psychomotricité ? Une profession paramédicale reconnue par un diplôme d'État, encadrée par le décret n°88-659 du 6 mai 1988. Elle s'intéresse aux liens entre les vécus corporels et psychiques, à la croisée des neurosciences, de l'anatomie, de la psychologie et de la psychiatrie.",
   );
   lines.push(
-    `Où consulter ? Au cabinet pluridisciplinaire, ${site.address.street}, ${site.address.postalCode} ${site.address.city}, du lundi au vendredi, sur rendez-vous.`,
+    `Où consulter ? Au cabinet pluridisciplinaire, ${site.address.street}, ${site.address.postalCode} ${site.address.city}, du lundi au jeudi, sur rendez-vous.`,
   );
   lines.push(
     `Combien coûte une séance ? ${site.pricing.suivi.amount} € la séance de suivi ; le bilan psychomoteur se déroule en ${site.pricing.bilan.sessions} séances, soit ${site.pricing.bilan.total} € au total (${site.pricing.bilan.unitAmount} € par séance). Une séance dure environ ${site.pricing.durationMinutes} minutes.`,
   );
   lines.push(
-    "Faut-il une ordonnance ? Oui. Une prescription médicale est donc obligatoire pour engager un bilan ou un suivi en psychomotricité.",
+    "Faut-il une ordonnance ? Une prescription médicale est nécessaire pour engager un bilan ou un suivi en psychomotricité, mais elle n’est pas demandée lors d’un premier rendez-vous.",
   );
   lines.push(
     "Est-ce remboursé par la Sécurité sociale ? Non, les soins de psychomotricité ne sont pas remboursés par l'Assurance maladie à ce jour. Des aides existent : mutuelles (forfait bien-être, recours amiable), prestations extra-légales de la CPAM, MDPH (PCH pour les adultes, complément d'AEEH pour les enfants), caisses de retraite et comités d'entreprise.",
@@ -60,18 +58,18 @@ export function GET() {
   lines.push("");
 
   lines.push("## Informations pratiques");
-  lines.push(`- Nom : ${site.name} — ${site.role}`);
+  lines.push(`- Nom : ${site.name} · ${site.role}`);
   lines.push(`- Adresse : ${fullAddress}`);
   lines.push(
     `- Coordonnées GPS : ${site.address.geo.latitude}, ${site.address.geo.longitude}`,
   );
   lines.push(
-    `- Téléphone : ${site.contact.phoneDisplay} (appel ou SMS) — ${site.contact.phoneHref}`,
+    `- Téléphone : ${site.contact.phoneDisplay} (appel ou SMS) · ${site.contact.phoneHref}`,
   );
   lines.push(`- E-mail : ${site.contact.email}`);
-  lines.push("- Horaires : du lundi au vendredi, sur rendez-vous");
+  lines.push("- Horaires : du lundi au jeudi, sur rendez-vous");
   lines.push(
-    "- Accès : à proximité du centre-ville, quartier Malakoff – Saint-Donatien ; parking du Super U Dalby, 2 h gratuites, 8 min à pied",
+    "- Accès : à proximité du centre-ville, quartier Saint Donatien, Dalby, Malakoff ; parking du Super U Dalby, 2 h gratuites, 8 min à pied ; cabinet accessible PMR",
   );
   lines.push(
     "- Transports : Bus 11 et 12 (arrêt Casterneau, 1 min à pied) ; C1 (arrêt Chalâtres, 10 min à pied) ; Tramway ligne 1 (arrêt Moutonnerie, 20 min à pied)",
@@ -97,7 +95,6 @@ export function GET() {
   );
   lines.push(`- [Contact](${site.url}/contact) : coordonnées, plan d'accès, formulaire`);
   lines.push(`- [Questions fréquentes](${site.url}/faq) : ordonnance, remboursement, tarifs, accès`);
-  lines.push(`- [Ressources](${site.url}/blog) : articles`);
   lines.push(`- [English](${site.url}/en) : English-speaking psychomotor therapist in Nantes`);
   lines.push("");
 
@@ -121,7 +118,7 @@ export function GET() {
     }
     if (motif.note) {
       lines.push("");
-      lines.push(`${motif.note.title} — ${motif.note.text}`);
+      lines.push(`${motif.note.title} · ${motif.note.text}`);
     }
     if (motif.faq.length > 0) {
       lines.push("");
@@ -129,20 +126,6 @@ export function GET() {
       for (const item of motif.faq) {
         lines.push(`- ${item.question} ${item.answer}`);
       }
-    }
-  }
-  lines.push("");
-
-  lines.push("## Articles");
-  for (const article of articles) {
-    lines.push("");
-    lines.push(`### ${article.title}`);
-    lines.push(`URL : ${site.url}/blog/${article.slug}`);
-    lines.push(`Publié le ${article.date}${article.updated ? `, mis à jour le ${article.updated}` : ""}.`);
-    lines.push(article.description);
-    for (const block of article.blocks) {
-      lines.push("");
-      lines.push(blockToText(block));
     }
   }
   lines.push("");

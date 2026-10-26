@@ -34,16 +34,17 @@ export const en: Copy = {
       "Alongside psychomotor therapy, my appetite for other disciplines such as sociology, political science and philosophy also took me to university. It leads me to think of psychomotor therapy as open to the world.",
     openBodyAfter:
       "Just as a patient lives within the society they live in, a care professional does not practise outside the society they belong to. Bodily experience also has to be read, understood and brought up to date in the light of contemporary societal themes.",
+    next: "Next: what matters to me",
   },
   themes: {
     eyebrow: "What matters to me",
     title: "Themes that run through society, and through bodies.",
     intro: "I have taken a particular interest in:",
     items: [
-      "migration and exile journeys — transcultural",
+      "migration and exile journeys (transcultural)",
       "parenthood",
-      "the question of gender — identity and orientation",
-      "sexist and sexual violence — incest, violence against women",
+      "the question of gender (identity and orientation)",
+      "sexist and sexual violence (incest, violence against women)",
       "precariousness",
       "sex work / prostitution",
       "the experience of patients with a chronic illness",

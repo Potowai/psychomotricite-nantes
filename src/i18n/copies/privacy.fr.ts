@@ -29,7 +29,7 @@ export const privacy = {
   },
   retention: {
     title: "Combien de temps sont-elles conservées ?",
-    body: "Les messages reçus sont conservés le temps nécessaire au traitement de votre demande, puis supprimés — en principe sous 12 mois, sauf relation de soin en cours, pour laquelle la conservation suit les obligations professionnelles applicables.",
+    body: "Les messages reçus sont conservés le temps nécessaire au traitement de votre demande, puis supprimés, en principe sous 12 mois, sauf relation de soin en cours, pour laquelle la conservation suit les obligations professionnelles applicables.",
   },
   access: {
     title: "Qui y a accès ?",

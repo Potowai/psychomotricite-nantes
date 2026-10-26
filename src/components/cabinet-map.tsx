@@ -290,7 +290,7 @@ export function CabinetMap({
         ref={shell}
         role={full ? "dialog" : undefined}
         aria-modal={full ? true : undefined}
-        aria-label={full ? `${t.dialogLabel} — ${fullAddressFor(locale)}` : undefined}
+        aria-label={full ? `${t.dialogLabel} · ${fullAddressFor(locale)}` : undefined}
         className={`carte-shell relative overflow-hidden bg-paper-2 ${
           full
             ? "carte-full"
@@ -308,7 +308,7 @@ export function CabinetMap({
           <div
             ref={holder}
             role="region"
-            aria-label={`${t.regionLabel} — ${fullAddressFor(locale)}`}
+            aria-label={`${t.regionLabel} · ${fullAddressFor(locale)}`}
             data-map
           />
         </div>

@@ -24,18 +24,17 @@ export const en: Copy = {
       title: "An image of attention and of the senses",
       note: "Close-up: hands, breath, movement, texture. Illustration without an identifiable face.",
     },
-    body: "Psychomotor therapy is a practice whose main landmark is to consider the body in its full complexity: existential, expressive, emotional, identity-related.",
-    quote:
-      "“Considering the body in its full complexity: existential, expressive, emotional, identity-related.”",
+    body: "Psychomotor therapy is a practice whose main landmark is to consider the body in its full complexity:",
+    quote: "“Existential, expressive, emotional, identity-related.”",
     bodyAfter:
       "Psychomotor therapy sessions are for anyone, from babies to older people. Requests lie on a continuum, from a simple wish to look inward, or a daily unease for some, to a suffering that is sometimes deep, and/or more severe disorders, for others.",
     calloutTitle: "A paramedical profession",
     calloutText:
-      "Psychomotor therapist is a paramedical profession, recognised by a state diploma, in the same way as speech and occupational therapists. The skills of psychomotor therapists are framed by the decree n°88-659 of 6 May 1988. A medical prescription is therefore required.",
+      "Psychomotor therapist is a paramedical profession, recognised by a state diploma, in the same way as speech and occupational therapists. The skills of psychomotor therapists are framed by the decree n°88-659 of 6 May 1988. A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
   },
   motifsSection: {
     eyebrow: "The reasons that lead people to consult",
-    title: "They are varied — and each one is singular.",
+    title: "They are varied, and each one is singular.",
     items: [
       {
         title: "The body and movement",
@@ -89,7 +88,7 @@ export const en: Copy = {
           "gender dysphoria",
         ],
         outro:
-          "There are many life paths, each of them singular, in which the relationship to the body is not peaceful — and sometimes the request is simply “to learn to reclaim one's body, to inhabit it, to love it.”",
+          "There are many life paths, each of them singular, in which the relationship to the body is not peaceful, and sometimes the request is simply “to learn to reclaim one's body, to inhabit it, to love it.”",
       },
       {
         title: "The stages of life",
@@ -153,7 +152,7 @@ export const en: Copy = {
       {
         question: "Does it work for adults too?",
         answer:
-          "Yes. Psychomotor therapy is not only for children: I see teenagers and adults, sometimes long after the difficulties have settled in. No diagnosis is needed to come. A medical prescription is required, however, to start an assessment or follow-up.",
+          "Yes. Psychomotor therapy is not only for children: I see teenagers and adults, sometimes long after the difficulties have settled in. No diagnosis is needed to come. ",
       },
       {
         question: "What is the difference with speech therapy or psychology?",

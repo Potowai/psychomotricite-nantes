@@ -81,6 +81,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
               </span>
             </address>
             <p className="mt-3 text-ink-2">{t.practice.neighbourhood}</p>
+            <p className="mt-1 text-ink-2">{t.practice.accessibility}</p>
             <PhotoPlaceholder
               className="mt-6 rounded-[1.5rem]"
               ratio="4 / 3"
@@ -120,7 +121,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
                 <li key={line.line} className="flex gap-3">
                   <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 rounded-full bg-blue" />
                   <span>
-                    <strong className="font-medium text-ink">{line.line}</strong> —
+                    <strong className="font-medium text-ink">{line.line}</strong> ·
                     {t.practical.transit.stopLabel} {line.stop} · {line.walk}
                   </span>
                 </li>
@@ -152,7 +153,6 @@ export function ContactPage({ locale }: { locale: Locale }) {
             {t.form.title}
           </h2>
           <p className="mt-3 text-ink-2">{t.form.intro}</p>
-          <p className="mt-3 text-sm text-ink-3">{t.form.prescription}</p>
           <div className="mt-8">
             <ContactForm locale={locale} />
           </div>

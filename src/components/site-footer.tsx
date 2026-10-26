@@ -32,7 +32,7 @@ const copy: Record<
     role: "Psychomotricienne D.E.",
     line1: "Bilan et séances de psychomotricité sur rendez-vous.",
     line2:
-      "Consultations de psychomotricité pour adolescent.es et adultes, à Nantes et dans la métropole : Rezé, Saint-Herblain, Orvault, Saint-Sébastien-sur-Loire.",
+      "Consultations au cabinet, à Nantes, accessibles depuis Rezé, Saint-Herblain, Orvault et Saint-Sébastien-sur-Loire.",
     otherSite: "mon autre site, pour les parents et les enfants",
     newWindow: "nouvelle fenêtre",
     practice: "Le cabinet",
@@ -45,7 +45,7 @@ const copy: Record<
     legal: "Mentions légales",
     privacy: "Confidentialité",
     language: "Langue du site",
-    hours: "du lundi au vendredi, sur rendez-vous",
+    hours: "du lundi au jeudi, sur rendez-vous",
     phoneNote: "Appel ou SMS",
     fullAddressLabel: "Adresse complète",
     phoneLabel: "Téléphone",
@@ -55,7 +55,7 @@ const copy: Record<
     role: "Psychomotor therapist (D.E.)",
     line1: "Psychomotor assessment and sessions by appointment.",
     line2:
-      "Psychomotor therapy for teenagers and adults, in Nantes and around the city: Rezé, Saint-Herblain, Orvault, Saint-Sébastien-sur-Loire.",
+      "Consultations at the practice in Nantes, easily reached from Rezé, Saint-Herblain, Orvault and Saint-Sébastien-sur-Loire.",
     otherSite: "my other site, for parents and children",
     newWindow: "new window",
     practice: "The practice",
@@ -68,7 +68,7 @@ const copy: Record<
     legal: "Legal notice",
     privacy: "Privacy",
     language: "Site language",
-    hours: "Monday to Friday, by appointment",
+    hours: "Monday to Thursday, by appointment",
     phoneNote: "Call or text",
     fullAddressLabel: "Full address",
     phoneLabel: "Phone",
@@ -78,7 +78,7 @@ const copy: Record<
     role: "Psicomotricista D.E.",
     line1: "Balance y sesiones de psicomotricidad con cita previa.",
     line2:
-      "Consultas de psicomotricidad para adolescentes y personas adultas, en Nantes y en su área metropolitana: Rezé, Saint-Herblain, Orvault, Saint-Sébastien-sur-Loire.",
+      "Consultas en el consultorio, en Nantes, accesibles desde Rezé, Saint-Herblain, Orvault y Saint-Sébastien-sur-Loire.",
     otherSite: "mi otro sitio, para las familias con hijos",
     newWindow: "ventana nueva",
     practice: "El consultorio",
@@ -91,7 +91,7 @@ const copy: Record<
     legal: "Aviso legal",
     privacy: "Privacidad",
     language: "Idioma del sitio",
-    hours: "de lunes a viernes, con cita previa",
+    hours: "de lunes a jueves, con cita previa",
     phoneNote: "Llamada o SMS",
     fullAddressLabel: "Dirección completa",
     phoneLabel: "Teléfono",
@@ -210,7 +210,7 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
         <div className="mt-6 flex flex-col gap-3 text-xs text-ink-3 sm:flex-row sm:items-start sm:justify-between">
           <div className="space-y-1.5">
             <p>
-              © {year} {site.name} — {t.role}. {t.rights}
+              © {year} {site.name} · {t.role} {t.rights}
             </p>
             <p>
               {t.credit}{" "}

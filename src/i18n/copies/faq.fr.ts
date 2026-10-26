@@ -19,7 +19,7 @@ export const faq = {
       question:
         "Faut-il une ordonnance pour consulter une psychomotricienne ?",
       answer:
-        "Oui. Psychomotricien.ne est une profession paramédicale, reconnue par un diplôme d’État, de la même manière que les orthophonistes et les kinésithérapeutes. Les compétences des psychomotricien.nes sont encadrées par le décret n°88-659 du 6 mai 1988. Une prescription médicale est donc obligatoire.",
+        "Oui. Psychomotricien.ne est une profession paramédicale, reconnue par un diplôme d’État, de la même manière que les orthophonistes et les kinésithérapeutes. Les compétences des psychomotricien.nes sont encadrées par le décret n°88-659 du 6 mai 1988. Une prescription médicale est nécessaire pour engager un bilan ou un suivi, mais elle n’est pas demandée lors d’un premier rendez-vous.",
     },
     {
       category: "Consulter",
@@ -32,13 +32,13 @@ export const faq = {
       question:
         "Faut-il un diagnostic ou un trouble particulier pour venir ?",
       answer:
-        "Non. Les demandes s’inscrivent sur un continuum allant d’une simple volonté d’introspection ou d’une gêne quotidienne, à une souffrance parfois profonde et/ou à des troubles plus sévères. Aucun diagnostic préalable n’est exigé. Une prescription médicale est en revanche obligatoire pour engager le bilan ou le suivi.",
+        "Non. Les demandes s’inscrivent sur un continuum allant d’une simple volonté d’introspection ou d’une gêne quotidienne, à une souffrance parfois profonde et/ou à des troubles plus sévères. Aucun diagnostic préalable n’est exigé. Une prescription médicale est nécessaire pour engager un bilan ou un suivi, mais elle n’est pas demandée lors d’un premier rendez-vous.",
     },
     {
       category: "Consulter",
       question: "Que se passe-t-il lors d’un premier rendez-vous ?",
       answer:
-        "Le premier rendez-vous permet de préciser votre demande, ce que je peux vous proposer, et de se rencontrer, sans jugement et à votre rythme. Si besoin, un bilan psychomoteur peut être réalisé ; il n’est pas obligatoire pour commencer des séances. C’est le temps d’une première photographie : où en est la personne dans son corps — motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité.",
+        "Le premier rendez-vous permet de préciser votre demande, ce que je peux vous proposer, et de se rencontrer, sans jugement et à votre rythme. Si besoin, un bilan psychomoteur peut être réalisé ; il n’est pas obligatoire pour commencer des séances. C’est le temps d’une première photographie : où en est la personne dans son corps (motricité fine et globale, rapport au temps et à l’espace, vécu corporel, sensorialité).",
     },
     {
       category: "Tarifs & remboursement",
@@ -95,13 +95,13 @@ export const faq = {
       category: "Le cabinet",
       question: "Où se trouve le cabinet et comment y accéder ?",
       answer:
-        "Le cabinet est situé au 4 rue de la Mitrie, 44000 Nantes, dans un cabinet pluridisciplinaire, à proximité du centre-ville, quartier Malakoff – Saint-Donatien. En transports : bus 11 et 12, arrêt Casterneau (1 min à pied) ; C1, arrêt Chalâtres (10 min à pied) ; tramway ligne 1, arrêt Moutonnerie (20 min à pied). À proximité, le parking du Super U Dalby propose 2 h gratuites, à 8 min à pied.",
+        "Le cabinet est situé au 4 rue de la Mitrie, 44000 Nantes, dans un cabinet pluridisciplinaire, à proximité du centre-ville, quartier Saint Donatien, Dalby, Malakoff. En transports : bus 11 et 12, arrêt Casterneau (1 min à pied) ; C1, arrêt Chalâtres (10 min à pied) ; tramway ligne 1, arrêt Moutonnerie (20 min à pied). À proximité, le parking du Super U Dalby propose 2 h gratuites, à 8 min à pied.",
     },
     {
       category: "Le cabinet",
       question: "Quels sont les horaires de consultation ?",
       answer:
-        "Je vous reçois au cabinet du lundi au vendredi, sur rendez-vous. Prenez rendez-vous par téléphone ou SMS au 06 84 74 96 70.",
+        "Je vous reçois au cabinet du lundi au jeudi, sur rendez-vous. Prenez rendez-vous par téléphone ou SMS au 06 84 74 96 70.",
     },
     {
       category: "Douance & neuroatypies",

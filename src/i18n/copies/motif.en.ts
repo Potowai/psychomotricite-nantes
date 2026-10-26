@@ -18,7 +18,7 @@ export const en: Copy = {
   },
   others: {
     title: "Other reasons for consulting",
-    before: "Is your situation not listed here? It is no less legitimate — ",
+    before: "Is your situation not listed here? It is no less legitimate: ",
     link: "write to me or call me",
     after: " to explain your request.",
   },
@@ -27,7 +27,7 @@ export const en: Copy = {
     text: "Do not hesitate to contact me to explain your request: I will suggest an appointment, or point you to another professional if that would be better.",
   },
   jsonLd: {
-    serviceSuffix: "— psychomotor therapy",
+    serviceSuffix: "· psychomotor therapy",
     breadcrumbCurrent: "Psychomotor therapy",
   },
 };

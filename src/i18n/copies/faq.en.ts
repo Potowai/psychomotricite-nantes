@@ -20,7 +20,7 @@ export const en: Copy = {
       category: "Consulting",
       question: "Do I need a prescription to see a psychomotor therapist?",
       answer:
-        "Yes. Psychomotor therapy is a paramedical profession, recognised by a state diploma, in the same way as speech and occupational therapy. The skills of psychomotor therapists are framed by the decree of 6 May 1988. A medical prescription is therefore required.",
+        "Yes. Psychomotor therapy is a paramedical profession, recognised by a state diploma, in the same way as speech and occupational therapy. The skills of psychomotor therapists are framed by the decree of 6 May 1988. A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
     },
     {
       category: "Consulting",
@@ -32,13 +32,13 @@ export const en: Copy = {
       category: "Consulting",
       question: "Do I need a diagnosis or a particular condition to come?",
       answer:
-        "No. Requests lie on a continuum, from a simple wish to look inward or a daily unease to a suffering that is sometimes deep and/or to more severe disorders. No prior diagnosis is required. A medical prescription is, however, required to start the assessment or follow-up.",
+        "No. Requests lie on a continuum, from a simple wish to look inward or a daily unease to a suffering that is sometimes deep and/or to more severe disorders. No prior diagnosis is required. A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
     },
     {
       category: "Consulting",
       question: "What happens at the first appointment?",
       answer:
-        "The first appointment allows us to clarify what you are asking for, what I can offer, and to meet each other, without judgement and at your own pace. If needed, a psychomotor assessment can be carried out; it is not required before starting sessions. It is the time of a first photograph: where the person stands in their body — fine and gross motor skills, relationship to time and space, bodily experience, sensitivity.",
+        "The first appointment allows us to clarify what you are asking for, what I can offer, and to meet each other, without judgement and at your own pace. If needed, a psychomotor assessment can be carried out; it is not required before starting sessions. It is the time of a first photograph: where the person stands in their body (fine and gross motor skills, relationship to time and space, bodily experience, sensitivity).",
     },
     {
       category: "Fees & reimbursement",
@@ -94,13 +94,13 @@ export const en: Copy = {
       category: "The practice",
       question: "Where is the practice and how do I get there?",
       answer:
-        "The practice is at 4 rue de la Mitrie, 44000 Nantes, in a multidisciplinary practice, close to the city centre, in the Malakoff – Saint-Donatien neighbourhood. By public transport: bus 11 and 12, Casterneau stop (1 min walk); C1, Chalâtres stop (10 min walk); tram line 1, Moutonnerie stop (20 min walk). Nearby, the Super U Dalby car park offers 2 hours free parking, an 8-minute walk away.",
+        "The practice is at 4 rue de la Mitrie, 44000 Nantes, in a multidisciplinary practice, close to the city centre, in the Saint Donatien, Dalby and Malakoff area. By public transport: bus 11 and 12, Casterneau stop (1 min walk); C1, Chalâtres stop (10 min walk); tram line 1, Moutonnerie stop (20 min walk). Nearby, the Super U Dalby car park offers 2 hours free parking, an 8-minute walk away.",
     },
     {
       category: "The practice",
       question: "What are the consultation times?",
       answer:
-        "I see people at the practice Monday to Friday, by appointment. Book by phone or text message on 06 84 74 96 70.",
+        "I see people at the practice Monday to Thursday, by appointment. Book by phone or text message on 06 84 74 96 70.",
     },
     {
       category: "Giftedness & neurodivergence",

@@ -128,7 +128,7 @@ const copy: Record<
     another: "Écrire un autre message",
     errorTitle: "Le formulaire n’a pas pu été envoyé",
     orCall: "Vous pouvez aussi m’appeler ou m’envoyer un SMS au",
-    subject: "Demande de contact — {name}",
+    subject: "Demande de contact · {name}",
     mailLabels: {
       name: "Nom",
       email: "E-mail",
@@ -198,7 +198,7 @@ const copy: Record<
     another: "Write another message",
     errorTitle: "The form could not be sent",
     orCall: "You can also call or text me on",
-    subject: "Contact request — {name}",
+    subject: "Contact request · {name}",
     mailLabels: {
       name: "Name",
       email: "E-mail",
@@ -267,7 +267,7 @@ const copy: Record<
     another: "Escribir otro mensaje",
     errorTitle: "No se ha podido enviar el formulario",
     orCall: "También puede llamarme o enviarme un SMS al",
-    subject: "Solicitud de contacto — {name}",
+    subject: "Solicitud de contacto · {name}",
     mailLabels: {
       name: "Nombre",
       email: "Correo electrónico",

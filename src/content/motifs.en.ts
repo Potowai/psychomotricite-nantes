@@ -10,12 +10,12 @@ export const motifs: Motif[] = [
     metaDescription:
       "Psychomotor therapy and giftedness in Nantes: a space for the body of HPI, HQI or THQI people, where intensity and sensitivity can settle. Manuela Edom, psychomotor therapist.",
     title: "Giftedness, HPI, HQI: when the body also needs room.",
-    lead: "Having developed a fine understanding of giftedness, I very often see HPI, HQI or THQI people. Psychomotor therapy offers a space where the intelligence no longer has to carry everything — where the body, on the other hand, can settle.",
+    lead: "Having developed a fine understanding of giftedness, I very often see HPI, HQI or THQI people. Psychomotor therapy offers a space where the intelligence no longer has to carry everything, where the body, on the other hand, can settle.",
     sections: [
       {
         heading: "What are we talking about?",
         paragraphs: [
-          "Giftedness — also called high intellectual potential (HPI), or HQI and THQI when the quotient is very high — describes a particular way of thinking, often marked by great speed of thought, emotional intensity and strong sensitivity.",
+          "Giftedness (also called high intellectual potential (HPI), or HQI and THQI when the quotient is very high) describes a particular way of thinking, often marked by great speed of thought, emotional intensity and strong sensitivity.",
           "It is neither an illness nor a superiority: it is a way of being in the world which, at times, can become tiring. The feeling of being out of step, the need for meaning, the difficulty of finding one's place sometimes weigh more than the thought itself.",
           "For many HPI, HQI or THQI people, the body says it first: tension, agitation, somatisation, difficulty slowing down, settling, letting an emotion pass through without being overwhelmed.",
         ],
@@ -32,7 +32,7 @@ export const motifs: Motif[] = [
           "agitation, bodily tension, somatisation",
           "the fatigue of having to adapt constantly, or to “make oneself smaller”",
           "difficulty finding one's bearings in one's sensations and body",
-          "a period of life — studies, work, parenthood — that turns everything upside down",
+          "a period of life (studies, work, parenthood) that turns everything upside down",
         ],
       },
       {
@@ -53,12 +53,12 @@ export const motifs: Motif[] = [
       {
         question: "Do I need an HPI or HQI diagnosis to consult?",
         answer:
-          "No. A diagnosis is not needed to come. You can consult because something weighs on you, without having a word for it. A medical prescription is still required to start the assessment or follow-up.",
+          "No. A diagnosis is not needed to come. You can consult because something weighs on you, without having a word for it. A medical prescription is still required to start the assessment or follow-up, but it is not asked for at a first appointment.",
       },
       {
         question: "Does psychomotor therapy “cure” giftedness?",
         answer:
-          "No — giftedness is not something to be cured. The work is about the lived experience: the tension, the fatigue, the place you allow yourself to take.",
+          "No, giftedness is not something to be cured. The work is about the lived experience: the tension, the fatigue, the place you allow yourself to take.",
       },
       {
         question: "Do you see HPI or HQI/THQI teenagers?",
@@ -81,7 +81,7 @@ export const motifs: Motif[] = [
       {
         heading: "What are we talking about?",
         paragraphs: [
-          "ADHD — attention deficit disorder, with or without hyperactivity — concerns the way attention is sustained, and the way agitation and impulsivity are regulated.",
+          "ADHD (attention deficit disorder, with or without hyperactivity) concerns the way attention is sustained, and the way agitation and impulsivity are regulated.",
           "It is not a lack of attention, but an attention that is hard to direct and to hold. The body is fully involved: moving, standing up, swaying, or on the contrary freezing, are often ways of holding on.",
           "Fatigue, the feeling of not managing, and difficulties in relationships or at work often come on top of that.",
         ],
@@ -98,21 +98,21 @@ export const motifs: Motif[] = [
           "constant fatigue, exhaustion from having to “hold things together”",
           "difficulties organising, planning, managing time",
           "a complicated relationship with one's body and sensations",
-          "periods of disruption — studies, work — that bring difficulties back up",
+          "periods of disruption (studies, work) that bring difficulties back up",
         ],
       },
       {
         heading: "What psychomotor therapy offers",
         paragraphs: [
-          "The session proposes experimenting rather than constraining: moving, leaning, settling, feeling — and little by little spotting what helps.",
-          "The work is on tonic-emotional regulation, identifying sensations, the relationship to time and space, motor skills, as well as on executive functions — organising, planning, starting and finishing. So many supports that can carry over into daily life.",
-          "The bodily mediations — movement, breathing, touch, material — are chosen with you, according to what speaks to you.",
+          "The session proposes experimenting rather than constraining: moving, leaning, settling, feeling, and little by little spotting what helps.",
+          "The work is on tonic-emotional regulation, identifying sensations, the relationship to time and space, motor skills, as well as on executive functions: organising, planning, starting and finishing. So many supports that can carry over into daily life.",
+          "The bodily mediations (movement, breathing, touch, material) are chosen with you, according to what speaks to you.",
         ],
       },
     ],
     note: {
       title: "In addition, never instead",
-      text: "ADHD is a form of neurodivergence: it is not a lack of will. My support is offered in addition — never instead — of medical follow-up.",
+      text: "ADHD is a form of neurodivergence: it is not a lack of will. My support is offered in addition to medical follow-up, never instead of it.",
       tone: "peach",
     },
     faq: [
@@ -142,12 +142,12 @@ export const motifs: Motif[] = [
     metaDescription:
       "Anxiety, panic attacks, chronic stress, burnout and professional exhaustion: psychomotor therapy offers another path, through the body. Sessions in Nantes with Manuela Edom, psychomotor therapist.",
     title: "Anxiety, burnout: going through the body to step to one side.",
-    lead: "When the head goes round in circles, the body is another path. Going through the body makes it possible to step to one side while exploring in depth — it is also a way of cultivating your inner resources.",
+    lead: "When the head goes round in circles, the body is another path. Going through the body makes it possible to step to one side while exploring in depth, it is also a way of cultivating your inner resources.",
     sections: [
       {
         heading: "What are we talking about?",
         paragraphs: [
-          "Anxiety, chronic stress and professional exhaustion (burnout) are not fragilities: they are signals. The body is often deeply involved — tension, sleep, shortness of breath, pain, digestive problems, fatigue that does not lift.",
+          "Anxiety, chronic stress and professional exhaustion (burnout) are not fragilities: they are signals. The body is often deeply involved: tension, sleep, shortness of breath, pain, digestive problems, fatigue that does not lift.",
           "You can have “everything you need” and still feel emptied out, or permanently on alert. Words sometimes fail to say it; the body, on the other hand, keeps the trace.",
           "A psychomotor therapy session does not replace medical or psychological follow-up. It offers another point of entry.",
         ],
@@ -158,7 +158,7 @@ export const motifs: Motif[] = [
           "You do not have to be “at rock bottom” to consult. People often come because they feel that a balance has shifted.",
         ],
         items: [
-          "anxiety — generalised or occasional — that takes up a lot of room, thoughts in loops",
+          "anxiety (generalised or occasional) that takes up a lot of room, thoughts in loops",
           "panic attacks, a body that goes into overdrive without warning",
           "an exhaustion that resists rest (burnout)",
           "tension, pain or somatisation linked to stress",
@@ -172,14 +172,14 @@ export const motifs: Motif[] = [
         heading: "What psychomotor therapy offers",
         paragraphs: [
           "The session offers time for oneself, where things slow down. Through breathing, relaxation, movement, material or therapeutic touch, the aim is to give the body its place back.",
-          "The goal is not to “drain off”, but to recover the capacity to feel, to settle, to recognise what calms you — and to turn that into resources for what comes next.",
+          "The goal is not to “drain off”, but to recover the capacity to feel, to settle, to recognise what calms you, and to turn that into resources for what comes next.",
           "The rhythm is built with you: once a week or every two weeks, according to what you need.",
         ],
       },
     ],
     note: {
       title: "Support that complements care",
-      text: "If you are going through deep suffering or a crisis, psychomotor therapy does not replace medical or psychological support: it can complement it. If in doubt, we talk it over — and I will point you elsewhere if needed.",
+      text: "If you are going through deep suffering or a crisis, psychomotor therapy does not replace medical or psychological support: it can complement it. If in doubt, we talk it over, and I will point you elsewhere if needed.",
       tone: "peach",
     },
     faq: [
@@ -209,12 +209,12 @@ export const motifs: Motif[] = [
     metaDescription:
       "Dyspraxia, dysgraphia, dyslexia, coordination difficulties: psychomotor therapy is interested in the body that learns. Assessment and sessions in Nantes with Manuela Edom, state-certified psychomotor therapist.",
     title: "Specific learning difficulties: the body, coordination, confidence.",
-    lead: "I work with people affected by specific learning difficulties. Beyond the learning itself, psychomotor therapy is interested in the body that learns: coordination, fine motor skills, bearings in time and space — and the self-confidence that comes with them.",
+    lead: "I work with people affected by specific learning difficulties. Beyond the learning itself, psychomotor therapy is interested in the body that learns: coordination, fine motor skills, bearings in time and space, and the self-confidence that comes with them.",
     sections: [
       {
         heading: "What are we talking about?",
         paragraphs: [
-          "Under the term “specific learning difficulties” several lasting difficulties in learning are grouped: dyspraxia — also called developmental coordination disorder (DCD) —, dyslexia, dysgraphia, dyscalculia, dysorthographia, dysphasia… They say nothing about intelligence, but they make certain gestures or certain learning costly.",
+          "Under the term “specific learning difficulties” several lasting difficulties in learning are grouped: dyspraxia (also called developmental coordination disorder, DCD), dyslexia, dysgraphia, dyscalculia, dysorthographia, dysphasia… They say nothing about intelligence, but they make certain gestures or certain learning costly.",
           "The body is very present in them: an awkward gesture, difficult handwriting, finding one's bearings in space or time that takes a lot of effort, significant fatigability.",
           "After making invisible efforts for so long, self-confidence can wear away. Psychomotor therapy takes this dimension into account as much as motor skills.",
         ],
@@ -237,9 +237,9 @@ export const motifs: Motif[] = [
       {
         heading: "What psychomotor therapy offers",
         paragraphs: [
-          "The psychomotor assessment makes it possible to understand where the difficulties lie — and where the resources are. It gives a first picture of the relationship to the body, to space, to time, to sensitivity.",
+          "The psychomotor assessment makes it possible to understand where the difficulties lie, and where the resources are. It gives a first picture of the relationship to the body, to space, to time, to sensitivity.",
           "Then the session works on coordination, fine and gross motor skills, the organisation of space, through play, movement and material.",
-          "The aim is also to restore confidence: to succeed at things with your body, to take pleasure in doing — because self-confidence supports learning.",
+          "The aim is also to restore confidence: to succeed at things with your body, to take pleasure in doing, because self-confidence supports learning.",
         ],
       },
     ],
@@ -257,7 +257,7 @@ export const motifs: Motif[] = [
       {
         question: "Do you work with children?",
         answer:
-          "I mostly see teenagers and adults; for children, it depends on the situation — do not hesitate to contact me.",
+          "I mostly see teenagers and adults; for children, it depends on the situation, do not hesitate to contact me.",
       },
       {
         question: "What does the psychomotor assessment involve?",
@@ -275,13 +275,13 @@ export const motifs: Motif[] = [
     metaDescription:
       "Psychomotor therapy sessions are for anyone, from babies to older people. Balance, fall prevention, autonomy and confidence: support in Nantes.",
     title: "Later life: continuing to inhabit one's body.",
-    lead: "Psychomotor therapy sessions are for anyone, from babies to older people. As we grow older, the body changes — and with it, sometimes, balance, the memory of a gesture, confidence. The session is a space to keep moving, to feel, to reassure oneself.",
+    lead: "Psychomotor therapy sessions are for anyone, from babies to older people. As we grow older, the body changes, and with it, sometimes, balance, the memory of a gesture, confidence. The session is a space to keep moving, to feel, to reassure oneself.",
     sections: [
       {
         heading: "What are we talking about?",
         paragraphs: [
           "Ageing is a stage of life, one movement of the body among others. It can come with changes: more fragile balance, less assured motor skills, fatigability, fear of falling, loss of autonomy.",
-          "After a fall, fear can settle in and limit movements — which in turn keeps the loss of confidence going. Certain neurological illnesses or chronic pain also change the relationship to the body.",
+          "After a fall, fear can settle in and limit movements, which in turn keeps the loss of confidence going. Certain neurological illnesses or chronic pain also change the relationship to the body.",
           "The psychomotor therapy session offers a gentle, safe time, where the body remains a place of exploration and of pleasure, whatever the age.",
         ],
       },
@@ -303,8 +303,8 @@ export const motifs: Motif[] = [
         heading: "What psychomotor therapy offers",
         paragraphs: [
           "The session adapts to what you can do that day. It can take place sitting or standing, starting from simple movements, breathing, touch and relaxation.",
-          "The aim is to maintain mobility, balance, proprioception and bearings in space — but also to recover inner security and the pleasure of movement.",
-          "In certain situations I can come to your home — as part of a home support scheme — or to a residence (care home, assisted living).",
+          "The aim is to maintain mobility, balance, proprioception and bearings in space, but also to recover inner security and the pleasure of movement.",
+          "In certain situations I can come to your home (as part of a home support scheme) or to a residence (care home, assisted living).",
         ],
       },
     ],
@@ -317,7 +317,7 @@ export const motifs: Motif[] = [
       {
         question: "Do I need a prescription?",
         answer:
-          "Psychomotor therapy is a paramedical profession: a medical prescription is therefore required to start an assessment or follow-up. Do not hesitate to mention it to your doctor.",
+          "Psychomotor therapy is a paramedical profession: a medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment. Do not hesitate to mention it to your doctor.",
       },
       {
         question: "Do you come to the home?",

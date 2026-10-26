@@ -114,7 +114,7 @@ export function LanguageMenu({
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-haspopup="true"
-        aria-label={`${changeLabel[locale]} — ${ariaLabel[locale]}`}
+        aria-label={`${changeLabel[locale]} · ${ariaLabel[locale]}`}
         className="flex size-10 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink/40 hover:bg-paper-2 focus-visible:border-ink/40"
       >
         <GlobeIcon />

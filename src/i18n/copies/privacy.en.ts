@@ -31,7 +31,7 @@ export const en: Copy = {
   },
   retention: {
     title: "How long is it kept?",
-    body: "The messages received are kept for as long as needed to handle your request, then deleted — in principle within 12 months, unless a therapeutic relationship is ongoing, in which case retention follows the applicable professional obligations.",
+    body: "The messages received are kept for as long as needed to handle your request, then deleted, in principle within 12 months, unless a therapeutic relationship is ongoing, in which case retention follows the applicable professional obligations.",
   },
   access: {
     title: "Who has access to it?",

@@ -1,7 +1,4 @@
-import { articlesFor } from "@/content/blog";
-import { articlesFor as articlesEn } from "@/content/blog.en";
-import { articlesFor as articlesEs } from "@/content/blog.es";
-import { articlePath, pages, type Locale } from "@/lib/i18n";
+import { pages, type Locale } from "@/lib/i18n";
 import { fullAddress, site } from "@/lib/site";
 
 type Copy = {
@@ -21,7 +18,6 @@ type Copy = {
   audience: string;
   reimbursement: string;
   pagesTitle: string;
-  articlesTitle: string;
   linksTitle: string;
   otherSite: string;
   readMore: string;
@@ -29,8 +25,8 @@ type Copy = {
 
 const copies: Record<Locale, Copy> = {
   fr: {
-    title: `${site.name} — ${site.role} à Nantes`,
-    intro: `Cabinet de psychomotricité à Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psychomotricienne diplômée d’État (D.E.) depuis ${site.practitioner.since}, reçoit adolescent.es et adultes au ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Spécialités : douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Consultations du lundi au vendredi, sur rendez-vous.`,
+    title: `${site.name} · ${site.role} à Nantes`,
+    intro: `Cabinet de psychomotricité à Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psychomotricienne diplômée d’État (D.E.) depuis ${site.practitioner.since}, reçoit adolescent.es et adultes au ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Spécialités : douance (HPI, HQI/THQI), TSA, TDA-H, troubles dys. Consultations du lundi au jeudi, sur rendez-vous.`,
     practical: "Informations pratiques",
     name: "Nom",
     address: "Adresse",
@@ -45,14 +41,13 @@ const copies: Record<Locale, Copy> = {
     audience: "Public",
     reimbursement: "Remboursement",
     pagesTitle: "Pages",
-    articlesTitle: "Articles",
     linksTitle: "Liens",
     otherSite: "Site parents/enfants",
     readMore: "",
   },
   en: {
-    title: `${site.name} — psychomotor therapist in Nantes`,
-    intro: `Psychomotor therapy practice in Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, state-certified psychomotor therapist since ${site.practitioner.since}, sees teenagers and adults at ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Specialities: giftedness (HPI, HQI/THQI), ASD, ADHD, specific learning difficulties. Consultations Monday to Friday, by appointment.`,
+    title: `${site.name} · psychomotor therapist in Nantes`,
+    intro: `Psychomotor therapy practice in Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, state-certified psychomotor therapist since ${site.practitioner.since}, sees teenagers and adults at ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Specialities: giftedness (HPI, HQI/THQI), ASD, ADHD, specific learning difficulties. Consultations Monday to Thursday, by appointment.`,
     practical: "Practical information",
     name: "Name",
     address: "Address",
@@ -67,14 +62,13 @@ const copies: Record<Locale, Copy> = {
     audience: "Who I work with",
     reimbursement: "Reimbursement",
     pagesTitle: "Pages",
-    articlesTitle: "Articles",
     linksTitle: "Links",
     otherSite: "Website for parents and children",
     readMore: "",
   },
   es: {
-    title: `${site.name} — psicomotricista en Nantes`,
-    intro: `Consultorio de psicomotricidad en Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psicomotricista diplomada de Estado desde ${site.practitioner.since}, recibe a adolescentes y personas adultas en la calle de la Mitrie 4, ${site.address.postalCode} ${site.address.city}. Especialidades: altas capacidades (HPI, HQI/THQI), TEA, TDAH, dificultades específicas del aprendizaje. Consultas de lunes a viernes, con cita previa.`,
+    title: `${site.name} · psicomotricista en Nantes`,
+    intro: `Consultorio de psicomotricidad en Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psicomotricista diplomada de Estado desde ${site.practitioner.since}, recibe a adolescentes y personas adultas en la calle de la Mitrie 4, ${site.address.postalCode} ${site.address.city}. Especialidades: altas capacidades (HPI, HQI/THQI), TEA, TDAH, dificultades específicas del aprendizaje. Consultas de lunes a jueves, con cita previa.`,
     practical: "Información práctica",
     name: "Nombre",
     address: "Dirección",
@@ -89,18 +83,14 @@ const copies: Record<Locale, Copy> = {
     audience: "A quién acompaño",
     reimbursement: "Cobertura",
     pagesTitle: "Páginas",
-    articlesTitle: "Artículos",
     linksTitle: "Enlaces",
     otherSite: "Sitio para familias con hijos",
     readMore: "",
   },
 };
 
-const collections = { fr: articlesFor, en: articlesEn, es: articlesEs };
-
 export function buildLlms(locale: Locale): string {
   const t = copies[locale];
-  const articles = collections[locale]();
   const lines: string[] = [];
 
   lines.push(`# ${t.title}`);
@@ -109,18 +99,18 @@ export function buildLlms(locale: Locale): string {
   lines.push("");
 
   lines.push(`## ${t.practical}`);
-  lines.push(`- ${t.name} : ${site.name} — ${site.role}`);
+  lines.push(`- ${t.name} : ${site.name} · ${site.role}`);
   lines.push(`- ${t.address} : ${fullAddress}`);
   lines.push(
     `- ${t.coordinates} : ${site.address.geo.latitude}, ${site.address.geo.longitude}`,
   );
   lines.push(
-    `- ${t.phone} : ${site.contact.phoneDisplay} (${site.contact.phoneNote}) — ${site.contact.phoneHref}`,
+    `- ${t.phone} : ${site.contact.phoneDisplay} (${site.contact.phoneNote}) · ${site.contact.phoneHref}`,
   );
   lines.push(`- ${t.email} : ${site.contact.email}`);
-  lines.push(`- ${t.hours} : du lundi au vendredi, sur rendez-vous`);
+  lines.push(`- ${t.hours} : du lundi au jeudi, sur rendez-vous`);
   lines.push(
-    `- ${t.access} : à proximité du centre-ville, quartier Malakoff – Saint-Donatien ; parking du Super U Dalby, 2 h gratuites, 8 min à pied`,
+    `- ${t.access} : à proximité du centre-ville, quartier Saint Donatien, Dalby, Malakoff ; parking du Super U Dalby, 2 h gratuites, 8 min à pied ; cabinet accessible PMR`,
   );
   lines.push(
     `- ${t.transport} : Bus 11 et 12 (Casterneau, 1 min à pied) ; C1 (Chalâtres, 10 min à pied) ; Tramway ligne 1 (Moutonnerie, 20 min à pied)`,
@@ -156,17 +146,9 @@ export function buildLlms(locale: Locale): string {
     ],
     [pages.contact[locale], "coordonnées, plan d’accès, formulaire"],
     [pages.faq[locale], "ordonnance, remboursement, tarifs, accès"],
-    [pages.resources[locale], "articles"],
   ];
   for (const [path, description] of pageList) {
     lines.push(`- [${path}](${site.url}${path}) : ${description}`);
-  }
-  lines.push("");
-
-  lines.push(`## ${t.articlesTitle}`);
-  for (const article of articles) {
-    const path = articlePath(locale, article.slug);
-    lines.push(`- [${article.title}](${site.url}${path}) : ${article.description}`);
   }
   lines.push("");
 

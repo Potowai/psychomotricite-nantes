@@ -4,7 +4,7 @@ export const en: Copy = {
   meta: {
     title: "Sessions, fees and help with funding",
     description:
-      "Psychomotor therapy sessions in Nantes: how they go, bodily mediations, length (40 min), fees (€47 follow-up, €200 assessment over 4 sessions) and the help that may be available — private health insurance, CPAM, MDPH (PCH, AEEH).",
+      "Psychomotor therapy sessions in Nantes: how they go, bodily mediations, length (40 min), fees (€47 follow-up, €200 assessment over 4 sessions) and the help that may be available: private health insurance, CPAM, MDPH (PCH, AEEH).",
   },
   breadcrumb: {
     home: "Home",
@@ -13,7 +13,7 @@ export const en: Copy = {
   hero: {
     eyebrow: "Sessions & fees",
     title: "Follow-up in psychomotor therapy.",
-    lead: "The rhythm of the sessions is most often one session a week or every two weeks, but this can vary — as can the length of the support.",
+    lead: "The rhythm of the sessions is most often one session a week or every two weeks, but this can vary, as can the length of the support.",
   },
   course: {
     eyebrow: "How it goes",
@@ -24,7 +24,7 @@ export const en: Copy = {
           "The first appointments allow the request to be clarified and for us to meet. If needed, a ",
         emphasis: "psychomotor assessment",
         after:
-          " may be carried out; it is not a mandatory step before going on to sessions. It allows a first framework of understanding to emerge — a first photograph of where the person stands in their body: fine motor skills, gross motor skills, relationship to time and space, bodily experience, relationship to the body, sensitivity.",
+          " may be carried out; it is not a mandatory step before going on to sessions. It allows a first framework of understanding to emerge, a first photograph of where the person stands in their body: fine motor skills, gross motor skills, relationship to time and space, bodily experience, relationship to the body, sensitivity.",
       },
       {
         before:
@@ -57,7 +57,7 @@ export const en: Copy = {
     body: "Sessions most often take place at my practice, within a multidisciplinary practice that brings together a psychomotor therapist, two clinical psychologists and a general practitioner. I can exceptionally come to your home and/or to your everyday places, for specific situations.",
     opening: {
       before: "Consultations take place ",
-      emphasis: "from Monday to Friday",
+      emphasis: "from Monday to Thursday",
       after: ", by appointment. ",
     },
     accessLink: "See the access map and public transport",
@@ -73,18 +73,18 @@ export const en: Copy = {
   callouts: {
     reimbursement: {
       title: "Reimbursement",
-      text: "Psychomotor therapists are auxiliary medical professionals; unlike physiotherapists and speech therapists, their care is not yet reimbursed by the national health insurance system. Help does exist — see below.",
+      text: "Psychomotor therapists are auxiliary medical professionals; unlike physiotherapists and speech therapists, their care is not yet reimbursed by the national health insurance system. Help does exist (see below).",
     },
     prescription: {
       title: "Prescription",
-      text: "Psychomotor therapy is a paramedical profession: a medical prescription is required to begin an assessment or follow-up.",
+      text: "Psychomotor therapy is a paramedical profession: A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
     },
   },
   funding: {
     eyebrow: "Help with funding",
     title: "Do not face the paperwork on your own.",
     intro:
-      "Several schemes can contribute to funding the sessions. Here is the essentials — and for the detail of the file, I can help you.",
+      "Several schemes can contribute to funding the sessions. Here is the essentials. For the detail of the file, I can help you.",
     items: [
       {
         question: "Private health insurance",
@@ -101,7 +101,7 @@ export const en: Copy = {
                 "If you are refused: all private health insurers have an ",
               emphasis: "appeals committee",
               after:
-                " for the costs that go beyond the cover. A file is then put together — letter requesting exceptional help, medical prescription for the assessment and/or the sessions, paid invoices, quote for the sessions — sent to the social services or to the social benefits committee. If the file is accepted, the insurer may grant a package.",
+                " for the costs that go beyond the cover. A file is then put together (letter requesting exceptional help, medical prescription for the assessment and/or the sessions, paid invoices, quote for the sessions) sent to the social services or to the social benefits committee. If the file is accepted, the insurer may grant a package.",
             },
           ],
           list: null,
@@ -124,7 +124,7 @@ export const en: Copy = {
         },
       },
       {
-        question: "The MDPH — PCH and the AEEH supplement",
+        question: "The MDPH: PCH and the AEEH supplement",
         answer: {
           paragraphs: [
             {
@@ -181,7 +181,7 @@ export const en: Copy = {
           paragraphs: [
             {
               before:
-                "Assessment, quote and invoice — do not hesitate to ask me for them, I will provide them.",
+                "Assessment, quote and invoice: do not hesitate to ask me for them, I will provide them.",
               emphasis: "",
               after: "",
             },
@@ -196,7 +196,7 @@ export const en: Copy = {
           paragraphs: [
             {
               before:
-                "The psychomotor assessment is a time of evaluation: a few appointments to clarify the request, to observe fine and gross motor skills, the relationship to time and space, bodily experience and sensitivity — and to draw up a first framework of understanding, with the difficulties as well as the resources. Follow-up may come afterwards: regular sessions, most often once a week or every two weeks, around bodily mediations and talking.",
+                "The psychomotor assessment is a time of evaluation: a few appointments to clarify the request, to observe fine and gross motor skills, the relationship to time and space, bodily experience and sensitivity, and to draw up a first framework of understanding, with the difficulties as well as the resources. Follow-up may come afterwards: regular sessions, most often once a week or every two weeks, around bodily mediations and talking.",
               emphasis: "",
               after: "",
             },

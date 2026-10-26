@@ -12,7 +12,7 @@ export function localBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "@id": businessId,
-    name: `${site.name} — ${site.role}`,
+    name: `${site.name} · ${site.role}`,
     alternateName: site.tagline,
     description: site.description,
     url,
@@ -74,6 +74,11 @@ export function localBusinessSchema() {
     },
     isAccessibleForFree: false,
     publicAccess: true,
+    amenityFeature: {
+      "@type": "LocationFeatureSpecification",
+      name: "Accessible PMR",
+      value: true,
+    },
     smokingAllowed: false,
   };
 }
@@ -120,7 +125,7 @@ export function websiteSchema() {
     "@type": "WebSite",
     "@id": `${url}/#website`,
     url,
-    name: `${site.name} — ${site.role}`,
+    name: `${site.name} · ${site.role}`,
     inLanguage: ["fr-FR", "en", "es"],
     publisher: { "@id": businessId },
   };

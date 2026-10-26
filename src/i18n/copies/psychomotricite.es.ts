@@ -24,18 +24,17 @@ export const es: Copy = {
       title: "Una imagen de escucha y de sensorialidad",
       note: "Primer plano: manos, respiración, movimiento, textura. Ilustración sin rostro identificable.",
     },
-    body: "La psicomotricidad es una práctica que tiene como principal referencia considerar el cuerpo en toda su complejidad: existencial, expresiva, emocional, identitaria.",
-    quote:
-      "«Considerar el cuerpo en toda su complejidad: existencial, expresiva, emocional, identitaria.»",
+    body: "La psicomotricidad es una práctica que tiene como principal referencia considerar el cuerpo en toda su complejidad:",
+    quote: "«Existencial, expresiva, emocional, identitaria.»",
     bodyAfter:
       "Las sesiones de psicomotricidad se dirigen a cualquier persona, desde el bebé hasta la persona mayor. Las solicitudes se inscriben en un continuo que va desde un simple deseo de introspección o una incomodidad cotidiana para algunas personas, hasta un sufrimiento a veces profundo y/o trastornos más severos, para otras.",
-    calloutTitle: "Una profesión paramédical",
+    calloutTitle: "Una profesión paramédica",
     calloutText:
-      "Psicomotricista es una profesión paramédical, reconocida por un diplomado de Estado, de la misma manera que la logopedia y la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto n°88-659 del 6 de mayo de 1988. Por tanto, es obligatoria una prescripción médica.",
+      "Psicomotricista es una profesión paramédica, reconocida por un diplomado de Estado, de la misma manera que la logopedia y la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto n°88-659 del 6 de mayo de 1988. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
   },
   motifsSection: {
     eyebrow: "Los motivos que llevan a consultar",
-    title: "Son variados — y todos singulares.",
+    title: "Son variados, y todos singulares.",
     items: [
       {
         title: "El cuerpo y la motricidad",
@@ -89,7 +88,7 @@ export const es: Copy = {
           "disforia de género",
         ],
         outro:
-          "Hay muchos trayectos de vida, todos singulares, en los que la relación con el cuerpo no es serena — y a veces la petición es «simplemente» aprender a reapropiarse del cuerpo propio, habitarlo y quererlo.",
+          "Hay muchos trayectos de vida, todos singulares, en los que la relación con el cuerpo no es serena, y a veces la petición es «simplemente» aprender a reapropiarse del cuerpo propio, habitarlo y quererlo.",
       },
       {
         title: "Las etapas de la vida",
@@ -153,7 +152,7 @@ export const es: Copy = {
       {
         question: "¿Funciona también para una persona adulta?",
         answer:
-          "Sí. La psicomotricidad no se dirige solo a la infancia: recibo a adolescentes y a personas adultas, a veces mucho después de que las dificultades se hayan instalado. No hace falta ningún diagnóstico para venir. En cambio, es obligatoria una prescripción médica para instaurar el balance o el seguimiento.",
+          "Sí. La psicomotricidad no se dirige solo a la infancia: recibo a adolescentes y a personas adultas, a veces mucho después de que las dificultades se hayan instalado. No hace falta ningún diagnóstico para venir. ",
       },
       {
         question: "¿Qué diferencia hay con la logopedia o la psicología?",

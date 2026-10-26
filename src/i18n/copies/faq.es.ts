@@ -21,7 +21,7 @@ export const es: Copy = {
       question:
         "¿Necesito una prescripción para consultar con una psicomotricista?",
       answer:
-        "Sí. La psicomotricidad es una profesión paramédical, reconocida por un diplomado de Estado, igual que la logopedia o la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto de 6 de mayo de 1988. Por tanto, es obligatoria una prescripción médica.",
+        "Sí. La psicomotricidad es una profesión paramédica, reconocida por un diplomado de Estado, igual que la logopedia o la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto de 6 de mayo de 1988. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
     },
     {
       category: "Consultar",
@@ -34,13 +34,13 @@ export const es: Copy = {
       question:
         "¿Hace falta un diagnóstico o un trastorno concreto para venir?",
       answer:
-        "No. Las solicitudes se inscriben en un continuo, desde un simple deseo de introspección o una incomodidad cotidiana hasta un sufrimiento a veces profundo y/o trastornos más severos. No se exige ningún diagnóstico previo. En cambio, sí es obligatoria una prescripción médica para iniciar el balance o el seguimiento.",
+        "No. Las solicitudes se inscriben en un continuo, desde un simple deseo de introspección o una incomodidad cotidiana hasta un sufrimiento a veces profundo y/o trastornos más severos. No se exige ningún diagnóstico previo. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
     },
     {
       category: "Consultar",
       question: "¿Qué ocurre en la primera cita?",
       answer:
-        "La primera cita sirve para precisar su demanda, lo que puedo proponerle y para conocerse, sin juicios y a su ritmo. Si hace falta, se puede realizar un balance psicomotor; no es obligatorio para empezar las sesiones. Es el momento de una primera fotografía: dónde está la persona en su cuerpo — motricidad fina y global, relación con el tiempo y el espacio, vivencia corporal, sensorialidad.",
+        "La primera cita sirve para precisar su demanda, lo que puedo proponerle y para conocerse, sin juicios y a su ritmo. Si hace falta, se puede realizar un balance psicomotor; no es obligatorio para empezar las sesiones. Es el momento de una primera fotografía: dónde está la persona en su cuerpo (motricidad fina y global, relación con el tiempo y el espacio, vivencia corporal, sensorialidad).",
     },
     {
       category: "Tarifas y cobertura",
@@ -94,13 +94,13 @@ export const es: Copy = {
       category: "El consultorio",
       question: "¿Dónde está el consultorio y cómo se llega?",
       answer:
-        "El consultorio está en la calle de la Mitrie 4, 44000 Nantes, en un consultorio multidisciplinario, cerca del centro de la ciudad, en el barrio Malakoff – Saint-Donatien. En transporte: autobús 11 y 12, parada Casterneau (1 min a pie); C1, parada Chalâtres (10 min a pie); tranvía línea 1, parada Moutonnerie (20 min a pie). Cerca, el aparcamiento del Super U Dalby ofrece 2 h gratuitas, a 8 min a pie.",
+        "El consultorio está en la calle de la Mitrie 4, 44000 Nantes, en un consultorio multidisciplinario, cerca del centro de la ciudad, en el barrio de Saint Donatien, Dalby y Malakoff. En transporte: autobús 11 y 12, parada Casterneau (1 min a pie); C1, parada Chalâtres (10 min a pie); tranvía línea 1, parada Moutonnerie (20 min a pie). Cerca, el aparcamiento del Super U Dalby ofrece 2 h gratuitas, a 8 min a pie.",
     },
     {
       category: "El consultorio",
       question: "¿Cuáles son los horarios de consulta?",
       answer:
-        "Les recibo en el consultorio de lunes a viernes, con cita previa. Pida cita por teléfono o SMS al 06 84 74 96 70.",
+        "Les recibo en el consultorio de lunes a jueves, con cita previa. Pida cita por teléfono o SMS al 06 84 74 96 70.",
     },
     {
       category: "Altas capacidades y neurodivergencias",

@@ -33,12 +33,12 @@ export const motifs: Motif[] = [
     metaDescription:
       "Psychomotricité et douance à Nantes : un espace pour le corps des personnes HPI, HQI ou THQI, où l’intensité et la sensibilité peuvent se déposer. Manuela Edom, psychomotricienne.",
     title: "Douance, HPI, HQI : quand le corps aussi a besoin de place.",
-    lead: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HPI, HQI ou THQI. La psychomotricité offre un espace où l’intelligence n’a plus à tout porter — où le corps, lui, peut se déposer.",
+    lead: "Ayant développé une connaissance fine de la douance, je reçois très fréquemment des personnes HPI, HQI ou THQI. La psychomotricité offre un espace où l’intelligence n’a plus à tout porter, où le corps, lui, peut se déposer.",
     sections: [
       {
         heading: "De quoi parle-t-on ?",
         paragraphs: [
-          "La douance — aussi appelée haut potentiel intellectuel (HPI), ou HQI et THQI lorsque le quotient est très élevé — désigne un fonctionnement cognitif particulier, souvent marqué par une grande rapidité de pensée, une intensité émotionnelle et une sensibilité forte.",
+          "La douance (aussi appelée haut potentiel intellectuel (HPI), ou HQI et THQI lorsque le quotient est très élevé) désigne un fonctionnement cognitif particulier, souvent marqué par une grande rapidité de pensée, une intensité émotionnelle et une sensibilité forte.",
           "Ce n’est ni une maladie, ni une supériorité : c’est une manière d’être au monde qui, à certains moments, peut devenir fatigante. Le sentiment de décalage, le besoin de sens, la difficulté à trouver sa place pèsent parfois plus que la pensée elle-même.",
           "Chez beaucoup de personnes HPI, HQI ou THQI, le corps est le premier à le dire : tensions, agitation, somatisations, difficulté à ralentir, à se poser, à se laisser traverser par une émotion sans être débordé.e.",
         ],
@@ -55,7 +55,7 @@ export const motifs: Motif[] = [
           "une agitation, une tension corporelle, des somatisations",
           "la fatigue d’avoir à se suradapter ou à « se faire plus petit.e »",
           "une difficulté à se repérer dans ses sensations et son corps",
-          "une période de vie — études, travail, parentalité — qui bouscule tout",
+          "une période de vie (études, travail, parentalité) qui bouscule tout",
         ],
       },
       {
@@ -76,12 +76,12 @@ export const motifs: Motif[] = [
       {
         question: "Faut-il un diagnostic de HPI ou de HQI pour consulter ?",
         answer:
-          "Non. Un diagnostic n’est pas nécessaire pour venir. Vous pouvez consulter parce que quelque chose vous pèse, sans avoir de mot pour le nommer. Une prescription médicale reste toutefois obligatoire pour engager le bilan ou le suivi.",
+          "Non. Un diagnostic n’est pas nécessaire pour venir. Vous pouvez consulter parce que quelque chose vous pèse, sans avoir de mot pour le nommer. Une prescription médicale reste toutefois nécessaire pour engager le bilan ou le suivi, mais elle n’est pas demandée lors d’un premier rendez-vous.",
       },
       {
         question: "La psychomotricité « guérit-elle » la douance ?",
         answer:
-          "Non — la douance n’est pas quelque chose à guérir. Le travail porte sur le vécu : les tensions, la fatigue, la place que vous vous autorisez à prendre.",
+          "Non, la douance n’est pas quelque chose à guérir. Le travail porte sur le vécu : les tensions, la fatigue, la place que vous vous autorisez à prendre.",
       },
       {
         question: "Recevez-vous les adolescent.es HPI ou HQI/THQI ?",
@@ -104,7 +104,7 @@ export const motifs: Motif[] = [
       {
         heading: "De quoi parle-t-on ?",
         paragraphs: [
-          "Le TDA-H — trouble du déficit de l’attention, avec ou sans hyperactivité — concerne la manière dont on soutient son attention, dont on régule son agitation et son impulsivité.",
+          "Le TDA-H (trouble du déficit de l’attention, avec ou sans hyperactivité) concerne la manière dont on soutient son attention, dont on régule son agitation et son impulsivité.",
           "Il ne s’agit pas d’un manque d’attention, mais d’une attention difficile à diriger et à maintenir. Le corps y est pleinement engagé : bouger, se lever, se balancer, ou au contraire se figer, sont souvent des façons de tenir.",
           "La fatigue, le sentiment de ne pas y arriver, et les difficultés dans les relations ou au travail s’y ajoutent souvent.",
         ],
@@ -121,21 +121,21 @@ export const motifs: Motif[] = [
           "une fatigue constante, un épuisement à « faire tenir » les choses",
           "des difficultés d’organisation, de planification, de gestion du temps",
           "un rapport compliqué à son corps et à ses sensations",
-          "des temps de rupture — études, travail — qui font remonter les difficultés",
+          "des temps de rupture (études, travail) qui font remonter les difficultés",
         ],
       },
       {
         heading: "Ce que la psychomotricité propose",
         paragraphs: [
-          "La séance propose d’expérimenter plutôt que de contraindre : bouger, s’appuyer, se poser, sentir — et peu à peu repérer ce qui aide.",
-          "Le travail porte sur la régulation tonico-émotionnelle, le repérage des sensations, le rapport au temps et à l’espace, la motricité, ainsi que sur les fonctions exécutives — s’organiser, planifier, commencer et terminer. Autant d’appuis qui peuvent se transférer au quotidien.",
-          "Les médiations corporelles — mouvement, respiration, toucher, matière — sont choisies avec vous, selon ce qui vous parle.",
+          "La séance propose d’expérimenter plutôt que de contraindre : bouger, s’appuyer, se poser, sentir, et peu à peu repérer ce qui aide.",
+          "Le travail porte sur la régulation tonico-émotionnelle, le repérage des sensations, le rapport au temps et à l’espace, la motricité, ainsi que sur les fonctions exécutives : s’organiser, planifier, commencer et terminer. Autant d’appuis qui peuvent se transférer au quotidien.",
+          "Les médiations corporelles (mouvement, respiration, toucher, matière) sont choisies avec vous, selon ce qui vous parle.",
         ],
       },
     ],
     note: {
       title: "En complément, jamais à la place",
-      text: "Le TDA-H est une neuroatypie : il ne s’agit pas d’un défaut de volonté. Mon accompagnement se fait en complément — jamais à la place — d’un suivi médical.",
+      text: "Le TDA-H est une neuroatypie : il ne s’agit pas d’un défaut de volonté. Mon accompagnement se fait en complément, jamais à la place, d’un suivi médical.",
       tone: "peach",
     },
     faq: [
@@ -165,12 +165,12 @@ export const motifs: Motif[] = [
     metaDescription:
       "Anxiété, attaques de panique, stress chronique, burn-out et épuisement professionnel : la psychomotricité offre un autre chemin, par le corps. Séances à Nantes avec Manuela Edom, psychomotricienne.",
     title: "Anxiété, burn-out : passer par le corps pour faire un pas de côté.",
-    lead: "Quand la tête tourne en boucle, le corps est un autre chemin. Passer par le corps permet de faire un pas de côté tout en allant explorer en profondeur — c’est aussi un moyen de cultiver ses ressources internes.",
+    lead: "Quand la tête tourne en boucle, le corps est un autre chemin. Passer par le corps permet de faire un pas de côté tout en allant explorer en profondeur, c’est aussi un moyen de cultiver ses ressources internes.",
     sections: [
       {
         heading: "De quoi parle-t-on ?",
         paragraphs: [
-          "L’anxiété, le stress chronique et l’épuisement professionnel (burn-out) ne sont pas des fragilités : ce sont des signaux. Le corps s’y trouve souvent très engagé — tensions, sommeil, souffle court, douleurs, troubles digestifs, fatigue qui ne passe pas.",
+          "L’anxiété, le stress chronique et l’épuisement professionnel (burn-out) ne sont pas des fragilités : ce sont des signaux. Le corps s’y trouve souvent très engagé : tensions, sommeil, souffle court, douleurs, troubles digestifs, fatigue qui ne passe pas.",
           "On peut avoir « tout ce qu’il faut » et se sentir pourtant vidé.e, ou en alerte permanente. Les mots manquent parfois pour le dire ; le corps, lui, en garde la trace.",
           "La séance de psychomotricité ne se substitue pas à un suivi médical ou psychologique. Elle propose un autre point d’entrée.",
         ],
@@ -181,7 +181,7 @@ export const motifs: Motif[] = [
           "Il n’est pas nécessaire d’être « au fond » pour consulter. Souvent, on vient parce qu’on sent qu’un équilibre s’est déplacé.",
         ],
         items: [
-          "une anxiété — généralisée ou ponctuelle — qui occupe beaucoup de place, des pensées en boucle",
+          "une anxiété (généralisée ou ponctuelle) qui occupe beaucoup de place, des pensées en boucle",
           "des attaques de panique, un corps qui s’emballe sans prévenir",
           "un épuisement qui résiste au repos (burn-out)",
           "des tensions, douleurs ou somatisations liées au stress",
@@ -195,14 +195,14 @@ export const motifs: Motif[] = [
         heading: "Ce que la psychomotricité propose",
         paragraphs: [
           "La séance offre un temps pour soi, où l’on ralentit. Par la respiration, la relaxation, le mouvement, la matière ou le toucher thérapeutique, il s’agit de redonner au corps sa place.",
-          "L’objectif n’est pas d’« évacuer », mais de retrouver la capacité à sentir, à se poser, à reconnaître ce qui apaise — et à en faire des ressources pour la suite.",
+          "L’objectif n’est pas d’« évacuer », mais de retrouver la capacité à sentir, à se poser, à reconnaître ce qui apaise, et à en faire des ressources pour la suite.",
           "Le rythme se construit avec vous : une fois par semaine ou tous les quinze jours, selon ce dont vous avez besoin.",
         ],
       },
     ],
     note: {
       title: "Un accompagnement qui complète les soins",
-      text: "Si vous traversez une souffrance profonde ou une crise, la psychomotricité ne remplace pas un accompagnement médical ou psychologique : elle peut le compléter. En cas de doute, nous en parlons — et je vous réoriente si besoin.",
+      text: "Si vous traversez une souffrance profonde ou une crise, la psychomotricité ne remplace pas un accompagnement médical ou psychologique : elle peut le compléter. En cas de doute, nous en parlons, et je vous réoriente si besoin.",
       tone: "peach",
     },
     faq: [
@@ -232,12 +232,12 @@ export const motifs: Motif[] = [
     metaDescription:
       "Dyspraxie, dysgraphie, dyslexie, trouble de la coordination… : la psychomotricité s’intéresse au corps qui apprend. Bilan et séances à Nantes avec Manuela Edom, psychomotricienne D.E.",
     title: "Troubles dys : le corps, la coordination, la confiance.",
-    lead: "J’accompagne des personnes concernées par les troubles dys. Au-delà des apprentissages, la psychomotricité s’intéresse au corps qui apprend : coordination, motricité fine, repères dans le temps et l’espace — et l’estime de soi qui va avec.",
+    lead: "J’accompagne des personnes concernées par les troubles dys. Au-delà des apprentissages, la psychomotricité s’intéresse au corps qui apprend : coordination, motricité fine, repères dans le temps et l’espace, et l’estime de soi qui va avec.",
     sections: [
       {
         heading: "De quoi parle-t-on ?",
         paragraphs: [
-          "On regroupe sous « troubles dys » plusieurs troubles durables des apprentissages : dyspraxie — aussi appelée trouble de la coordination (TDC ou TAC) —, dyslexie, dysgraphie, dyscalculie, dysorthographie, dysphasie… Ils ne disent rien de l’intelligence, mais rendent certains gestes ou certains apprentissages coûteux.",
+          "On regroupe sous « troubles dys » plusieurs troubles durables des apprentissages : dyspraxie (aussi appelée trouble de la coordination, TDC ou TAC), dyslexie, dysgraphie, dyscalculie, dysorthographie, dysphasie… Ils ne disent rien de l’intelligence, mais rendent certains gestes ou certains apprentissages coûteux.",
           "Le corps y est très présent : un geste maladroit, une écriture difficile, un repérage dans l’espace ou le temps qui demande beaucoup d’efforts, une fatigabilité importante.",
           "À force de fournir des efforts invisibles, la confiance en soi peut s’effriter. La psychomotricité prend en compte cette dimension autant que la motricité.",
         ],
@@ -260,9 +260,9 @@ export const motifs: Motif[] = [
       {
         heading: "Ce que la psychomotricité propose",
         paragraphs: [
-          "Le bilan psychomoteur permet de comprendre où se situent les difficultés — et les ressources. Il donne une première photographie du rapport au corps, à l’espace, au temps, à la sensorialité.",
+          "Le bilan psychomoteur permet de comprendre où se situent les difficultés, et les ressources. Il donne une première photographie du rapport au corps, à l’espace, au temps, à la sensorialité.",
           "Ensuite, la séance travaille la coordination, la motricité fine et globale, l’organisation de l’espace, par le jeu, le mouvement et la matière.",
-          "L’objectif est aussi de redonner de la confiance : réussir des choses avec son corps, éprouver du plaisir à faire — car l’estime de soi soutient les apprentissages.",
+          "L’objectif est aussi de redonner de la confiance : réussir des choses avec son corps, éprouver du plaisir à faire, car l’estime de soi soutient les apprentissages.",
         ],
       },
     ],
@@ -280,7 +280,7 @@ export const motifs: Motif[] = [
       {
         question: "Travaillez-vous avec les enfants ?",
         answer:
-          "Je reçois surtout des adolescent.es et des adultes ; pour les enfants, cela dépend des situations — n’hésitez pas à me contacter.",
+          "Je reçois surtout des adolescent.es et des adultes ; pour les enfants, cela dépend des situations, n’hésitez pas à me contacter.",
       },
       {
         question: "En quoi consiste le bilan psychomoteur ?",
@@ -298,13 +298,13 @@ export const motifs: Motif[] = [
     metaDescription:
       "Les séances de psychomotricité s’adressent à toute personne, du bébé à la personne âgée. Équilibre, prévention des chutes, autonomie et confiance : accompagnement à Nantes.",
     title: "Grand âge : continuer d’habiter son corps.",
-    lead: "Les séances de psychomotricité s’adressent à toute personne, du bébé à la personne âgée. Avec l’avancée en âge, le corps change — et avec lui, parfois, l’équilibre, la mémoire du geste, la confiance. La séance est un espace pour continuer à bouger, se sentir et se réassurer.",
+    lead: "Les séances de psychomotricité s’adressent à toute personne, du bébé à la personne âgée. Avec l’avancée en âge, le corps change, et avec lui, parfois, l’équilibre, la mémoire du geste, la confiance. La séance est un espace pour continuer à bouger, se sentir et se réassurer.",
     sections: [
       {
         heading: "De quoi parle-t-on ?",
         paragraphs: [
           "Le vieillissement est une étape de la vie, un mouvement du corps parmi d’autres. Il peut s’accompagner de changements : équilibre plus fragile, motricité moins assurée, fatigabilité, peur de tomber, perte d’autonomie.",
-          "Après une chute, la crainte peut s’installer et limiter les déplacements — ce qui entretient la perte de confiance. Certaines maladies neurologiques ou douleurs chroniques modifient aussi le rapport au corps.",
+          "Après une chute, la crainte peut s’installer et limiter les déplacements, ce qui entretient la perte de confiance. Certaines maladies neurologiques ou douleurs chroniques modifient aussi le rapport au corps.",
           "La séance de psychomotricité propose un temps doux et sécurisant, où le corps reste un lieu d’exploration et de plaisir, quel que soit l’âge.",
         ],
       },
@@ -326,8 +326,8 @@ export const motifs: Motif[] = [
         heading: "Ce que la psychomotricité propose",
         paragraphs: [
           "La séance s’adapte à vos possibilités du moment. Elle peut se dérouler assis.e ou debout, à partir de mouvements simples, de la respiration, du toucher, de la détente.",
-          "Il s’agit d’entretenir la mobilité, l’équilibre, la proprioception et le repérage dans l’espace — mais aussi de retrouver la sécurité intérieure et le plaisir du mouvement.",
-          "Je peux, dans certaines situations, me déplacer à domicile — dans le cadre d’un maintien à domicile — ou en établissement (EHPAD, résidence).",
+          "Il s’agit d’entretenir la mobilité, l’équilibre, la proprioception et le repérage dans l’espace, mais aussi de retrouver la sécurité intérieure et le plaisir du mouvement.",
+          "Je peux, dans certaines situations, me déplacer à domicile (dans le cadre d’un maintien à domicile) ou en établissement (EHPAD, résidence).",
         ],
       },
     ],
@@ -340,7 +340,7 @@ export const motifs: Motif[] = [
       {
         question: "Faut-il une prescription ?",
         answer:
-          "La psychomotricité est une profession paramédicale : une prescription médicale est donc obligatoire pour engager un bilan ou un suivi. N’hésitez pas à en parler à votre médecin.",
+          "La psychomotricité est une profession paramédicale : une prescription médicale est nécessaire pour engager un bilan ou un suivi, mais elle n’est pas demandée lors d’un premier rendez-vous. N’hésitez pas à en parler à votre médecin.",
       },
       {
         question: "Recevez-vous à domicile ?",

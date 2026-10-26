@@ -31,7 +31,7 @@ export const es: Copy = {
   },
   retention: {
     title: "¿Cuánto tiempo se conservan?",
-    body: "Los mensajes recibidos se conservan el tiempo necesario para tramitar su solicitud y después se suprimen — en principio en menos de 12 meses, salvo que exista una relación de atención en curso, en cuyo caso la conservación sigue las obligaciones profesionales aplicables.",
+    body: "Los mensajes recibidos se conservan el tiempo necesario para tramitar su solicitud y después se suprimen, en principio en menos de 12 meses, salvo que exista una relación de atención en curso, en cuyo caso la conservación sigue las obligaciones profesionales aplicables.",
   },
   access: {
     title: "¿Quién tiene acceso?",

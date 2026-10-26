@@ -31,7 +31,7 @@ export const sessions = {
   meta: {
     title: "Séances, tarifs et aides au financement",
     description:
-      "Séances de psychomotricité à Nantes : déroulé, médiations corporelles, durée (40 min), tarifs (47 € suivi, 200 € bilan en 4 séances) et aides possibles — mutuelles, CPAM, MDPH (PCH, AEEH).",
+      "Séances de psychomotricité à Nantes : déroulé, médiations corporelles, durée (40 min), tarifs (47 € suivi, 200 € bilan en 4 séances) et aides possibles : mutuelles, CPAM, MDPH (PCH, AEEH).",
   },
   breadcrumb: {
     home: "Accueil",
@@ -40,7 +40,7 @@ export const sessions = {
   hero: {
     eyebrow: "Séances & tarifs",
     title: "Le suivi en psychomotricité.",
-    lead: "Le rythme des séances est le plus souvent 1 séance par semaine ou tous les 15 jours, mais cela peut varier — tout comme la durée de l’accompagnement.",
+    lead: "Le rythme des séances est le plus souvent 1 séance par semaine ou tous les 15 jours, mais cela peut varier, tout comme la durée de l’accompagnement.",
   },
   course: {
     eyebrow: "Le déroulé",
@@ -51,7 +51,7 @@ export const sessions = {
           "Les premiers rendez-vous permettent de préciser la demande et de se rencontrer. Si besoin, un ",
         emphasis: "bilan psychomoteur",
         after:
-          " peut être réalisé ; ce n’est pas une étape obligatoire pour donner suite à des séances. Il permet de dégager une première grille de compréhension — une première photographie de là où en est la personne dans son corps : motricité fine, motricité globale, rapport au temps et à l’espace, vécu corporel, rapport au corps, sensorialité.",
+          " peut être réalisé ; ce n’est pas une étape obligatoire pour donner suite à des séances. Il permet de dégager une première grille de compréhension, une première photographie de là où en est la personne dans son corps : motricité fine, motricité globale, rapport au temps et à l’espace, vécu corporel, rapport au corps, sensorialité.",
       },
       {
         before:
@@ -84,7 +84,7 @@ export const sessions = {
     body: "Les séances se déroulent le plus souvent à mon cabinet, au sein d’un cabinet pluridisciplinaire qui réunit une psychomotricienne, deux psychologues cliniciennes et une médecin généraliste. Je peux me déplacer exceptionnellement à domicile et/ou sur les lieux de vie, pour des situations spécifiques.",
     opening: {
       before: "La consultation a lieu ",
-      emphasis: "du lundi au vendredi",
+      emphasis: "du lundi au jeudi",
       after: ", sur rendez-vous. ",
     },
     accessLink: "Voir le plan d’accès et les transports",
@@ -100,18 +100,18 @@ export const sessions = {
   callouts: {
     reimbursement: {
       title: "Remboursement",
-      text: "Les psychomotricien.nes sont auxiliaires de la médecine ; à la différence des kinés et des orthophonistes, leurs soins ne bénéficient pas encore d’un remboursement par la Sécurité sociale. Des aides existent — voir ci-dessous.",
+      text: "Les psychomotricien.nes sont auxiliaires de la médecine ; à la différence des kinés et des orthophonistes, leurs soins ne bénéficient pas encore d’un remboursement par la Sécurité sociale. Des aides existent (voir ci-dessous).",
     },
     prescription: {
       title: "Ordonnance",
-      text: "La psychomotricité est une profession paramédicale : une prescription médicale est obligatoire pour engager un bilan ou un suivi.",
+      text: "La psychomotricité est une profession paramédicale : Une prescription médicale est nécessaire pour engager un bilan ou un suivi, mais elle n’est pas demandée lors d’un premier rendez-vous.",
     },
   },
   funding: {
     eyebrow: "Aides au financement",
     title: "Ne restez pas seul.e face aux démarches.",
     intro:
-      "Plusieurs dispositifs peuvent participer au financement des séances. Voici l’essentiel — et pour le détail du dossier, je peux vous accompagner.",
+      "Plusieurs dispositifs peuvent participer au financement des séances. Voici l’essentiel. Pour le détail du dossier, je peux vous accompagner.",
     items: [
       {
         question: "Les mutuelles",
@@ -128,7 +128,7 @@ export const sessions = {
                 "En cas de refus : toutes les mutuelles disposent d’une ",
               emphasis: "commission de recours amiable",
               after:
-                " pour les dépassements d’honoraires. On constitue alors un dossier — lettre de demande d’aide exceptionnelle, prescription médicale du bilan et/ou des séances, factures acquittées, devis des séances — adressé au service social ou à la commission des prestations sociales. Si le dossier est accepté, la mutuelle peut octroyer un forfait.",
+                " pour les dépassements d’honoraires. On constitue alors un dossier (lettre de demande d’aide exceptionnelle, prescription médicale du bilan et/ou des séances, factures acquittées, devis des séances) adressé au service social ou à la commission des prestations sociales. Si le dossier est accepté, la mutuelle peut octroyer un forfait.",
             },
           ],
           list: null,
@@ -151,7 +151,7 @@ export const sessions = {
         },
       },
       {
-        question: "La MDPH — PCH et complément d’AEEH",
+        question: "La MDPH : PCH et complément d’AEEH",
         answer: {
           paragraphs: [
             {
@@ -212,7 +212,7 @@ export const sessions = {
           paragraphs: [
             {
               before:
-                "Bilan, devis et facture — n’hésitez pas à m’en faire la demande, je vous les fournirai.",
+                "Bilan, devis et facture : n’hésitez pas à m’en faire la demande, je vous les fournirai.",
               emphasis: "",
               after: "",
             },
@@ -227,7 +227,7 @@ export const sessions = {
           paragraphs: [
             {
               before:
-                "Le bilan psychomoteur est un temps d’évaluation : quelques rendez-vous pour préciser la demande, observer la motricité fine et globale, le rapport au temps et à l’espace, le vécu corporel et la sensorialité — et dégager une première grille de compréhension, avec les difficultés comme les ressources. Le suivi peut venir ensuite : des séances régulières, le plus souvent une fois par semaine ou tous les quinze jours, autour de médiations corporelles et d’échanges.",
+                "Le bilan psychomoteur est un temps d’évaluation : quelques rendez-vous pour préciser la demande, observer la motricité fine et globale, le rapport au temps et à l’espace, le vécu corporel et la sensorialité, et dégager une première grille de compréhension, avec les difficultés comme les ressources. Le suivi peut venir ensuite : des séances régulières, le plus souvent une fois par semaine ou tous les quinze jours, autour de médiations corporelles et d’échanges.",
               emphasis: "",
               after: "",
             },

@@ -30,8 +30,8 @@ const legacyRedirects = [
     source: "/2024/10/11/le-travail-dequipe-triomphe/",
     destination: "/blog",
   },
-  { source: "/feed", destination: "/rss.xml" },
-  { source: "/feed/", destination: "/rss.xml" },
+  { source: "/feed", destination: "/" },
+  { source: "/feed/", destination: "/" },
 ] as const;
 
 const securityHeaders = [
@@ -65,6 +65,11 @@ const nextConfig: NextConfig = {
       // Les anciennes URL WordPress : priorité, pour ne pas perdre le
       // référencement acquis, même en www.
       ...legacyRedirects.map((r) => ({ ...r, permanent: true })),
+      // Les ressources sont retirées du site jusqu'en janvier : on renvoie
+      // vers l'accueil de la langue plutôt que de laisser des 404.
+      { source: "/blog/:path*", destination: "/", permanent: true },
+      { source: "/en/resources/:path*", destination: "/en", permanent: true },
+      { source: "/es/recursos/:path*", destination: "/es", permanent: true },
       // Le site canonique est sans « www » : le www est renvoyé vers
       // l'adresse de référence, quoi qu'il arrive côté configuration Vercel.
       {

@@ -27,7 +27,7 @@ export const es: Copy = {
   },
   host: {
     title: "Alojamiento",
-    body: "Este sitio web está alojado por Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, Estados Unidos — ",
+    body: "Este sitio web está alojado por Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, Estados Unidos: ",
     link: "vercel.com",
     end: ".",
   },

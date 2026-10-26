@@ -165,7 +165,7 @@ export const articles: Article[] = [
         items: [
           "A session lasts about 40 minutes. A follow-up session costs €47.",
           "The psychomotor assessment takes 4 sessions, so €200 in total (€50 per session).",
-          "A medical prescription is therefore required to start an assessment or follow-up.",
+          "A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
           "This prescription can also make certain steps easier (private health insurer, MDPH).",
         ],
       },
@@ -210,7 +210,7 @@ export const articles: Article[] = [
       { type: "h2", text: "At the practice, in Nantes" },
       {
         type: "p",
-        text: "I see people at the multidisciplinary practice, 4 rue de la Mitrie, 44000 Nantes, Monday to Friday, by appointment. The practice is close to the city centre, in the Malakoff – Saint-Donatien neighbourhood.",
+        text: "I see people at the multidisciplinary practice, 4 rue de la Mitrie, 44000 Nantes, Monday to Thursday, by appointment. The practice is close to the city centre, in the Saint Donatien, Dalby and Malakoff area.",
       },
       {
         type: "ul",
