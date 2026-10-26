@@ -22,9 +22,9 @@ type Suggestion = {
 };
 
 const messages: Record<Locale, { message: string; close: string }> = {
-  fr: { message: "Ce site est aussi disponible en anglais et en espagnol.", close: "Fermer ce message" },
-  en: { message: "This site is also available in French and Spanish.", close: "Close this message" },
-  es: { message: "Este sitio también está disponible en francés e inglés.", close: "Cerrar este mensaje" },
+  fr: { message: "Ce site est aussi disponible en anglais, en espagnol, en roumain et en arabe.", close: "Fermer ce message" },
+  en: { message: "This site is also available in French, Spanish, Romanian and Arabic.", close: "Close this message" },
+  es: { message: "Este sitio también está disponible en francés, inglés, rumano y árabe.", close: "Cerrar este mensaje" },
   ro: { message: "Acest site este disponibil și în franceză, engleză, spaniolă și arabă.", close: "Închide mesajul" },
   ar: { message: "هذا الموقع متاح أيضًا بالفرنسية والإنجليزية والإسبانية والرومانية.", close: "إغلاق هذه الرسالة" },
 };
