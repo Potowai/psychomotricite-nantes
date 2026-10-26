@@ -97,6 +97,7 @@ export const ro: Copy = {
     bilanLabel: "Bilanț psihomotor",
     bilanNote: "(se prevăd {sessions} ședințe · {amount} €/ședință)",
     durationLabel: "Durata unei ședințe",
+    durationUnit: "min",
     note: "Dacă întâmpinați dificultăți financiare, putem vorbi despre asta.",
   },
   callouts: {

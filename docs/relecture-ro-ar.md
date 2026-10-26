@@ -92,11 +92,14 @@ Formulation retenue partout :
 ## 7. Tarifs
 
 - **FR** : « 47 € la séance de suivi ; bilan 200 € (4 séances, 50 €/séance) ;
-  séance d'environ 40 minutes. »
+  durée : 40 min. »
 - **RO** : « 47 € ședința de acompaniere ; bilanț 200 € (4 ședințe, 50 € pe
-  ședință) ; o ședință durează aproximativ 40 de minute. »
+  ședință) ; durata: 40 min. »
 - **AR** : « 47 € لجلسة المتابعة ؛ التقييم 200 € (4 جلسات، 50 € لكل جلسة) ؛
-  الجلسة نحو 40 دقيقة. »
+  المدة: 40 دقيقة. »
+
+Les montants et la durée sont affichés par le site à partir des données
+tarifaires ; les libellés ci-dessus sont ceux qui les entourent.
 
 - [ ] RO validé
 - [ ] AR validé

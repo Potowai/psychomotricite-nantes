@@ -76,6 +76,7 @@ export const ar: Copy = {
     bilanLabel: "تقييم نفسي حركي",
     bilanNote: "(يُتوقع {sessions} جلسات · {amount} € للجلسة)",
     durationLabel: "مدة الجلسة",
+    durationUnit: "دقيقة",
     note: "إذا كنتم تواجهون صعوبات مالية، يمكننا التحدث عنها.",
   },
   callouts: {

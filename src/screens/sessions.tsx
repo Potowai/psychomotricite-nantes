@@ -177,7 +177,7 @@ export function SessionsPage({ locale }: { locale: Locale }) {
                 <div className="flex items-baseline justify-between gap-4">
                   <dt className="text-ink-2">{t.fees.durationLabel}</dt>
                   <dd className="font-display text-3xl text-ink">
-                    {site.pricing.durationMinutes} min
+                    {site.pricing.durationMinutes} {t.fees.durationUnit}
                   </dd>
                 </div>
               </dl>

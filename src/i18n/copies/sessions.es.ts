@@ -68,6 +68,7 @@ export const es: Copy = {
     bilanLabel: "Balance psicomotor",
     bilanNote: "(prever {sessions} sesiones · {amount} €/sesión)",
     durationLabel: "Duración de una sesión",
+    durationUnit: "min",
     note: "Si tiene dificultades económicas, podemos hablarlo.",
   },
   callouts: {

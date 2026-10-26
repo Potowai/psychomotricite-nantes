@@ -95,6 +95,7 @@ export const sessions = {
     bilanLabel: "Bilan psychomoteur",
     bilanNote: "(prévoir {sessions} séances · {amount} €/séance)",
     durationLabel: "Durée d’une séance",
+    durationUnit: "min",
     note: "Si vous rencontrez des difficultés financières, nous pouvons en parler.",
   },
   callouts: {
