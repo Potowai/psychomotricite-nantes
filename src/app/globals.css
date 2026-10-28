@@ -523,6 +523,11 @@ html[dir="rtl"] .arrow {
 /* Tache d'aquarelle : on adoucit les bords pour qu'elle se pose sur le papier
    au lieu de former un rectangle. */
 .aquarelle-fade {
-  -webkit-mask-image: radial-gradient(ellipse at 50% 35%, #000 30%, transparent 76%);
-  mask-image: radial-gradient(ellipse at 50% 35%, #000 30%, transparent 76%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 38%, #000 36%, transparent 84%);
+  mask-image: radial-gradient(ellipse at 50% 38%, #000 36%, transparent 84%);
+}
+
+/* Variante "galet" : la tache garde ses couleurs, sans bord rectangulaire. */
+.aquarelle-blob {
+  border-radius: 46% 54% 48% 52% / 44% 46% 54% 56%;
 }

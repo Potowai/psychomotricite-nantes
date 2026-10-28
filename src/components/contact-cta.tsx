@@ -82,8 +82,8 @@ export function CtaBand({
         src={aquarelleChaude}
         alt=""
         aria-hidden="true"
-        sizes="560px"
-        className="aquarelle-fade pointer-events-none absolute -start-24 -top-20 w-[560px] max-w-none opacity-25 mix-blend-screen"
+        sizes="460px"
+        className="aquarelle-fade pointer-events-none absolute -start-24 -top-20 w-[460px] max-w-none opacity-30 mix-blend-screen"
       />
       <Image
         src={figurePaper}

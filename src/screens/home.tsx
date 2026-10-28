@@ -27,7 +27,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           alt=""
           aria-hidden="true"
           sizes="(max-width: 1024px) 300px, 440px"
-          className="aquarelle-fade pointer-events-none absolute -bottom-8 -end-16 w-[300px] max-w-none opacity-60 mix-blend-multiply lg:-top-24 lg:bottom-auto lg:-end-20 lg:w-[440px] lg:opacity-65"
+          className="aquarelle-blob pointer-events-none absolute -bottom-8 -end-16 w-[300px] max-w-none opacity-60 mix-blend-multiply lg:-top-20 lg:bottom-auto lg:-end-4 lg:w-[440px] lg:opacity-65"
         />
         <Image
           src={feuilleRose}
@@ -225,8 +225,8 @@ export function HomePage({ locale }: { locale: Locale }) {
           src={aquarelleChaude}
           alt=""
           aria-hidden="true"
-          sizes="560px"
-          className="aquarelle-fade pointer-events-none absolute -end-20 -top-24 w-[560px] max-w-none opacity-25 mix-blend-screen"
+          sizes="420px"
+          className="aquarelle-fade pointer-events-none absolute -end-20 -top-24 w-[420px] max-w-none opacity-30 mix-blend-screen"
         />
         <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
           <figure>

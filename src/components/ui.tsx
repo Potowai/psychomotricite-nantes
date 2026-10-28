@@ -78,8 +78,8 @@ export function PageHero({
         src={aquarelleChaude}
         alt=""
         aria-hidden="true"
-        sizes="460px"
-        className="aquarelle-fade pointer-events-none absolute -end-20 -top-24 hidden w-[460px] max-w-none opacity-65 mix-blend-multiply lg:block"
+        sizes="420px"
+        className="aquarelle-fade pointer-events-none absolute -end-20 -top-24 hidden w-[420px] max-w-none opacity-70 mix-blend-multiply lg:block"
       />
       <Container className="relative grid gap-12 py-14 md:py-20 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
         <div className="animate-fade-up">
