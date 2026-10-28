@@ -1,7 +1,7 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import washBleu from "@/assets/images/wash-bleu.png";
+import aquarelleChaude from "@/assets/images/aquarelle-chaude.png";
 
 export function Container({
   children,
@@ -75,11 +75,11 @@ export function PageHero({
   return (
     <section className="relative overflow-hidden border-b border-line/70 paper-grain">
       <Image
-        src={washBleu}
+        src={aquarelleChaude}
         alt=""
         aria-hidden="true"
-        sizes="560px"
-        className="pointer-events-none absolute -end-24 -top-28 hidden w-[560px] max-w-none opacity-70 mix-blend-multiply lg:block"
+        sizes="460px"
+        className="aquarelle-fade pointer-events-none absolute -end-20 -top-24 hidden w-[460px] max-w-none opacity-65 mix-blend-multiply lg:block"
       />
       <Container className="relative grid gap-12 py-14 md:py-20 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
         <div className="animate-fade-up">

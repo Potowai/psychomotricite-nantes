@@ -3,36 +3,36 @@
 /* ------------------------------------------------------------------ */
 /*  Palette — trois familles, et rien d'autre                          */
 /*                                                                     */
-/*  Blues (azure, blue, ink), peach (paper-2, paper-3, line, peach) et  */
-/*  noir & blanc (ink, ink-2, ink-3, paper). Pas de vert, pas d'ocre,   */
-/*  pas de corail décoratif : chaque accent est une nuance de bleu, un  */
-/*  aplat de peach, ou de l'encre. Le rouge ne sert qu'à signaler une   */
-/*  erreur de formulaire.                                              */
+/*  Roses et terracottas (azure, blue), peach (paper-2, paper-3, line,  */
+/*  peach) et bruns chauds (ink, ink-2, ink-3, paper). Pas de vert, pas  */
+/*  de bleu décoratif : chaque accent est une nuance de rose, un aplat  */
+/*  de peach, ou de l'encre chaude. Le rouge vif ne sert qu'à signaler  */
+/*  une erreur de formulaire.                                          */
 /* ------------------------------------------------------------------ */
 @theme {
-  --color-paper: #fdfcfa;
+  --color-paper: #fdf8f1;
   /* Bande de section : volontairement très proche du fond. Au-delà de ~3,5
      d'écart Lab, un aplat pleine largeur se lit comme une ligne dure et
      fatigue l'œil. On garde le rythme, pas la coupure. */
-  --color-paper-2: #fbf5ef;
-  --color-paper-3: #f1e4d6;
-  --color-ink: #152a3c;
-  --color-ink-2: #3a4b56;
-  --color-ink-3: #55646d;
-  --color-line: #e5d9cb;
+  --color-paper-2: #faf1e7;
+  --color-paper-3: #f2dfcf;
+  --color-ink: #3a2420;
+  --color-ink-2: #5c4339;
+  --color-ink-3: #7c6257;
+  --color-line: #e8d4c4;
 
-  /* Bleus — le bleu vif de Manuela, légèrement densifié pour la lisibilité */
-  --color-blue: #0f6cae;
-  --color-blue-deep: #0d3f63;
-  --color-blue-soft: #dcecfa;
-  --color-azure: #0a8ade;
-  --color-azure-deep: #0a6aae;
+  /* Roses et terracottas — la palette chaude de Manuela */
+  --color-blue: #b5483f;
+  --color-blue-deep: #7e2f2b;
+  --color-blue-soft: #f7e1d9;
+  --color-azure: #d56a4a;
+  --color-azure-deep: #a84432;
 
   /* Peach — deuxième famille. Surfaces et bordures seulement, jamais de
      texte : à cette clarté, un texte peach ne passerait pas le contraste.
      Les nuances proches sont paper-2, paper-3 et line. */
-  --color-peach: #e8cdb4;
-  --color-peach-soft: #f9ecdf;
+  --color-peach: #e8c5a8;
+  --color-peach-soft: #fbeee4;
 
   /* Alerte — réservée aux erreurs de formulaire, jamais décorative. */
   --color-alert: #a4262c;
@@ -42,8 +42,8 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --radius-card: 1.25rem;
-  --shadow-soft: 0 1px 2px rgba(21, 42, 60, 0.04), 0 12px 32px -12px rgba(21, 42, 60, 0.16);
-  --shadow-lift: 0 2px 4px rgba(21, 42, 60, 0.05), 0 24px 56px -20px rgba(21, 42, 60, 0.22);
+  --shadow-soft: 0 1px 2px rgba(58, 36, 32, 0.05), 0 12px 32px -12px rgba(58, 36, 32, 0.16);
+  --shadow-lift: 0 2px 4px rgba(58, 36, 32, 0.05), 0 24px 56px -20px rgba(58, 36, 32, 0.22);
 
   /* Échelle de titres fluide : la taille suit la largeur de l'écran, ce qui
      garantit qu'un mot long en français ne déborde jamais de sa boîte.
@@ -98,7 +98,7 @@
   }
 
   ::selection {
-    background-color: var(--color-azure);
+    background-color: var(--color-blue);
     color: var(--color-paper);
   }
 
@@ -169,7 +169,7 @@
 /* Motif de fond très discret : grain de papier */
 @utility paper-grain {
   background-image: radial-gradient(
-    rgba(21, 42, 60, 0.032) 1px,
+    rgba(58, 36, 32, 0.035) 1px,
     transparent 1px
   );
   background-size: 22px 22px;
@@ -194,7 +194,7 @@
 /* Texture de carte : papier texturé, relief doux */
 @utility card-texture {
   background-image:
-    radial-gradient(rgba(21, 42, 60, 0.05) 1px, transparent 1.4px),
+    radial-gradient(rgba(58, 36, 32, 0.05) 1px, transparent 1.4px),
     radial-gradient(
       130% 100% at 0% 0%,
       rgba(255, 255, 255, 0.8),
@@ -518,4 +518,11 @@ html[lang="ar"] :where(*) {
 html[dir="rtl"] .arrow {
   display: inline-block;
   transform: scaleX(-1);
+}
+
+/* Tache d'aquarelle : on adoucit les bords pour qu'elle se pose sur le papier
+   au lieu de former un rectangle. */
+.aquarelle-fade {
+  -webkit-mask-image: radial-gradient(ellipse at 50% 35%, #000 30%, transparent 76%);
+  mask-image: radial-gradient(ellipse at 50% 35%, #000 30%, transparent 76%);
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 import feuilleRose from "@/assets/images/feuille-rose.png";
 import figureLineInk from "@/assets/images/figure-line-ink.png";
 import portraitManuela from "@/assets/images/portrait-manuela.webp";
-import washBleu from "@/assets/images/wash-bleu.png";
+import aquarelleChaude from "@/assets/images/aquarelle-chaude.png";
 import { CabinetMap } from "@/components/cabinet-map";
 import { CtaBand } from "@/components/contact-cta";
 import { Container, Faq, SectionTitle } from "@/components/ui";
@@ -11,7 +11,7 @@ import { copy } from "@/i18n/copies/home";
 import { pages, type Locale } from "@/lib/i18n";
 import { JsonLd, faqSchema } from "@/lib/jsonld";
 
-/* Texture d'abord, une seule couleur : son bleu */
+/* Texture d'abord, une seule couleur : son rose chaud */
 const motifAccent = "var(--color-azure)";
 
 export function HomePage({ locale }: { locale: Locale }) {
@@ -23,11 +23,11 @@ export function HomePage({ locale }: { locale: Locale }) {
       <section className="relative overflow-hidden border-b border-line/70 paper-grain">
         {/* Aquarelles — les couleurs de Manuela */}
         <Image
-          src={washBleu}
+          src={aquarelleChaude}
           alt=""
           aria-hidden="true"
-          sizes="(max-width: 1024px) 300px, 620px"
-          className="pointer-events-none absolute -bottom-8 -end-16 w-[300px] max-w-none opacity-70 mix-blend-multiply lg:-top-28 lg:bottom-auto lg:-end-24 lg:w-[620px] lg:opacity-80"
+          sizes="(max-width: 1024px) 300px, 440px"
+          className="aquarelle-fade pointer-events-none absolute -bottom-8 -end-16 w-[300px] max-w-none opacity-60 mix-blend-multiply lg:-top-24 lg:bottom-auto lg:-end-20 lg:w-[440px] lg:opacity-65"
         />
         <Image
           src={feuilleRose}
@@ -222,11 +222,11 @@ export function HomePage({ locale }: { locale: Locale }) {
       {/* ---------------- Qui suis-je ---------------- */}
       <section className="relative overflow-hidden border-y border-line bg-ink text-paper">
         <Image
-          src={washBleu}
+          src={aquarelleChaude}
           alt=""
           aria-hidden="true"
-          sizes="680px"
-          className="pointer-events-none absolute -end-24 -top-28 w-[680px] max-w-none opacity-25 mix-blend-screen"
+          sizes="560px"
+          className="aquarelle-fade pointer-events-none absolute -end-20 -top-24 w-[560px] max-w-none opacity-25 mix-blend-screen"
         />
         <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
           <figure>
