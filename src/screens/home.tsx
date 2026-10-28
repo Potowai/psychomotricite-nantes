@@ -11,8 +11,14 @@ import { copy } from "@/i18n/copies/home";
 import { pages, type Locale } from "@/lib/i18n";
 import { JsonLd, faqSchema } from "@/lib/jsonld";
 
-/* Texture d'abord, une seule couleur : son rose chaud */
-const motifAccent = "var(--color-azure)";
+/* Les cinq couleurs de l'aquarelle, réparties sur les cartes. */
+const motifAccents = [
+  "var(--color-blue)",
+  "var(--color-gold)",
+  "var(--color-teal)",
+  "var(--color-ocean)",
+  "var(--color-azure)",
+];
 
 export function HomePage({ locale }: { locale: Locale }) {
   const t = copy[locale];
@@ -114,7 +120,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             ))}
             <Link
               href={pages.psychomotricite[locale]}
-              className="inline-flex items-center gap-2 text-blue-deep link-quiet"
+              className="inline-flex items-center gap-2 link-quiet"
             >
               {t.manifest.link}
               <span aria-hidden="true" className="arrow">→</span>
@@ -152,12 +158,13 @@ export function HomePage({ locale }: { locale: Locale }) {
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 opacity-80 transition-opacity duration-300 group-hover:opacity-100"
                   style={{
-                    backgroundImage: `radial-gradient(135% 115% at 100% 0%, color-mix(in srgb, ${motifAccent} 14%, transparent), transparent 62%)`,
+                    backgroundImage: `radial-gradient(135% 115% at 100% 0%, color-mix(in srgb, ${motifAccents[i % motifAccents.length]} 14%, transparent), transparent 62%)`,
                   }}
                 />
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute end-6 top-4 font-display text-[3.25rem] leading-none text-ink/[0.08]"
+                  className="pointer-events-none absolute end-6 top-4 font-display text-[3.25rem] leading-none"
+                  style={{ color: `color-mix(in srgb, ${motifAccents[i % motifAccents.length]} 24%, transparent)` }}
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -165,7 +172,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                   aria-hidden="true"
                   className="relative mb-5 block h-1.5 w-10 rounded-full"
                   style={{
-                    backgroundColor: `color-mix(in srgb, ${motifAccent} 60%, transparent)`,
+                    backgroundColor: `color-mix(in srgb, ${motifAccents[i % motifAccents.length]} 60%, transparent)`,
                   }}
                 />
                 <h3 className="relative font-display text-xl text-ink">
@@ -193,7 +200,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             </p>
             <Link
               href={pages.sessions[locale]}
-              className="mt-6 inline-flex items-center gap-2 text-blue-deep link-quiet"
+              className="mt-6 inline-flex items-center gap-2 link-quiet"
             >
               {t.stepsSection.link}
               <span aria-hidden="true" className="arrow">→</span>
@@ -240,7 +247,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           <div>
             <span
               aria-hidden="true"
-              className="mb-5 block h-1.5 w-12 rounded-full bg-azure"
+              className="accent-gradient mb-5 block h-1.5 w-12 rounded-full"
             />
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/50">
               {t.aboutSection.eyebrow}
@@ -287,10 +294,15 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
 
           <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
-            {t.practical.info.map((cell) => (
-              <InfoCell key={cell.label} label={cell.label} value={cell.value} />
+            {t.practical.info.map((cell, i) => (
+              <InfoCell
+                key={cell.label}
+                label={cell.label}
+                value={cell.value}
+                accent={motifAccents[i % motifAccents.length]}
+              />
             ))}
-            <div className="bg-blue-soft/50 p-6 sm:col-span-2">
+            <div className="bg-gold-soft/60 p-6 sm:col-span-2">
               <p className="text-xs uppercase tracking-[0.16em] text-ink-2">
                 {t.practical.transportTitle}
               </p>
@@ -325,15 +337,18 @@ export function HomePage({ locale }: { locale: Locale }) {
 function InfoCell({
   label,
   value,
+  accent,
 }: {
   label: string;
   value: string;
+  accent: string;
 }) {
   return (
     <div className="bg-paper p-6">
       <span
         aria-hidden="true"
-        className="mb-4 block h-1 w-8 rounded-full bg-azure"
+        className="mb-4 block h-1 w-8 rounded-full"
+        style={{ backgroundColor: accent }}
       />
       <p className="text-xs uppercase tracking-[0.16em] text-ink-3">{label}</p>
       <p className="mt-2 font-display text-xl text-ink">{value}</p>

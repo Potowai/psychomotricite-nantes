@@ -91,7 +91,7 @@ function Wordmark({
       className="group inline-flex flex-col leading-none"
       aria-label={`${site.name} · ${labels[locale].home}`}
     >
-      <span className="font-display text-2xl tracking-tight text-ink transition-colors group-hover:text-blue-deep sm:text-[1.75rem]">
+      <span className="font-display text-2xl tracking-tight text-ink transition-colors group-hover:text-teal-deep sm:text-[1.75rem]">
         {site.name}
       </span>
       {!compact && (
@@ -150,7 +150,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
                       href={item.href}
                       aria-current={active ? "page" : undefined}
                       className={`relative inline-flex py-2 text-sm transition-colors ${
-                        active ? "text-blue-deep" : "text-ink-2 hover:text-ink"
+                        active ? "text-blue-deep" : "text-ink-2 hover:text-teal-deep"
                       }`}
                     >
                       {item.label}
@@ -171,7 +171,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
           <a
             href={telHref}
             dir="ltr"
-            className="inline-flex py-2 text-sm text-ink-2 tabular-nums transition-colors hover:text-blue-deep"
+            className="inline-flex py-2 text-sm text-ink-2 tabular-nums transition-colors hover:text-teal-deep"
           >
             {site.contact.phoneDisplay}
           </a>

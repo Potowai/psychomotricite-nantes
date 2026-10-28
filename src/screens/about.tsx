@@ -73,7 +73,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
 
           <a
             href="#themes"
-            className="group inline-flex items-center gap-2 text-sm font-medium text-blue-deep link-quiet"
+            className="group inline-flex items-center gap-2 text-sm font-medium link-quiet"
           >
             {t.intro.next}
             <span
@@ -145,7 +145,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
             ))}
           </ul>
 
-          <Callout title={t.approach.calloutTitle} tone="peach" className="mt-8">
+          <Callout title={t.approach.calloutTitle} tone="teal" className="mt-8">
             <p>{t.approach.calloutText}</p>
             <p className="mt-3">{t.approach.interpretation}</p>
           </Callout>

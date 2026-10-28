@@ -95,7 +95,7 @@ export function CtaBand({
         <div>
           <span
             aria-hidden="true"
-            className="mb-5 block h-1.5 w-12 rounded-full bg-azure"
+            className="accent-gradient mb-5 block h-1.5 w-12 rounded-full"
           />
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/50">
             {t.eyebrow}

@@ -131,14 +131,14 @@ export function ContactPage({ locale }: { locale: Locale }) {
 
           <CabinetMap locale={locale} />
 
-          <Callout title={t.otherSite.title} tone="peach">
+          <Callout title={t.otherSite.title} tone="gold">
             <p>
               {t.otherSite.before}
               <a
                 href={site.otherSite.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="-my-1 inline-block py-1 text-blue-deep link-quiet"
+                className="-my-1 inline-block py-1 link-quiet"
               >
                 {site.otherSite.label}
               </a>

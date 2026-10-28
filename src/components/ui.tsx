@@ -155,12 +155,15 @@ export function Callout({
 }: {
   title?: string;
   children: ReactNode;
-  tone?: "blue" | "peach";
+  tone?: "blue" | "peach" | "teal" | "gold" | "ocean";
   className?: string;
 }) {
   const tones = {
     blue: "border-azure/30 bg-blue-soft/60",
     peach: "border-peach/70 bg-peach-soft",
+    teal: "border-teal/30 bg-teal-soft/70",
+    gold: "border-gold/45 bg-gold-soft/70",
+    ocean: "border-ocean/30 bg-ocean-soft/70",
   } as const;
   return (
     <aside

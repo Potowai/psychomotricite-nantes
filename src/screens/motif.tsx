@@ -117,7 +117,7 @@ export function MotifPage({
               {t.others.before}
               <Link
                 href={pages.contact[locale]}
-                className="text-blue-deep link-quiet"
+                className="link-quiet"
               >
                 {t.others.link}
               </Link>{" "}

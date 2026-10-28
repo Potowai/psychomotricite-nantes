@@ -970,7 +970,7 @@ export function ContactForm({ locale = "fr" }: { locale?: Locale }) {
             {t.consent}{" "}
             <Link
               href={pages.privacy[locale]}
-              className="text-blue-deep link-quiet"
+              className="link-quiet"
             >
               {t.privacy}
             </Link>

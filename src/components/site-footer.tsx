@@ -168,7 +168,7 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
               href={site.otherSite.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-1.5 py-1 text-sm text-blue-deep link-quiet"
+              className="mt-6 inline-flex items-center gap-1.5 py-1 text-sm link-quiet"
             >
               {site.otherSite.label}
               <span aria-hidden="true">↗</span>
@@ -198,7 +198,7 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex py-1 text-sm text-blue-deep link-quiet"
+              className="mt-3 inline-flex py-1 text-sm link-quiet"
             >
               {t.seeMap}
             </a>
@@ -245,7 +245,7 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="inline-flex py-1 text-sm text-ink-2 transition-colors hover:text-blue-deep"
+                      className="inline-flex py-1 text-sm text-ink-2 transition-colors hover:text-teal-deep"
                     >
                       {item.label}
                     </Link>

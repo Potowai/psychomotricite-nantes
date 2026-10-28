@@ -143,7 +143,7 @@ export function SessionsPage({ locale }: { locale: Locale }) {
                 <Rich text={t.place.opening} />
                 <Link
                   href={pages.contact[locale]}
-                  className="text-blue-deep link-quiet"
+                  className="link-quiet"
                 >
                   {t.place.accessLink}
                 </Link>
@@ -186,11 +186,11 @@ export function SessionsPage({ locale }: { locale: Locale }) {
               </p>
             </div>
 
-            <Callout title={t.callouts.reimbursement.title} tone="peach">
+            <Callout title={t.callouts.reimbursement.title} tone="gold">
               <p>{t.callouts.reimbursement.text}</p>
             </Callout>
 
-            <Callout title={t.callouts.prescription.title} tone="blue">
+            <Callout title={t.callouts.prescription.title} tone="ocean">
               <p>{t.callouts.prescription.text}</p>
             </Callout>
           </div>

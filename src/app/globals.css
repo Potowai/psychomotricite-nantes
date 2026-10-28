@@ -27,6 +27,17 @@
   --color-blue-soft: #f7e1d9;
   --color-azure: #d56a4a;
   --color-azure-deep: #a84432;
+  --color-azure-soft: #f7e1d9;
+
+  /* Les couleurs de l'aquarelle, en petites touches : un jaune chaud, un
+     bleu profond et un vert d'eau. Le jaune reste décoratif, jamais du texte. */
+  --color-gold: #d8a23d;
+  --color-gold-soft: #fbf0cf;
+  --color-teal: #2f7378;
+  --color-teal-deep: #245b60;
+  --color-teal-soft: #e3f0ee;
+  --color-ocean: #1f5f7a;
+  --color-ocean-soft: #e2edf3;
 
   /* Peach — deuxième famille. Surfaces et bordures seulement, jamais de
      texte : à cette clarté, un texte peach ne passerait pas le contraste.
@@ -151,9 +162,9 @@
 
 /* Lien éditorial souligné, réutilisé dans le corps de texte */
 @utility link-quiet {
-  color: var(--color-blue-deep);
+  color: var(--color-teal-deep);
   text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--color-blue) 40%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--color-teal) 45%, transparent);
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
   transition: text-decoration-color 150ms ease, color 150ms ease;
@@ -164,6 +175,17 @@
     color: var(--color-blue);
     text-decoration-color: var(--color-blue);
   }
+}
+
+/* Filet multicolore, repris de l'aquarelle : rose, jaune, vert. */
+@utility accent-gradient {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-blue),
+    var(--color-azure) 38%,
+    var(--color-gold) 68%,
+    var(--color-teal)
+  );
 }
 
 /* Motif de fond très discret : grain de papier */
