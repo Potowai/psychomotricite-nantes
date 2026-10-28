@@ -13,17 +13,17 @@ export const en: Copy = {
   hero: {
     eyebrow: "Your data",
     title: "Privacy policy.",
-    lead: "This page explains which data is collected on this website, why, and what your rights are.",
+    lead: "This page explains what data is collected on this website, why, and what your rights are.",
   },
   controller: {
     title: "Data controller",
     contactLabel: "Contact:",
   },
   collected: {
-    title: "Which data is collected?",
+    title: "What data is collected?",
     body: "The contact form sends nothing through the website: it prepares a message in your own e-mail app, with your name, your e-mail address, your phone number (optional), the age of the person concerned (optional), the reason for the request (optional), your contact preference and your message. Nothing is stored on the website until you click “Send” in your e-mail app.",
     bodyAfter:
-      "The form does not ask for any health data. If you choose to mention some in your message, it is only used to answer your request.",
+      "The form does not ask for any health data. If you choose to mention some in your message, they are only processed to answer your request.",
   },
   basis: {
     title: "Why, and on what basis?",

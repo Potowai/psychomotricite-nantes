@@ -17,7 +17,7 @@ export const es: Copy = {
   publisher: {
     title: "Editor del sitio",
     role: "Psicomotricista D.E.",
-    diploma: "(diplomado de Estado en psicomotricidad).",
+    diploma: "(diploma de Estado en psicomotricidad).",
     phoneLabel: "Teléfono:",
     emailLabel: "Correo electrónico:",
     siretLabel: "Número de identificación (SIRET):",
@@ -32,7 +32,7 @@ export const es: Copy = {
   },
   activity: {
     title: "Actividad y marco legal",
-    body: "La psicomotricidad es una profesión paramédical reconocida por un diplomado de Estado. Las competencias de las psicomotricistas están reguladas por el decreto de 6 de mayo de 1988.",
+    body: "La psicomotricidad es una profesión paramédica reconocida por un diploma de Estado. Las competencias de las psicomotricistas están reguladas por el decreto n.º 88-659, de 6 de mayo de 1988.",
   },
   intellectual: {
     title: "Propiedad intelectual",

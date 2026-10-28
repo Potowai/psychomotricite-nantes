@@ -11,26 +11,26 @@ export const en: Copy = {
     breadcrumbCurrent: "Psychomotor therapy",
     eyebrow: "Psychomotor therapy",
     titleLine: "The link between the body and the mind.",
-    titleAccent: "The link to the other.",
+    titleAccent: "The bond with others.",
     lead:
-      "Psychomotor therapy was built on the shoulders of neuroscience, physiology and anatomy, as much as on psychology and psychiatry. It sits at the crossing of these disciplines.",
+      "Psychomotor therapy draws on neuroscience, physiology and anatomy, as much as on psychology and psychiatry. It sits at the crossroads of these disciplines.",
   },
   intro: {
     eyebrow: "What makes it specific",
     title:
-      "Care given to the links between what the body and the mind have lived through.",
+      "Attention to the links between bodily and psychic experience.",
     placeholder: {
       label: "Illustration to come",
-      title: "An image of attention and of the senses",
+      title: "An image of listening and sensory experience",
       note: "Close-up: hands, breath, movement, texture. Illustration without an identifiable face.",
     },
-    body: "Psychomotor therapy is a practice whose main landmark is to consider the body in its full complexity:",
+    body: "Psychomotor therapy is a practice whose guiding principle is to consider the body in all its complexity:",
     quote: "“Existential, expressive, emotional, identity-related.”",
     bodyAfter:
       "Psychomotor therapy sessions are for anyone, from babies to older people. Requests lie on a continuum, from a simple wish to look inward, or a daily unease for some, to a suffering that is sometimes deep, and/or more severe disorders, for others.",
     calloutTitle: "A paramedical profession",
     calloutText:
-      "Psychomotor therapist is a paramedical profession, recognised by a state diploma, in the same way as speech and occupational therapists. The skills of psychomotor therapists are framed by the decree n°88-659 of 6 May 1988. A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
+      "Psychomotor therapy is a paramedical profession, recognised by a state diploma, in the same way as speech therapy and physiotherapy. The skills of psychomotor therapists are governed by Decree No. 88-659 of 6 May 1988. A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
   },
   motifsSection: {
     eyebrow: "The reasons that lead people to consult",
@@ -54,12 +54,12 @@ export const en: Copy = {
           "accidents",
         ],
         outro:
-          "In these situations, the body is affected in its integrity and/or in its gestures.",
+          "In these situations, the body is affected in its integrity and/or in its movement.",
       },
       {
         title: "Emotions, relationships, the mind",
         intro:
-          "They may also concern the emotions, the relationship to others and to oneself, and the mind more deeply.",
+          "They may also concern emotions, relationships with others and with oneself, and the mind more specifically.",
         items: [
           "self-confidence",
           "anxiety",
@@ -76,12 +76,12 @@ export const en: Copy = {
           "professional exhaustion / burnout",
         ],
         outro:
-          "Going through the body makes it possible to step aside while exploring in depth. It is also a way of seeking solid foundations and cultivating one's inner resources.",
+          "Going through the body makes it possible to take a step back while exploring in depth. It is also a way of seeking solid foundations and cultivating one's inner resources.",
       },
       {
         title: "The relationship to the body",
         intro:
-          "For some people, it is the relationship to the body itself that is at the origin of the suffering.",
+          "For some people, the relationship to the body itself is the source of the suffering.",
         items: [
           "eating disorders",
           "the experience of violence",
@@ -145,9 +145,9 @@ export const en: Copy = {
           "A paramedical profession that looks at the links between the body and psychic life: movement, sensations, muscle tone, the relationship to time and space, the relationship to others. It is practised with a state diploma, like speech therapy or physiotherapy.",
       },
       {
-        question: "What is it useful for, concretely?",
+        question: "What is it for, concretely?",
         answer:
-          "To find solid ground again: to feel one's body better, coordinate one's gestures, regulate what overflows, find one's bearings in space and in time, dare to move and take one's place. We work through movement, relaxation, breathing, material and speech.",
+          "To find solid ground again: to feel one's body better, coordinate one's gestures, regulate what overflows, find one's bearings in space and in time, dare to move and take one's place. We work through movement, relaxation, breathing, materials and speech.",
       },
       {
         question: "Does it work for adults too?",

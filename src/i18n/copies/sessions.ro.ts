@@ -53,7 +53,7 @@ export const ro: Copy = {
           "Primele întâlniri permit să precizăm cererea și să ne cunoaștem. Dacă este nevoie, un ",
         emphasis: "bilanț psihomotor",
         after:
-          " poate fi realizat; nu este o etapă obligatorie pentru a continua cu ședințe. El permite să degajăm o primă grilă de înțelegere, o primă fotografie a locului în care se află persoana în corpul ei: motricitate fină, motricitate globală, raportul cu timpul și spațiul, trăirea corporală, raportul cu corpul, sensorialitate.",
+          " poate fi realizat; nu este o etapă obligatorie pentru a continua cu ședințe. El permite să conturăm o primă grilă de înțelegere, o primă fotografie a locului în care se află persoana în corpul ei: motricitate fină, motricitate globală, raportul cu timpul și spațiul, trăirea corporală, raportul cu corpul, sensorialitate.",
       },
       {
         before:
@@ -129,7 +129,7 @@ export const ro: Copy = {
             {
               before:
                 "În caz de refuz: toate asigurările private de sănătate dispun de o ",
-              emphasis: "comisie de recurs amiabil",
+              emphasis: "comisie de soluționare amiabilă",
               after:
                 " pentru depășirile de onorarii. Se constituie atunci un dosar (scrisoare de cerere de ajutor excepțional, prescripție medicală pentru bilanț și/sau ședințe, facturi achitate, deviz al ședințelor) adresat serviciului social sau comisiei de prestații sociale. Dacă dosarul este acceptat, asigurarea poate acorda un pachet.",
             },
@@ -139,12 +139,12 @@ export const ro: Copy = {
         },
       },
       {
-        question: "Prestațiile extra-legale ale CPAM",
+        question: "Prestațiile extraordinare ale CPAM",
         answer: {
           paragraphs: [
             {
               before:
-                "Este vorba de un ajutor acordat cu titlu excepțional. Ne adresăm serviciului social al primăriei (CCAS) sau unui asistent social al Asigurărilor Sociale, cu un dosar «ajutor pentru prestație extra-legală». Se aplică criterii de venit, iar cererea este justificată printr-un bilanț. Este posibil fără MDPH, dar un dosar MDPH în curs poate facilita demersul.",
+                "Este vorba de un ajutor acordat cu titlu excepțional. Ne adresăm serviciului social al primăriei (CCAS) sau unui asistent social al Asigurărilor Sociale, cu un dosar «ajutor pentru prestație extraordinară». Se aplică criterii de venit, iar cererea este justificată printr-un bilanț. Este posibil fără MDPH, dar un dosar MDPH în curs poate facilita demersul.",
               emphasis: "",
               after: "",
             },
@@ -154,7 +154,7 @@ export const ro: Copy = {
         },
       },
       {
-        question: "MDPH: PCH și completarea AEEH",
+        question: "MDPH: PCH și complementul AEEH",
         answer: {
           paragraphs: [
             {
@@ -175,7 +175,7 @@ export const ro: Copy = {
               before: "",
               emphasis: "Copii și adolescenți beneficiari MDPH:",
               after:
-                " o completare se poate adăuga la AEEH (Alocația de Educație pentru Copilul cu Handicap), al cărei cuantum depinde de 6 categorii. Plata ședințelor rămâne în sarcina familiei, dar AEEH o compensează.",
+                " un complement se poate adăuga la AEEH (Alocația de Educație pentru Copilul cu Handicap), al cărei cuantum depinde de 6 categorii. Plata ședințelor rămâne în sarcina dumneavoastră, dar AEEH o compensează.",
             },
           ],
           closing: {
@@ -230,7 +230,7 @@ export const ro: Copy = {
           paragraphs: [
             {
               before:
-                "Bilanțul psihomotor este un timp de evaluare: câteva întâlniri pentru a preciza cererea, a observa motricitatea fină și globală, raportul cu timpul și spațiul, trăirea corporală și sensorialitatea, și a degaja o primă grilă de înțelegere, cu dificultățile ca și cu resursele. Acompanierea poate veni apoi: ședințe regulate, cel mai adesea o dată pe săptămână sau la două săptămâni, în jurul medierilor corporale și al schimburilor.",
+                "Bilanțul psihomotor este o etapă de evaluare: câteva întâlniri pentru a preciza cererea, a observa motricitatea fină și globală, raportul cu timpul și spațiul, trăirea corporală și sensorialitatea, și a contura o primă grilă de înțelegere, cu dificultățile, dar și cu resursele. Acompanierea poate veni apoi: ședințe regulate, cel mai adesea o dată pe săptămână sau la două săptămâni, în jurul medierilor corporale și al schimburilor.",
               emphasis: "",
               after: "",
             },
@@ -245,6 +245,6 @@ export const ro: Copy = {
   },
   cta: {
     title: "O întrebare despre tarife sau ajutoare?",
-    text: "Sunați-mă sau trimiteți-mi un SMS: vom vorbi despre asta simplu. Dacă întâmpinați dificultăți financiare, spuneți-mi, putem vorbi despre asta.",
+    text: "Sunați-mă sau trimiteți-mi un SMS: vom vorbi simplu despre asta. Dacă întâmpinați dificultăți financiare, spuneți-mi, putem vorbi despre asta.",
   },
 };

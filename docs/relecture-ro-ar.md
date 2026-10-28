@@ -30,7 +30,7 @@ numéro et recopiez la phrase concernée.
 - **FR** : « Psychomotricienne à Nantes, j'accompagne adolescent.es et adultes
   (et enfants sur demandes spécifiques). »
 - **RO** : « Psihomotricistă în Nantes, însoțesc adolescenți și adulți (și
-  copii la cereri specifice). »
+  copii în situații specifice). »
 - **AR** : « أخصائية العلاج النفسي الحركي في نانت، أرافق المراهقين والبالغين
   (والأطفال عند طلبات محددة). »
 
@@ -109,7 +109,7 @@ tarifaires ; les libellés ci-dessus sont ceux qui les entourent.
 ## 8. Public
 
 - **FR** : « Adolescent.es et adultes (et enfants sur demandes spécifiques). »
-- **RO** : « Adolescenți și adulți (și copii la cereri specifice). »
+- **RO** : « Adolescenți și adulți (și copii în situații specifice). »
 - **AR** : « المراهقون والبالغون (والأطفال عند طلبات محددة). »
 
 - [ ] RO validé

@@ -20,7 +20,7 @@ export const en: Copy = {
       category: "Consulting",
       question: "Do I need a prescription to see a psychomotor therapist?",
       answer:
-        "Yes. Psychomotor therapy is a paramedical profession, recognised by a state diploma, in the same way as speech and occupational therapy. The skills of psychomotor therapists are framed by the decree of 6 May 1988. A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
+        "Yes. Psychomotor therapy is a paramedical profession, recognised by a state diploma, in the same way as speech therapy and physiotherapy. The skills of psychomotor therapists are governed by Decree No. 88-659 of 6 May 1988. A medical prescription is required to start an assessment or follow-up, but it is not asked for at a first appointment.",
     },
     {
       category: "Consulting",
@@ -38,7 +38,7 @@ export const en: Copy = {
       category: "Consulting",
       question: "What happens at the first appointment?",
       answer:
-        "The first appointment allows us to clarify what you are asking for, what I can offer, and to meet each other, without judgement and at your own pace. If needed, a psychomotor assessment can be carried out; it is not required before starting sessions. It is the time of a first photograph: where the person stands in their body (fine and gross motor skills, relationship to time and space, bodily experience, sensitivity).",
+        "The first appointment allows us to clarify what you are asking for, what I can offer, and to meet each other, without judgement and at your own pace. If needed, a psychomotor assessment can be carried out; it is not required before starting sessions. It is a first snapshot: where the person stands in their body (fine and gross motor skills, relationship to time and space, bodily experience, sensory experience).",
     },
     {
       category: "Fees & reimbursement",
@@ -57,7 +57,7 @@ export const en: Copy = {
       category: "Fees & reimbursement",
       question: "What help is there to pay for the sessions?",
       answer:
-        "Several schemes: more and more private health insurers reimburse psychomotor therapy (often through the wellbeing package); the supplementary benefits of the local health insurance office, requested through your council's social services (CCAS); the MDPH, with the PCH for adults and an AEEH supplement for children and teenagers; and finally, certain pension funds and company schemes.",
+        "Several schemes: more and more private health insurers reimburse psychomotor therapy (often through the wellbeing package); the extra-statutory benefits of CPAM, requested through your council's social services (CCAS); the MDPH, with the PCH for adults and an AEEH supplement for children and teenagers; and finally, certain pension funds and works councils.",
     },
     {
       category: "Fees & reimbursement",
@@ -75,20 +75,20 @@ export const en: Copy = {
       category: "How it goes",
       question: "What do you actually do during a session?",
       answer:
-        "The sessions alternate bodily mediation and talking. The mediations used may be relaxation, singing, dance, music, drawing, clay, therapeutic touch, self-massage and breathing exercises.",
+        "The sessions are built around bodily mediation and exchanges. The mediations used may be relaxation, singing, dance, music, drawing, clay, therapeutic touch, self-massage and breathing exercises.",
     },
     {
       category: "How it goes",
       question: "How is psychomotor therapy different from physiotherapy?",
       answer:
-        "Physiotherapy works on functional and muscular rehabilitation. Psychomotor therapy focuses on the links between bodily and psychic experience: the way the body is lived, felt, expressed and enters into relationship.",
+        "Physiotherapy works on functional and muscular rehabilitation. Psychomotor therapy focuses on the links between bodily and psychic experience: the way the body is lived, felt, expressed and enters into relationships.",
     },
     {
       category: "How it goes",
       question:
         "What is the difference with speech therapy or psychology?",
       answer:
-        "These approaches complement each other more than they oppose each other. The speech therapist works on language, speech and written language learning. The psychologist works on psychic life through speech and, depending on their training, cognitive assessment. Psychomotor therapy relies on the body, movement and sensations to find support, regulation and a place in the relationship. It is common for these follow-ups to happen in parallel: I readily work alongside the professionals who surround the person.",
+        "These approaches complement each other more than they oppose each other. The speech therapist works on language, speech and written language learning. The psychologist works on psychic life through speech and, depending on their training, cognitive assessment. Psychomotor therapy relies on the body, movement and sensations to find support, regulation and a place in relationships. It is common for these follow-ups to happen in parallel: I readily work alongside the professionals who surround the person.",
     },
     {
       category: "The practice",

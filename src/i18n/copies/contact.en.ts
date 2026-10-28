@@ -11,7 +11,7 @@ export const en: Copy = {
     current: "Contact",
   },
   hero: {
-    eyebrow: "Contact & appointment",
+    eyebrow: "Contact & appointments",
     title: "Book an appointment.",
     lead: "You can contact me by e-mail, text message or phone. The form prepares your message in your own e-mail app: you only have to send it. I usually reply within 24 to 48 working hours.",
   },
@@ -32,7 +32,7 @@ export const en: Copy = {
     title: "The practice",
     neighbourhood:
       "Close to the city centre, in the Saint Donatien, Dalby and Malakoff area.",
-    accessibility: "Wheelchair accessible.",
+    accessibility: "Accessible to people with reduced mobility.",
     imageAlt: "Front of the practice, at 4 rue de la Mitrie.",
   },
   practical: {

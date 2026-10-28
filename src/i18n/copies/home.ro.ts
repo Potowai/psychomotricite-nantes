@@ -4,14 +4,14 @@ export const ro: Copy = {
   meta: {
     title: "Psihomotricistă în Nantes · adolescenți și adulți",
     description:
-      "Manuela Edom, psihomotricistă cu diplomă de stat în Nantes. Ședințe pentru adolescenți și adulți, și pentru copii la cereri specifice, în cabinetul din 4 rue de la Mitrie. Supradotare (HPI, HQI/THQI), TSA, TDA-H, tulburări specifice de învățare. Apel sau SMS la 06 84 74 96 70.",
+      "Manuela Edom, psihomotricistă cu diplomă de stat în Nantes. Ședințe pentru adolescenți și adulți, și pentru copii în situații specifice, în cabinetul din 4 rue de la Mitrie. Supradotare (HPI, HQI/THQI), TSA, TDA-H, tulburări specifice de învățare. Apel sau SMS la 06 84 74 96 70.",
   },
   hero: {
     eyebrow: "Psihomotricistă cu diplomă de stat · Nantes",
     titleLines: ["Legătura dintre corp", "și minte."],
     accent: "Legătura cu celălalt.",
     lead:
-      "Psihomotricistă în Nantes, însoțesc adolescenți și adulți (și copii la cereri specifice).",
+      "Psihomotricistă în Nantes, însoțesc adolescenți și adulți (și copii în situații specifice).",
     ctaPrimary: "Faceți o programare",
     ctaSecondary: "Înțelegeți psihomotricitatea",
     figureAlt:
@@ -21,7 +21,7 @@ export const ro: Copy = {
       {
         label: "Public",
         value: "adolescenți și adulți",
-        note: "(și copii la cereri specifice)",
+        note: "(și copii în situații specifice)",
       },
       { label: "În cabinet", value: "de luni până joi, cu programare" },
     ],
@@ -137,7 +137,7 @@ export const ro: Copy = {
       {
         question: "Psihomotricitatea este rambursată?",
         answer:
-          "Psihomotriciștii sunt auxiliari ai medicinei; îngrijirile lor nu beneficiază încă de rambursare de către Asigurările Sociale. Există totuși ajutoare: tot mai multe asigurări private de sănătate (pachet de bunăstare), prestațiile extra-legale ale CPAM, MDPH (PCH, completarea AEEH), precum și anumite case de pensii și comitete de întreprindere.",
+          "Psihomotriciștii sunt auxiliari ai medicinei; îngrijirile lor nu beneficiază încă de rambursare de către Asigurările Sociale. Există totuși ajutoare: tot mai multe asigurări private de sănătate (pachet de bunăstare), prestațiile extraordinare ale CPAM, MDPH (PCH, complementul AEEH), precum și anumite case de pensii și comitete de întreprindere.",
       },
       {
         question:
@@ -148,7 +148,7 @@ export const ro: Copy = {
       {
         question: "Primiți adulți? Și copii?",
         answer:
-          "Da, profesez în cabinet liberal cu adolescenți și adulți. Primesc de asemenea copii la cerere sau în funcție de situații, iar ședințele se adresează oricărei persoane, de la bebeluș la persoana vârstnică.",
+          "Da, profesez în cabinet liberal cu adolescenți și adulți. Primesc de asemenea copii la cerere sau în funcție de situație, iar ședințele se adresează oricărei persoane, de la bebeluș la persoana vârstnică.",
       },
     ],
   },

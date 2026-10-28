@@ -24,7 +24,7 @@ export const en: Copy = {
           "The first appointments allow the request to be clarified and for us to meet. If needed, a ",
         emphasis: "psychomotor assessment",
         after:
-          " may be carried out; it is not a mandatory step before going on to sessions. It allows a first framework of understanding to emerge, a first photograph of where the person stands in their body: fine motor skills, gross motor skills, relationship to time and space, bodily experience, relationship to the body, sensitivity.",
+          " may be carried out; it is not a mandatory step before going on to sessions. It allows a first framework of understanding to emerge, a first snapshot of where the person stands in their body: fine motor skills, gross motor skills, relationship to time and space, bodily experience, relationship to the body, sensory experience.",
       },
       {
         before:
@@ -38,7 +38,7 @@ export const en: Copy = {
     eyebrow: "The sessions",
     title: "Bodily mediations, and talking.",
     intro:
-      "When follow-up is decided on, psychomotor therapy sessions alternate bodily mediations and talking. The mediations used may be:",
+      "When follow-up is decided on, psychomotor therapy sessions are built around bodily mediations and exchanges. The mediations used may be:",
     mediations: [
       "relaxation",
       "singing",
@@ -85,7 +85,7 @@ export const en: Copy = {
     eyebrow: "Help with funding",
     title: "Do not face the paperwork on your own.",
     intro:
-      "Several schemes can contribute to funding the sessions. Here is the essentials. For the detail of the file, I can help you.",
+      "Several schemes can contribute to funding the sessions. Here are the essentials. For the details of your file, I can help you.",
     items: [
       {
         question: "Private health insurance",
@@ -102,7 +102,7 @@ export const en: Copy = {
                 "If you are refused: all private health insurers have an ",
               emphasis: "appeals committee",
               after:
-                " for the costs that go beyond the cover. A file is then put together (letter requesting exceptional help, medical prescription for the assessment and/or the sessions, paid invoices, quote for the sessions) sent to the social services or to the social benefits committee. If the file is accepted, the insurer may grant a package.",
+                " for fees above the covered rate. An application is then put together (letter requesting exceptional help, medical prescription for the assessment and/or the sessions, paid invoices, quote for the sessions) sent to the social services or to the social benefits committee. If the application is accepted, the insurer may grant a package.",
             },
           ],
           list: null,
@@ -110,12 +110,12 @@ export const en: Copy = {
         },
       },
       {
-        question: "The supplementary benefits of the CPAM",
+        question: "The extra-statutory benefits of CPAM",
         answer: {
           paragraphs: [
             {
               before:
-                "This is help granted on an exceptional basis. You apply to the social services office of your local council (CCAS) or to a social worker at the social security office, with a file for “extra-legal benefit assistance”. Income criteria apply, and the request is justified by an assessment. It is possible without the MDPH, but an MDPH file in progress can make the process easier.",
+                "This is help granted on an exceptional basis. You apply to the social services office of your local council (CCAS) or to a social worker at the social security office, with an application for “extra-statutory benefit assistance”. Income criteria apply, and the request is justified by an assessment. It is possible without the MDPH, but an MDPH application in progress can make the process easier.",
               emphasis: "",
               after: "",
             },
@@ -130,7 +130,7 @@ export const en: Copy = {
           paragraphs: [
             {
               before:
-                "The MDPH also concerns people without a severe disability. Full or partial reimbursement is a right for an established and diagnosed disability (autism, dyspraxia, ADHD…) by a specialist doctor (child psychiatrist, paediatric neurologist…).",
+                "The MDPH also concerns people without a severe disability. Full or partial reimbursement is a right when a disability has been established and diagnosed (autism, dyspraxia, ADHD…) by a specialist doctor (child psychiatrist, paediatric neurologist…).",
               emphasis: "",
               after: "",
             },
@@ -158,12 +158,12 @@ export const en: Copy = {
         },
       },
       {
-        question: "Pension funds and company schemes",
+        question: "Pension funds and works councils",
         answer: {
           paragraphs: [
             {
               before:
-                "Pension funds and company schemes can take part through financial help. Ask your organisation.",
+                "Pension funds and works councils can contribute financial support. Ask your organisation.",
               emphasis: "",
               after: "",
             },
@@ -197,7 +197,7 @@ export const en: Copy = {
           paragraphs: [
             {
               before:
-                "The psychomotor assessment is a time of evaluation: a few appointments to clarify the request, to observe fine and gross motor skills, the relationship to time and space, bodily experience and sensitivity, and to draw up a first framework of understanding, with the difficulties as well as the resources. Follow-up may come afterwards: regular sessions, most often once a week or every two weeks, around bodily mediations and talking.",
+                "The psychomotor assessment is a time of evaluation: a few appointments to clarify the request, to observe fine and gross motor skills, the relationship to time and space, bodily experience and sensory experience, and to draw up a first framework of understanding, with the difficulties as well as the resources. Follow-up may come afterwards: regular sessions, most often once a week or every two weeks, around bodily mediations and exchanges.",
               emphasis: "",
               after: "",
             },

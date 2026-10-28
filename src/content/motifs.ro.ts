@@ -32,7 +32,7 @@ export const motifs: Motif[] = [
         items: [
           "un sentiment persistent de decalaj față de ceilalți",
           "o gândire care nu se oprește niciodată, dificultăți de a adormi",
-          "o hipersensibilitate, o intensitate emoțională greu de conținut",
+          "o hipersensibilitate, o intensitate emoțională greu de stăpânit",
           "o agitație, o tensiune corporală, somatizări",
           "oboseala de a trebui să se supra-adapteze sau să «se facă mai mic»",
           "o dificultate de a se orienta în senzațiile sale și în corpul său",
@@ -42,9 +42,9 @@ export const motifs: Motif[] = [
       {
         heading: "Ce propune psihomotricitatea",
         paragraphs: [
-          "Ședința nu caută să «facă să tacă» această intensitate. Ea propune un spațiu în care să o trăiți altfel, pornind de la corp, de la senzații, de la mișcare și de la materie.",
+          "Ședința nu caută să reducă la tăcere această intensitate. Ea propune un spațiu în care să o trăiți altfel, pornind de la corp, de la senzații, de la mișcare și de la materie.",
           "Prin relaxare, mișcare, respirație, desen, argilă sau atingere terapeutică, este vorba de a regăsi repere, de a locui un corp uneori ținut la distanță și de a vă da dreptul de a încetini.",
-          "Această lucrare se face în ritmul dumneavoastră, lăsându-vă locul de a gândi tot atât cât de a simți.",
+          "Acest demers se face în ritmul dumneavoastră, lăsându-vă spațiu să gândiți tot atât cât să simțiți.",
         ],
       },
     ],
@@ -67,7 +67,7 @@ export const motifs: Motif[] = [
       {
         question: "Primiți adolescenți HPI sau HQI/THQI?",
         answer:
-          "Da. Primesc adolescenți și adulți, și copii în funcție de situații.",
+          "Da. Primesc adolescenți și adulți, și copii în funcție de situație.",
       },
     ],
     related: ["douance-hqi-thqi-et-psychomotricite"],
@@ -98,7 +98,7 @@ export const motifs: Motif[] = [
         items: [
           "o atenție care pleacă, sarcini începute și niciodată terminate",
           "o agitație corporală, o dificultate de a rămâne așezat fără să se miște",
-          "o impulsivitate, vorbe sau gesturi care se revarsă",
+          "o impulsivitate, vorbe sau gesturi care debordează",
           "o oboseală constantă, o epuizare de a «ține» lucrurile",
           "dificultăți de organizare, de planificare, de gestionare a timpului",
           "un raport complicat cu propriul corp și cu senzațiile sale",
@@ -115,8 +115,8 @@ export const motifs: Motif[] = [
       },
     ],
     note: {
-      title: "În completare, niciodată în locul",
-      text: "TDA-H este o neuroatipie: nu este vorba de o lipsă de voință. Acompanierea mea se face în completarea, niciodată în locul, unui acompaniament medical.",
+      title: "Ca o completare, niciodată ca înlocuire",
+      text: "TDA-H este o neuroatipie: nu este vorba de o lipsă de voință. Acompanierea mea se face în completarea unui acompaniament medical, niciodată în locul lui.",
       tone: "peach",
     },
     faq: [
@@ -152,7 +152,7 @@ export const motifs: Motif[] = [
         heading: "Despre ce este vorba?",
         paragraphs: [
           "Anxietatea, stresul cronic și epuizarea profesională (burn-out) nu sunt fragilități: sunt semnale. Corpul este adesea foarte implicat: tensiuni, somn, suflare scurtă, dureri, tulburări digestive, oboseală care nu trece.",
-          "Se poate avea «tot ce este necesar» și, cu toate acestea, să vă simțiți gol sau într-o alertă permanentă. Cuvintele lipsesc uneori pentru a o spune; corpul, el, păstrează urma.",
+          "Se poate avea «tot ce este necesar» și, cu toate acestea, să vă simțiți gol sau într-o alertă permanentă. Cuvintele lipsesc uneori pentru a spune asta; corpul, el, păstrează urma.",
           "Ședința de psihomotricitate nu se substituie unui acompaniament medical sau psihologic. Ea propune un alt punct de intrare.",
         ],
       },
@@ -177,7 +177,7 @@ export const motifs: Motif[] = [
         paragraphs: [
           "Ședința oferă un timp pentru sine, în care încetinim. Prin respirație, relaxare, mișcare, materie sau atingere terapeutică, este vorba de a reda corpului locul său.",
           "Obiectivul nu este de a «evacua», ci de a regăsi capacitatea de a simți, de a vă așeza, de a recunoaște ceea ce alină și de a transforma toate acestea în resurse pentru mai departe.",
-          "Ritmul se construiește împreună cu dumneavoastră: o dată pe săptămână sau la două săptămâni, în funcție de ceea ce aveți nevoie.",
+          "Ritmul se construiește împreună cu dumneavoastră: o dată pe săptămână sau la două săptămâni, în funcție de ce aveți nevoie.",
         ],
       },
     ],
@@ -213,12 +213,12 @@ export const motifs: Motif[] = [
     metaDescription:
       "Dispraxie, disgrafie, dislexie, tulburare de coordonare…: psihomotricitatea se interesează de corpul care învață. Bilanț și ședințe în Nantes cu Manuela Edom, psihomotricistă cu diplomă de stat.",
     title: "Tulburări specifice de învățare: corpul, coordonarea, încrederea.",
-    lead: "Însoțesc persoane vizate de tulburări specifice de învățare. Dincolo de învățare, psihomotricitatea se interesează de corpul care învață: coordonare, motricitate fină, repere în timp și spațiu și stima de sine care merge cu ele.",
+    lead: "Însoțesc persoane vizate de tulburări specifice de învățare. Dincolo de învățare, psihomotricitatea se interesează de corpul care învață: coordonare, motricitate fină, repere în timp și spațiu și stima de sine asociată.",
     sections: [
       {
         heading: "Despre ce este vorba?",
         paragraphs: [
-          "Sub denumirea «tulburări specifice de învățare» sunt grupate mai multe tulburări durabile ale învățării: dispraxie (numită și tulburare de coordonare, TDC sau TAC), dislexie, disgrafie, discalculie, disortografie, disfazie… Ele nu spun nimic despre inteligență, dar fac anumite gesturi sau anumite învățări costisitoare.",
+          "Sub denumirea «tulburări specifice de învățare» sunt grupate mai multe tulburări durabile ale învățării: dispraxie (numită și tulburare de coordonare, TDC sau TAC), dislexie, disgrafie, discalculie, disortografie, disfazie… Ele nu spun nimic despre inteligență, dar fac anumite gesturi sau anumite învățări solicitante.",
           "Corpul este foarte prezent: un gest stângaci, o scriere dificilă, o orientare în spațiu sau timp care cere mult efort, o fatigabilitate importantă.",
           "În urma eforturilor invizibile, încrederea în sine se poate eroda. Psihomotricitatea ia în considerare această dimensiune tot atât cât motricitatea.",
         ],
@@ -226,16 +226,16 @@ export const motifs: Motif[] = [
       {
         heading: "Când să consultați?",
         paragraphs: [
-          "Un bilanț psihomotor poate ajuta la înțelegerea a ceea ce se joacă și la deschiderea unor piste concrete.",
+          "Un bilanț psihomotor poate ajuta să înțelegem ce se joacă și să deschidem piste concrete.",
         ],
         items: [
           "o stângăcie, un copil «stângaci» care se lovește sau răstoarnă des",
           "o dificultate de coordonare sau de echilibru",
-          "o scriere laborioasă sau ilizibilă, un gest grafic costisitor",
+          "o scriere laborioasă sau ilizibilă, un gest grafic solicitant",
           "repere în timp și spațiu greu de construit",
           "o fatigabilitate importantă în învățare",
           "o evitare, o pierdere de încredere, un sentiment de eșec",
-          "nevoia de repere concrete pentru a locui altfel corpul",
+          "nevoia de repere concrete pentru a locui corpul altfel",
         ],
       },
       {
@@ -266,7 +266,7 @@ export const motifs: Motif[] = [
       {
         question: "În ce constă bilanțul psihomotor?",
         answer:
-          "El permite să degajăm o primă grilă de înțelegere: motricitate fină și globală, raportul cu timpul și spațiul, trăirea corporală, sensorialitatea. El arată dificultățile, dar și resursele.",
+          "El permite să conturăm o primă grilă de înțelegere: motricitate fină și globală, raportul cu timpul și spațiul, trăirea corporală, sensorialitatea. El arată dificultățile, dar și resursele.",
       },
     ],
     related: ["le-bilan-psychomoteur"],
@@ -278,7 +278,7 @@ export const motifs: Motif[] = [
     metaTitle: "Persoane vârstnice",
     metaDescription:
       "Ședințele de psihomotricitate se adresează oricărei persoane, de la bebeluș la persoana vârstnică. Echilibru, prevenirea căderilor, autonomie și încredere: acompaniere în Nantes.",
-    title: "Marea vârstă: a continua să locuiți în corpul dumneavoastră.",
+    title: "Vârsta înaintată: a continua să locuiți în corpul dumneavoastră.",
     lead: "Ședințele de psihomotricitate se adresează oricărei persoane, de la bebeluș la persoana vârstnică. Odată cu înaintarea în vârstă, corpul se schimbă și, odată cu el, uneori, echilibrul, memoria gestului, încrederea. Ședința este un spațiu pentru a continua să vă mișcați, să vă simțiți și să vă reasigurați.",
     sections: [
       {
@@ -314,7 +314,7 @@ export const motifs: Motif[] = [
     ],
     note: {
       title: "În completarea acompaniamentului medical",
-      text: "Psihomotricitatea se înscrie în completarea acompaniamentului medical (medic, kinetoterapeut, ergoterapeut…). Ea nu are vocația de a-l înlocui.",
+      text: "Psihomotricitatea se înscrie în completarea acompaniamentului medical (medic, kinetoterapeut, ergoterapeut…). Ea nu are ca scop să-l înlocuiască.",
       tone: "peach",
     },
     faq: [

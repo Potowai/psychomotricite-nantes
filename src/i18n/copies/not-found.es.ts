@@ -4,7 +4,7 @@ export const es: Copy = {
   meta: {
     title: "Página no encontrada",
     description:
-      "La página que busca no existe o se ha movido.Vd. las secciones del sitio de Manuela Edom, psicomotricista en Nantes.",
+      "La página que busca no existe o se ha trasladado. Consulte las secciones del sitio de Manuela Edom, psicomotricista en Nantes.",
   },
   eyebrow: "Error 404",
   title: "Puede que esta página se haya perdido por el camino.",

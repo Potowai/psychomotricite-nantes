@@ -39,14 +39,14 @@ export const motifs: Motif[] = [
         heading: "Qué ofrece la psicomotricidad",
         paragraphs: [
           "La sesión no busca «silenciar» esa intensidad. Ofrece un espacio para vivirla de otra manera, a partir del cuerpo, las sensaciones, el movimiento y la materia.",
-          "Mediante la relajación, el movimiento, la respiración, el dibujo, la arcilla o el toque terapéutico, se trata de recuperar apoyos, de habitar un cuerpo a veces tenido a distancia, y de darse permiso para ralentizar.",
+          "Mediante la relajación, el movimiento, la respiración, el dibujo, la arcilla o el tacto terapéutico, se trata de recuperar apoyos, de habitar un cuerpo a veces mantenido a distancia, y de darse permiso para ralentizar.",
           "Este trabajo se hace a su ritmo, dejándole el lugar de pensar tanto como de sentir.",
         ],
       },
     ],
     note: {
       title: "También soy formadora",
-      text: "Soy formadora en la temática de las altas capacidades (HPI, HQI/THQI), así como en parentalidad, desarrollo infantil, portage y transculturalidad.",
+      text: "Soy formadora en la temática de las altas capacidades (HPI, HQI/THQI), así como en parentalidad, desarrollo infantil, porteo y transculturalidad.",
       tone: "peach",
     },
     faq: [
@@ -82,8 +82,8 @@ export const motifs: Motif[] = [
       {
         heading: "¿De qué hablamos?",
         paragraphs: [
-          "El TDAH (trastorno por déficit de atención e hiperactividad, con o sin hiperactividad) concierne la manera de sostener la atención, de regular la agitación y la impulsividad.",
-          "No se trata de una falta de atención, sino de una atención difícil de dirigir y de mantener. El cuerpo está plenamente implicado: moverse, levantarse, balancearse, o por el contrario quedarse quieto, son a menudo formas de resistir.",
+          "El TDAH (trastorno por déficit de atención con o sin hiperactividad) concierne la manera de sostener la atención, de regular la agitación y la impulsividad.",
+          "No se trata de una falta de atención, sino de una atención difícil de dirigir y de mantener. El cuerpo está plenamente implicado: moverse, levantarse, balancearse, o por el contrario quedarse quieto, son a menudo formas de sostenerse.",
           "A menudo se suman la fatiga, la sensación de no llegar y las dificultades en las relaciones o en el trabajo.",
         ],
       },
@@ -95,7 +95,7 @@ export const motifs: Motif[] = [
         items: [
           "una atención que se va, tareas empezadas y nunca terminadas",
           "agitación corporal, dificultad para quedarse quieto sin moverse",
-          "impulsividad, palabras o gestos que se desbordan",
+          "impulsividad, palabras o gestos que rebasan",
           "fatiga constante, agotamiento por «aguantar» las cosas",
           "dificultades de organización, planificación y gestión del tiempo",
           "una relación complicada con el cuerpo y las sensaciones",
@@ -105,15 +105,15 @@ export const motifs: Motif[] = [
       {
         heading: "Qué ofrece la psicomotricidad",
         paragraphs: [
-          "La sesión propone experimentar más que constreñir: moverse, apoyarse, asentarse, sentir, y poco a poco distinguir qué ayuda.",
-          "El trabajo versa sobre la regulación tónico-emocional, la localización de las sensaciones, la relación con el tiempo y el espacio, la motricidad, así como sobre las funciones ejecutivas: organizarse, planificar, empezar y terminar. Tantos apoyos que pueden trasladarse a lo cotidiano.",
-          "Las mediaciones corporales (movimiento, respiración, tacto, materia) se eligen con usted, según lo que le resulte.",
+          "La sesión invita a experimentar en lugar de constreñir: moverse, apoyarse, asentarse, sentir, y poco a poco distinguir qué ayuda.",
+          "El trabajo versa sobre la regulación tónico-emocional, la identificación de las sensaciones, la relación con el tiempo y el espacio, la motricidad, así como sobre las funciones ejecutivas: organizarse, planificar, empezar y terminar. Otros tantos apoyos que pueden trasladarse a lo cotidiano.",
+          "Las mediaciones corporales (movimiento, respiración, tacto, materia) se eligen con usted, según lo que le resulte significativo.",
         ],
       },
     ],
     note: {
-      title: "En complemento, nunca en lugar",
-      text: "El TDAH es una neurodivergencia: no se trata de una falta de voluntad. Mi acompañamiento se hace en complemento, nunca en lugar, de un seguimiento médico.",
+      title: "Como complemento, nunca como sustituto",
+      text: "El TDAH es una neurodivergencia: no se trata de una falta de voluntad. Mi acompañamiento se hace como complemento de un seguimiento médico, nunca en su lugar.",
       tone: "peach",
     },
     faq: [
@@ -162,7 +162,7 @@ export const motifs: Motif[] = [
           "una ansiedad (generalizada o puntual) que ocupa mucho espacio, pensamientos en bucle",
           "ataques de pánico, un cuerpo que se desborda sin aviso",
           "un agotamiento que resiste al descanso (burnout)",
-          "tensiones, dolores o somatizaciones ligados al estrés",
+          "tensiones, dolores o somatizaciones relacionados con el estrés",
           "un sueño difícil, un cuerpo siempre en alerta",
           "una desconexión de sus sensaciones y sus necesidades",
           "un acontecimiento o un período de vida difícil de atravesar",
@@ -172,7 +172,7 @@ export const motifs: Motif[] = [
       {
         heading: "Qué ofrece la psicomotricidad",
         paragraphs: [
-          "La sesión ofrece un tiempo para uno mismo, donde se ralentiza. Mediante la respiración, la relajación, el movimiento, la materia o el toque terapéutico, se trata de devolverle al cuerpo su lugar.",
+          "La sesión ofrece un tiempo para uno mismo, donde se ralentiza. Mediante la respiración, la relajación, el movimiento, la materia o el tacto terapéutico, se trata de devolverle al cuerpo su lugar.",
           "El objetivo no es «evacuar», sino recuperar la capacidad de sentir, de asentarse, de reconocer lo que calma, y convertirlo en recursos para lo que viene después.",
           "El ritmo se construye con usted: una vez por semana o cada quince días, según lo que necesite.",
         ],
@@ -210,14 +210,14 @@ export const motifs: Motif[] = [
     metaDescription:
       "Dispraxia, disgrafia, dislexia, trastorno de la coordinación: la psicomotricidad se interesa por el cuerpo que aprende. Balance y sesiones en Nantes con Manuela Edom, psicomotricista D.E.",
     title: "Dificultades específicas del aprendizaje: el cuerpo, la coordinación, la confianza.",
-    lead: "Acompaño a personas afectadas por dificultades específicas del aprendizaje. Más allá de los aprendizajes, la psicomotricidad se interesa por el cuerpo que aprende: coordinación, motricidad fina, referencias en el tiempo y el espacio, y la autoestima que va con ello.",
+    lead: "Acompaño a personas afectadas por dificultades específicas del aprendizaje. Más allá de los aprendizajes, la psicomotricidad se interesa por el cuerpo que aprende: coordinación, motricidad fina, referencias en el tiempo y el espacio, y la confianza en uno mismo que va con ello.",
     sections: [
       {
         heading: "¿De qué hablamos?",
         paragraphs: [
-          "Bajo la etiqueta «dificultades específicas del aprendizaje» se agrupan varios trastornos duraderos de los aprendizajes: dispraxia (también llamada trastorno de la coordinación, TDC o TAC), dislexia, disgrafia, discalculia, disortografía, disfasia… No dicen nada de la inteligencia, pero hacen costosos ciertos gestos o ciertos aprendizajes.",
+          "Bajo la etiqueta «dificultades específicas del aprendizaje» se agrupan varios trastornos duraderos de los aprendizajes: dispraxia (también llamada trastorno de la coordinación, TDC o TAC), dislexia, disgrafia, discalculia, disortografía, disfasia… No dicen nada de la inteligencia, pero dificultan ciertos gestos o ciertos aprendizajes.",
           "El cuerpo está muy presente: un gesto torpe, una escritura difícil, una ubicación en el espacio o el tiempo que exige mucho esfuerzo, una fatigabilidad importante.",
-          "Al acumular tanto esfuerzo invisible, la autoestima puede erosionarse. La psicomotricidad tiene en cuenta esta dimensión tanto como la motricidad.",
+          "Al acumular tanto esfuerzo invisible, la confianza en uno mismo puede erosionarse. La psicomotricidad tiene en cuenta esta dimensión tanto como la motricidad.",
         ],
       },
       {
@@ -228,7 +228,7 @@ export const motifs: Motif[] = [
         items: [
           "torpeza, un niño/a «torpe» que se golpea o vuelca a menudo",
           "dificultad de coordinación o de equilibrio",
-          "una escritura laboriosa o ilegible, un gesto gráfico costoso",
+          "una escritura laboriosa o ilegible, un gesto gráfico que exige esfuerzo",
           "referencias en el tiempo y el espacio difíciles de construir",
           "fatigabilidad importante en los aprendizajes",
           "evitación, pérdida de confianza, sensación de fracaso",
@@ -240,7 +240,7 @@ export const motifs: Motif[] = [
         paragraphs: [
           "El balance psicomotor permite comprender dónde se sitúan las dificultades, y también los recursos. Ofrece una primera fotografía de la relación con el cuerpo, con el espacio, con el tiempo, con la sensorialidad.",
           "Después, la sesión trabaja la coordinación, la motricidad fina y global, la organización del espacio, a través del juego, el movimiento y la materia.",
-          "El objetivo es también devolver la confianza: lograr cosas con el cuerpo, disfrutar haciendo, porque la autoestima sostiene los aprendizajes.",
+          "El objetivo es también devolver la confianza: lograr cosas con el cuerpo, disfrutar haciendo, porque la confianza en uno mismo sostiene los aprendizajes.",
         ],
       },
     ],
@@ -263,7 +263,7 @@ export const motifs: Motif[] = [
       {
         question: "¿En qué consiste el balance psicomotor?",
         answer:
-          "Permite obtener una primera cuadrícula de comprensión: motricidad fina y global, relación con el tiempo y el espacio, vivencia corporal, sensorialidad. Hace visibles las dificultades, pero también los recursos.",
+          "Permite obtener un primer marco de comprensión: motricidad fina y global, relación con el tiempo y el espacio, vivencia corporal, sensorialidad. Hace visibles las dificultades, pero también los recursos.",
       },
     ],
     related: ["el-balance-psicomotor"],
@@ -305,13 +305,13 @@ export const motifs: Motif[] = [
         paragraphs: [
           "La sesión se adapta a sus posibilidades del momento. Puede celebrarse sentado/a o de pie, a partir de movimientos sencillos, de la respiración, del tacto, de la relajación.",
           "Se trata de mantener la movilidad, el equilibrio, la propiocepción y la ubicación en el espacio, pero también de recuperar la seguridad interior y el placer del movimiento.",
-          "Puedo, en determinadas situaciones, desplazarme a su domicilio (en el marco de una continuidad domiciliaria o de un centro residencial, EHPAD o residencia).",
+          "Puedo, en determinadas situaciones, desplazarme a su domicilio (en el marco de una atención domiciliaria) o a un centro residencial (EHPAD, residencia).",
         ],
       },
     ],
     note: {
-      title: "En complemento del seguimiento médico",
-      text: "La psicomotricidad se sitúa en complemento del seguimiento médico (médico, fisioterapeuta, terapeuta ocupacional…). No tiene por vocación sustituirlo.",
+      title: "Como complemento del seguimiento médico",
+      text: "La psicomotricidad se sitúa en complemento del seguimiento médico (médico, fisioterapeuta, terapeuta ocupacional…). No pretende sustituirlo.",
       tone: "peach",
     },
     faq: [

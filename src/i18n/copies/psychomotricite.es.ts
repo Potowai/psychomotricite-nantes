@@ -4,7 +4,7 @@ export const es: Copy = {
   meta: {
     title: "La psicomotricidad, en pocas palabras",
     description:
-      "La psicomotricidad se interesa por los vínculos entre lo vivido en el cuerpo y lo vivido en la psique. Una profesión paramédical reconocida por un diplomado de Estado, para cualquier persona, desde el bebé hasta la persona mayor.",
+      "La psicomotricidad se interesa por los vínculos entre lo vivido en el cuerpo y lo vivido en la psique. Una profesión paramédica reconocida por un diploma de Estado, para cualquier persona, desde el bebé hasta la persona mayor.",
   },
   hero: {
     breadcrumbHome: "Inicio",
@@ -30,7 +30,7 @@ export const es: Copy = {
       "Las sesiones de psicomotricidad se dirigen a cualquier persona, desde el bebé hasta la persona mayor. Las solicitudes se inscriben en un continuo que va desde un simple deseo de introspección o una incomodidad cotidiana para algunas personas, hasta un sufrimiento a veces profundo y/o trastornos más severos, para otras.",
     calloutTitle: "Una profesión paramédica",
     calloutText:
-      "Psicomotricista es una profesión paramédica, reconocida por un diplomado de Estado, de la misma manera que la logopedia y la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto n°88-659 del 6 de mayo de 1988. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
+      "La psicomotricidad es una profesión paramédica, reconocida por un diploma de Estado, de la misma manera que la logopedia y la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto n°88-659 del 6 de mayo de 1988. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
   },
   motifsSection: {
     eyebrow: "Los motivos que llevan a consultar",
@@ -38,7 +38,7 @@ export const es: Copy = {
     items: [
       {
         title: "El cuerpo y la motricidad",
-        intro: "Pueden concerner directamente al cuerpo y a la motricidad.",
+        intro: "Pueden concernir directamente al cuerpo y a la motricidad.",
         items: [
           "retraso del desarrollo",
           "torpeza",
@@ -59,13 +59,13 @@ export const es: Copy = {
       {
         title: "Las emociones, la relación, la psique",
         intro:
-          "También pueden concerner más a las emociones, a la relación con los demás y con uno mismo, a la psique.",
+          "También pueden concernir más a las emociones, a la relación con los demás y con uno mismo, a la psique.",
         items: [
           "confianza en uno mismo",
           "ansiedad",
           "depresión",
           "adicciones",
-          "traumatismos",
+          "psicotraumatismos",
           "dificultades relacionales",
           "trastornos de conducta",
           "gestión de la ira",
@@ -76,7 +76,7 @@ export const es: Copy = {
           "agotamiento profesional / burnout",
         ],
         outro:
-          "Pasar por el cuerpo permite dar un paso al lado mientras se explora en profundidad. También es una manera de buscar fundaciones sólidas y cultivar los propios recursos internos.",
+          "Pasar por el cuerpo permite dar un paso al lado mientras se explora en profundidad. También es una manera de buscar bases sólidas y cultivar los propios recursos internos.",
       },
       {
         title: "La relación con el cuerpo",
@@ -142,7 +142,7 @@ export const es: Copy = {
       {
         question: "¿Qué es la psicomotricidad?",
         answer:
-          "Una profesión paramédical que se interesa por los vínculos entre el cuerpo y la vida psíquica: la motricidad, las sensaciones, el tono muscular, la relación con el tiempo y con el espacio, la relación con el otro. Se ejerce con un diplomado de Estado, como la logopedia o la fisioterapia.",
+          "Una profesión paramédica que se interesa por los vínculos entre el cuerpo y la vida psíquica: la motricidad, las sensaciones, el tono muscular, la relación con el tiempo y con el espacio, la relación con el otro. Se ejerce con un diploma de Estado, como la logopedia o la fisioterapia.",
       },
       {
         question: "¿Para qué sirve concretamente?",

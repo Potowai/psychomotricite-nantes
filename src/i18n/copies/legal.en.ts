@@ -20,9 +20,9 @@ export const en: Copy = {
     diploma: "(state diploma in psychomotor therapy).",
     phoneLabel: "Phone:",
     emailLabel: "E-mail:",
-    siretLabel: "Company identification number (SIRET):",
+    siretLabel: "Identification number (SIRET):",
     rppsLabel: "RPPS number:",
-    publicationDirector: "Director of publication:",
+    publicationDirector: "Publication director:",
   },
   host: {
     title: "Hosting",
@@ -32,7 +32,7 @@ export const en: Copy = {
   },
   activity: {
     title: "Activity and legal framework",
-    body: "Psychomotor therapy is a paramedical profession recognised by a state diploma. The skills of psychomotor therapists are framed by the decree of 6 May 1988.",
+    body: "Psychomotor therapy is a paramedical profession recognised by a state diploma. The skills of psychomotor therapists are governed by Decree No. 88-659 of 6 May 1988.",
   },
   intellectual: {
     title: "Intellectual property",

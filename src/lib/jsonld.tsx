@@ -127,7 +127,7 @@ export function websiteSchema() {
     "@id": `${url}/#website`,
     url,
     name: `${site.name} · ${site.role}`,
-    inLanguage: ["fr-FR", "en", "es"],
+    inLanguage: ["fr-FR", "en", "es", "ro", "ar"],
     publisher: { "@id": businessId },
   };
 }

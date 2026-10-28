@@ -27,7 +27,7 @@ export const ro: Copy = {
       category: "Consultație",
       question: "Primiți adulți? Și copii?",
       answer:
-        "Profesez în cabinet liberal cu adolescenți și adulți și primesc de asemenea copii la cerere sau în funcție de situații. Ședințele de psihomotricitate se adresează oricărei persoane, de la bebeluș la persoana vârstnică.",
+        "Profesez în cabinet liberal cu adolescenți și adulți și primesc de asemenea copii la cerere sau în funcție de situație. Ședințele de psihomotricitate se adresează oricărei persoane, de la bebeluș la persoana vârstnică.",
     },
     {
       category: "Consultație",
@@ -59,7 +59,7 @@ export const ro: Copy = {
       category: "Tarife și rambursare",
       question: "Ce ajutoare există pentru finanțarea ședințelor?",
       answer:
-        "Mai multe dispozitive: tot mai multe asigurări private de sănătate rambursează psihomotricitatea (adesea prin pachetul de bunăstare); prestațiile extra-legale ale CPAM, de solicitat prin serviciul social al primăriei (CCAS); MDPH, cu PCH pentru adulți și o completare AEEH pentru copii și adolescenți; în sfârșit, anumite case de pensii și comitete de întreprindere.",
+        "Mai multe dispozitive: tot mai multe asigurări private de sănătate rambursează psihomotricitatea (adesea prin pachetul de bunăstare); prestațiile extraordinare ale CPAM, de solicitat prin serviciul social al primăriei (CCAS); MDPH, cu PCH pentru adulți și un complement AEEH pentru copii și adolescenți; în sfârșit, anumite case de pensii și comitete de întreprindere.",
     },
     {
       category: "Tarife și rambursare",
@@ -91,7 +91,7 @@ export const ro: Copy = {
       question:
         "Care este diferența față de logopedie sau psihologie?",
       answer:
-        "Aceste abordări se completează mai mult decât se opun. Logopedul lucrează limbajul, vorbirea și învățarea limbajului scris. Psihologul lucrează viața psihică prin intermediul cuvântului și, în funcție de formarea sa, bilanțul cognitiv. Psihomotricitatea se sprijină pe corp, mișcare și senzații pentru a regăsi repere, o reglare și un loc în relație. Este frecvent ca aceste acompanieri să se facă în paralel: colaborez cu plăcere cu profesioniștii care înconjoară persoana.",
+        "Aceste abordări se completează mai mult decât se opun. Logopedul lucrează limbajul, vorbirea și învățarea limbajului scris. Psihologul lucrează viața psihică prin intermediul cuvântului și, în funcție de formarea sa, bilanțul cognitiv. Psihomotricitatea se sprijină pe corp, mișcare și senzații pentru a regăsi repere, o reglare și un loc în relații. Este frecvent ca aceste acompanieri să se facă în paralel: colaborez cu plăcere cu profesioniștii care înconjoară persoana.",
     },
     {
       category: "Cabinetul",

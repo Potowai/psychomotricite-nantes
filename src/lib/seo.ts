@@ -185,7 +185,7 @@ const metaCopy: Record<
     titleDefault: `${site.name} · psicomotricista en Nantes`,
     titleTemplate: `%s · ${site.name}, Nantes`,
     description:
-      "Manuela Edom es psicomotricista diplomada de Estado en Nantes. Sesiones para adolescentes y personas adultas, y para niños ante solicitudes específicas, en el consultorio de la calle de la Mitrie 4. Altas capacidades (HPI, HQI/THQI), TEA, TDAH, dificultades específicas del aprendizaje.",
+      "Manuela Edom es psicomotricista con título de Estado en Nantes. Sesiones para adolescentes y personas adultas, y para niños en casos concretos, en el consultorio de la calle de la Mitrie 4. Altas capacidades (HPI, HQI/THQI), TEA, TDAH, dificultades específicas del aprendizaje.",
     category: "Salud",
   },
   ro: {
@@ -193,7 +193,7 @@ const metaCopy: Record<
     titleDefault: `${site.name} · psihomotricistă în Nantes`,
     titleTemplate: `%s · ${site.name}, Nantes`,
     description:
-      "Manuela Edom este psihomotricistă diplomata de stat în Nantes. Ședințe pentru adolescenți și adulți, precum și pentru copii la cerere, în cabinetul din 4 rue de la Mitrie. Supradotare (HPI, HQI/THQI), TSA, TDAH, tulburări specifice de învățare.",
+      "Manuela Edom este psihomotricistă cu diplomă de stat în Nantes. Ședințe pentru adolescenți și adulți, precum și pentru copii la cerere, în cabinetul din 4 rue de la Mitrie. Supradotare (HPI, HQI/THQI), TSA, TDAH, tulburări specifice de învățare.",
     category: "Sănătate",
   },
   ar: {

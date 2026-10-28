@@ -48,15 +48,15 @@ export const es: Copy = {
       },
       {
         title: "Las emociones y la psique",
-        text: "Confianza en uno mismo, ansiedad, depresión, adicciones, traumatismos, dificultades relacionales, trastornos de conducta, gestión de la ira, trastornos del sueño, trastornos de la alimentación, trastornos psicosomáticos, agotamiento profesional / burnout.",
+        text: "Confianza en uno mismo, ansiedad, depresión, adicciones, psicotraumatismos, dificultades relacionales, trastornos de conducta, gestión de la ira, trastornos del sueño, trastornos de la alimentación, trastornos psicosomáticos, agotamiento profesional / burnout.",
       },
       {
         title: "La relación con el cuerpo",
-        text: "Trastornos de la conducta alimentaria, haber vivido violencia, disfforia de género o, más sencillamente, el deseo de «aprender a querer el cuerpo propio».",
+        text: "Trastornos de la conducta alimentaria, haber vivido violencia, disforia de género o, más sencillamente, el deseo de «aprender a querer el cuerpo propio».",
       },
       {
         title: "Las etapas de la vida",
-        text: "Nuestro cuerpo crece y atraviesa umbrales: pubertad, embarazo, envejecimiento. Tantos períodos de sensibilidad donde una sesión de psicomotricidad puede ser un espacio seguro.",
+        text: "Nuestro cuerpo crece y atraviesa umbrales: pubertad, embarazo, envejecimiento. Otras tantas etapas de sensibilidad en las que una sesión de psicomotricidad puede ser un espacio seguro.",
       },
       {
         title: "Las neurodivergencias",
@@ -84,7 +84,7 @@ export const es: Copy = {
       {
         n: "03",
         title: "Las sesiones",
-        text: "Se articulan en torno a mediaciones corporales e intercambios: relajación, canto, danza, música, dibujo, arcilla, toque terapéutico, automasaje, respiración. Una sesión dura unos 40 minutos.",
+        text: "Se articulan en torno a mediaciones corporales e intercambios: relajación, canto, danza, música, dibujo, arcilla, tacto terapéutico, automasaje, respiración. Una sesión dura unos 40 minutos.",
       },
     ],
   },
@@ -93,7 +93,7 @@ export const es: Copy = {
     quote:
       "«La vivencia corporal también hay que leer, comprender y actualizar a la luz de los temas sociales contemporáneos.»",
     body:
-      "Psicomotricista desde 2016, mi interés por la sociología, las ciencias políticas y la filosofía me lleva a pensar la psicomotricidad como abierta al mundo. También soy formadora en parentalidad, desarrollo infantil, portage, transculturalidad y altas capacidades.",
+      "Psicomotricista desde 2016, mi interés por la sociología, las ciencias políticas y la filosofía me lleva a pensar la psicomotricidad como abierta al mundo. También soy formadora en parentalidad, desarrollo infantil, porteo, transculturalidad y altas capacidades.",
     link: "Saber más sobre mi recorrido",
     portraitAlt:
       "Retrato de Manuela Edom, psicomotricista en Nantes, sonriente, con las manos en primer plano.",
@@ -128,12 +128,12 @@ export const es: Copy = {
       {
         question: "¿Necesito una prescripción para consultar con una psicomotricista?",
         answer:
-          "Sí. La psicomotricidad es una profesión paramédica, reconocida por un diplomado de Estado, igual que la logopedia o la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto de 6 de mayo de 1988. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
+          "Sí. La psicomotricidad es una profesión paramédica, reconocida por un diploma de Estado, igual que la logopedia o la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto n.º 88-659, de 6 de mayo de 1988. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
       },
       {
         question: "¿Se reembolsa la psicomotricidad?",
         answer:
-          "Las psicomotricistas son auxiliares de la medicina; sus cuidados todavía no se reembolsa por la seguridad social. Sí existen, no obstante, ayudas: cada vez más mutuas (paquete de bienestar), las prestaciones no legales del centro de salud, la MDPH (PCH, complemento de la AEEH), así como algunas mutualidades de pensiones y comités de empresa.",
+          "Las psicomotricistas son auxiliares de la medicina; sus cuidados todavía no se reembolsan por la seguridad social. Sí existen, no obstante, ayudas: cada vez más mutuas (paquete de bienestar), las prestaciones extralegales de la CPAM, la MDPH (PCH, complemento de la AEEH), así como algunos fondos de pensiones y comités de empresa.",
       },
       {
         question: "¿Cuánto cuesta una sesión y cuánto dura?",

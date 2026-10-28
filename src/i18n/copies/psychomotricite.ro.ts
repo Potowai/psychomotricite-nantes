@@ -147,7 +147,7 @@ export const ro: Copy = {
       {
         question: "La ce folosește concret?",
         answer:
-          "La a regăsi repere: a vă simți mai bine corpul, a vă coordona gesturile, a regla ceea ce se revarsă, a vă orienta în spațiu și timp, a îndrăzni să vă mișcați și să vă luați locul. Trecerea se face prin mișcare, relaxare, respirație, materie și cuvânt.",
+          "La a regăsi repere: a vă simți mai bine în corp, a vă coordona gesturile, a regla ceea ce se revarsă, a vă orienta în spațiu și timp, a îndrăzni să vă mișcați și să vă luați locul. Trecerea se face prin mișcare, relaxare, respirație, materie și cuvânt.",
       },
       {
         question: "Funcționează și pentru un adult?",

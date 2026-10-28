@@ -37,7 +37,7 @@ export const ar: Copy = {
   },
   practical: {
     hours: {
-      title: "المواعيد",
+      title: "أوقات الاستشارة",
       before: "الاستشارات في العيادة ",
       emphasis: "من الاثنين إلى الخميس",
       after: "، بموعد مسبق.",

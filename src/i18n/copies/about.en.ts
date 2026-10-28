@@ -31,9 +31,9 @@ export const en: Copy = {
       "Do not hesitate to contact me to explain your request and I will suggest an appointment, or point you to another professional if that would be better.",
     openTitle: "Psychomotor therapy, open to the world",
     openBody:
-      "Alongside psychomotor therapy, my appetite for other disciplines such as sociology, political science and philosophy also took me to university. It leads me to think of psychomotor therapy as open to the world.",
+      "Alongside psychomotor therapy, my interest in other disciplines such as sociology, political science and philosophy also took me to university. It leads me to think of psychomotor therapy as open to the world.",
     openBodyAfter:
-      "Just as a patient lives within the society they live in, a care professional does not practise outside the society they belong to. Bodily experience also has to be read, understood and brought up to date in the light of contemporary societal themes.",
+      "Just as a patient is part of the society they live in, a care professional does not practise outside the society they belong to. Bodily experience also has to be read, understood and brought up to date in the light of contemporary societal themes.",
     next: "Next: what matters to me",
   },
   themes: {
@@ -58,13 +58,13 @@ export const en: Copy = {
     },
     eyebrow: "Going towards people",
     title: "An outreach approach, rooted in what is real.",
-    body: "Working with an outreach approach, I spent 5 years with asylum seekers, in emergency accommodation for single mothers with children (most of them foreign-born), as well as in squats.",
+    body: "Working with an outreach approach, I spent 5 years with asylum seekers, in emergency accommodation for single mothers with children (most of them foreign), as well as in shantytowns.",
     bodyAfter:
-      "I train at a social work school and at a psychomotor therapy school, as well as with care professionals in continuing education, on themes such as:",
+      "I teach at a social work school and at a psychomotor therapy school, and I train care professionals in continuing education, on themes such as:",
     formations: [
       "parenthood",
       "child development",
-      "baby carrying",
+      "babywearing",
       "transculturality",
       "psychotrauma",
       "giftedness (HQI/THQI)",

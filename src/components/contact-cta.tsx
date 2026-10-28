@@ -30,7 +30,7 @@ const copy: Record<
   en: {
     eyebrow: "Book an appointment",
     title: "Let’s talk about what brings you here",
-    text: "A doubt, a question, a particular situation? Write to me or call me: I will suggest an appointment, or point you to whoever is best placed if that is not me.",
+    text: "A question, a concern, a particular situation? Write to me or call me: I will suggest an appointment, or point you to whoever is best placed if that is not me.",
     call: "Call",
     sms: "Send a text",
     form: "Or write to me through the form",

@@ -4,7 +4,7 @@ export const es: Copy = {
   meta: {
     title: "Sesiones, tarifas y ayudas a la financiación",
     description:
-      "Sesiones de psicomotricidad en Nantes: cómo sedevelopan, mediaciones corporales, duración (40 min), tarifas (47 € seguimiento, 200 € balance en 4 sesiones) y las ayudas que pueden existir: mutuas, CPAM, MDPH (PCH, AEEH).",
+      "Sesiones de psicomotricidad en Nantes: cómo se desarrollan, mediaciones corporales, duración (40 min), tarifas (47 € seguimiento, 200 € balance en 4 sesiones) y las ayudas que pueden existir: mutuas, CPAM, MDPH (PCH, AEEH).",
   },
   breadcrumb: {
     home: "Inicio",
@@ -13,7 +13,7 @@ export const es: Copy = {
   hero: {
     eyebrow: "Sesiones y tarifas",
     title: "El seguimiento en psicomotricidad.",
-    lead: "El ritmo de las sesiones es lo más habitual de una sesión por semana o cada quince días, pero puede variar, igual que la duración del acompañamiento.",
+    lead: "El ritmo más habitual es de una sesión por semana o cada quince días, pero puede variar, igual que la duración del acompañamiento.",
   },
   course: {
     eyebrow: "Cómo es",
@@ -24,7 +24,7 @@ export const es: Copy = {
           "Las primeras citas permiten precisar la demanda y conocerse. Si hace falta, se puede realizar un ",
         emphasis: "balance psicomotor",
         after:
-          "; no es un paso obligatorio para dar curso a sesiones. Permite dibujar un primer marco de comprensión: una primera fotografía de dónde está la persona en su cuerpo: motricidad fina, motricidad global, relación con el tiempo y el espacio, vivencia corporal, relación con el cuerpo, sensorialidad.",
+          "; no es un paso obligatorio para continuar con las sesiones. Permite dibujar un primer marco de comprensión: una primera fotografía de dónde está la persona en su cuerpo: motricidad fina, motricidad global, relación con el tiempo y el espacio, vivencia corporal, relación con el cuerpo, sensorialidad.",
       },
       {
         before:
@@ -46,7 +46,7 @@ export const es: Copy = {
       "música",
       "dibujo",
       "arcilla",
-      "toque terapéutico",
+      "tacto terapéutico",
       "automasaje",
       "ejercicios de respiración",
     ],
@@ -74,7 +74,7 @@ export const es: Copy = {
   callouts: {
     reimbursement: {
       title: "Reembolso",
-      text: "Las psicomotricistas son auxiliares de la medicina; a diferencia de los fisioterapeutas y los logopedas, sus cuidados todavía no se reembolsa por la seguridad social. Sí existen ayudas: véase más abajo.",
+      text: "Las psicomotricistas son auxiliares de la medicina; a diferencia de los fisioterapeutas y los logopedas, sus cuidados todavía no se reembolsan por la seguridad social. Sí existen ayudas: véase más abajo.",
     },
     prescription: {
       title: "Prescripción",
@@ -83,7 +83,7 @@ export const es: Copy = {
   },
   funding: {
     eyebrow: "Ayudas a la financiación",
-    title: "No se quede solo.a frente a las trámites.",
+    title: "No se quede solo o sola frente a los trámites.",
     intro:
       "Varios dispositivos pueden participar en la financiación de las sesiones. Aquí lo esencial. Para el detalle del expediente, puedo acompañarle.",
     items: [
@@ -100,9 +100,9 @@ export const es: Copy = {
             {
               before:
                 "En caso de rechazo: todas las mutuas disponen de una ",
-              emphasis: "comisión de recursos amistosa",
+              emphasis: "comisión de recursos amistosos",
               after:
-                " para los gastos que superan la cobertura. Entonces se constituye un expediente: carta de solicitud de ayuda excepcional, prescripción médica del balance y/o de las sesiones, facturas pagadas, presupuesto de las sesiones, dirigido al servicio social o a la comisión de prestaciones sociales. Si se acepta el expediente, la mutua puede conceder un paquete.",
+                " para los honorarios que superan la cobertura. Entonces se constituye un expediente: carta de solicitud de ayuda excepcional, prescripción médica del balance y/o de las sesiones, facturas pagadas, presupuesto de las sesiones, dirigido al servicio social o a la comisión de prestaciones sociales. Si se acepta el expediente, la mutua puede conceder un paquete.",
             },
           ],
           list: null,
@@ -110,12 +110,12 @@ export const es: Copy = {
         },
       },
       {
-        question: "Las prestaciones no legales de la CPAM",
+        question: "Las prestaciones extralegales de la CPAM",
         answer: {
           paragraphs: [
             {
               before:
-                "Se trata de una ayuda concedida a título excepcional. Se dirige al servicio social de su ayuntamiento (CCAS) o a un.a asistente social de la Seguridad Social, con un expediente «ayuda para prestación no legal». Se aplican criterios de ingresos, y la solicitud se justifica con un balance. Es posible sin la MDPH, pero un expediente MDPH en curso puede facilitar la tramitació.",
+                "Se trata de una ayuda concedida a título excepcional. Se dirige al servicio social de su ayuntamiento (CCAS) o a un/a asistente social de la Seguridad Social, con un expediente «ayuda para prestación extralegal». Se aplican criterios de ingresos, y la solicitud se justifica con un balance. Es posible sin la MDPH, pero un expediente MDPH en curso puede facilitar el trámite.",
               emphasis: "",
               after: "",
             },
@@ -146,24 +146,24 @@ export const es: Copy = {
               before: "",
               emphasis: "Niños y adolescentes beneficiarios de la MDPH:",
               after:
-                " puede añadirse un complemento a la AEEH (Asignación de Educación del Niño Discapacitado), cuya cuantía depende de 6 categorías. El pago de las sesiones sigue en su cargo, pero la AEEH lo compensa.",
+                " puede añadirse un complemento a la AEEH (Asignación de Educación del Niño con Discapacidad), cuya cuantía depende de 6 categorías. El pago de las sesiones corre a su cargo, pero la AEEH lo compensa.",
             },
           ],
           closing: {
             before:
-              "Estos expedientes son largos; los facilita un.a asistente social del CCAS o del espacio departamental de solidaridades.",
+              "Estos expedientes son largos; los facilita un/a asistente social del CCAS o del espacio departamental de solidaridades.",
             emphasis: "",
             after: "",
           },
         },
       },
       {
-        question: "Cajas de pensiones y comités de empresa",
+        question: "Fondos de pensiones y comités de empresa",
         answer: {
           paragraphs: [
             {
               before:
-                "Las cajas de pensiones y los comités de empresa pueden participar con ayudas económicas. Infórmese en su entidad.",
+                "Los fondos de pensiones y los comités de empresa pueden participar con ayudas económicas. Infórmese en su entidad.",
               emphasis: "",
               after: "",
             },

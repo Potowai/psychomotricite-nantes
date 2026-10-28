@@ -103,6 +103,14 @@ const mapCopy: Record<
 
 const addressLine = `${site.address.street}, ${site.address.postalCode} ${site.address.city}`;
 
+const osmAttribution: Record<Locale, string> = {
+  fr: "contributeurs OpenStreetMap",
+  en: "OpenStreetMap contributors",
+  es: "colaboradores de OpenStreetMap",
+  ro: "contribuitorii OpenStreetMap",
+  ar: "مساهمو OpenStreetMap",
+};
+
 /**
  * Carte navigable du cabinet, partagée entre l'accueil et la page contact.
  *
@@ -189,7 +197,7 @@ export function CabinetMap({
         {
           maxZoom: 19,
           attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">contributeurs OpenStreetMap</a>',
+            `&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">${osmAttribution[locale]}</a>`,
         },
       ).addTo(map);
 

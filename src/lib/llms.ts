@@ -113,7 +113,7 @@ const copies: Record<Locale, Copy> = {
       phoneNote: "Call or SMS",
       hours: "Monday to Thursday, by appointment",
       access:
-        "close to the city centre, Saint Donatien, Dalby and Malakoff neighbourhood ; Super U Dalby car park, 2 hours free, 8 minutes on foot ; wheelchair accessible",
+        "close to the city centre, Saint Donatien, Dalby and Malakoff neighbourhood ; Super U Dalby car park, 2 hours free, 8 minutes on foot ; practice accessible for people with reduced mobility",
       transport:
         "Bus 11 and 12 (Casterneau, 1 minute on foot) ; C1 (Chalâtres, 10 minutes on foot) ; Tram line 1 (Moutonnerie, 20 minutes on foot)",
       fees:
@@ -140,7 +140,7 @@ const copies: Record<Locale, Copy> = {
   },
   es: {
     title: `${site.name} · psicomotricista en Nantes`,
-    intro: `Consultorio de psicomotricidad en Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psicomotricista diplomada de Estado desde ${site.practitioner.since}, recibe a adolescentes y personas adultas en la calle de la Mitrie 4, ${site.address.postalCode} ${site.address.city}. Especialidades: altas capacidades (HPI, HQI/THQI), TEA, TDAH, dificultades específicas del aprendizaje. Consultas de lunes a jueves, con cita previa.`,
+    intro: `Consultorio de psicomotricidad en Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psicomotricista con título de Estado desde ${site.practitioner.since}, recibe a adolescentes y personas adultas en la calle de la Mitrie 4, ${site.address.postalCode} ${site.address.city}. Especialidades: altas capacidades (HPI, HQI/THQI), TEA, TDAH, dificultades específicas del aprendizaje. Consultas de lunes a jueves, con cita previa.`,
     practical: "Información práctica",
     name: "Nombre",
     address: "Dirección",
@@ -156,7 +156,7 @@ const copies: Record<Locale, Copy> = {
     reimbursement: "Cobertura",
     pagesTitle: "Páginas",
     linksTitle: "Enlaces",
-    otherSite: "Sitio para familias con hijos",
+    otherSite: "Sitio para padres y niños",
     details: {
       phoneNote: "Llamada o SMS",
       hours: "de lunes a jueves, con cita previa",
@@ -165,13 +165,13 @@ const copies: Record<Locale, Copy> = {
       transport:
         "Autobús 11 y 12 (Casterneau, 1 min a pie) ; C1 (Chalâtres, 10 min a pie) ; Tranvía línea 1 (Moutonnerie, 20 min a pie)",
       fees:
-        "47 € la sesión de seguimiento ; balance 200 € (4 sesiones, 50 €/sesión) ; sesión de unos 40 minutos",
+        "47 € la sesión de seguimiento ; evaluación 200 € (4 sesiones, 50 €/sesión) ; sesión de unos 40 minutos",
       languages:
         "sesiones en francés e inglés ; francés (lengua materna), inglés (B2), español (B1), nociones de árabe y rumano ; interpretación posible a estudiar",
       audience:
         "adolescentes y adultos (también niños por petición) ; cualquier persona, desde bebés hasta personas mayores",
       reimbursement:
-        "sin reembolso de la Seguridad Social francesa ; ayudas posibles a través de mutuas, prestaciones extra-legales de la CPAM, MDPH (PCH, complemento AEEH), cajas de pensiones y comités de empresa",
+        "sin reembolso de la Seguridad Social francesa ; ayudas posibles a través de mutuas, prestaciones extralegales de la CPAM, MDPH (PCH, complemento AEEH), fondos de pensiones y comités de empresa",
     },
     pageDescriptions: {
       home: "presentación del consultorio y motivos de consulta",
@@ -188,7 +188,7 @@ const copies: Record<Locale, Copy> = {
   },
   ro: {
     title: `${site.name} · psihomotricistă în Nantes`,
-    intro: `Cabinet de psihomotricitate în Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psihomotricistă diplomata de stat din ${site.practitioner.since}, primește adolescenți și adulți la ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Specialități: supradotare (HPI, HQI/THQI), TSA, TDAH, tulburări specifice de învățare. Consultații de luni până joi, cu programare.`,
+    intro: `Cabinet de psihomotricitate în Nantes. ${site.practitioner.firstName} ${site.practitioner.lastName}, psihomotricistă cu diplomă de stat din ${site.practitioner.since}, primește adolescenți și adulți la ${site.address.street}, ${site.address.postalCode} ${site.address.city}. Specialități: supradotare (HPI, HQI/THQI), TSA, TDAH, tulburări specifice de învățare. Consultații de luni până joi, cu programare.`,
     practical: "Informații practice",
     name: "Nume",
     address: "Adresă",
@@ -219,7 +219,7 @@ const copies: Record<Locale, Copy> = {
       audience:
         "adolescenți și adulți (și copii la cerere) ; orice persoană, de la bebeluși la vârstnici",
       reimbursement:
-        "fără rambursare de la asigurările sociale franceze ; ajutoare posibile prin asigurări private, prestații extra-legale CPAM, MDPH (PCH, supliment AEEH), case de pensii și comitete de întreprindere",
+        "fără rambursare de la asigurările sociale franceze ; ajutoare posibile prin asigurări private, prestații extraordinare CPAM, MDPH (PCH, supliment AEEH), case de pensii și comitete de întreprindere",
     },
     pageDescriptions: {
       home: "prezentarea cabinetului și motivele de consultare",
@@ -267,7 +267,7 @@ const copies: Record<Locale, Copy> = {
       audience:
         "المراهقون والبالغون (والأطفال عند الطلب) ؛ كل شخص، من الرضيع إلى المسن",
       reimbursement:
-        "لا تغطية من الضمان الاجتماعي الفرنسي ؛ مساعدات ممكنة عبر التأمينات الخاصة، والمزايا الإضافية من CPAM، وMDPH (PCH، ملحق AEEH)، وصناديق التقاعد ولجان المؤسسات",
+        "لا تغطية من الضمان الاجتماعي الفرنسي ؛ مساعدات ممكنة عبر التأمينات الخاصة، والمزايا الاستثنائية من CPAM، وMDPH (PCH، ملحق AEEH)، وصناديق التقاعد ولجان المؤسسات",
     },
     pageDescriptions: {
       home: "تقديم العيادة ودوافع الاستشارة",

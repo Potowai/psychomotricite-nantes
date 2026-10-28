@@ -4,14 +4,14 @@ export const ro: Copy = {
   meta: {
     title: "Cine sunt?",
     description:
-      "Psihomotricistă cu diplomă de stat din 2016, profesez în Nantes cu adolescenți și adulți, și cu copii la cereri specifice. Supradotare (HPI, HQI/THQI), TSA, TDA-H, tulburări specifice de învățare, transculturalitate.",
+      "Psihomotricistă cu diplomă de stat din 2016, profesez în Nantes cu adolescenți și adulți, și cu copii în situații specifice. Supradotare (HPI, HQI/THQI), TSA, TDA-H, tulburări specifice de învățare, transculturalitate.",
   },
   hero: {
     breadcrumbHome: "Acasă",
     breadcrumbCurrent: "Cine sunt?",
     eyebrow: "Cine sunt?",
     title: "Psihomotricistă.",
-    lead: "Profesez din 2016, în cabinet liberal, cu adolescenți și adulți (și copii la cerere sau în funcție de situații). Cererile pot fi foarte variate.",
+    lead: "Profesez din 2016, în cabinet liberal, cu adolescenți și adulți (și copii la cerere sau în funcție de situație). Cererile pot fi foarte variate.",
   },
   portrait: {
     alt: "Portretul lui Manuela Edom, psihomotricistă în Nantes, zâmbitoare, cu partea superioară a mâinilor în prim-plan.",

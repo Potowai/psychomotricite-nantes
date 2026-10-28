@@ -21,7 +21,7 @@ export const es: Copy = {
       question:
         "¿Necesito una prescripción para consultar con una psicomotricista?",
       answer:
-        "Sí. La psicomotricidad es una profesión paramédica, reconocida por un diplomado de Estado, igual que la logopedia o la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto de 6 de mayo de 1988. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
+        "Sí. La psicomotricidad es una profesión paramédica, reconocida por un diploma de Estado, igual que la logopedia o la fisioterapia. Las competencias de las psicomotricistas están reguladas por el decreto n.º 88-659, de 6 de mayo de 1988. Se necesita una prescripción médica para iniciar un balance o un seguimiento, pero no se pide en la primera cita.",
     },
     {
       category: "Consultar",
@@ -58,11 +58,11 @@ export const es: Copy = {
       category: "Tarifas y cobertura",
       question: "¿Qué ayudas existen para financiar las sesiones?",
       answer:
-        "Varias: cada vez más mutuas cubren la psicomotricidad (a menudo a través del paquete de bienestar); las prestaciones no legales del centro de salud, que se solicitan a través de los servicios sociales del ayuntamiento (CCAS); la MDPH, con la PCH para personas adultas y un complemento de la AEEH para niñas, niños y adolescentes; y, por último, algunas mutualidades de pensiones y comités de empresa.",
+        "Varias: cada vez más mutuas cubren la psicomotricidad (a menudo a través del paquete de bienestar); las prestaciones extralegales de la CPAM, que se solicitan a través de los servicios sociales del ayuntamiento (CCAS); la MDPH, con la PCH para personas adultas y un complemento de la AEEH para niñas, niños y adolescentes; y, por último, algunos fondos de pensiones y comités de empresa.",
     },
     {
       category: "Tarifas y cobertura",
-      question: "¿Qué documentos hacen falta para estas gestas?",
+      question: "¿Qué documentos hacen falta para estos trámites?",
       answer:
         "Lo más habitual: el balance, un presupuesto y las facturas. No dude en pedírmelos, se los facilitaré.",
     },
@@ -76,19 +76,19 @@ export const es: Copy = {
       category: "Cómo es",
       question: "¿Qué se hace concretamente durante una sesión?",
       answer:
-        "Las sesiones se articulan en torno a mediaciones corporales e intercambios. Las mediaciones que se emplean pueden ser la relajación, el canto, la danza, la música, el dibujo, la arcilla, el toque terapéutico, los automasajes y los ejercicios de respiración.",
+        "Las sesiones se articulan en torno a mediaciones corporales e intercambios. Las mediaciones que se emplean pueden ser la relajación, el canto, la danza, la música, el dibujo, la arcilla, el tacto terapéutico, los automasajes y los ejercicios de respiración.",
     },
     {
       category: "Cómo es",
       question: "¿En qué se diferencia la psicomotricidad de la fisioterapia?",
       answer:
-        "La fisioterapia trabaja la rehabilitación funcional y muscular. La psicomotricidad atiende a los vínculos entre lo vivido en el cuerpo y en la psique: la manera en que el cuerpo se habita, se siente, se expresa y se pone en relación.",
+        "La fisioterapia trabaja la rehabilitación funcional y muscular. La psicomotricidad atiende a los vínculos entre lo vivido en el cuerpo y en la psique: la manera en que el cuerpo se habita, se siente, se expresa y se relaciona.",
     },
     {
       category: "Cómo es",
       question: "¿Qué diferencia hay con la logopedia o la psicología?",
       answer:
-        "Estos enfoques se complementan más de lo que se oponen. La logopeda trabaja el lenguaje, el habla y los aprendizajes de la lengua escrita. La psicóloga trabaja la vida psíquica a través de la palabra y, según su formación, la evaluación cognitiva. La psicomotricidad se apoya en el cuerpo, el movimiento y las sensaciones para recuperar apoyos, regulación y un lugar en la relación. Es habitual que estos seguimientos se den en paralelo: trabajo a gusto en coordinación con los profesionales que rodean a la persona.",
+        "Estos enfoques se complementan más de lo que se oponen. La logopeda trabaja el lenguaje, el habla y los aprendizajes de la lengua escrita. La psicóloga trabaja la vida psíquica a través de la palabra y, según su formación, la evaluación cognitiva. La psicomotricidad se apoya en el cuerpo, el movimiento y las sensaciones para recuperar apoyos, regulación y un lugar en las relaciones. Es habitual que estos seguimientos se den en paralelo: trabajo a gusto en coordinación con los profesionales que rodean a la persona.",
     },
     {
       category: "El consultorio",

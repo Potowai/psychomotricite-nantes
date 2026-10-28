@@ -17,7 +17,7 @@ export const ro: Copy = {
   publisher: {
     title: "Editorul site-ului",
     role: "Psihomotricistă cu diplomă de stat",
-    diploma: "(diplomă de stat de psihomotricist).",
+    diploma: "(diplomă de stat în psihomotricitate).",
     phoneLabel: "Telefon:",
     emailLabel: "E-mail:",
     siretLabel: "Număr de identificare (SIRET):",

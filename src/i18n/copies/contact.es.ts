@@ -58,7 +58,7 @@ export const es: Copy = {
   },
   otherSite: {
     title: "Otro sitio",
-    before: "Mi otra web, para las familias con hijos: ",
+    before: "Mi otra web, para padres y niños: ",
     after: ".",
   },
   form: {
