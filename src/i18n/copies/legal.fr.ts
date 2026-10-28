@@ -19,8 +19,7 @@ export const legal = {
     phoneLabel: "Téléphone :",
     emailLabel: "E-mail :",
     siretLabel: "Numéro d’identification (SIRET) :",
-    adeliLabel: "Numéro ADELI / RPPS :",
-    pending: "[à compléter]",
+    rppsLabel: "Numéro RPPS :",
     publicationDirector: "Directrice de la publication :",
   },
   host: {
@@ -50,7 +49,6 @@ export const legal = {
   credits: {
     title: "Crédits",
     before: "Conception et développement du site : ",
-    pending: "[à compléter]",
     photos: "Photographies : Manuela Edom, sauf mention contraire. Portrait : © Fabrice Rault.",
   },
 };

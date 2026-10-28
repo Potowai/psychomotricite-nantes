@@ -85,7 +85,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
             <p className="mt-1 text-ink-2">{t.practice.accessibility}</p>
             <Image
               src={cabinetExterieur}
-              alt={t.practice.placeholder.title}
+              alt={t.practice.imageAlt}
               sizes="(min-width: 1024px) 45vw, 100vw"
               className="mt-6 aspect-[4/3] w-full rounded-[1.5rem] object-cover"
             />

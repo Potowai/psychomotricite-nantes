@@ -21,8 +21,7 @@ export const ar: Copy = {
     phoneLabel: "الهاتف:",
     emailLabel: "البريد الإلكتروني:",
     siretLabel: "رقم التعريف (SIRET):",
-    adeliLabel: "رقم ADELI / RPPS:",
-    pending: "[يُستكمل]",
+    rppsLabel: "رقم RPPS:",
     publicationDirector: "مديرة النشر:",
   },
   host: {
@@ -52,7 +51,6 @@ export const ar: Copy = {
   credits: {
     title: "الاعتمادات",
     before: "تصميم الموقع وتطويره: ",
-    pending: "[يُستكمل]",
     photos: "الصور الفوتوغرافية: Manuela Edom، ما لم يُذكر خلاف ذلك. الصورة الشخصية: © Fabrice Rault.",
   },
 };

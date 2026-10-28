@@ -31,11 +31,7 @@ export const contact = {
     neighbourhood:
       "Situé à proximité du centre-ville, quartier Saint Donatien, Dalby, Malakoff.",
     accessibility: "Cabinet accessible PMR.",
-    placeholder: {
-      label: "Photo à venir",
-      title: "Façade du nouveau cabinet, au 4 rue de la Mitrie",
-      note: "Photo couleur de la nouvelle façade à venir.",
-    },
+    imageAlt: "Façade du cabinet, au 4 rue de la Mitrie.",
   },
   practical: {
     hours: {

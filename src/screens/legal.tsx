@@ -3,14 +3,6 @@ import { copy } from "@/i18n/copies/legal";
 import { fullAddressFor, pages, type Locale } from "@/lib/i18n";
 import { mailHref, site, telHref } from "@/lib/site";
 
-function Todo({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="rounded bg-paper-3 px-1.5 py-0.5 text-ink-2">
-      {children}
-    </span>
-  );
-}
-
 export function LegalPage({ locale }: { locale: Locale }) {
   const t = copy[locale];
 
@@ -47,9 +39,11 @@ export function LegalPage({ locale }: { locale: Locale }) {
               </a>
             </p>
             <p>
-              {t.publisher.siretLabel} <Todo>{t.publisher.pending}</Todo>
+              {t.publisher.siretLabel}{" "}
+              <span dir="ltr">{site.practitioner.siret}</span>
               <br />
-              {t.publisher.adeliLabel} <Todo>{t.publisher.pending}</Todo>
+              {t.publisher.rppsLabel}{" "}
+              <span dir="ltr">{site.practitioner.rpps}</span>
               <br />
               {t.publisher.publicationDirector} {site.name}
             </p>
@@ -96,7 +90,8 @@ export function LegalPage({ locale }: { locale: Locale }) {
             <h2 className="font-display text-2xl text-ink">{t.credits.title}</h2>
             <p>
               {t.credits.before}
-              <Todo>{t.credits.pending}</Todo>
+              <bdi>{site.credits.author}</bdi>
+              <br />
               {t.credits.photos}
             </p>
           </Prose>

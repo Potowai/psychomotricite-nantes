@@ -21,8 +21,7 @@ export const ro: Copy = {
     phoneLabel: "Telefon:",
     emailLabel: "E-mail:",
     siretLabel: "Număr de identificare (SIRET):",
-    adeliLabel: "Număr ADELI / RPPS:",
-    pending: "[de completat]",
+    rppsLabel: "Număr RPPS:",
     publicationDirector: "Directoare a publicației:",
   },
   host: {
@@ -52,7 +51,6 @@ export const ro: Copy = {
   credits: {
     title: "Credite",
     before: "Concepția și dezvoltarea site-ului: ",
-    pending: "[de completat]",
     photos: "Fotografii: Manuela Edom, cu excepția mențiunii contrare. Portret: © Fabrice Rault.",
   },
 };

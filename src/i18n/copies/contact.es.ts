@@ -33,11 +33,7 @@ export const es: Copy = {
     neighbourhood:
       "Situado cerca del centro de la ciudad, en el barrio de Saint Donatien, Dalby y Malakoff.",
     accessibility: "Consultorio accesible para personas con movilidad reducida.",
-    placeholder: {
-      label: "Foto pendiente",
-      title: "Fachada del nuevo consultorio, en la calle de la Mitrie 4",
-      note: "Foto en color de la nueva fachada, pendiente.",
-    },
+    imageAlt: "Fachada del consultorio, en la calle de la Mitrie 4.",
   },
   practical: {
     hours: {

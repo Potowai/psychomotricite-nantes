@@ -33,11 +33,7 @@ export const ro: Copy = {
     neighbourhood:
       "Situat în apropierea centrului orașului, cartierul Saint Donatien, Dalby, Malakoff.",
     accessibility: "Cabinet accesibil PMR.",
-    placeholder: {
-      label: "Fotografie în curând",
-      title: "Fațada noului cabinet, la 4 rue de la Mitrie",
-      note: "Fotografie color a noii fațade, în curând.",
-    },
+    imageAlt: "Fațada cabinetului, la 4 rue de la Mitrie.",
   },
   practical: {
     hours: {

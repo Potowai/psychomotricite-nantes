@@ -18,6 +18,8 @@ export const site = {
     fullName: "Manuela Edom",
     title: "Psychomotricienne D.E.",
     since: 2016,
+    siret: "819 908 419 000 57",
+    rpps: "10006895139",
   },
 
   contact: {

@@ -33,11 +33,7 @@ export const en: Copy = {
     neighbourhood:
       "Close to the city centre, in the Saint Donatien, Dalby and Malakoff area.",
     accessibility: "Wheelchair accessible.",
-    placeholder: {
-      label: "Photo to come",
-      title: "Front of the new practice, at 4 rue de la Mitrie",
-      note: "Colour photo of the new frontage, to come.",
-    },
+    imageAlt: "Front of the practice, at 4 rue de la Mitrie.",
   },
   practical: {
     hours: {

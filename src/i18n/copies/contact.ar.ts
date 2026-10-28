@@ -33,11 +33,7 @@ export const ar: Copy = {
     neighbourhood:
       "تقع قرب وسط المدينة، في حي سان دوناتيان ودالبي ومالاكوف.",
     accessibility: "العيادة مهيأة لاستقبال الأشخاص ذوي الحركة المحدودة (PMR).",
-    placeholder: {
-      label: "صورة قادمة",
-      title: "واجهة العيادة الجديدة، في 4 rue de la Mitrie",
-      note: "صورة ملونة للواجهة الجديدة، قادمة.",
-    },
+    imageAlt: "واجهة العيادة، في 4 rue de la Mitrie.",
   },
   practical: {
     hours: {
