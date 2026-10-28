@@ -58,7 +58,7 @@ export const en: Copy = {
     },
     eyebrow: "Going towards people",
     title: "An outreach approach, rooted in what is real.",
-    body: "Working with an outreach approach, I spent 5 years with asylum seekers, in emergency accommodation for mothers with no children (most of them foreign-born), as well as in squats.",
+    body: "Working with an outreach approach, I spent 5 years with asylum seekers, in emergency accommodation for single mothers with children (most of them foreign-born), as well as in squats.",
     bodyAfter:
       "I train at a social work school and at a psychomotor therapy school, as well as with care professionals in continuing education, on themes such as:",
     formations: [
