@@ -29,13 +29,6 @@ export function HomePage({ locale }: { locale: Locale }) {
       <section className="relative overflow-hidden border-b border-line/70 paper-grain">
         {/* Aquarelles — les couleurs de Manuela */}
         <Image
-          src={aquarelleChaude}
-          alt=""
-          aria-hidden="true"
-          sizes="(max-width: 1024px) 300px, 440px"
-          className="aquarelle-blob pointer-events-none absolute -bottom-8 -end-16 w-[300px] max-w-none opacity-60 mix-blend-multiply lg:-top-20 lg:bottom-auto lg:-end-4 lg:w-[440px] lg:opacity-65"
-        />
-        <Image
           src={feuilleRose}
           alt=""
           aria-hidden="true"
@@ -45,7 +38,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <Container className="relative grid gap-10 pb-16 pt-12 md:pt-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-16 lg:pb-24">
           <div className="animate-fade-up">
             <p className="eyebrow">{t.hero.eyebrow}</p>
-            <h1 className="mt-5 text-display-2 leading-[1.0] sm:text-[3.6rem] lg:text-[4.4rem]">
+            <h1 className="mt-5 text-display-2 leading-[1.0] sm:text-[3.2rem] lg:text-[3.8rem] xl:text-[4.4rem]">
               {t.hero.titleLines[0]}
               <br />
               {t.hero.titleLines[1]}
@@ -81,7 +74,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               {t.hero.facts.map((fact) => (
                 <div key={fact.label}>
                   <dt className="text-ink-3">{fact.label}</dt>
-                  <dd className="mt-1 font-display text-2xl text-ink">
+                  <dd className="mt-1 font-display text-xl text-ink">
                     {fact.value}
                     {"note" in fact && fact.note ? (
                       <span className="mt-1 block font-sans text-xs leading-snug text-ink-3">
@@ -94,14 +87,25 @@ export function HomePage({ locale }: { locale: Locale }) {
             </dl>
           </div>
 
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex flex-col items-center gap-6 lg:items-end">
             <div className="absolute end-0 top-1/2 hidden h-[82%] w-[82%] -translate-y-1/2 rounded-full bg-azure-soft/70 blur-3xl lg:block" />
+            <figure className="relative w-[220px] overflow-hidden rounded-[1.5rem] border border-line bg-paper p-2 shadow-[var(--shadow-soft)] sm:w-[240px]">
+              <Image
+                src={aquarelleChaude}
+                alt=""
+                aria-hidden="true"
+                width={256}
+                height={256}
+                unoptimized
+                className="h-auto w-full rounded-[1.1rem]"
+              />
+            </figure>
             <Image
               src={figureLineInk}
               alt={t.hero.figureAlt}
               preload
               sizes="(max-width: 1024px) 60vw, 34vw"
-              className="relative h-auto w-[220px] sm:w-[280px] lg:w-[340px]"
+              className="relative h-auto w-[200px] sm:w-[260px] lg:w-[320px]"
             />
           </div>
         </Container>
@@ -228,12 +232,9 @@ export function HomePage({ locale }: { locale: Locale }) {
 
       {/* ---------------- Qui suis-je ---------------- */}
       <section className="relative overflow-hidden border-y border-line bg-ink text-paper">
-        <Image
-          src={aquarelleChaude}
-          alt=""
+        <div
           aria-hidden="true"
-          sizes="420px"
-          className="aquarelle-fade pointer-events-none absolute -end-20 -top-24 w-[420px] max-w-none opacity-30 mix-blend-screen"
+          className="wash-warm pointer-events-none absolute inset-0 opacity-25"
         />
         <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
           <figure>

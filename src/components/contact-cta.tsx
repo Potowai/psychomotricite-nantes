@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import figurePaper from "@/assets/images/figure-line-paper.png";
-import aquarelleChaude from "@/assets/images/aquarelle-chaude.png";
 import { Container } from "@/components/ui";
 import { pages, type Locale } from "@/lib/i18n";
 import { mailHref, site, smsHref, telHref } from "@/lib/site";
@@ -78,12 +77,9 @@ export function CtaBand({
 
   return (
     <section className="relative overflow-hidden bg-ink text-paper">
-      <Image
-        src={aquarelleChaude}
-        alt=""
+      <div
         aria-hidden="true"
-        sizes="460px"
-        className="aquarelle-fade pointer-events-none absolute -start-24 -top-20 w-[460px] max-w-none opacity-30 mix-blend-screen"
+        className="wash-warm pointer-events-none absolute inset-0 opacity-25"
       />
       <Image
         src={figurePaper}

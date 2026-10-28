@@ -16,9 +16,9 @@
      fatigue l'œil. On garde le rythme, pas la coupure. */
   --color-paper-2: #faf1e7;
   --color-paper-3: #f2dfcf;
-  --color-ink: #3a2420;
-  --color-ink-2: #5c4339;
-  --color-ink-3: #7c6257;
+  --color-ink: #151313;
+  --color-ink-2: #5f5f5f;
+  --color-ink-3: #6b6b6b;
   --color-line: #e8d4c4;
 
   /* Roses et terracottas — la palette chaude de Manuela */
@@ -49,7 +49,7 @@
   --color-alert: #a4262c;
   --color-alert-soft: #fbeae7;
 
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-cinzel), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --radius-card: 1.25rem;
@@ -77,7 +77,7 @@
 
   body {
     background-color: var(--color-paper);
-    color: var(--color-ink);
+    color: var(--color-ink-2);
     font-family: var(--font-sans);
     font-size: 1.0625rem;
     line-height: 1.7;
@@ -542,14 +542,17 @@ html[dir="rtl"] .arrow {
   transform: scaleX(-1);
 }
 
-/* Tache d'aquarelle : on adoucit les bords pour qu'elle se pose sur le papier
-   au lieu de former un rectangle. */
-.aquarelle-fade {
-  -webkit-mask-image: radial-gradient(ellipse at 50% 38%, #000 36%, transparent 84%);
-  mask-image: radial-gradient(ellipse at 50% 38%, #000 36%, transparent 84%);
-}
-
-/* Variante "galet" : la tache garde ses couleurs, sans bord rectangulaire. */
-.aquarelle-blob {
-  border-radius: 46% 54% 48% 52% / 44% 46% 54% 56%;
+/* Lavis chaud, sans image : rose et vert d'eau se fondent dans le papier. */
+@utility wash-warm {
+  background-image:
+    radial-gradient(
+      70% 80% at 85% 10%,
+      color-mix(in srgb, var(--color-azure) 24%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      60% 70% at 10% 90%,
+      color-mix(in srgb, var(--color-teal) 18%, transparent),
+      transparent 70%
+    );
 }

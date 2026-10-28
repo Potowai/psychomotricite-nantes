@@ -58,7 +58,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
             <p className="text-xs uppercase tracking-[0.16em] text-ink-3">
               {t.contactCards.email.label}
             </p>
-            <p className="mt-3 break-all font-display text-xl text-ink">
+            <p className="mt-3 break-all font-sans text-lg text-ink">
               {site.contact.email}
             </p>
           </a>

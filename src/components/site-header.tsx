@@ -91,7 +91,7 @@ function Wordmark({
       className="group inline-flex flex-col leading-none"
       aria-label={`${site.name} · ${labels[locale].home}`}
     >
-      <span className="font-display text-2xl tracking-tight text-ink transition-colors group-hover:text-teal-deep sm:text-[1.75rem]">
+      <span className="font-display whitespace-nowrap text-xl tracking-tight text-ink transition-colors group-hover:text-teal-deep sm:text-2xl xl:text-[1.75rem]">
         {site.name}
       </span>
       {!compact && (
@@ -134,11 +134,11 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
             : "border-transparent bg-paper/0"
       }`}
     >
-      <div className="container-page flex items-center justify-between gap-6 py-4">
+      <div className="container-page flex items-center justify-between gap-4 py-4 xl:gap-6">
         <Wordmark locale={locale} />
 
         <nav aria-label={copy.nav} className="hidden lg:block">
-          <ul className="flex items-center gap-7">
+          <ul className="flex items-center gap-5 xl:gap-7">
             {nav
               .filter((item) => item.href !== pages.home[locale])
               .map((item) => {
@@ -171,7 +171,7 @@ export function SiteHeader({ locale = "fr" }: { locale?: Locale }) {
           <a
             href={telHref}
             dir="ltr"
-            className="inline-flex py-2 text-sm text-ink-2 tabular-nums transition-colors hover:text-teal-deep"
+            className="hidden py-2 text-sm text-ink-2 tabular-nums transition-colors hover:text-teal-deep xl:inline-flex"
           >
             {site.contact.phoneDisplay}
           </a>

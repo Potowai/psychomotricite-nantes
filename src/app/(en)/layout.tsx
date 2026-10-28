@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Cinzel, Inter } from "next/font/google";
 import "../globals.css";
 import { SiteShell } from "@/components/site-shell";
 import { buildMetadata } from "@/lib/seo";
 
-const fraunces = Fraunces({
+const cinzel = Cinzel({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-fraunces",
+  variable: "--font-cinzel",
   display: "swap",
-  axes: ["SOFT", "WONK", "opsz"],
+  weight: ["400", "500", "600"],
 });
 
 const inter = Inter({
@@ -21,15 +21,15 @@ export const metadata: Metadata = buildMetadata("en");
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fdfcfa" },
-    { media: "(prefers-color-scheme: dark)", color: "#152a3c" },
+    { media: "(prefers-color-scheme: light)", color: "#fdf8f1" },
+    { media: "(prefers-color-scheme: dark)", color: "#151313" },
   ],
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
 };
 
-const sharedLayoutProps = [fraunces.variable, inter.variable].join(" ");
+const sharedLayoutProps = [cinzel.variable, inter.variable].join(" ");
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
