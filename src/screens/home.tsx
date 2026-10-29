@@ -3,7 +3,6 @@ import Link from "next/link";
 import feuilleRose from "@/assets/images/feuille-rose.png";
 import figureLineInk from "@/assets/images/figure-line-ink.png";
 import portraitManuela from "@/assets/images/portrait-manuela.webp";
-import aquarelleChaude from "@/assets/images/aquarelle-chaude.png";
 import { CabinetMap } from "@/components/cabinet-map";
 import { CtaBand } from "@/components/contact-cta";
 import { Container, Faq, SectionTitle } from "@/components/ui";
@@ -87,19 +86,8 @@ export function HomePage({ locale }: { locale: Locale }) {
             </dl>
           </div>
 
-          <div className="relative flex flex-col items-center gap-6 lg:items-end">
+          <div className="relative flex justify-center lg:justify-end">
             <div className="absolute end-0 top-1/2 hidden h-[82%] w-[82%] -translate-y-1/2 rounded-full bg-azure-soft/70 blur-3xl lg:block" />
-            <figure className="relative w-[220px] overflow-hidden rounded-[1.5rem] border border-line bg-paper p-2 shadow-[var(--shadow-soft)] sm:w-[240px]">
-              <Image
-                src={aquarelleChaude}
-                alt=""
-                aria-hidden="true"
-                width={256}
-                height={256}
-                unoptimized
-                className="h-auto w-full rounded-[1.1rem]"
-              />
-            </figure>
             <Image
               src={figureLineInk}
               alt={t.hero.figureAlt}
