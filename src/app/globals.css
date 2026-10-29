@@ -543,6 +543,27 @@ html[dir="rtl"] .arrow {
 }
 
 /* Lavis chaud, sans image : rose et vert d'eau se fondent dans le papier. */
+/* Tache de soleil : bords fondus pour se mêler au dessin et au papier. */
+@utility sun-wash {
+  background-image:
+    radial-gradient(
+      circle at 38% 34%,
+      color-mix(in srgb, var(--color-gold) 58%, transparent),
+      transparent 56%
+    ),
+    radial-gradient(
+      circle at 56% 55%,
+      color-mix(in srgb, var(--color-azure) 46%, transparent),
+      transparent 72%
+    ),
+    radial-gradient(
+      circle at 72% 66%,
+      color-mix(in srgb, var(--color-blue) 30%, transparent),
+      transparent 78%
+    );
+  filter: blur(20px);
+}
+
 @utility wash-warm {
   background-image:
     radial-gradient(

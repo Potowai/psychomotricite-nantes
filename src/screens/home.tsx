@@ -88,6 +88,10 @@ export function HomePage({ locale }: { locale: Locale }) {
 
           <div className="relative flex justify-center lg:justify-end">
             <div className="absolute end-0 top-1/2 hidden h-[82%] w-[82%] -translate-y-1/2 rounded-full bg-azure-soft/70 blur-3xl lg:block" />
+            <div
+              aria-hidden="true"
+              className="sun-wash pointer-events-none absolute -top-24 end-0 h-[340px] w-[340px] rounded-full opacity-80 mix-blend-multiply sm:h-[420px] sm:w-[420px]"
+            />
             <Image
               src={figureLineInk}
               alt={t.hero.figureAlt}
