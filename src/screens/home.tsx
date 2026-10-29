@@ -134,7 +134,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-3">
               {t.aboutSection.eyebrow}
             </p>
-            <blockquote className="mt-5 font-display text-[1.7rem] leading-[1.2] text-ink sm:text-[2.1rem]">
+            <blockquote className="mt-5 font-sans text-xl italic leading-relaxed text-ink sm:text-2xl">
               {t.aboutSection.quote}
             </blockquote>
             <p className="mt-6 leading-relaxed text-ink-2">

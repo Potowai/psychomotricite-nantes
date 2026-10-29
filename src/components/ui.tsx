@@ -185,7 +185,7 @@ export function Faq({
       {items.map((item) => (
         <details key={item.question} className="group py-1">
           <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-5 text-lg text-ink marker:hidden [&::-webkit-details-marker]:hidden">
-            <span className="font-display text-xl leading-snug">
+            <span className="font-sans text-lg font-medium leading-snug text-ink">
               {item.question}
             </span>
             <span
