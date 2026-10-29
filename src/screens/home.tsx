@@ -111,6 +111,46 @@ export function HomePage({ locale }: { locale: Locale }) {
         </Container>
       </section>
 
+      {/* ---------------- Qui suis-je ---------------- */}
+      <section className="relative overflow-hidden border-y border-line bg-paper-2">
+        <div
+          aria-hidden="true"
+          className="wash-warm pointer-events-none absolute inset-0 opacity-40"
+        />
+        <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
+          <figure>
+            <Image
+              src={portraitManuela}
+              alt={t.aboutSection.portraitAlt}
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="portrait-fade mx-auto h-auto w-full max-w-[420px] lg:mx-0"
+            />
+          </figure>
+          <div>
+            <span
+              aria-hidden="true"
+              className="accent-gradient mb-5 block h-1.5 w-12 rounded-full"
+            />
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-3">
+              {t.aboutSection.eyebrow}
+            </p>
+            <blockquote className="mt-5 font-display text-[1.7rem] leading-[1.2] text-ink sm:text-[2.1rem]">
+              {t.aboutSection.quote}
+            </blockquote>
+            <p className="mt-6 leading-relaxed text-ink-2">
+              {t.aboutSection.body}
+            </p>
+            <Link
+              href={pages.about[locale]}
+              className="mt-8 inline-flex items-center gap-2 border-b border-ink/20 pb-1 text-ink transition-colors hover:border-ink/50"
+            >
+              {t.aboutSection.link}
+              <span aria-hidden="true" className="arrow">→</span>
+            </Link>
+          </div>
+        </Container>
+      </section>
+
       {/* ---------------- Manifeste ---------------- */}
       <section>
         <Container className="grid gap-12 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:py-28">
@@ -154,30 +194,9 @@ export function HomePage({ locale }: { locale: Locale }) {
                   i < 3 ? "lg:col-span-2" : "lg:col-span-3"
                 } ${i === 4 ? "sm:col-span-2" : ""}`}
               >
-                <span
-                  aria-hidden="true"
-                  className="card-texture pointer-events-none absolute inset-0"
-                />
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 opacity-80 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    backgroundImage: `radial-gradient(135% 115% at 100% 0%, color-mix(in srgb, ${motifAccents[i % motifAccents.length]} 14%, transparent), transparent 62%)`,
-                  }}
-                />
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute end-6 top-4 font-display text-[3.25rem] leading-none"
-                  style={{ color: `color-mix(in srgb, ${motifAccents[i % motifAccents.length]} 24%, transparent)` }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="relative mb-5 block h-1.5 w-10 rounded-full"
-                  style={{
-                    backgroundColor: `color-mix(in srgb, ${motifAccents[i % motifAccents.length]} 60%, transparent)`,
-                  }}
+                <MotifGlyph
+                  index={i}
+                  accent={motifAccents[i % motifAccents.length]}
                 />
                 <h3 className="relative font-display text-xl text-ink">
                   {m.title}
@@ -227,46 +246,6 @@ export function HomePage({ locale }: { locale: Locale }) {
               </li>
             ))}
           </ol>
-        </Container>
-      </section>
-
-      {/* ---------------- Qui suis-je ---------------- */}
-      <section className="relative overflow-hidden border-y border-line bg-ink text-paper">
-        <div
-          aria-hidden="true"
-          className="wash-warm pointer-events-none absolute inset-0 opacity-25"
-        />
-        <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
-          <figure>
-            <Image
-              src={portraitManuela}
-              alt={t.aboutSection.portraitAlt}
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="portrait-fade h-auto w-full"
-            />
-          </figure>
-          <div>
-            <span
-              aria-hidden="true"
-              className="accent-gradient mb-5 block h-1.5 w-12 rounded-full"
-            />
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/50">
-              {t.aboutSection.eyebrow}
-            </p>
-            <blockquote className="mt-5 font-display text-[1.9rem] leading-[1.2] text-paper sm:text-[2.3rem]">
-              {t.aboutSection.quote}
-            </blockquote>
-            <p className="mt-6 leading-relaxed text-paper/70">
-              {t.aboutSection.body}
-            </p>
-            <Link
-              href={pages.about[locale]}
-              className="mt-8 inline-flex items-center gap-2 border-b border-paper/40 pb-1 text-paper transition-colors hover:border-paper"
-            >
-              {t.aboutSection.link}
-              <span aria-hidden="true" className="arrow">→</span>
-            </Link>
-          </div>
         </Container>
       </section>
 
@@ -332,6 +311,76 @@ export function HomePage({ locale }: { locale: Locale }) {
 
       <JsonLd data={faqSchema(t.faqSection.items.map((f) => ({ ...f })))} />
     </>
+  );
+}
+
+function MotifGlyph({
+  index,
+  accent,
+}: {
+  index: number;
+  accent: string;
+}) {
+  const icon = (() => {
+    switch (index % 5) {
+      case 0:
+        return (
+          <>
+            <circle cx="12" cy="4.5" r="1.8" />
+            <path d="M12 7v5.5m0 0-3.5 6M12 12.5l3.5 6M7 9.5l5 1.2 5-1.2" />
+          </>
+        );
+      case 1:
+        return (
+          <path d="M20.8 4.6a5.4 5.4 0 0 0-7.7 0L12 5.7l-1.1-1.1a5.4 5.4 0 0 0-7.7 7.7l1.1 1.1L12 21l7.7-7.6 1.1-1.1a5.4 5.4 0 0 0 0-7.7Z" />
+        );
+      case 2:
+        return (
+          <>
+            <circle cx="12" cy="12" r="8.5" />
+            <circle cx="12" cy="9" r="2.3" />
+            <path d="M7.5 18c.7-3 2.4-4.2 4.5-4.2s3.8 1.2 4.5 4.2" />
+          </>
+        );
+      case 3:
+        return (
+          <>
+            <path d="M12 21V9" />
+            <path d="M12 9c0-4 3-7 7-7 0 4-3 7-7 7Z" />
+            <path d="M12 13c0-3-2.5-5.5-5.5-5.5 0 3 2.5 5.5 5.5 5.5Z" />
+          </>
+        );
+      default:
+        return (
+          <>
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" />
+            <circle cx="12" cy="12" r="2.2" />
+          </>
+        );
+    }
+  })();
+
+  return (
+    <span
+      aria-hidden="true"
+      className="relative mb-5 flex h-11 w-11 items-center justify-center rounded-full"
+      style={{
+        backgroundColor: `color-mix(in srgb, ${accent} 12%, transparent)`,
+        color: accent,
+      }}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-5 w-5"
+      >
+        {icon}
+      </svg>
+    </span>
   );
 }
 

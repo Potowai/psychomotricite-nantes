@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import {
   Cinzel,
-  Inter,
+  Quattrocento_Sans,
   Noto_Naskh_Arabic,
   Noto_Sans_Arabic,
 } from "next/font/google";
@@ -16,9 +16,11 @@ const cinzel = Cinzel({
   weight: ["400", "500", "600"],
 });
 
-const inter = Inter({
+const quattrocento = Quattrocento_Sans({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-inter",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-quattrocento",
   display: "swap",
 });
 
@@ -49,7 +51,7 @@ export const viewport: Viewport = {
 
 const sharedLayoutProps = [
   cinzel.variable,
-  inter.variable,
+  quattrocento.variable,
   arabicSans.variable,
   arabicDisplay.variable,
 ].join(" ");

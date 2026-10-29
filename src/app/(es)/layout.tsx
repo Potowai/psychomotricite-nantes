@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Inter } from "next/font/google";
+import { Cinzel, Quattrocento_Sans } from "next/font/google";
 import "../globals.css";
 import { SiteShell } from "@/components/site-shell";
 import { buildMetadata } from "@/lib/seo";
@@ -11,9 +11,11 @@ const cinzel = Cinzel({
   weight: ["400", "500", "600"],
 });
 
-const inter = Inter({
+const quattrocento = Quattrocento_Sans({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-inter",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-quattrocento",
   display: "swap",
 });
 
@@ -29,7 +31,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const sharedLayoutProps = [cinzel.variable, inter.variable].join(" ");
+const sharedLayoutProps = [cinzel.variable, quattrocento.variable].join(" ");
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

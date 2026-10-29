@@ -17,8 +17,8 @@
   --color-paper-2: #faf1e7;
   --color-paper-3: #f2dfcf;
   --color-ink: #151313;
-  --color-ink-2: #5f5f5f;
-  --color-ink-3: #6b6b6b;
+  --color-ink-2: #3f5360;
+  --color-ink-3: #5a6f7a;
   --color-line: #e8d4c4;
 
   /* Roses et terracottas — la palette chaude de Manuela */
@@ -50,7 +50,7 @@
   --color-alert-soft: #fbeae7;
 
   --font-display: var(--font-cinzel), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-quattrocento), ui-sans-serif, system-ui, sans-serif;
 
   --radius-card: 1.25rem;
   --shadow-soft: 0 1px 2px rgba(58, 36, 32, 0.05), 0 12px 32px -12px rgba(58, 36, 32, 0.16);
@@ -162,9 +162,9 @@
 
 /* Lien éditorial souligné, réutilisé dans le corps de texte */
 @utility link-quiet {
-  color: var(--color-teal-deep);
+  color: var(--color-ocean);
   text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--color-teal) 45%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--color-ocean) 45%, transparent);
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
   transition: text-decoration-color 150ms ease, color 150ms ease;
