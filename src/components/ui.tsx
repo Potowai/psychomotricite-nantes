@@ -87,7 +87,7 @@ export function PageHero({
           {eyebrow && (
             <p className="eyebrow mt-8">{eyebrow}</p>
           )}
-          <h1 className="mt-4 text-display-1 leading-[1.02] sm:text-[3.4rem] lg:text-[4rem]">
+          <h1 className="mt-4 text-display-1 leading-[1.02] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem]">
             {title}
           </h1>
           {lead && (
@@ -186,7 +186,7 @@ export function Faq({
       {items.map((item) => (
         <details key={item.question} className="group py-1">
           <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-5 text-lg text-ink marker:hidden [&::-webkit-details-marker]:hidden">
-            <span className="font-display text-xl leading-snug">
+            <span className="font-sans text-lg font-medium leading-snug text-ink">
               {item.question}
             </span>
             <span

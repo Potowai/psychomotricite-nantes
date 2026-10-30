@@ -38,8 +38,8 @@
   --color-alert: #a4262c;
   --color-alert-soft: #fbeae7;
 
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cinzel), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-quattrocento), ui-sans-serif, system-ui, sans-serif;
 
   --radius-card: 1.25rem;
   --shadow-soft: 0 1px 2px rgba(21, 42, 60, 0.04), 0 12px 32px -12px rgba(21, 42, 60, 0.16);
@@ -66,7 +66,7 @@
 
   body {
     background-color: var(--color-paper);
-    color: var(--color-ink);
+    color: var(--color-ink-2);
     font-family: var(--font-sans);
     font-size: 1.0625rem;
     line-height: 1.7;
@@ -483,6 +483,21 @@
   }
 }
 
+
+/* Lavis bleu, sans image : deux halos très doux se fondent dans le papier. */
+@utility wash-blue {
+  background-image:
+    radial-gradient(
+      70% 80% at 85% 10%,
+      color-mix(in srgb, var(--color-azure) 20%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      60% 70% at 10% 90%,
+      color-mix(in srgb, var(--color-blue) 14%, transparent),
+      transparent 70%
+    );
+}
 
 /* ------------------------------------------------------------------ */
 /*  Arabe : police dédiée et sens d'écriture                          */

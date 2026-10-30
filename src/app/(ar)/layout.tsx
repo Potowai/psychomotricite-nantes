@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import {
-  Fraunces,
-  Inter,
+  Cinzel,
+  Quattrocento_Sans,
   Noto_Naskh_Arabic,
   Noto_Sans_Arabic,
 } from "next/font/google";
@@ -9,16 +9,18 @@ import "../globals.css";
 import { SiteShell } from "@/components/site-shell";
 import { buildMetadata } from "@/lib/seo";
 
-const fraunces = Fraunces({
+const cinzel = Cinzel({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-fraunces",
+  variable: "--font-cinzel",
   display: "swap",
-  axes: ["SOFT", "WONK", "opsz"],
+  weight: ["400", "500", "600"],
 });
 
-const inter = Inter({
+const quattrocento = Quattrocento_Sans({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-inter",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-quattrocento",
   display: "swap",
 });
 
@@ -48,8 +50,8 @@ export const viewport: Viewport = {
 };
 
 const sharedLayoutProps = [
-  fraunces.variable,
-  inter.variable,
+  cinzel.variable,
+  quattrocento.variable,
   arabicSans.variable,
   arabicDisplay.variable,
 ].join(" ");
