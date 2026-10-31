@@ -108,11 +108,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       {/* ---------------- Qui suis-je ---------------- */}
-      <section className="relative overflow-hidden border-y border-line bg-paper-2">
-        <div
-          aria-hidden="true"
-          className="wash-blue pointer-events-none absolute inset-0 opacity-60"
-        />
+      <section className="border-y border-line bg-paper-3">
         <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
           <figure>
             <Image
