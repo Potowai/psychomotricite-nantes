@@ -104,11 +104,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       {/* ---------------- Qui suis-je ---------------- */}
-      <section className="relative overflow-hidden border-y border-line bg-paper-2">
-        <div
-          aria-hidden="true"
-          className="wash-warm pointer-events-none absolute inset-0 opacity-40"
-        />
+      <section className="border-y border-line bg-paper-3">
         <Container className="relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 lg:py-24">
           <figure>
             <Image
@@ -123,7 +119,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               aria-hidden="true"
               className="accent-gradient mb-5 block h-1.5 w-12 rounded-full"
             />
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-2">
               {t.aboutSection.eyebrow}
             </p>
             <blockquote className="mt-5 font-sans text-xl italic leading-relaxed text-ink sm:text-2xl">
